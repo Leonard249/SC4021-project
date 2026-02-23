@@ -2,3 +2,4 @@ test_dataset
 pyproject.toml
 uv.lock
 .venv
+bry_note
