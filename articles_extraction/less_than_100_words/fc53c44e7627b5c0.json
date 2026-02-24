@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/74831509/github-copilot-does-not-work-after-latest-vscode-update",
+  "normalized_url": "https://stackoverflow.com/questions/74831509/github-copilot-does-not-work-after-latest-vscode-update",
+  "source_type": "stackoverflow",
+  "title": "GitHub Copilot does not work after latest vscode update",
+  "author": "John James",
+  "date": "2022-12-17",
+  "text": "GitHub Copilot stopped working after it asked to restart vscode for the last update I installed, right now it doesn't even show the icon and there are no suggestions either, it's as if it wasn't installed.\nI unistalled everything, even the vscode itself, deleting all the files and configuringicon in case there was a conflict or error, but the extension still does not work.\nIf anyone knows how to fix it or what is causing the error, I would be very grateful.",
+  "excerpt": "GitHub Copilot stopped working after it asked to restart vscode for the last update I installed, right now it doesn't even show the icon and there are no suggestions either, it's as if it wasn't installed.\nI unistalled everything, even the vscode itself, deleting all the files and configuringicon in case there was a conflict or error, but the extension still does not work.\nIf anyone knows how to fix it or what is causing the error, I would be very grateful.",
+  "word_count": 82,
+  "scraped_at": "2026-02-24T08:21:29.441946+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76016049/copilot-suggests-only-line-by-line",
+  "normalized_url": "https://stackoverflow.com/questions/76016049/copilot-suggests-only-line-by-line",
+  "source_type": "stackoverflow",
+  "title": "Copilot suggests only line by line",
+  "author": "Dafna 1",
+  "date": "2023-04-14",
+  "text": "Copilot suggests only line by line instead of a whole block. I've seen issues a year ago which were actually a copilot bug but I can't find any hints for the current version. Is there a setting to enable it or do I have to switch anything off in VS Code?\n-\n\"I've seen issues a year ago\" links please? And can you add a procedure to reproduce what you observe and tell us clearly what you expect to observe?2023-04-14 20:06:19 +00:00Commented Apr 14, 2023 at 20:06",
+  "excerpt": "Copilot suggests only line by line instead of a whole block. I've seen issues a year ago which were actually a copilot bug but I can't find any hints for the current version. Is there a setting to enable it or do I have to switch anything off in VS Code?\n-\n\"I've seen issues a year ago\" links please? And can you add a procedure to reproduce what you observe and tell us clearly what you expect to observe?2023-04-14 20:06:19 +00:00Commented Apr 14, 2023 at 20:06",
+  "word_count": 87,
+  "scraped_at": "2026-02-24T08:19:11.168550+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

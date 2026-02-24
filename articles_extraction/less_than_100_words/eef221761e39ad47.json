@@ -1,0 +1,16 @@
+{
+  "url": "https://stripe.dev/blog/building-financial-operations-agents-hypermode-stripe",
+  "normalized_url": "https://stripe.dev/blog/building-financial-operations-agents-hypermode-stripe",
+  "source_type": "personal_blog",
+  "title": "Building financial operations agents with Hypermode and Stripe",
+  "author": "About the author",
+  "date": "2025-08-06",
+  "text": "William Lyon\nWilliam Lyon is an AI engineer at Hypermode where he works to help practitioners put AI apps into production. Previously he worked as a software developer at Neo4j and other startups. He is also the author of the book “Fullstack GraphQL Applications” and earned a master's degree in Computer Science from the University of Montana. You can find him online at http://lyonwj.com.",
+  "excerpt": "William Lyon\nWilliam Lyon is an AI engineer at Hypermode where he works to help practitioners put AI apps into production. Previously he worked as a software developer at Neo4j and other startups. He is also the author of the book “Fullstack GraphQL Applications” and earned a master's degree in Computer Science from the University of Montana. You can find him online at http://lyonwj.com.",
+  "word_count": 64,
+  "scraped_at": "2026-02-24T08:11:40.703655+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stripe, Discord, Shopify engineering blog sweep"
+  ]
+}

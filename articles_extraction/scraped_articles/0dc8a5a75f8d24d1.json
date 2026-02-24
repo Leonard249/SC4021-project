@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/17/the-fate-of-small-open-source/",
+  "normalized_url": "https://simonwillison.net/2025/nov/17/the-fate-of-small-open-source",
+  "source_type": "personal_blog",
+  "title": "The fate of “small” open source",
+  "author": "Simon Willison",
+  "date": "2025-11-17",
+  "text": "17th November 2025 - Link Blog\nThe fate of “small” open source. Nolan Lawson asks if LLM assistance means that the category of tiny open source libraries like his own blob-util is destined to fade away.\nWhy take on additional supply chain risks adding another dependency when an LLM can likely kick out the subset of functionality needed by your own code to-order?\nI still believe in open source, and I’m still doing it (in fits and starts). But one thing has become clear to me: the era of small, low-value libraries like\nblob-util\nis over. They were already on their way out thanks to Node.js and the browser taking on more and more of their functionality (seenode:glob\n,structuredClone\n, etc.), but LLMs are the final nail in the coffin.\nI've been thinking about a similar issue myself recently as well.\nQuite a few of my own open source projects exist to solve problems that are frustratingly hard to figure out. s3-credentials is a great example of this: it solves the problem of creating read-only or read-write credentials for an S3 bucket - something that I've always found infuriatingly difficult since you need to know to craft an IAM policy that looks something like this:\n{\n\"Version\": \"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"s3:ListBucket\",\n\"s3:GetBucketLocation\"\n],\n\"Resource\": [\n\"arn:aws:s3:::my-s3-bucket\"\n]\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"s3:GetObject\",\n\"s3:GetObjectAcl\",\n\"s3:GetObjectLegalHold\",\n\"s3:GetObjectRetention\",\n\"s3:GetObjectTagging\"\n],\n\"Resource\": [\n\"arn:aws:s3:::my-s3-bucket/*\"\n]\n}\n]\n}\nModern LLMs are very good at S3 IAM polices, to the point that if I needed to solve this problem today I doubt I would find it frustrating enough to justify finding or creating a reusable library to help.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "17th November 2025 - Link Blog\nThe fate of “small” open source. Nolan Lawson asks if LLM assistance means that the category of tiny open source libraries like his own blob-util is destined to fade away.\nWhy take on additional supply chain risks adding another dependency when an LLM can likely kick out the subset of functionality needed by your own code to-order?\nI still believe in open source, and I’m still doing it (in fits and starts). But one thing has become clear to me: the era of small, lo",
+  "word_count": 319,
+  "scraped_at": "2026-02-24T08:21:17.553927+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

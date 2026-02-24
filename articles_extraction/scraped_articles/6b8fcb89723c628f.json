@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/tech-waves/ai-that-fixes-itself-inside-codemender-google-deepminds-new-agent-that-patches-vulnerabilities-a766bd307051",
+  "normalized_url": "https://medium.com/tech-waves/ai-that-fixes-itself-inside-codemender-google-deepminds-new-agent-that-patches-vulnerabilities-a766bd307051",
+  "source_type": "medium",
+  "title": "AI That Fixes Itself: Inside CodeMender, Google DeepMind’s New Agent That Patches Vulnerabilities…",
+  "author": "Kamal Acharya",
+  "date": "2025-10-07",
+  "text": "Member-only story\nAI That Fixes Itself: Inside CodeMender, Google DeepMind’s New Agent That Patches Vulnerabilities Automatically\nMeet CodeMender, an autonomous AI system that doesn’t just find software vulnerabilities, it fixes them, validates the patches, and rewrites code to make entire classes of bugs impossible.\nModern software runs everything from critical infrastructure to smartphones, but it’s also riddled with vulnerabilities. Despite decades of security automation, zero-day exploits continue to emerge faster than humans can patch them.\nTraditional techniques like fuzzing and static analysis can find bugs, but they struggle with scale and complexity. As AI models become more capable of reasoning about code, a new frontier has opened: autonomous software repair.\nEnter CodeMender, a research project that signals what might be the biggest leap yet toward self-healing software.\nWhat Is CodeMender?\nDeveloped over the past six months by researchers leveraging the Gemini Deep Think models, CodeMender is an AI-powered agent designed to automatically detect, analyze, and fix software vulnerabilities.",
+  "excerpt": "Member-only story\nAI That Fixes Itself: Inside CodeMender, Google DeepMind’s New Agent That Patches Vulnerabilities Automatically\nMeet CodeMender, an autonomous AI system that doesn’t just find software vulnerabilities, it fixes them, validates the patches, and rewrites code to make entire classes of bugs impossible.\nModern software runs everything from critical infrastructure to smartphones, but it’s also riddled with vulnerabilities. Despite decades of security automation, zero-day exploits co",
+  "word_count": 158,
+  "scraped_at": "2026-02-24T08:26:04.061701+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 4 (balancing)"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/ai-coding/",
+  "normalized_url": "https://stackoverflow.blog/ai-coding",
+  "source_type": "personal_blog",
+  "title": "ai coding",
+  "author": "Phoebe Sajor",
+  "date": "2026-02-24",
+  "text": "Dogfood so nutritious it’s building the future of SDLCs\nRyan welcomes Thibault Sottiaux, OpenAI’s engineering lead on Codex, to discuss how the Codex team dogfoods Codex to build Codex, what distinguishes an agentic coding tool from a chat-based code assistant, and why they’re focusing on a safe and secure agentic SDLC rather than just code generation.",
+  "excerpt": "Dogfood so nutritious it’s building the future of SDLCs\nRyan welcomes Thibault Sottiaux, OpenAI’s engineering lead on Codex, to discuss how the Codex team dogfoods Codex to build Codex, what distinguishes an agentic coding tool from a chat-based code assistant, and why they’re focusing on a safe and secure agentic SDLC rather than just code generation.",
+  "word_count": 56,
+  "scraped_at": "2026-02-24T08:14:12.986364+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog sitemap tags/categories"
+  ]
+}

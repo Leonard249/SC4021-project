@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/15/catherine-wu/",
+  "normalized_url": "https://simonwillison.net/2025/oct/15/catherine-wu",
+  "source_type": "personal_blog",
+  "title": "A quote from Catherine Wu",
+  "author": "Simon Willison",
+  "date": "2025-10-15",
+  "text": "15th October 2025\nWhile Sonnet 4.5 remains the default [in Claude Code], Haiku 4.5 now powers the Explore subagent which can rapidly gather context on your codebase to build apps even faster.\nYou can select Haiku 4.5 to be your default model in /model. When selected, you’ll automatically use Sonnet 4.5 in Plan mode and Haiku 4.5 for execution for smarter plans and faster results.\n— Catherine Wu, Claude Code PM, Anthropic\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "15th October 2025\nWhile Sonnet 4.5 remains the default [in Claude Code], Haiku 4.5 now powers the Explore subagent which can rapidly gather context on your codebase to build apps even faster.\nYou can select Haiku 4.5 to be your default model in /model. When selected, you’ll automatically use Sonnet 4.5 in Plan mode and Haiku 4.5 for execution for smarter plans and faster results.\n— Catherine Wu, Claude Code PM, Anthropic\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd Februar",
+  "word_count": 111,
+  "scraped_at": "2026-02-24T08:22:17.189199+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

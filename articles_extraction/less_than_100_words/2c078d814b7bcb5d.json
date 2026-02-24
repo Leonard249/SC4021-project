@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79346306/why-cursor-ide-automatically-sorting-my-imports-in-react-project",
+  "normalized_url": "https://stackoverflow.com/questions/79346306/why-cursor-ide-automatically-sorting-my-imports-in-react-project",
+  "source_type": "stackoverflow",
+  "title": "Why Cursor IDE automatically sorting my imports in React project?",
+  "author": "Dmitry",
+  "date": "2025-01-11",
+  "text": "I've installed Cursor IDE and opened my React project which I developed using Webstorm IDE. When I did some changes in one of my .jsx files, Cursor automatically sorted my imports by it's own point of view or by alphabet, I'm not sure yet.\nWhy it is doing that and how I can switch it off?\nI tried to find such option in Cursor settings, but did not find that.",
+  "excerpt": "I've installed Cursor IDE and opened my React project which I developed using Webstorm IDE. When I did some changes in one of my .jsx files, Cursor automatically sorted my imports by it's own point of view or by alphabet, I'm not sure yet.\nWhy it is doing that and how I can switch it off?\nI tried to find such option in Cursor settings, but did not find that.",
+  "word_count": 70,
+  "scraped_at": "2026-02-24T08:21:47.520877+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:cursor IDE"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77539244/aws-copilot-nlb-port443-tls",
+  "normalized_url": "https://stackoverflow.com/questions/77539244/aws-copilot-nlb-port443-tls",
+  "source_type": "stackoverflow",
+  "title": "AWS Copilot NLB port:443/tls",
+  "author": "Seb",
+  "date": "2023-11-23",
+  "text": "I've created a hello world listening to the port 80 and deployed with AWS Copilot using a NLB. It works... Now, I'd like to deployed as Https . So I use the port 443/tls. When deploying it doesn't give any error but simply it doesnt work. The browser would hang for ever if I try to open the URL that copilota tell me to open. Any ideas ?\nTried different ports.",
+  "excerpt": "I've created a hello world listening to the port 80 and deployed with AWS Copilot using a NLB. It works... Now, I'd like to deployed as Https . So I use the port 443/tls. When deploying it doesn't give any error but simply it doesnt work. The browser would hang for ever if I try to open the URL that copilota tell me to open. Any ideas ?\nTried different ports.",
+  "word_count": 71,
+  "scraped_at": "2026-02-24T08:20:53.499360+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

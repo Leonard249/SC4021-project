@@ -1,0 +1,16 @@
+{
+  "url": "https://prototypr.io/note/vibe-coding-cursor-windsurf-slot-machine",
+  "normalized_url": "https://prototypr.io/note/vibe-coding-cursor-windsurf-slot-machine",
+  "source_type": "personal_blog",
+  "title": "Vibe Coding: Cursor, Windsurf, and Developer Slot Machines",
+  "author": null,
+  "date": "2025-04-29",
+  "text": "House of Cards\nI've been a Cursor subscriber for over a year, and I find its performance can vary depending on the project. Sometimes it's amazing, sometimes it's frustrating, a bit like the Illusion of AI Productivity chart:\nToday I spent $10 trying out the recent Claude 3.7 MAX model, finding it amazing at first, only to find it crashing to nothing like a house of cards (as Addy Osmani put it).\nDeveloper slot machines\nI started getting frustrated waiting for Claude 3.5 to spin in circles inside Cursor, and then exchanging my coins for Claude 3.7 tokens like a developer slot machine (from a user experience perspective), not knowing what code is going to come out. It's so easy to pay more too, with just a click:\nMeanwhile, my friend was raving about Windsurf building his Town events community app, and I also started hearing how Windsurf might be outperforming Cursor, prompting me to give Windsurf another look.\nThe fact that Windsurf is unseating Cursor right now is a signal that, even with commodity LLMs, Windsurf is offering a better product than Cursor.\nI don't know if it'll turn out better yet, but it's so easy to try.\nWith everything being built on VS Code, it feels like I'm just moving onto the next slot machine in the same casino. When Windsurf stops spitting out in good code, I'll probably jump back over to Cursor.\nAI IDEs need moats\nAs I perviously mentioned, there's no friction to switching IDEs - it's like picking up another pen. Chris put it another way - AI IDEs need a moat:\nYou can even use them at the same time! Windsurf, Cursor, and all the other VS Code forks can open the same workspace files, and you can drag tabs between each of them, as if they're the same program:\nUntil one of these IDEs builds a real moat, something more than just interface changes, or temporary LLM edge, devs will probably keep hopping between IDEs. For me as a user that's fine, but it makes me wonder where it's all going - does it all just lead back to VS Code?",
+  "excerpt": "House of Cards\nI've been a Cursor subscriber for over a year, and I find its performance can vary depending on the project. Sometimes it's amazing, sometimes it's frustrating, a bit like the Illusion of AI Productivity chart:\nToday I spent $10 trying out the recent Claude 3.7 MAX model, finding it amazing at first, only to find it crashing to nothing like a house of cards (as Addy Osmani put it).\nDeveloper slot machines\nI started getting frustrated waiting for Claude 3.5 to spin in circles insid",
+  "word_count": 359,
+  "scraped_at": "2026-02-24T08:08:28.396637+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com high volume high quality batch 4"
+  ]
+}

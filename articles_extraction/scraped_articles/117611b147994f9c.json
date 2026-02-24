@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/11/agentic-pelican-on-a-bicycle/",
+  "normalized_url": "https://simonwillison.net/2025/nov/11/agentic-pelican-on-a-bicycle",
+  "source_type": "personal_blog",
+  "title": "Agentic Pelican on a Bicycle",
+  "author": "Simon Willison",
+  "date": "2025-11-11",
+  "text": "11th November 2025 - Link Blog\nAgentic Pelican on a Bicycle (via) Robert Glaser took my pelican riding a bicycle benchmark and applied an agentic loop to it, seeing if vision models could draw a better pelican if they got the chance to render their SVG to an image and then try again until they were happy with the end result.\nHere's what Claude Opus 4.1 got to after four iterations - I think the most interesting result of the models Robert tried:\nI tried a similar experiment to this a few months ago in preparation for the GPT-5 launch and was surprised at how little improvement it produced.\nRobert's \"skeptical take\" conclusion is similar to my own:\nMost models didn’t fundamentally change their approach. They tweaked. They adjusted. They added details. But the basic composition—pelican shape, bicycle shape, spatial relationship—was determined in iteration one and largely frozen thereafter.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "11th November 2025 - Link Blog\nAgentic Pelican on a Bicycle (via) Robert Glaser took my pelican riding a bicycle benchmark and applied an agentic loop to it, seeing if vision models could draw a better pelican if they got the chance to render their SVG to an image and then try again until they were happy with the end result.\nHere's what Claude Opus 4.1 got to after four iterations - I think the most interesting result of the models Robert tried:\nI tried a similar experiment to this a few months ",
+  "word_count": 188,
+  "scraped_at": "2026-02-24T08:20:58.046652+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

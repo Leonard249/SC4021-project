@@ -1,0 +1,16 @@
+{
+  "url": "https://bsky.app/profile/hillelwayne.com/post/3lmgjrjzis22w",
+  "normalized_url": "https://bsky.app/profile/hillelwayne.com/post/3lmgjrjzis22w",
+  "source_type": "other_blog",
+  "title": "Hillel (@hillelwayne.com)",
+  "author": null,
+  "date": "2025-04-10",
+  "text": "This is a heavily interactive web application, and JavaScript is required. Simple HTML interfaces are possible, but that is not what this is.\nPost\nHillel\nhillelwayne.com\ndid:plc:rvlyeda73kxm7l2weegk73pa\nVibe coding makes it really clear how many amazingly useful programs fall in the 50-100 line range and the only reason I hadn't made them already is that I didn't want to learn the libraries required for 40 of those lines\n2025-04-10T03:10:54.084Z",
+  "excerpt": "This is a heavily interactive web application, and JavaScript is required. Simple HTML interfaces are possible, but that is not what this is.\nPost\nHillel\nhillelwayne.com\ndid:plc:rvlyeda73kxm7l2weegk73pa\nVibe coding makes it really clear how many amazingly useful programs fall in the 50-100 line range and the only reason I hadn't made them already is that I didn't want to learn the libraries required for 40 of those lines\n2025-04-10T03:10:54.084Z",
+  "word_count": 69,
+  "scraped_at": "2026-02-24T08:09:48.393583+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hillelwayne.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

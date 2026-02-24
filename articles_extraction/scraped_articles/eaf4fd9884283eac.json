@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79734340/disable-copilot-in-vs-code",
+  "normalized_url": "https://stackoverflow.com/questions/79734340/disable-copilot-in-vs-code",
+  "source_type": "stackoverflow",
+  "title": "Disable Copilot in VS Code",
+  "author": "Holly",
+  "date": "2025-08-15",
+  "text": "I want to completely disable Copilot in VS Code.\nThere are some old questions about this, but VS Code has changed enough to make them obsolete:\n- Copilot is no longer an extension;\n- Ctrl+Shift+P no longer has a \"hide copilot\" or \"disable copilot\" entry; and\nsettings.json\nno longer thinksgithub.copilot.enable\nis a thing.\nI'm on Windows 11 (24H2) with VS Code 1.102.3.\nSo far I've got the latest recommended:\n\"chat.agent.enabled\": false,\n\"chat.commandCenter.enabled\": false,\n\"chat.notifyWindowOnConfirmation\": false,\nbut when I use the {}\nbutton next to the file type (e.g. Plain Text\n) I still get the Copilot icon with the text \"No inline suggestion available\", so it seems I haven't got rid of it completely.",
+  "excerpt": "I want to completely disable Copilot in VS Code.\nThere are some old questions about this, but VS Code has changed enough to make them obsolete:\n- Copilot is no longer an extension;\n- Ctrl+Shift+P no longer has a \"hide copilot\" or \"disable copilot\" entry; and\nsettings.json\nno longer thinksgithub.copilot.enable\nis a thing.\nI'm on Windows 11 (24H2) with VS Code 1.102.3.\nSo far I've got the latest recommended:\n\"chat.agent.enabled\": false,\n\"chat.commandCenter.enabled\": false,\n\"chat.notifyWindowOnConf",
+  "word_count": 114,
+  "scraped_at": "2026-02-24T08:18:11.694650+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

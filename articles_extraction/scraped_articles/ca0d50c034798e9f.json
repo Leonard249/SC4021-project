@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77667243/how-to-use-github-copilot-with",
+  "normalized_url": "https://stackoverflow.com/questions/77667243/how-to-use-github-copilot-with",
+  "source_type": "stackoverflow",
+  "title": "How to use GitHub Copilot with \"??\"",
+  "author": "Yingjz",
+  "date": "2023-12-15",
+  "text": "Many blog show that they can use GitHub Copilot with ?? ...\n. However, according to the official docs, you can only use it with gh copilot explain ...\nor gh copilot suggest ...\n.\nI have found that their difference is the way of installation:\n- The former version is installed through npm:\nnpm install -g @githubnext/github-copilot-cli\n- The latter version is installed through\ngh extension install github/gh-copilot\nI have tried to install with npm, but when I tried to auth it with my GitHub account, it told me that I'm not on the waitlist and refused. However, the waitlist doesn't exist now because this tool is in beta stage.\nPS: I'm a college student, so my copilot plan is free version (included in the student pack). I'm not sure whether this matters.",
+  "excerpt": "Many blog show that they can use GitHub Copilot with ?? ...\n. However, according to the official docs, you can only use it with gh copilot explain ...\nor gh copilot suggest ...\n.\nI have found that their difference is the way of installation:\n- The former version is installed through npm:\nnpm install -g @githubnext/github-copilot-cli\n- The latter version is installed through\ngh extension install github/gh-copilot\nI have tried to install with npm, but when I tried to auth it with my GitHub account",
+  "word_count": 134,
+  "scraped_at": "2026-02-24T08:20:51.586727+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

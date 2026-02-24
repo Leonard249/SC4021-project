@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77580213/how-to-get-gpt-4-copilot",
+  "normalized_url": "https://stackoverflow.com/questions/77580213/how-to-get-gpt-4-copilot",
+  "source_type": "stackoverflow",
+  "title": "How to get GPT 4 Copilot",
+  "author": "David Ogletree",
+  "date": "2023-11-30",
+  "text": "I just signed up for the Github Copilot Business and installed Visual Studio Code for Mac. I added the GitHub Copilot and the GitHub Copilot Chat extensions. When I asked it what version it was using it said it was using GPT 3.\nI am on the paid-plan (20$ for a month).\nHow can I get it to use GPT 4?",
+  "excerpt": "I just signed up for the Github Copilot Business and installed Visual Studio Code for Mac. I added the GitHub Copilot and the GitHub Copilot Chat extensions. When I asked it what version it was using it said it was using GPT 3.\nI am on the paid-plan (20$ for a month).\nHow can I get it to use GPT 4?",
+  "word_count": 61,
+  "scraped_at": "2026-02-24T08:21:11.934880+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

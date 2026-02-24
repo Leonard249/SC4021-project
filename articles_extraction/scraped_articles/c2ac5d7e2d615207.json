@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79530541/cursor-ide-overwrite-tab-complete-without-disabling-it-in-python",
+  "normalized_url": "https://stackoverflow.com/questions/79530541/cursor-ide-overwrite-tab-complete-without-disabling-it-in-python",
+  "source_type": "stackoverflow",
+  "title": "Cursor IDE overwrite TAB complete without disabling it in python",
+  "author": "Daniel 1",
+  "date": "2025-03-27",
+  "text": "I'm using cursor for a while not and I generally like it but it's incredible annoying when programming in python. The image below shows a simple example. My cursor is in line 22 and I just want to insert a TAB space since I do not want to autocomplete the suggestion in line 21. However as far as I know it's impossible to suppress this TAB autocomplete without turning it off (entirely or for python). I wonder if there is no good solution (e.g. to be able to use Shift + Tab to insert a TAB space without accepting the AI suggestion)?\nThis is so annoying that 95% of the time I leave the cursor TAB completion off in python which is a shame because the quality of the AI suggestions is really good most of time.\nI don't like to fiddle with the settings for hours to see if there is an easy fix for this so I just ask this here. I also saw similar questions but they were a few months old so I'm wondering if anything has changed since then.",
+  "excerpt": "I'm using cursor for a while not and I generally like it but it's incredible annoying when programming in python. The image below shows a simple example. My cursor is in line 22 and I just want to insert a TAB space since I do not want to autocomplete the suggestion in line 21. However as far as I know it's impossible to suppress this TAB autocomplete without turning it off (entirely or for python). I wonder if there is no good solution (e.g. to be able to use Shift + Tab to insert a TAB space w",
+  "word_count": 184,
+  "scraped_at": "2026-02-24T08:21:45.797532+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:cursor IDE"
+  ]
+}

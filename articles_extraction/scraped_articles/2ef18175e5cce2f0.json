@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/13/obie-fernandez/",
+  "normalized_url": "https://simonwillison.net/2025/dec/13/obie-fernandez",
+  "source_type": "personal_blog",
+  "title": "A quote from Obie Fernandez",
+  "author": "Simon Willison",
+  "date": "2025-12-13",
+  "text": "13th December 2025\nIf the part of programming you enjoy most is the physical act of writing code, then agents will feel beside the point. You’re already where you want to be, even just with some Copilot or Cursor-style intelligent code auto completion, which makes you faster while still leaving you fully in the driver’s seat about the code that gets written.\nBut if the part you care about is the decision-making around the code, agents feel like they clear space. They take care of the mechanical expression and leave you with judgment, tradeoffs, and intent. Because truly, for someone at my experience level, that is my core value offering anyway. When I spend time actually typing code these days with my own fingers, it feels like a waste of my time.\n— Obie Fernandez, What happens when the coding becomes the least interesting part of the work\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "13th December 2025\nIf the part of programming you enjoy most is the physical act of writing code, then agents will feel beside the point. You’re already where you want to be, even just with some Copilot or Cursor-style intelligent code auto completion, which makes you faster while still leaving you fully in the driver’s seat about the code that gets written.\nBut if the part you care about is the decision-making around the code, agents feel like they clear space. They take care of the mechanical ",
+  "word_count": 187,
+  "scraped_at": "2026-02-24T08:17:34.458409+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

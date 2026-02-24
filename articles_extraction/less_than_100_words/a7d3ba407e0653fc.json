@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2025/07/22/ai-has-been-the-wild-west-creating-standards-for-agents-with-sean-falconer/",
+  "normalized_url": "https://stackoverflow.blog/2025/07/22/ai-has-been-the-wild-west-creating-standards-for-agents-with-sean-falconer",
+  "source_type": "personal_blog",
+  "title": "“AI has been the wild west”: Creating standards for agents with Sean Falconer",
+  "author": "Phoebe Sajor",
+  "date": "2025-07-22",
+  "text": "Confluent is an all-in-one, real-time platform that allows you to stream, connect, process, and govern your data.\nConnect with Sean on Linkedin, and listen to the Software Engineering Daily podcast, where he co-hosts.\nDo you know the answer to Loadrunner lr_get_attrib_string always returns null? If so, you can help out Trncvs and receive the bounty offered on the question.",
+  "excerpt": "Confluent is an all-in-one, real-time platform that allows you to stream, connect, process, and govern your data.\nConnect with Sean on Linkedin, and listen to the Software Engineering Daily podcast, where he co-hosts.\nDo you know the answer to Loadrunner lr_get_attrib_string always returns null? If so, you can help out Trncvs and receive the bounty offered on the question.",
+  "word_count": 59,
+  "scraped_at": "2026-02-24T08:19:06.754785+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow agentic-ai category sweep"
+  ]
+}

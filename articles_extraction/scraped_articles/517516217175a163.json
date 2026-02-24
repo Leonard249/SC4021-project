@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Feb/12/anthropic/",
+  "normalized_url": "https://simonwillison.net/2026/feb/12/anthropic",
+  "source_type": "personal_blog",
+  "title": "A quote from Anthropic",
+  "author": "Simon Willison",
+  "date": "2026-02-12",
+  "text": "12th February 2026\nClaude Code was made available to the general public in May 2025. Today, Claude Code’s run-rate revenue has grown to over $2.5 billion; this figure has more than doubled since the beginning of 2026. The number of weekly active Claude Code users has also doubled since January 1 [six weeks ago].\n— Anthropic, announcing their $30 billion series G\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "12th February 2026\nClaude Code was made available to the general public in May 2025. Today, Claude Code’s run-rate revenue has grown to over $2.5 billion; this figure has more than doubled since the beginning of 2026. The number of weekly active Claude Code users has also doubled since January 1 [six weeks ago].\n— Anthropic, announcing their $30 billion series G\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research ",
+  "word_count": 101,
+  "scraped_at": "2026-02-24T08:19:47.359674+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

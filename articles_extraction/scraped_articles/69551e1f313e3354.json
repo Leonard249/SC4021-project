@@ -1,0 +1,16 @@
+{
+  "url": "https://www.linkedin.com/posts/steveyegge_the-brute-squad-sourcegraph-blog-activity-7341134975548760065-L--T",
+  "normalized_url": "https://www.linkedin.com/posts/steveyegge_the-brute-squad-sourcegraph-blog-activity-7341134975548760065-l--t",
+  "source_type": "other_blog",
+  "title": "The Brute Squad | Sourcegraph Blog | Steve Yegge | 12 comments",
+  "author": "Steve Yegge",
+  "date": "2025-06-18",
+  "text": "Hi friends! I just put up a new blog post about the current rapid rise of Agentic vibe coding using autonomous agents. It's called \"The Brute Squad\": https://lnkd.in/g-aMm2GF This is my follow-up to Revenge of the Junior Developer. More jokes, more news, maybe some insights. I hope you find it as fun to read as it was to write! Enjoy.\nI do like token spend per developer as a metric. However, I wouldn’t equate it as a boost to productivity boost directly, at least not in the direct sense of “2x productivity increase you get 2x more shit done or ship features faster.” Its definitely a factor, but a more interesting angle is quality. Code is now sooo cheap, I’m able to test way more ideas, explore the solution space and pick the right approach for the problem. This is the real superpower to me. 🚀\nActually I still use IDEs and web views like github, but much more for seeing and navigating codebases rather than writing new code from scratch (and, let's face it, writing new code was always the fun part, and seeing how it really interacts with everything else was always the hard part). So now I interact with chatbots and new code just as in your 1970s command line description, and seem to have windows and tabs open all over trying to preempt whatever problem that new code is going to encounter next. Yes, I'm more productive now, can't argue with that part, but often feel much less single-thread focused, and much more like a shepherd using peripheral vision the whole time.\nThis stuff sux for those of us who's coding style is not idiomatic 🙂 I guess the whole concept of beautiful elegant code is gone and it's industrial all the way down now.\nThe slot machine/addictive nature is dead on, I feel seen (as the kids say)\nWho had \"favorite thing about the rise of AI: Steve Yegge starts blogging again\" on their bingo card?\nReally resonated with this, Steve Yegge. I’ve been working this way for a couple of years. Back when you were calling it CHOP in 2024, I was calling it CHAP, and now it’s vibe coding. The shift is real, and you captured the pace and pressure perfectly.\nYour writing style is spectacular\nA banger, as always\nsuperb read 👌🙏",
+  "excerpt": "Hi friends! I just put up a new blog post about the current rapid rise of Agentic vibe coding using autonomous agents. It's called \"The Brute Squad\": https://lnkd.in/g-aMm2GF This is my follow-up to Revenge of the Junior Developer. More jokes, more news, maybe some insights. I hope you find it as fun to read as it was to write! Enjoy.\nI do like token spend per developer as a metric. However, I wouldn’t equate it as a boost to productivity boost directly, at least not in the direct sense of “2x p",
+  "word_count": 390,
+  "scraped_at": "2026-02-24T08:11:29.581995+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "sourcegraph.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

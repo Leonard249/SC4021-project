@@ -1,0 +1,16 @@
+{
+  "url": "https://cognition.ai/blog/introducing-devin",
+  "normalized_url": "https://cognition.ai/blog/introducing-devin",
+  "source_type": "other_blog",
+  "title": "Related posts",
+  "author": null,
+  "date": "2025-09-29",
+  "text": "Devin was evaluated on a random 25% subset of the dataset. Devin was unassisted, whereas all other models were assisted (meaning the model was told exactly which files need to be edited).\nWe plan to publish a more detailed technical report soon—stay tuned for more details.\nWe are an applied AI lab focused on reasoning.We’re building AI teammates with capabilities far beyond today’s existing AI tools. By solving reasoning, we can unlock new possibilities in a wide range of disciplines—code is just the beginning. We want to help people around the world turn their ideas into reality.\nWe are well funded, including a $21 million Series A led by Founders Fund. And we’re grateful for the support of industry leaders including Patrick and John Collison, Elad Gil, Sarah Guo, Chris Re, Eric Glyman, Karim Atiyeh, Erik Bernhardsson, Tony Xu, Fred Ehrsam and so many more.\nDevin is currently in early access as we ramp up capacity. To start using Devin for engineering work, join the waitlist or get in touch at info@cognition.ai.",
+  "excerpt": "Devin was evaluated on a random 25% subset of the dataset. Devin was unassisted, whereas all other models were assisted (meaning the model was told exactly which files need to be edited).\nWe plan to publish a more detailed technical report soon—stay tuned for more details.\nWe are an applied AI lab focused on reasoning.We’re building AI teammates with capabilities far beyond today’s existing AI tools. By solving reasoning, we can unlock new possibilities in a wide range of disciplines—code is jus",
+  "word_count": 172,
+  "scraped_at": "2026-02-24T08:05:20.200015+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "AI software engineer"
+  ]
+}

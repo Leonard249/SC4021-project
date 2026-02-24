@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76533194/neovim-github-copilot-notsignedin-but-authenticated",
+  "normalized_url": "https://stackoverflow.com/questions/76533194/neovim-github-copilot-notsignedin-but-authenticated",
+  "source_type": "stackoverflow",
+  "title": "Neovim GitHub Copilot NotSignedIn, but Authenticated",
+  "author": "Tim Anthony",
+  "date": "2023-06-22",
+  "text": "GitHub Copilot in NeoVim was always working, up until five minutes ago. The response from the server is \"[Copilot] Not Authenticated: NotSignedIn\", but when I do :Copilot auth It says \"[Copilot] Authenticated as Github user XYZ\".\nI did not change anything, and it does not seem to work, even after plugin reinstallation or system restart. The plugin seems to have no \"logout\" option either.\nI am using the \"zbirenbaum/copilot.lua\" plugin in AstroNvim.\nIs there a way to \"deauth\" somehow? The only available commands to me are: auth, attach, detach, disable, enable, panel, status, suggestion, toggle, version.\nI have tried uninstalling the plugin and reinstalling it, restarting my system, doing \":Copilot detach\", \":Copilot disable\", \":Copilot toggle\", and also \":Copilot auth\" to reauth, but it uses the old session I believe.",
+  "excerpt": "GitHub Copilot in NeoVim was always working, up until five minutes ago. The response from the server is \"[Copilot] Not Authenticated: NotSignedIn\", but when I do :Copilot auth It says \"[Copilot] Authenticated as Github user XYZ\".\nI did not change anything, and it does not seem to work, even after plugin reinstallation or system restart. The plugin seems to have no \"logout\" option either.\nI am using the \"zbirenbaum/copilot.lua\" plugin in AstroNvim.\nIs there a way to \"deauth\" somehow? The only ava",
+  "word_count": 129,
+  "scraped_at": "2026-02-24T08:20:26.605699+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

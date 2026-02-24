@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76940225/github-copilot-configuration-fails-for-neovim",
+  "normalized_url": "https://stackoverflow.com/questions/76940225/github-copilot-configuration-fails-for-neovim",
+  "source_type": "stackoverflow",
+  "title": "Github Copilot configuration fails for neovim",
+  "author": "Tauseef Razaq",
+  "date": "2023-08-23",
+  "text": "Github copilot configuration in neovim fails.\nI tried to use Github copilot in neovim on windows using this documentation. After cloning repo, I wrote :Copilot setup in neovim but I got the following error\nNot an editor command: Copilot setup\nHow to fix this",
+  "excerpt": "Github copilot configuration in neovim fails.\nI tried to use Github copilot in neovim on windows using this documentation. After cloning repo, I wrote :Copilot setup in neovim but I got the following error\nNot an editor command: Copilot setup\nHow to fix this",
+  "word_count": 44,
+  "scraped_at": "2026-02-24T08:20:44.588724+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

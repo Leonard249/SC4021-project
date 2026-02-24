@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/21/ooda-loop/",
+  "normalized_url": "https://simonwillison.net/2025/oct/21/ooda-loop",
+  "source_type": "personal_blog",
+  "title": "A quote from Bruce Schneier and Barath Raghavan",
+  "author": "Simon Willison",
+  "date": "2025-10-21",
+  "text": "21st October 2025\nPrompt injection might be unsolvable in today’s LLMs. LLMs process token sequences, but no mechanism exists to mark token privileges. Every solution proposed introduces new injection vectors: Delimiter? Attackers include delimiters. Instruction hierarchy? Attackers claim priority. Separate models? Double the attack surface. Security requires boundaries, but LLMs dissolve boundaries. [...]\nPoisoned states generate poisoned outputs, which poison future states. Try to summarize the conversation history? The summary includes the injection. Clear the cache to remove the poison? Lose all context. Keep the cache for continuity? Keep the contamination. Stateful systems can’t forget attacks, and so memory becomes a liability. Adversaries can craft inputs that corrupt future outputs.\n— Bruce Schneier and Barath Raghavan, Agentic AI’s OODA Loop Problem\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "21st October 2025\nPrompt injection might be unsolvable in today’s LLMs. LLMs process token sequences, but no mechanism exists to mark token privileges. Every solution proposed introduces new injection vectors: Delimiter? Attackers include delimiters. Instruction hierarchy? Attackers claim priority. Separate models? Double the attack surface. Security requires boundaries, but LLMs dissolve boundaries. [...]\nPoisoned states generate poisoned outputs, which poison future states. Try to summarize th",
+  "word_count": 160,
+  "scraped_at": "2026-02-24T08:22:45.234918+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

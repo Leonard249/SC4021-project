@@ -1,0 +1,16 @@
+{
+  "url": "https://cursor.com/students",
+  "normalized_url": "https://cursor.com/students",
+  "source_type": "corporate_blog",
+  "title": "Cursor · Students",
+  "author": null,
+  "date": "2026-01-01",
+  "text": "Empowering the next generation of developers.\nEligible university students get one free year of Cursor Pro.\nUsed every day by students at\nThe way students everywhere code with AI.\nBring Cursor to your classroom.\nIf you're an educator or student community leader, we'd love to partner with you.",
+  "excerpt": "Empowering the next generation of developers.\nEligible university students get one free year of Cursor Pro.\nUsed every day by students at\nThe way students everywhere code with AI.\nBring Cursor to your classroom.\nIf you're an educator or student community leader, we'd love to partner with you.",
+  "word_count": 48,
+  "scraped_at": "2026-02-24T08:11:23.804578+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "cursor.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

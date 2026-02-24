@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/swlh/ai-assisted-coding-for-casual-developers-8a9bbe44f041",
+  "normalized_url": "https://medium.com/swlh/ai-assisted-coding-for-casual-developers-8a9bbe44f041",
+  "source_type": "medium",
+  "title": "AI-assisted coding for casual developers",
+  "author": "Karl Mochel",
+  "date": "2025-01-11",
+  "text": "Member-only story\nPRACTICAL DESIGN INNOVATION\nAI-assisted coding for casual developers\nLessons from a casual coder using ChatGPT, VSCode Copilot, and Claude.ai to develop a web app.\nWhen I set out to create a tool for 3D printing letter stamps for my daughter, I wasn’t aiming to write perfect code or reinvent the wheel. I wanted a functional web app that could quickly generate text with precise kerning and alignments in various fonts. It seemed like the perfect opportunity to leverage AI tools.\nAs a casual coder with a background in computer science but limited experience in production coding, I thought these tools could help fill the gaps in my expertise. While they proved invaluable in many ways — writing code and speeding up development — they also introduced challenges. Miscommunications, regressions, and debugging hurdles turned this project into a crash course in collaborating with AI tools effectively.\nI was able to use ChatGPT with some help from Claude and VSCode Copilot to develop the web app I wanted, but I still needed some basic HTML/CSS/JS coding/debugging skills to complete it.\nYou can check out the final page here and use it to understand some of the issues mentioned below. The Project section explains the steps I took. The Postmortem…",
+  "excerpt": "Member-only story\nPRACTICAL DESIGN INNOVATION\nAI-assisted coding for casual developers\nLessons from a casual coder using ChatGPT, VSCode Copilot, and Claude.ai to develop a web app.\nWhen I set out to create a tool for 3D printing letter stamps for my daughter, I wasn’t aiming to write perfect code or reinvent the wheel. I wanted a functional web app that could quickly generate text with precise kerning and alignments in various fonts. It seemed like the perfect opportunity to leverage AI tools.\n",
+  "word_count": 209,
+  "scraped_at": "2026-02-24T08:27:31.804857+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com AI-assisted coding"
+  ]
+}

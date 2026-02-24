@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77374105/invalid-copilot-token-missing-token-403",
+  "normalized_url": "https://stackoverflow.com/questions/77374105/invalid-copilot-token-missing-token-403",
+  "source_type": "stackoverflow",
+  "title": "Invalid copilot token: missing token: 403",
+  "author": "Yafeshan Ünal",
+  "date": "2025-02-28",
+  "text": "I have been using Copilot for a long time. Yesterday I changed my GitHub password and started getting this error in Copilot:\nInvalid copilot token: missing token: 403\nI tried logging in and out and reinstalling the IDE, but unfortunately I didn't get any results.\nI tried closing and reopening my account and restarting the IDE.",
+  "excerpt": "I have been using Copilot for a long time. Yesterday I changed my GitHub password and started getting this error in Copilot:\nInvalid copilot token: missing token: 403\nI tried logging in and out and reinstalling the IDE, but unfortunately I didn't get any results.\nI tried closing and reopening my account and restarting the IDE.",
+  "word_count": 56,
+  "scraped_at": "2026-02-24T08:17:53.678833+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

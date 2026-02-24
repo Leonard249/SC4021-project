@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76162353/github-copilot-not-launching-with-vscode",
+  "normalized_url": "https://stackoverflow.com/questions/76162353/github-copilot-not-launching-with-vscode",
+  "source_type": "stackoverflow",
+  "title": "Github Copilot not launching with VSCode",
+  "author": "Alex X",
+  "date": "2023-05-03",
+  "text": "I am on Linux and I use VS Code, every time I restart VS Code, Copilot is just not there. In Output, it doesn't show up either, so I am pretty sure it is just not starting. I am logged into GitHub and the GitHub Authentication seems to be successful. I have Copilot as part of the Developer Students pack.\nI tried uninstalling and installing other versions, it didn't help, the only thing that helps is deleting the extension folder and then reinstalling.",
+  "excerpt": "I am on Linux and I use VS Code, every time I restart VS Code, Copilot is just not there. In Output, it doesn't show up either, so I am pretty sure it is just not starting. I am logged into GitHub and the GitHub Authentication seems to be successful. I have Copilot as part of the Developer Students pack.\nI tried uninstalling and installing other versions, it didn't help, the only thing that helps is deleting the extension folder and then reinstalling.",
+  "word_count": 83,
+  "scraped_at": "2026-02-24T08:20:31.217299+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

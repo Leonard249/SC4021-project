@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/71806576/why-is-my-github-copilot-not-working-all-of-a-sudden",
+  "normalized_url": "https://stackoverflow.com/questions/71806576/why-is-my-github-copilot-not-working-all-of-a-sudden",
+  "source_type": "stackoverflow",
+  "title": "why is my github copilot not working all of a sudden?",
+  "author": "Arnish B",
+  "date": "2024-09-10",
+  "text": "I have been using copilot for a while now, and one fine day on opening VSCode this error appeared.\n[ERROR] [default] [2022-04-09T08:38:10.995Z] GitHub Copilot could not connect to server. Extension activation failed: \"certificate has expired\"\nI looked up for it everywhere and found nothing, it'd be a great help if someone could fix this for me!\nhere's the error and how the extension looks like on the status bar",
+  "excerpt": "I have been using copilot for a while now, and one fine day on opening VSCode this error appeared.\n[ERROR] [default] [2022-04-09T08:38:10.995Z] GitHub Copilot could not connect to server. Extension activation failed: \"certificate has expired\"\nI looked up for it everywhere and found nothing, it'd be a great help if someone could fix this for me!\nhere's the error and how the extension looks like on the status bar",
+  "word_count": 69,
+  "scraped_at": "2026-02-24T08:17:42.223525+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

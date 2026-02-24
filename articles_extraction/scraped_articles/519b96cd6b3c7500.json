@@ -1,0 +1,16 @@
+{
+  "url": "https://alirezarezvani.medium.com/claude-code-complete-mastery-guide-for-solo-developers-using-claude-code-4e3e2cd38d5f",
+  "normalized_url": "https://alirezarezvani.medium.com/claude-code-complete-mastery-guide-for-solo-developers-using-claude-code-4e3e2cd38d5f",
+  "source_type": "medium",
+  "title": "Claude Code Complete Mastery Guide: For Solo Developers Using Claude Code",
+  "author": "Reza Rezvani",
+  "date": "2025-11-03",
+  "text": "Member-only story\nClaude Code Complete Mastery Guide: For Solo Developers Using Claude Code\nWhy 85% of developers use AI tools, but only 15% build the context systems that make them reliable.\nDisclosure: I used AI tools to help refine and structure this content. The insights and code examples are from my direct work experience or my own research and investigational work.\nThe Wake-Up Call\nThree months into a six-week consulting project, I sat staring at deployment errors at night. The client email had arrived an hour earlier: “We need to discuss timeline adjustments.”\nTranslation: You’re behind, and we’re worried.\nI’d been using Claude Code for months. Daily. But my outputs looked like they came from someone who’d just discovered autocomplete — fast, yes, but brittle. Code that worked until it didn’t. Documentation that explained what but never why.\nThat’s when I realized:\nClaude Code’s future isn’t about writing code faster. It’s about thinking about systems differently.\nAfter restructuring my entire workflow around that insight, I shipped what should have been three weeks of work in four days. Debugging time dropped 65%. More importantly, the architecture…",
+  "excerpt": "Member-only story\nClaude Code Complete Mastery Guide: For Solo Developers Using Claude Code\nWhy 85% of developers use AI tools, but only 15% build the context systems that make them reliable.\nDisclosure: I used AI tools to help refine and structure this content. The insights and code examples are from my direct work experience or my own research and investigational work.\nThe Wake-Up Call\nThree months into a six-week consulting project, I sat staring at deployment errors at night. The client emai",
+  "word_count": 185,
+  "scraped_at": "2026-02-24T08:30:50.034759+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com claude code"
+  ]
+}

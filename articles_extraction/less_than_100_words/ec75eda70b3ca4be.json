@@ -1,0 +1,16 @@
+{
+  "url": "https://x.com/Lethain?lang=en",
+  "normalized_url": "https://x.com/lethain?lang=en",
+  "source_type": "other_blog",
+  "title": "JavaScript is not available.",
+  "author": null,
+  "date": "2026-01-01",
+  "text": "We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.\nHelp Center\nTerms of Service Privacy Policy Cookie Policy Imprint Ads info © 2026 X Corp.",
+  "excerpt": "We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.\nHelp Center\nTerms of Service Privacy Policy Cookie Policy Imprint Ads info © 2026 X Corp.",
+  "word_count": 50,
+  "scraped_at": "2026-02-24T08:12:50.644713+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "lethain.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

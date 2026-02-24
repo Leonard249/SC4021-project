@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76573482/copilot-neovim-keybinding-behave-wrong",
+  "normalized_url": "https://stackoverflow.com/questions/76573482/copilot-neovim-keybinding-behave-wrong",
+  "source_type": "stackoverflow",
+  "title": "Copilot Neovim keybinding behave wrong?",
+  "author": "NoFallToggled",
+  "date": "2023-06-28",
+  "text": "using copilot.vim plugin in neovim the <M+]>, <M+[> and <M+> (M stands for alt) doesn't work, the keybinding are used in insert mode and when i press alt+[ or alt+] which is the keybindings “‘\nthese two characters are typed, technically its the right behavior.\nif so why is keybinding that? Didn't they realize this? I am using U.S. keyboard layout",
+  "excerpt": "using copilot.vim plugin in neovim the <M+]>, <M+[> and <M+> (M stands for alt) doesn't work, the keybinding are used in insert mode and when i press alt+[ or alt+] which is the keybindings “‘\nthese two characters are typed, technically its the right behavior.\nif so why is keybinding that? Didn't they realize this? I am using U.S. keyboard layout",
+  "word_count": 61,
+  "scraped_at": "2026-02-24T08:18:37.417687+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

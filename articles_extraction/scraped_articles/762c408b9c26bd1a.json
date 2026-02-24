@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79724326/how-to-inject-system-prompt-in-cursor-ide-window-by-own-extension",
+  "normalized_url": "https://stackoverflow.com/questions/79724326/how-to-inject-system-prompt-in-cursor-ide-window-by-own-extension",
+  "source_type": "stackoverflow",
+  "title": "How to inject \"system prompt\" in Cursor IDE window by own extension?",
+  "author": "Truthseeker 2",
+  "date": "2025-08-03",
+  "text": "I'm trying to write extension to Cursor IDE which can be also used with other VS like editors. It gives more power to Agent help and it's coding. I'm searching for a couple of last weeks or even months, possibility to inject \"system prompt\" or \"system prompt add\" before I send message with enter hit. Does anyone know how to do it with success? I used official APIs and other methods but everything failed. Maybe someone already did sth like that with success or there is already extension that I could check how it is done there? My extension I'm going to distribute as Open Source or double license. If I succeed for sure I will share with others my success.\nI've tried may approaches, don't want to list them all. Capturing enter button action, overriding code/functions of Cursor IDE and many others. Everything failed.",
+  "excerpt": "I'm trying to write extension to Cursor IDE which can be also used with other VS like editors. It gives more power to Agent help and it's coding. I'm searching for a couple of last weeks or even months, possibility to inject \"system prompt\" or \"system prompt add\" before I send message with enter hit. Does anyone know how to do it with success? I used official APIs and other methods but everything failed. Maybe someone already did sth like that with success or there is already extension that I co",
+  "word_count": 145,
+  "scraped_at": "2026-02-24T08:21:51.385324+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:cursor IDE"
+  ]
+}

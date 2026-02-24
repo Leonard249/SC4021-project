@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/74511049/github-copilot-auto-complete-quotes-and-brackets",
+  "normalized_url": "https://stackoverflow.com/questions/74511049/github-copilot-auto-complete-quotes-and-brackets",
+  "source_type": "stackoverflow",
+  "title": "Github Copilot Auto complete Quotes and Brackets",
+  "author": "Ramazan",
+  "date": "2022-11-20",
+  "text": "i have an issue with github copilot's auto complete. When coding C in vscode, the auto complete suggest me some code but without closing brackets and quotes. how to fix it?\nHere is an example of code (just an example, don't care what is it :)), you can see that the suggestion doesn't have the closing quote and bracket.\nI tried to change auto complete settings but nothing changed.",
+  "excerpt": "i have an issue with github copilot's auto complete. When coding C in vscode, the auto complete suggest me some code but without closing brackets and quotes. how to fix it?\nHere is an example of code (just an example, don't care what is it :)), you can see that the suggestion doesn't have the closing quote and bracket.\nI tried to change auto complete settings but nothing changed.",
+  "word_count": 69,
+  "scraped_at": "2026-02-24T08:21:04.873339+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

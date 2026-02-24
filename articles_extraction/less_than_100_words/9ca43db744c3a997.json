@@ -1,0 +1,16 @@
+{
+  "url": "https://the-council-of-perspectives.vercel.app/",
+  "normalized_url": "https://the-council-of-perspectives.vercel.app",
+  "source_type": "personal_blog",
+  "title": "The Council of Engineering",
+  "author": null,
+  "date": null,
+  "text": "A council of AI experts discussing solutions from different perspectives\nTo get started: (1) Add your Anthropic API key in the settings dialog in the top-right corner, (2) Write your problem statement or question in the box below, and (3) Click \"Start Discussion\" to begin the AI council's deliberation.\nPioneer of object-oriented programming\nCreator of Linux and Git\nNASA's software engineering pioneer\nWaiting for discussion to start...",
+  "excerpt": "A council of AI experts discussing solutions from different perspectives\nTo get started: (1) Add your Anthropic API key in the settings dialog in the top-right corner, (2) Write your problem statement or question in the box below, and (3) Click \"Start Discussion\" to begin the AI council's deliberation.\nPioneer of object-oriented programming\nCreator of Linux and Git\nNASA's software engineering pioneer\nWaiting for discussion to start...",
+  "word_count": 67,
+  "scraped_at": "2026-02-24T08:09:25.724737+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "HN final targeted sweep batch 1"
+  ]
+}

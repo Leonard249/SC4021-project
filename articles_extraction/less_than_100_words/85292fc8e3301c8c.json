@@ -1,0 +1,16 @@
+{
+  "url": "https://supabase.com/blog/tags/vibe-coding",
+  "normalized_url": "https://supabase.com/blog/tags/vibe-coding",
+  "source_type": "corporate_blog",
+  "title": "Blog | Vibe coding",
+  "author": null,
+  "date": "2025-08-16",
+  "text": "16 Aug 2025\n•\n9 minute read\nVibe Coding: Best Practices for Prompting\nMaster the art of communicating with AI coding assistants through effective prompting strategies, iterative refinement, and systematic approaches that turn ideas into deployable applications.",
+  "excerpt": "16 Aug 2025\n•\n9 minute read\nVibe Coding: Best Practices for Prompting\nMaster the art of communicating with AI coding assistants through effective prompting strategies, iterative refinement, and systematic approaches that turn ideas into deployable applications.",
+  "word_count": 37,
+  "scraped_at": "2026-02-24T08:09:01.496604+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "supabase.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79517420/testing-copilot-related-extension",
+  "normalized_url": "https://stackoverflow.com/questions/79517420/testing-copilot-related-extension",
+  "source_type": "stackoverflow",
+  "title": "Testing Copilot-related extension",
+  "author": "J Muros",
+  "date": "2025-03-18",
+  "text": "I'm trying to automate the testing of a Copilot-related extension in VSCode using the VS Code test CLI, and ExTester but in both cases I'm facing the same issue, I cannot sign up into Github to use the Copilot extension in VS Code.\nWhen using ExTester I'm able to click on the button, and then authorize my user to use the extension but the browser instead of redirecting to the VS Code instance where the test are run, it opens a new instance of the VS Code I have installed on my computer. Whereas when I'm using the VS Code test CLI I get an CopilotAuthError error when attempting to execute any of the github copilot commands.\nI've tried to sign up in Github to automate the testing of a Copilot-related extension but none of the method I tried had worked:\nMock an authenticated account using\nvscode.authentication.registerAuthenticationProvider\nUse ExTester to click on the Sign up into Github.\nConfigure Vs Code to use my user data by using\n--user-data-dir\nUse my local installation of VS Code instead of downloading a new one by passing my executable instead of the following:\nconst extensionTestsPath = path.resolve(__dirname, './index'); const vscodeExecutablePath = await downloadAndUnzipVSCode('stable'); const [cliPath, ...args] = resolveCliArgsFromVSCodeExecutablePath(vscodeExecutablePath); // Use cp.spawn / cp.exec for custom setup cp.spawnSync( cliPath, [...args], { encoding: 'utf-8', stdio: 'inherit' } );\nAnd none of those solutions worked for me, so I'm not sure if I'm not doing it correctly or if this is not possible to achieve. Do you know if there is a way for me to configure the test to use my local configuration, where I'm signed up into Github? Or if there is a way to sign up in Github without authorizing my user inside a web browser?",
+  "excerpt": "I'm trying to automate the testing of a Copilot-related extension in VSCode using the VS Code test CLI, and ExTester but in both cases I'm facing the same issue, I cannot sign up into Github to use the Copilot extension in VS Code.\nWhen using ExTester I'm able to click on the button, and then authorize my user to use the extension but the browser instead of redirecting to the VS Code instance where the test are run, it opens a new instance of the VS Code I have installed on my computer. Whereas ",
+  "word_count": 292,
+  "scraped_at": "2026-02-24T08:18:10.183847+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

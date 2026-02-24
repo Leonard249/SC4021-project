@@ -1,0 +1,16 @@
+{
+  "url": "https://agenticinsights.substack.com/",
+  "normalized_url": "https://agenticinsights.substack.com",
+  "source_type": "substack",
+  "title": "Agentic Coding Newsletter | Vaskin Kissoyan | Substack",
+  "author": "Vaskin Kissoyan",
+  "date": "2024-06-07",
+  "text": "Exploring the frontier of agentic AI development tools and workflows, examining how autonomous AI assistants are reshaping the way we think about, write, and ship code.",
+  "excerpt": "Exploring the frontier of agentic AI development tools and workflows, examining how autonomous AI assistants are reshaping the way we think about, write, and ship code.",
+  "word_count": 26,
+  "scraped_at": "2026-02-24T08:23:31.885148+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "substack.com agentic coding"
+  ]
+}

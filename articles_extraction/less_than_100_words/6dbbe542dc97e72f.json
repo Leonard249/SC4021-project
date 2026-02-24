@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78862133/github-copilot-error-unable-to-resolve-model-with-family-selection-gpt-4-in",
+  "normalized_url": "https://stackoverflow.com/questions/78862133/github-copilot-error-unable-to-resolve-model-with-family-selection-gpt-4-in",
+  "source_type": "stackoverflow",
+  "title": "Github Copilot Error - \"Unable to resolve model with family selection: gpt-4\" in Github Copilot",
+  "author": "Paras Elixir 3",
+  "date": "2024-08-12",
+  "text": "I was getting error in Github copilot, without making any changes\n\"Unable to resolve model with family selection: gpt-4\"\nI was getting error in Github copilot, without making any changes\n\"Unable to resolve model with family selection: gpt-4\"\nTo fix it , try adding this settings in VSCode\n\"github.copilot.advanced\": {\n\"debug.useNodeFetcher\": true,\n\"debug.useElectronFetcher\": true\n}\n}\nRestart the editor after updating this setting.\nPreferences\n>Open User Settings (JSON)\nand it worked.Open ctrl+shift+p\nAnd type preferneces:open json settings\nAdd the code\n\"github.copilot.advanced\": {\n\"debug.useNodeFetcher\": true,\n\"debug.useElectronFetcher\": true\n}\nAnd then restart the vscode\nNow you can chat with github copilot",
+  "excerpt": "I was getting error in Github copilot, without making any changes\n\"Unable to resolve model with family selection: gpt-4\"\nI was getting error in Github copilot, without making any changes\n\"Unable to resolve model with family selection: gpt-4\"\nTo fix it , try adding this settings in VSCode\n\"github.copilot.advanced\": {\n\"debug.useNodeFetcher\": true,\n\"debug.useElectronFetcher\": true\n}\n}\nRestart the editor after updating this setting.\nPreferences\n>Open User Settings (JSON)\nand it worked.Open ctrl+shif",
+  "word_count": 99,
+  "scraped_at": "2026-02-24T08:18:34.589787+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

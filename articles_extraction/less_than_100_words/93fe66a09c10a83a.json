@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79745326/how-to-collapse-code-regions-in-cursor-ide-with-command-r",
+  "normalized_url": "https://stackoverflow.com/questions/79745326/how-to-collapse-code-regions-in-cursor-ide-with-command-r",
+  "source_type": "stackoverflow",
+  "title": "How to collapse code regions in Cursor IDE with Command + R?",
+  "author": "Ezzalarab Al-Homaidi",
+  "date": "2025-08-25",
+  "text": "I noticed that Command + K in Cursor IDE is used for generating data using artificial intelligence, which has confused many users who want to collapse code regions. Is there an alternative shortcut for collapsing regions in Cursor IDE?\nIn Cursor IDE, you can collapse code regions using the shortcut Command + R. This allows you to manage your code more efficiently without using Command + K. If anyone has further tips or additional shortcuts related to this functionality, please share!",
+  "excerpt": "I noticed that Command + K in Cursor IDE is used for generating data using artificial intelligence, which has confused many users who want to collapse code regions. Is there an alternative shortcut for collapsing regions in Cursor IDE?\nIn Cursor IDE, you can collapse code regions using the shortcut Command + R. This allows you to manage your code more efficiently without using Command + K. If anyone has further tips or additional shortcuts related to this functionality, please share!",
+  "word_count": 81,
+  "scraped_at": "2026-02-24T08:21:49.776123+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:cursor IDE"
+  ]
+}

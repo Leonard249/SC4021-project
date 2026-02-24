@@ -1,0 +1,17 @@
+{
+  "url": "https://medium.com/tech-ai-chat/mastering-vs-code-copilot-by-understanding-its-context-window-1ca97f318966",
+  "normalized_url": "https://medium.com/tech-ai-chat/mastering-vs-code-copilot-by-understanding-its-context-window-1ca97f318966",
+  "source_type": "medium",
+  "title": "Mastering VS Code Copilot by Understanding Its Context Window",
+  "author": "Elye",
+  "date": "2026-02-22",
+  "text": "Member-only story\nLearning AI Coding\nMastering VS Code Copilot by Understanding Its Context Window\nExpanding Your AI Coding Skills by Understanding How VS Code Copilot Works Under the Hood and How Its Context Window Is Structured\nIf you’ve enjoyed building software with AI and are amazed by what agentic coding can do, you may still wonder how to get the most out of it — while keeping token costs under control. Understanding what’s happening under the hood makes a big difference. In this article, I break down how VS Code Copilot actually works behind the scenes.\nThe Basic of LLM for Agentic Coding\nThe real engine behind agentic AI coding is the LLM (Large Language Model). At its core, an LLM is software trained to predict and generate tokens in a way that aligns with real-world expectations, based on patterns learned from its training data.\nOn its own, an LLM is little more than a sophisticated “chat” machine. But when its outputs are treated as instructions for tools — such as reading, editing, or writing files, or running…",
+  "excerpt": "Member-only story\nLearning AI Coding\nMastering VS Code Copilot by Understanding Its Context Window\nExpanding Your AI Coding Skills by Understanding How VS Code Copilot Works Under the Hood and How Its Context Window Is Structured\nIf you’ve enjoyed building software with AI and are amazed by what agentic coding can do, you may still wonder how to get the most out of it — while keeping token costs under control. Understanding what’s happening under the hood makes a big difference. In this article,",
+  "word_count": 178,
+  "scraped_at": "2026-02-24T08:17:23.621756+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com large tag batch",
+    "medium.com massive tag sweep"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/11/uncomfortable/",
+  "normalized_url": "https://simonwillison.net/2025/oct/11/uncomfortable",
+  "source_type": "personal_blog",
+  "title": "Note on 11th October 2025",
+  "author": "Simon Willison",
+  "date": "2025-10-11",
+  "text": "11th October 2025\nI'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to closely review every line of code they produce. This feels deeply uncomfortable!\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "11th October 2025\nI'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to closely review every line of code they produce. This feels deeply uncomfortable!\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "word_count": 78,
+  "scraped_at": "2026-02-24T08:22:06.880276+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "url": "https://medium.com/@riturajpokhriyal/why-ai-coding-tools-are-making-you-slower-and-what-actually-works-c18f432e470b",
+  "normalized_url": "https://medium.com/@riturajpokhriyal/why-ai-coding-tools-are-making-you-slower-and-what-actually-works-c18f432e470b",
+  "source_type": "medium",
+  "title": "Why AI Coding Tools Are Making You Slower (And What Actually Works)",
+  "author": "Rituraj",
+  "date": "2026-02-22",
+  "text": "Member-only story\nWhy AI Coding Tools Are Making You Slower (And What Actually Works)\nI spent months testing Cursor, Antigravity, Claude Code, and Copilot. Here’s the uncomfortable truth nobody in the AI hype cycle is talking about.\nI watched 200 lines of code materialize in my editor in under eight seconds. Cursor’s agent had taken my one-line prompt and generated an entire authentication module — controllers, services, middleware, the works.\nI felt fast.\nForty minutes later, I was still debugging line 147.\nThe AI had hallucinated a middleware function that didn’t exist in my framework version. Fixing it broke the service layer. Fixing that introduced a subtle race condition I didn’t catch until my tests started failing intermittently.\nI could have written the 30 lines I actually needed in 10 minutes.\nThat was my wake-up call. And after spending most of the past year testing every major AI coding tool on the market — Cursor, Google Antigravity, Claude Code, GitHub Copilot, Windsurf, Cline — while building production applications, I’ve come to a conclusion that won’t make me popular in developer Twitter circles:",
+  "excerpt": "Member-only story\nWhy AI Coding Tools Are Making You Slower (And What Actually Works)\nI spent months testing Cursor, Antigravity, Claude Code, and Copilot. Here’s the uncomfortable truth nobody in the AI hype cycle is talking about.\nI watched 200 lines of code materialize in my editor in under eight seconds. Cursor’s agent had taken my one-line prompt and generated an entire authentication module — controllers, services, middleware, the works.\nI felt fast.\nForty minutes later, I was still debugg",
+  "word_count": 182,
+  "scraped_at": "2026-02-24T08:31:46.199286+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com AI coding",
+    "medium.com AI coding hype",
+    "AI coding hype"
+  ]
+}

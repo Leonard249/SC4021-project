@@ -1,0 +1,16 @@
+{
+  "url": "https://stripe.dev/blog/introducing-versioning-for-stripe-workflows",
+  "normalized_url": "https://stripe.dev/blog/introducing-versioning-for-stripe-workflows",
+  "source_type": "personal_blog",
+  "title": "Versioning in Stripe Workflows: Ship workflow changes with confidence",
+  "author": "Tanya Boiteau Product Manager",
+  "date": "2025-12-10",
+  "text": "Product Manager on the Developer Platform Product Management team.\nExplore our guides and examples to integrate Stripe.",
+  "excerpt": "Product Manager on the Developer Platform Product Management team.\nExplore our guides and examples to integrate Stripe.",
+  "word_count": 17,
+  "scraped_at": "2026-02-24T08:12:44.942646+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stripe, Discord, Shopify engineering blog sweep"
+  ]
+}

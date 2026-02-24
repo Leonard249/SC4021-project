@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/towards-data-engineering/ai-coding-worth-or-hype-86cc753a76f7",
+  "normalized_url": "https://medium.com/towards-data-engineering/ai-coding-worth-or-hype-86cc753a76f7",
+  "source_type": "medium",
+  "title": "AI Coding: Worth or Hype",
+  "author": "Neeraj Maheshwari",
+  "date": "2025-07-28",
+  "text": "Member-only story\nAI Coding: Worth or Hype\nMy experience with AI coding as Data Engineer\nNon members, read full article free using this link.\nRecently, I got a chance to experiment with AI coding tools, specifically GitHub Copilot, for developing an internal application. Being a data engineer, I’m comfortable handling data pipelines, backend logic, and databases. Frontend, though? Not exactly my strongest suit, however needed UI to demonstrate some reports from pulled data. So the idea of quickly creating UI pages felt both exciting and slightly intimidating. Still, curiosity got the better of me, and I decided to give it a go with buzzing vibe coding.\nThe project’s aim was pretty clear: fetch data from APIs, store it neatly in a database, display some meaningful reports on a simple UI, and add a conversational AI agent that could answer questions about the stored data. Sounds straightforward enough, right?\nInitially, using Copilot felt almost magical. I typed simple instructions, something along the lines of “build a UI page to display and summarize data and few additional insights from it”, and boom, in seconds, Copilot generated actual working code. Clicking buttons, filtering data, it was all functional, and honestly, for a moment, I felt like I was cheating, but it was genuinely fun.",
+  "excerpt": "Member-only story\nAI Coding: Worth or Hype\nMy experience with AI coding as Data Engineer\nNon members, read full article free using this link.\nRecently, I got a chance to experiment with AI coding tools, specifically GitHub Copilot, for developing an internal application. Being a data engineer, I’m comfortable handling data pipelines, backend logic, and databases. Frontend, though? Not exactly my strongest suit, however needed UI to demonstrate some reports from pulled data. So the idea of quickl",
+  "word_count": 211,
+  "scraped_at": "2026-02-24T08:31:50.601329+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com AI coding hype"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78541541/cant-accept-suggestions-in-github-copilot",
+  "normalized_url": "https://stackoverflow.com/questions/78541541/cant-accept-suggestions-in-github-copilot",
+  "source_type": "stackoverflow",
+  "title": "Can't accept suggestions in Github Copilot",
+  "author": "Coxy 8",
+  "date": "2024-05-28",
+  "text": "I installed Github Copilot and suggestions do appear, but I am unable to accept them.\nWhen I press Tab, the suggestion disappears and I can see in the output window a log message\n[INFO] [CopilotProposalSourceProvider] Completion dismissed\nI do have R#, but I have it set to use Visual Studio Intellisense now, although that didn't fix anything anyway.\nI can't find anything in Keyboard commands windows to accept suggestion to check the keybinds for.",
+  "excerpt": "I installed Github Copilot and suggestions do appear, but I am unable to accept them.\nWhen I press Tab, the suggestion disappears and I can see in the output window a log message\n[INFO] [CopilotProposalSourceProvider] Completion dismissed\nI do have R#, but I have it set to use Visual Studio Intellisense now, although that didn't fix anything anyway.\nI can't find anything in Keyboard commands windows to accept suggestion to check the keybinds for.",
+  "word_count": 74,
+  "scraped_at": "2026-02-24T08:20:41.020171+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

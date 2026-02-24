@@ -1,0 +1,16 @@
+{
+  "url": "https://levelup.gitconnected.com/what-is-a-monad-in-non-technical-terms-b22640cfd993",
+  "normalized_url": "https://levelup.gitconnected.com/what-is-a-monad-in-non-technical-terms-b22640cfd993",
+  "source_type": "personal_blog",
+  "title": "What Is a Monad in Non-Technical Terms?",
+  "author": "Mary Paskhaver",
+  "date": "2026-02-23",
+  "text": "Member-only story\nWhat Is a Monad in Non-Technical Terms?\nFunctional programming for non-programmers\nIn 2009, Professor Brent Yorgey criticized tutorials that defined monads abstractly. His popular example was burritos.\nYou shouldn’t teach monads by saying they’re like burritos, he said. Doing so prevents programmers from studying monads how they’re supposed to: by investigating code that makes and uses them.\nYorgey argued that programmers have to know what’s concrete about monads — for example, the types and functions involved — before they can come up with intuitive abstractions that help them understand their particulars.\nBut what if you’re not a programmer?\nWhat if you are, for example, the relative of a snooty functional programmer who likes to talk about monads in casual dinner conversation?\nThen you’ve come to the right place!\nIn this article, I will try to explain monads, from my experience with Haskell, in non-technical terms. That is, without code.\nBecause this tutorial is non-technical, it will inherently miss some finer details. But my goal is to capture the big picture.\nI may fail here, but this is a learning opportunity for me as well. Let’s dive into it!",
+  "excerpt": "Member-only story\nWhat Is a Monad in Non-Technical Terms?\nFunctional programming for non-programmers\nIn 2009, Professor Brent Yorgey criticized tutorials that defined monads abstractly. His popular example was burritos.\nYou shouldn’t teach monads by saying they’re like burritos, he said. Doing so prevents programmers from studying monads how they’re supposed to: by investigating code that makes and uses them.\nYorgey argued that programmers have to know what’s concrete about monads — for example,",
+  "word_count": 190,
+  "scraped_at": "2026-02-24T08:10:00.614007+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com massive tag sweep"
+  ]
+}

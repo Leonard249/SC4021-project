@@ -1,0 +1,16 @@
+{
+  "url": "https://www.reddit.com/r/Supabase/comments/1qfoxmt/state_of_supabase_exposure_across_vibecoding_apps/",
+  "normalized_url": "https://www.reddit.com/r/supabase/comments/1qfoxmt/state_of_supabase_exposure_across_vibecoding_apps",
+  "source_type": "other_blog",
+  "title": "Prove your humanity",
+  "author": null,
+  "date": "2026-01-01",
+  "text": "Prove your humanity\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re a real person.\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re a real person.",
+  "excerpt": "Prove your humanity\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re a real person.\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re a real person.",
+  "word_count": 47,
+  "scraped_at": "2026-02-24T08:13:35.879806+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "supabase.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

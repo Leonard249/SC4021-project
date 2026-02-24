@@ -1,0 +1,16 @@
+{
+  "url": "https://www.linkedin.com/posts/aronchick_two-weeks-ago-steve-yegge-released-gastown-activity-7419146275809480704-6t7Z",
+  "normalized_url": "https://www.linkedin.com/posts/aronchick_two-weeks-ago-steve-yegge-released-gastown-activity-7419146275809480704-6t7z",
+  "source_type": "other_blog",
+  "title": "Steve Yegge's GasTown and Dan Lorenc's multiclaude: identical primitives for agent systems | David Aronchick posted on the topic | LinkedIn",
+  "author": "David Aronchick",
+  "date": "2026-01-19",
+  "text": "Two weeks ago, Steve Yegge released GasTown: a multi-agent orchestrator he describes as \"an industrialized coding factory manned by superintelligent chimpanzees.\" A few days later, Dan Lorenc, inspired by GasTown, pushed multiclaude, built on what he calls the \"Brownian Ratchet\" principle: chaos is fine, as long as we ratchet forward. They landed on almost identical architecture: - tmux for observability - git worktrees for isolation - External state persistence - CI as the final arbiter While they have very different approaches (i like both! for different reasons!), when two experienced engineers solve the same problem and arrive at the same primitives, that's not coincidence. That's the problem space telling you what it actually requires. The \"19-agent trap\" - simulating an org chart with Analyst → PM → Architect → Dev → QA handoffs - is giving way to something more operational. Bounded roles. Infrastructure primitives. CI as coordination mechanism instead of real-time sync. The chimpanzee factory and the Brownian ratchet asked different questions but got the same answer. If you're building agent systems, these are probably your primitives too.\nAn alternative take from Steve Klabnik at https://steveklabnik.com/writing/how-to-think-about-gas-town/. Interesting that Steve is now working at East River Source Control who presumably are building CI into their new system based on Jujutsu. Also see https://lucumr.pocoo.org/2026/1/18/agent-psychosis/ No mention of Ralph Wiggim loops?",
+  "excerpt": "Two weeks ago, Steve Yegge released GasTown: a multi-agent orchestrator he describes as \"an industrialized coding factory manned by superintelligent chimpanzees.\" A few days later, Dan Lorenc, inspired by GasTown, pushed multiclaude, built on what he calls the \"Brownian Ratchet\" principle: chaos is fine, as long as we ratchet forward. They landed on almost identical architecture: - tmux for observability - git worktrees for isolation - External state persistence - CI as the final arbiter While t",
+  "word_count": 219,
+  "scraped_at": "2026-02-24T08:17:58.066893+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "steveklabnik.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

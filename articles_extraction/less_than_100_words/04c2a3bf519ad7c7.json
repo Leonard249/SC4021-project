@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79538511/github-copilot-instructions-md-support-for-intellij",
+  "normalized_url": "https://stackoverflow.com/questions/79538511/github-copilot-instructions-md-support-for-intellij",
+  "source_type": "stackoverflow",
+  "title": ".github/copilot-instructions.md support for IntelliJ",
+  "author": "PPriest",
+  "date": "2025-06-01",
+  "text": "Does anyone know if .github/copilot-instructions.md also support in IntelliJ ?\nBackground: There's a new guideline to include custom instructions file .github/copilot-instructions.md\nfor copilot in visual studio code.\nmore details: https://code.visualstudio.com/docs/copilot/copilot-customization\nI try using this in visual studio code and wondering if copilot custom instructions also avaiable in intelliJ",
+  "excerpt": "Does anyone know if .github/copilot-instructions.md also support in IntelliJ ?\nBackground: There's a new guideline to include custom instructions file .github/copilot-instructions.md\nfor copilot in visual studio code.\nmore details: https://code.visualstudio.com/docs/copilot/copilot-customization\nI try using this in visual studio code and wondering if copilot custom instructions also avaiable in intelliJ",
+  "word_count": 48,
+  "scraped_at": "2026-02-24T08:18:17.629456+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78680906/prevent-users-to-use-copilot-edge",
+  "normalized_url": "https://stackoverflow.com/questions/78680906/prevent-users-to-use-copilot-edge",
+  "source_type": "stackoverflow",
+  "title": "Prevent users to use Copilot Edge",
+  "author": "Penguin",
+  "date": "2024-07-02",
+  "text": "I want to prevent users from using Copilot Edge to create a summary of my displayed website. Is there any way to do this? Robots.txt?\nI don't want to switch of Copilot Edge completely - just on my website.\nI want to prevent users from using Copilot Edge to create a summary of my displayed website. Is there any way to do this? Robots.txt?\nI don't want to switch of Copilot Edge completely - just on my website.",
+  "excerpt": "I want to prevent users from using Copilot Edge to create a summary of my displayed website. Is there any way to do this? Robots.txt?\nI don't want to switch of Copilot Edge completely - just on my website.\nI want to prevent users from using Copilot Edge to create a summary of my displayed website. Is there any way to do this? Robots.txt?\nI don't want to switch of Copilot Edge completely - just on my website.",
+  "word_count": 78,
+  "scraped_at": "2026-02-24T08:21:08.884232+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

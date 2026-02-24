@@ -1,0 +1,18 @@
+{
+  "url": "https://www.youtube.com/watch?v=HQaVFUV2AgY",
+  "normalized_url": "https://www.youtube.com/watch?v=hqavfuv2agy",
+  "source_type": "other_blog",
+  "title": "Vibe Coding Crash Course: Build Real Apps with Cursor, Copilot, MCP + more",
+  "author": null,
+  "date": "2026-01-23",
+  "text": "About\nPress\nCopyright\nContact us\nCreators\nAdvertise\nDevelopers\nTerms\nPrivacy\nPolicy & Safety\nHow YouTube works\nTest new features\n© 2026 Google LLC",
+  "excerpt": "About\nPress\nCopyright\nContact us\nCreators\nAdvertise\nDevelopers\nTerms\nPrivacy\nPolicy & Safety\nHow YouTube works\nTest new features\n© 2026 Google LLC",
+  "word_count": 23,
+  "scraped_at": "2026-02-24T08:11:53.433195+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "pinecone.io/blog vibe coding OR AI OR copilot OR cursor",
+    "discord.com/category/engineering vibe coding OR AI OR copilot OR cursor",
+    "lethain.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

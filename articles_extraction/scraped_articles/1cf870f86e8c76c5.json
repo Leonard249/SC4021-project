@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/19/sam-rose-llms/",
+  "normalized_url": "https://simonwillison.net/2025/dec/19/sam-rose-llms",
+  "source_type": "personal_blog",
+  "title": "Sam Rose explains how LLMs work with a visual essay",
+  "author": "Simon Willison",
+  "date": "2025-12-19",
+  "text": "19th December 2025 - Link Blog\nSam Rose explains how LLMs work with a visual essay. Sam Rose is one of my favorite authors of explorable interactive explanations - here's his previous collection.\nSam joined ngrok in September as a developer educator. Here's his first big visual explainer for them, ostensibly about how prompt caching works but it quickly expands to cover tokenization, embeddings, and the basics of the transformer architecture.\nThe result is one of the clearest and most accessible introductions to LLM internals I've seen anywhere.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "19th December 2025 - Link Blog\nSam Rose explains how LLMs work with a visual essay. Sam Rose is one of my favorite authors of explorable interactive explanations - here's his previous collection.\nSam joined ngrok in September as a developer educator. Here's his first big visual explainer for them, ostensibly about how prompt caching works but it quickly expands to cover tokenization, embeddings, and the basics of the transformer architecture.\nThe result is one of the clearest and most accessible",
+  "word_count": 127,
+  "scraped_at": "2026-02-24T08:18:14.015597+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

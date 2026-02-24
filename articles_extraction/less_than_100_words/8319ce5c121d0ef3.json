@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/ai-agents/",
+  "normalized_url": "https://stackoverflow.blog/ai-agents",
+  "source_type": "personal_blog",
+  "title": "AI agents",
+  "author": "Phoebe Sajor",
+  "date": "2026-01-09",
+  "text": "Every ecommerce hero needs a Sidekick\nRyan is joined by Vanessa Lee, VP of Product at Shopify, to discuss how AI is a tech renaissance and how these new technologies are affecting the ecommerce world. They cover the development of Sidekick, along with the general challenges of building AI tools, the importance of maintaining human oversight in AI, and what the future holds for personalized user experiences in ecommerce.",
+  "excerpt": "Every ecommerce hero needs a Sidekick\nRyan is joined by Vanessa Lee, VP of Product at Shopify, to discuss how AI is a tech renaissance and how these new technologies are affecting the ecommerce world. They cover the development of Sidekick, along with the general challenges of building AI tools, the importance of maintaining human oversight in AI, and what the future holds for personalized user experiences in ecommerce.",
+  "word_count": 69,
+  "scraped_at": "2026-02-24T08:15:55.224139+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog sitemap tags/categories"
+  ]
+}

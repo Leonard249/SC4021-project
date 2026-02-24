@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79310941/cannot-log-out-of-copilot-in-phpstorm",
+  "normalized_url": "https://stackoverflow.com/questions/79310941/cannot-log-out-of-copilot-in-phpstorm",
+  "source_type": "stackoverflow",
+  "title": "Cannot log out of Copilot in PhpStorm",
+  "author": "Ecomevo",
+  "date": "2024-12-27",
+  "text": "I accidentally logged into the wrong account when setting up GitHub's Copilot in PhpStorm.\n- I tried uninstalling the plugin and restarting.\n- I tried selecting a different GitHub account in the Copilot settings.\n- Other posts have suggested there is a logout button/link in the Copilot settings, but that is not in my PhpStorm 2024.3.1.1 Copilot settings.\nHow do I disconnect the wrong GitHub account so I can use the one I'm actually paying for Copilot on?",
+  "excerpt": "I accidentally logged into the wrong account when setting up GitHub's Copilot in PhpStorm.\n- I tried uninstalling the plugin and restarting.\n- I tried selecting a different GitHub account in the Copilot settings.\n- Other posts have suggested there is a logout button/link in the Copilot settings, but that is not in my PhpStorm 2024.3.1.1 Copilot settings.\nHow do I disconnect the wrong GitHub account so I can use the one I'm actually paying for Copilot on?",
+  "word_count": 78,
+  "scraped_at": "2026-02-24T08:21:27.786376+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

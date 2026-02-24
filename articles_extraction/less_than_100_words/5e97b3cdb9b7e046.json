@@ -1,0 +1,16 @@
+{
+  "url": "https://www.linkedin.com/posts/chadschieken_cve-2025-53773-is-a-reminder-that-developer-activity-7363196725987004418-2s2g",
+  "normalized_url": "https://www.linkedin.com/posts/chadschieken_cve-2025-53773-is-a-reminder-that-developer-activity-7363196725987004418-2s2g",
+  "source_type": "other_blog",
+  "title": "CVE-2025-53773: VS Code/Copilot YOLO mode vulnerability | Chad Schieken posted on the topic | LinkedIn",
+  "author": "Chad Schieken",
+  "date": "2025-08-18",
+  "text": "CVE-2025-53773 is a reminder that developer convenience can cross into parody. The vuln in VS Code/Copilot includes a so-called “YOLO mode” — which lets the AI skip safety prompts and run commands directly in your environment. Funny name. Terrifying reality.\nAnd with access to the vast amounts of code it was trained on, the AI can do far more damage than a given dev could do on their own. Yikes.",
+  "excerpt": "CVE-2025-53773 is a reminder that developer convenience can cross into parody. The vuln in VS Code/Copilot includes a so-called “YOLO mode” — which lets the AI skip safety prompts and run commands directly in your environment. Funny name. Terrifying reality.\nAnd with access to the vast amounts of code it was trained on, the AI can do far more damage than a given dev could do on their own. Yikes.",
+  "word_count": 70,
+  "scraped_at": "2026-02-24T08:17:48.648442+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "lilianweng.github.io vibe coding OR AI OR copilot OR cursor"
+  ]
+}

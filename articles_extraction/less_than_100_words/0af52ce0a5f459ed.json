@@ -1,0 +1,18 @@
+{
+  "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents",
+  "normalized_url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents",
+  "source_type": "personal_blog",
+  "title": "Minions: Stripe’s one-shot, end-to-end coding agents",
+  "author": "About the author",
+  "date": "2026-02-09",
+  "text": "Minions: Stripe’s one-shot, end-to-end coding agents\n/Metadata\nDate:2026.2.09\nAuthor:Alistair Gray\nReading time:5 min read\nCategories:\nAI\nDeveloper Productivity\nLLMs\nEngineering\n/Article\n/About the author\nAlistair Gray\nAlistair is a software engineer on the Leverage team. The Leverage team builds surprisingly delightful internal products that Stripes can leverage to supercharge their productivity.\n© 2025 Stripe, Inc.",
+  "excerpt": "Minions: Stripe’s one-shot, end-to-end coding agents\n/Metadata\nDate:2026.2.09\nAuthor:Alistair Gray\nReading time:5 min read\nCategories:\nAI\nDeveloper Productivity\nLLMs\nEngineering\n/Article\n/About the author\nAlistair Gray\nAlistair is a software engineer on the Leverage team. The Leverage team builds surprisingly delightful internal products that Stripes can leverage to supercharge their productivity.\n© 2025 Stripe, Inc.",
+  "word_count": 55,
+  "scraped_at": "2026-02-24T08:08:59.459811+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com high volume high quality batch 3",
+    "hn.algolia.com high volume high quality batch 4",
+    "Stripe, Discord, Shopify engineering blog sweep"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "url": "https://arstechnica.com/ai/2026/02/an-ai-coding-bot-took-down-amazon-web-services/",
+  "normalized_url": "https://arstechnica.com/ai/2026/02/an-ai-coding-bot-took-down-amazon-web-services",
+  "source_type": "personal_blog",
+  "title": "JavaScript is disabled",
+  "author": null,
+  "date": null,
+  "text": "JavaScript is disabled\nIn order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page.",
+  "excerpt": "JavaScript is disabled\nIn order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page.",
+  "word_count": 26,
+  "scraped_at": "2026-02-24T08:11:54.928075+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com high volume high quality batch 3",
+    "hn.algolia.com high volume high quality batch 4"
+  ]
+}

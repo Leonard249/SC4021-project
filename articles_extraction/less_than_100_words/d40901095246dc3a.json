@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77369588/copilot-with-bitbucket",
+  "normalized_url": "https://stackoverflow.com/questions/77369588/copilot-with-bitbucket",
+  "source_type": "stackoverflow",
+  "title": "Copilot with Bitbucket",
+  "author": "Vadim Peretokin 2",
+  "date": "2025-07-20",
+  "text": "I'm currently exploring the capabilities of GitHub Copilot and am keen to understand its compatibility with other version control platforms outside of GitHub. Specifically, I'd like to know:\n- Can GitHub Copilot work with private Bitbucket repositories?\n- If so, are there any specific configuration steps required to enable this integration?\n- Are there any security implications to be aware of when using Copilot with private Bitbucket repos?\nAny insights or experiences shared would be greatly appreciated. Thanks!",
+  "excerpt": "I'm currently exploring the capabilities of GitHub Copilot and am keen to understand its compatibility with other version control platforms outside of GitHub. Specifically, I'd like to know:\n- Can GitHub Copilot work with private Bitbucket repositories?\n- If so, are there any specific configuration steps required to enable this integration?\n- Are there any security implications to be aware of when using Copilot with private Bitbucket repos?\nAny insights or experiences shared would be greatly app",
+  "word_count": 78,
+  "scraped_at": "2026-02-24T08:17:16.327355+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/10/normalization-of-deviance/",
+  "normalized_url": "https://simonwillison.net/2025/dec/10/normalization-of-deviance",
+  "source_type": "personal_blog",
+  "title": "The Normalization of Deviance in AI",
+  "author": "Simon Willison",
+  "date": "2025-12-10",
+  "text": "10th December 2025 - Link Blog\nThe Normalization of Deviance in AI. This thought-provoking essay from Johann Rehberger directly addresses something that I’ve been worrying about for quite a while: in the absence of any headline-grabbing examples of prompt injection vulnerabilities causing real economic harm, is anyone going to care?\nJohann describes the concept of the “Normalization of Deviance” as directly applying to this question.\nCoined by Diane Vaughan, the key idea here is that organizations that get away with “deviance” - ignoring safety protocols or otherwise relaxing their standards - will start baking that unsafe attitude into their culture. This can work fine… until it doesn’t. The Space Shuttle Challenger disaster has been partially blamed on this class of organizational failure.\nAs Johann puts it:\nIn the world of AI, we observe companies treating probabilistic, non-deterministic, and sometimes adversarial model outputs as if they were reliable, predictable, and safe.\nVendors are normalizing trusting LLM output, but current understanding violates the assumption of reliability.\nThe model will not consistently follow instructions, stay aligned, or maintain context integrity. This is especially true if there is an attacker in the loop (e.g indirect prompt injection).\nHowever, we see more and more systems allowing untrusted output to take consequential actions. Most of the time it goes well, and over time vendors and organizations lower their guard or skip human oversight entirely, because “it worked last time.”\nThis dangerous bias is the fuel for normalization: organizations confuse the absence of a successful attack with the presence of robust security.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "10th December 2025 - Link Blog\nThe Normalization of Deviance in AI. This thought-provoking essay from Johann Rehberger directly addresses something that I’ve been worrying about for quite a while: in the absence of any headline-grabbing examples of prompt injection vulnerabilities causing real economic harm, is anyone going to care?\nJohann describes the concept of the “Normalization of Deviance” as directly applying to this question.\nCoined by Diane Vaughan, the key idea here is that organizatio",
+  "word_count": 294,
+  "scraped_at": "2026-02-24T08:13:53.554212+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

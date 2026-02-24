@@ -1,0 +1,16 @@
+{
+  "url": "https://www.letsdatascience.com/news/programmers-assert-ownership-over-ai-generated-code-ae40fcb6",
+  "normalized_url": "https://www.letsdatascience.com/news/programmers-assert-ownership-over-ai-generated-code-ae40fcb6",
+  "source_type": "other_blog",
+  "title": "Programmers Assert Ownership Over AI-Generated Code",
+  "author": null,
+  "date": "2026-01-31",
+  "text": "Opinionautomatic programmingprogramming assistanceredisauthorship\nProgrammers Assert Ownership Over AI-Generated Code\nantirez.com\n|6.1\nRelevance ScoreIn a recent blog post, Redis creator antirez argues that \"automatic programming\"—the practice of producing software with active AI assistance—is distinct from passive \"vibe coding\" and results in code that remains the programmer's intellectual product. He emphasizes human vision, design, and continuous steering as the determinants of quality and ownership, framing automatic programming as a democratizing yet author-preserving approach.",
+  "excerpt": "Opinionautomatic programmingprogramming assistanceredisauthorship\nProgrammers Assert Ownership Over AI-Generated Code\nantirez.com\n|6.1\nRelevance ScoreIn a recent blog post, Redis creator antirez argues that \"automatic programming\"—the practice of producing software with active AI assistance—is distinct from passive \"vibe coding\" and results in code that remains the programmer's intellectual product. He emphasizes human vision, design, and continuous steering as the determinants of quality and ow",
+  "word_count": 71,
+  "scraped_at": "2026-02-24T08:06:29.916364+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "antirez.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

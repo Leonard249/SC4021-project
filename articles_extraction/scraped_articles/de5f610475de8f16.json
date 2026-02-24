@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/better-programming/integrating-psychology-into-software-development-c5f79fc8019e",
+  "normalized_url": "https://medium.com/better-programming/integrating-psychology-into-software-development-c5f79fc8019e",
+  "source_type": "medium",
+  "title": "Integrating Psychology into Software Development",
+  "author": "Ulas Can Cengiz",
+  "date": "2023-11-10",
+  "text": "Member-only story\nIntegrating Psychology into Software Development\nEmotional Architecture in Software Design\nThe Psychological Underpinnings of Software Development\nImagine sitting down at your desk to untangle a particularly complex piece of software code. Your eyes scan lines packed with logical operations and function calls. Somewhere in this intricate weave, a bug lurks, derailing the application’s performance. This scenario, familiar to many developers, isn’t just a test of technical skill; it’s a psychological challenge. The frustration and cognitive fatigue that often accompany such tasks can cloud judgment and prolong resolution. It’s in moments like these that the intersection of psychology and software development comes into sharp focus.\nCognitive load theory, originally applied to educational psychology, has profound implications for managing complexity in software projects. It posits that our working memory has a limited capacity for processing new information. In the context of software development, this translates to the need for clean, readable code and well-architected systems that minimize the cognitive load on developers. By understanding and applying this theory, we can create development environments that reduce unnecessary complexity and allow developers to allocate their cognitive resources…",
+  "excerpt": "Member-only story\nIntegrating Psychology into Software Development\nEmotional Architecture in Software Design\nThe Psychological Underpinnings of Software Development\nImagine sitting down at your desk to untangle a particularly complex piece of software code. Your eyes scan lines packed with logical operations and function calls. Somewhere in this intricate weave, a bug lurks, derailing the application’s performance. This scenario, familiar to many developers, isn’t just a test of technical skill;",
+  "word_count": 185,
+  "scraped_at": "2026-02-24T08:25:03.439859+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium top publications sweep (balancing)"
+  ]
+}

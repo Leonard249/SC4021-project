@@ -1,0 +1,16 @@
+{
+  "url": "https://preview3.app.daily.dev/posts/my-ai-adoption-journey-xnuqmrzp6",
+  "normalized_url": "https://preview3.app.daily.dev/posts/my-ai-adoption-journey-xnuqmrzp6",
+  "source_type": "other_blog",
+  "title": "My AI Adoption Journey | daily.dev",
+  "author": null,
+  "date": "2026-02-05",
+  "text": "Mitchell Hashimoto shares his six-step journey to finding value in AI coding tools. He emphasizes moving beyond chatbots to AI agents that can read files, execute programs, and make HTTP requests. Key strategies include reproducing manual work with agents to build expertise, running end-of-day agents for research and triage,\nTable of contents\nStep 1: Drop the ChatbotStep 2: Reproduce Your Own WorkStep 3: End-of-Day AgentsStep 4: Outsource the Slam DunksStep 5: Engineer the HarnessStep 6: Always Have an Agent RunningTodayFootnotes1 Comment\nSort:",
+  "excerpt": "Mitchell Hashimoto shares his six-step journey to finding value in AI coding tools. He emphasizes moving beyond chatbots to AI agents that can read files, execute programs, and make HTTP requests. Key strategies include reproducing manual work with agents to build expertise, running end-of-day agents for research and triage,\nTable of contents\nStep 1: Drop the ChatbotStep 2: Reproduce Your Own WorkStep 3: End-of-Day AgentsStep 4: Outsource the Slam DunksStep 5: Engineer the HarnessStep 6: Always ",
+  "word_count": 82,
+  "scraped_at": "2026-02-24T08:05:26.143225+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "mitchellh.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://bsky.app/profile/did:plc:b65l7jiwk75kx3woz5ewhyib",
+  "normalized_url": "https://bsky.app/profile/did:plc:b65l7jiwk75kx3woz5ewhyib",
+  "source_type": "other_blog",
+  "title": "Vicki (@vickiboykis.com)",
+  "author": null,
+  "date": "2023-04-11",
+  "text": "This is a heavily interactive web application, and JavaScript is required. Simple HTML interfaces are possible, but that is not what this is.\nProfile\nVicki\nvickiboykis.com\ndid:plc:b65l7jiwk75kx3woz5ewhyib\nFounding list[float] engineer. Recsys. Personalization. Infra. Systems. Normcore code. Nutella. Vectors. Words. Vibes. Bad puns (soon).\nhttps://vickiboykis.com/what_are_embeddings/",
+  "excerpt": "This is a heavily interactive web application, and JavaScript is required. Simple HTML interfaces are possible, but that is not what this is.\nProfile\nVicki\nvickiboykis.com\ndid:plc:b65l7jiwk75kx3woz5ewhyib\nFounding list[float] engineer. Recsys. Personalization. Infra. Systems. Normcore code. Nutella. Vectors. Words. Vibes. Bad puns (soon).\nhttps://vickiboykis.com/what_are_embeddings/",
+  "word_count": 44,
+  "scraped_at": "2026-02-24T08:05:05.479039+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "vickiboykis.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

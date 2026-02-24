@@ -1,0 +1,16 @@
+{
+  "url": "https://community.databricks.com/t5/databrickstv/recording-bricktalks-vibe-coding-databricks-apps-in-replit/ba-p/141197",
+  "normalized_url": "https://community.databricks.com/t5/databrickstv/recording-bricktalks-vibe-coding-databricks-apps-in-replit/ba-p/141197",
+  "source_type": "corporate_blog",
+  "title": "JavaScript is disabled",
+  "author": null,
+  "date": null,
+  "text": "JavaScript is disabled\nIn order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page.",
+  "excerpt": "JavaScript is disabled\nIn order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page.",
+  "word_count": 26,
+  "scraped_at": "2026-02-24T08:11:59.854564+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "databricks.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

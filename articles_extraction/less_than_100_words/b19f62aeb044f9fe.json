@@ -1,0 +1,16 @@
+{
+  "url": "https://www.anthropic.com/",
+  "normalized_url": "https://www.anthropic.com",
+  "source_type": "corporate_blog",
+  "title": "Home \\ Anthropic",
+  "author": null,
+  "date": "2026-02-04",
+  "text": "AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.\nThe first AI-planned drive on another planet.\nNo ads. No sponsored content. Just genuinely helpful conversations.\nIntroducing the world’s most powerful model for coding, agents, and professional work.\nIntroducing our most capable Sonnet model yet with frontier performance across coding, agents, and professional work.",
+  "excerpt": "AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.\nThe first AI-planned drive on another planet.\nNo ads. No sponsored content. Just genuinely helpful conversations.\nIntroducing the world’s most powerful model for coding, agents, and professional work.\nIntroducing our most capable Sonnet model yet with frontier performance across coding, agents, and professional work.",
+  "word_count": 68,
+  "scraped_at": "2026-02-24T08:13:30.284509+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "anthropic.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

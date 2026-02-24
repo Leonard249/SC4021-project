@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2024/03/22/is-ai-making-your-code-worse/",
+  "normalized_url": "https://stackoverflow.blog/2024/03/22/is-ai-making-your-code-worse",
+  "source_type": "personal_blog",
+  "title": "Is AI making your code worse?",
+  "author": "Eira May",
+  "date": "2024-03-22",
+  "text": "GitClear is a developer-friendly code review tool that aims to deliver higher developer satisfaction and faster releases. Check out their blog or find them on GitHub.\nGitClear’s research focuses on how AI code-gen tools have impacted code quality (and not in a good way).\nFind Bill on LinkedIn.\nChapters\n00:00 Introduction\n00:30 Background of the Research\n06:09 Business Model of GitClear\n09:46 Copy Pasted Code\n10:26 Churn Code\n12:21 Code Readability\n14:12 Code Suggestions and Auto-Completion\n16:34 Drop in Moved Code\n23:18 Larger Token Windows\n26:31 Improving Gen AI\n28:46 Conclusion",
+  "excerpt": "GitClear is a developer-friendly code review tool that aims to deliver higher developer satisfaction and faster releases. Check out their blog or find them on GitHub.\nGitClear’s research focuses on how AI code-gen tools have impacted code quality (and not in a good way).\nFind Bill on LinkedIn.\nChapters\n00:00 Introduction\n00:30 Background of the Research\n06:09 Business Model of GitClear\n09:46 Copy Pasted Code\n10:26 Churn Code\n12:21 Code Readability\n14:12 Code Suggestions and Auto-Completion\n16:34",
+  "word_count": 91,
+  "scraped_at": "2026-02-24T08:21:49.281747+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow AI assistant and OverflowAI sweep"
+  ]
+}

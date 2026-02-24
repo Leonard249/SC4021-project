@@ -1,0 +1,16 @@
+{
+  "url": "https://www.bigtechnology.com/p/are-llms-about-to-hit-a-wall",
+  "normalized_url": "https://www.bigtechnology.com/p/are-llms-about-to-hit-a-wall",
+  "source_type": "personal_blog",
+  "title": "Generative AI Might Be Slamming Right Into A Resource Wall",
+  "author": "Alex Kantrowitz",
+  "date": "2024-04-26",
+  "text": "Generative AI Might Be Slamming Right Into A Resource Wall\nThrowing more data, compute, and energy at the problem may run its course. What’s next?\nEach new generation of large language model consumes a staggering amount of resources.\nMeta, for instance, trained its new Llama 3 models with about 10 times more data and 100 times more compute than Llama 2. Amid a chip shortage, it used two 24,000 GPU clusters, with each chip running around the price of a luxury car. It employed so much data in its AI…",
+  "excerpt": "Generative AI Might Be Slamming Right Into A Resource Wall\nThrowing more data, compute, and energy at the problem may run its course. What’s next?\nEach new generation of large language model consumes a staggering amount of resources.\nMeta, for instance, trained its new Llama 3 models with about 10 times more data and 100 times more compute than Llama 2. Amid a chip shortage, it used two 24,000 GPU clusters, with each chip running around the price of a luxury car. It employed so much data in its ",
+  "word_count": 90,
+  "scraped_at": "2026-02-24T08:05:01.509942+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Big Technology Substack sitemap links"
+  ]
+}

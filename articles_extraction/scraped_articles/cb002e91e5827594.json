@@ -1,0 +1,16 @@
+{
+  "url": "https://garymarcus.substack.com/p/is-vibe-coding-dying",
+  "normalized_url": "https://garymarcus.substack.com/p/is-vibe-coding-dying",
+  "source_type": "substack",
+  "title": "Is vibe coding dying?",
+  "author": "Gary Marcus",
+  "date": "2025-10-22",
+  "text": "Is vibe coding dying?\nAmateurs might not be replacing teams of coders, after all\nRemember how in October and in March I told you that vibe coding — in the sense of amateurs using large language models to write code to “build products that would have previously required teams of engineers” — would never be remotely reliable? And that such tools were fine for demos but not for complex apps in the real world? And that the code they wrote would be hard to maintain?\nCustomers are finally figuring that out.\nSo is the often-enthusiastic investor Chamath Palihapitiya, not known for his skepticism. Yesterday he posted some fascinating data on X, including this chart which shows that vibe coding usage has been declining for months, after an initial steep rise:\nHis analysis of this was brutal:\n§\nIn September, software developer Mike Judge wrote a scathing essay about the vibe coding promise versus vibe coding reality:\n§\nThe problem, as always, lies in generalizing outside the training distribution. Vibe coding can be fine if you are building something very familiar, but is less reliable for the unfamiliar. Even Andrej Karpathy, who literally invented the term vibe-coding, sees this:\n§\nThe reality is that vibe coding experiments often start out great, and end badly:\nOr as I put it in August:",
+  "excerpt": "Is vibe coding dying?\nAmateurs might not be replacing teams of coders, after all\nRemember how in October and in March I told you that vibe coding — in the sense of amateurs using large language models to write code to “build products that would have previously required teams of engineers” — would never be remotely reliable? And that such tools were fine for demos but not for complex apps in the real world? And that the code they wrote would be hard to maintain?\nCustomers are finally figuring tha",
+  "word_count": 220,
+  "scraped_at": "2026-02-24T08:21:06.036110+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Substack massive expert sweep batch 1"
+  ]
+}

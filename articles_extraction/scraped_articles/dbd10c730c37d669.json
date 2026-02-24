@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/15/llm-anthropic-022/",
+  "normalized_url": "https://simonwillison.net/2025/nov/15/llm-anthropic-022",
+  "source_type": "personal_blog",
+  "title": "llm-anthropic 0.22",
+  "author": "Simon Willison",
+  "date": "2025-11-15",
+  "text": "15th November 2025 - Link Blog\nllm-anthropic 0.22. New release of my llm-anthropic\nplugin:\n- Support for Claude's new structured outputs feature for Sonnet 4.5 and Opus 4.1. #54\n- Support for the web search tool using\n-o web_search 1\n- thanks Nick Powell and Ian Langworth. #30\nThe plugin previously powered LLM schemas using this tool-call based workaround. That code is still used for Anthropic's older models.\nI also figured out uv\nrecipes for running the plugin's test suite in an isolated environment, which are now baked into the new Justfile.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "15th November 2025 - Link Blog\nllm-anthropic 0.22. New release of my llm-anthropic\nplugin:\n- Support for Claude's new structured outputs feature for Sonnet 4.5 and Opus 4.1. #54\n- Support for the web search tool using\n-o web_search 1\n- thanks Nick Powell and Ian Langworth. #30\nThe plugin previously powered LLM schemas using this tool-call based workaround. That code is still used for Anthropic's older models.\nI also figured out uv\nrecipes for running the plugin's test suite in an isolated enviro",
+  "word_count": 131,
+  "scraped_at": "2026-02-24T08:21:14.560265+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

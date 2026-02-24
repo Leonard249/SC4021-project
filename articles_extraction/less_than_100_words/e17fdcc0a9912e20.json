@@ -1,0 +1,16 @@
+{
+  "url": "https://www.uber.com/en-IN/blog/ai/",
+  "normalized_url": "https://www.uber.com/en-in/blog/ai",
+  "source_type": "other_blog",
+  "title": "Uber AI Archives",
+  "author": null,
+  "date": "2026-02-24",
+  "text": "Uber AI\nUber AI is at the heart of AI-powered innovation and technologies at Uber. AI research and its applications solve challenges across the whole of Uber.\nInterested in joining Uber Eng?\nClick hereStay up to date with the latest from Uber Engineering\nFollow us on LinkedInProducts\nCompany",
+  "excerpt": "Uber AI\nUber AI is at the heart of AI-powered innovation and technologies at Uber. AI research and its applications solve challenges across the whole of Uber.\nInterested in joining Uber Eng?\nClick hereStay up to date with the latest from Uber Engineering\nFollow us on LinkedInProducts\nCompany",
+  "word_count": 48,
+  "scraped_at": "2026-02-24T08:10:26.253822+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "uber.com/blog/engineering vibe coding OR AI OR copilot OR cursor"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@varsha754/developers-guide-to-the-agentic-era-5f0857fb9b7e",
+  "normalized_url": "https://medium.com/@varsha754/developers-guide-to-the-agentic-era-5f0857fb9b7e",
+  "source_type": "medium",
+  "title": "Developer’s Guide to the Agentic Era",
+  "author": "Varsha Vatsavai",
+  "date": "2026-02-23",
+  "text": "Developer’s Guide to the Agentic Era\nWe all know AI is future, but after the Prompts to Multi Agent Systems course by Professor Martin Hilbert at Coursera, UC Davis, I realize that analogy is too small. AI agents represent an evolutionary jump. If foundational models were our “Ice Age,” agentic workflows are more than our “Discovery of Fire.” They don’t just sit there; they act, they use tools, and they collaborate.\nBuilding a Multi-Agent System (MAS) is less like traditional programming and more like managing a high-stakes department. You have independent entities – each with its own role, “backstory,” and goals – working toward a collective objective.\nAs developers, we are moving from being builders of tools to architects of societies.\nHere are some non-negotiables for anyone getting their hands dirty with agents:\nDivision of Labor is King: Don’t ask one agent to be a generalist. Pair a creative “Optimist” with a cynical “Fact-Checker” to kill hallucinations before they reach the user.\nKeep it Simple (At First): Complexity in MAS grows exponentially. If you can’t get two agents to talk effectively, you won’t survive ten.\nThe Power of the ‘Human-in-the-Loop’: Workflows aren’t just mathematical algorithms; they are social processes. Always design a “check-point” where human intuition can guide the machine’s autonomy.\nIterate or Die: These systems are unpredictable. You won’t find the perfect prompt on day one. You have to test, refine, and “train” the system through its environment.\nConclusion\nThe future isn’t a single, all-knowing AI. It’s a network of specialized agents that complement each other – and us.",
+  "excerpt": "Developer’s Guide to the Agentic Era\nWe all know AI is future, but after the Prompts to Multi Agent Systems course by Professor Martin Hilbert at Coursera, UC Davis, I realize that analogy is too small. AI agents represent an evolutionary jump. If foundational models were our “Ice Age,” agentic workflows are more than our “Discovery of Fire.” They don’t just sit there; they act, they use tools, and they collaborate.\nBuilding a Multi-Agent System (MAS) is less like traditional programming and mor",
+  "word_count": 260,
+  "scraped_at": "2026-02-24T08:24:57.762431+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 2 (balancing)"
+  ]
+}

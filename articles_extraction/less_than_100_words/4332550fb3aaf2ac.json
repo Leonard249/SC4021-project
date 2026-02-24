@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77538172/aws-copilot-and-aws-vpn",
+  "normalized_url": "https://stackoverflow.com/questions/77538172/aws-copilot-and-aws-vpn",
+  "source_type": "stackoverflow",
+  "title": "AWS Copilot and AWS VPN",
+  "author": "Mihael Veber",
+  "date": "2023-11-23",
+  "text": "I am using the AWS Copilot system to deploy microservices. I have encountered an issue where I need a static IP for the services deployed in ECS due to a Site-to-Site VPN. I am interested in how I can configure Copilot to assign a static IP to a service deployed in ECS, as this is necessary for firewalls. This IP must also be part of the CIDRs defined by the VPN Site-to-Site.\nBest regards, Mihael\nI just need answer if this is possible or not,.. Or I must deploy my service to EC2 in AWS",
+  "excerpt": "I am using the AWS Copilot system to deploy microservices. I have encountered an issue where I need a static IP for the services deployed in ECS due to a Site-to-Site VPN. I am interested in how I can configure Copilot to assign a static IP to a service deployed in ECS, as this is necessary for firewalls. This IP must also be part of the CIDRs defined by the VPN Site-to-Site.\nBest regards, Mihael\nI just need answer if this is possible or not,.. Or I must deploy my service to EC2 in AWS",
+  "word_count": 95,
+  "scraped_at": "2026-02-24T08:18:25.028411+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

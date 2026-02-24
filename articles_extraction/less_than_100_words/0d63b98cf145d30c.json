@@ -1,0 +1,18 @@
+{
+  "url": "https://deepai.org/chat/ai-code",
+  "normalized_url": "https://deepai.org/chat/ai-code",
+  "source_type": "other_blog",
+  "title": "AI Code - DeepAI",
+  "author": null,
+  "date": "2020-01-01",
+  "text": "AI Code\nAn AI coding assistant designed to help with programming-related queries. Provides assistance by suggesting code snippets, debugging code, explaining programming concepts, or guiding users through understanding code logic.\nAI Chat can make mistakes. By messaging AI Chat, you agree to our Terms of Service, and acknowledge our Privacy Policy.",
+  "excerpt": "AI Code\nAn AI coding assistant designed to help with programming-related queries. Provides assistance by suggesting code snippets, debugging code, explaining programming concepts, or guiding users through understanding code logic.\nAI Chat can make mistakes. By messaging AI Chat, you agree to our Terms of Service, and acknowledge our Privacy Policy.",
+  "word_count": 51,
+  "scraped_at": "2026-02-24T08:05:33.351323+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "coding with AI",
+    "AI code generation",
+    "AI coding"
+  ]
+}

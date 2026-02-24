@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78071493/vaadin-disable-copilot-double-shift-function",
+  "normalized_url": "https://stackoverflow.com/questions/78071493/vaadin-disable-copilot-double-shift-function",
+  "source_type": "stackoverflow",
+  "title": "Vaadin: Disable Copilot (\"Double shift\" function)",
+  "author": "Lord M-Cube",
+  "date": "2024-02-28",
+  "text": "Is there a way to disable Copilot in development mode?\nI know about setting vaadin.devmode.devTools.enabled=false\nin application.properties\nbut this will only initially remove the icon on the bottom right. Once I hit \"double shift\" the icon reappears and switches to the component inspection mode.\nIt's really annoying that the browser enters this mode when I hit shift two times accidentally (or Shift+Space).",
+  "excerpt": "Is there a way to disable Copilot in development mode?\nI know about setting vaadin.devmode.devTools.enabled=false\nin application.properties\nbut this will only initially remove the icon on the bottom right. Once I hit \"double shift\" the icon reappears and switches to the component inspection mode.\nIt's really annoying that the browser enters this mode when I hit shift two times accidentally (or Shift+Space).",
+  "word_count": 62,
+  "scraped_at": "2026-02-24T08:21:26.233390+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

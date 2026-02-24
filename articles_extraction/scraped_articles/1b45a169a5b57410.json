@@ -1,0 +1,16 @@
+{
+  "url": "https://www.tabnine.com/blog/ai-code-assistant-buyers-guide/",
+  "normalized_url": "https://www.tabnine.com/blog/ai-code-assistant-buyers-guide",
+  "source_type": "corporate_blog",
+  "title": "AI Code Assistant Buyer's Guide - Tabnine",
+  "author": "Sharon Kruk",
+  "date": "2025-01-23",
+  "text": "The pressure to adopt generative AI is intense. Yet the field is so new, how do you choose which tool is right for you? How do you differentiate between ineffective (or even risky) solutions vs. safe and mature AI software tools?\nTabnine’s AI Code Assistant Buyer’s Guide is designed to guide engineering leaders through the critical considerations for choosing and adopting AI code generation technology, backed by real-world examples and expert insights.\nIn 2023, StackOverflow’s annual developer survey found that 77% of respondents felt favorably about using AI in their workflow, and that 70% already were using them. Furthermore, a recent Gartner© report stated that, by 2028, 75% of enterprise software engineers will use AI code assistants in their development process, resulting in at least 36% compounded developer productivity growth. Generative AI code assistance is not the future, it’s the now — and it’s critical for keeping up with competitors.\nThis guide examines the importance of AI code generation tools, establishes comprehensive evaluation criteria, and defines the selection process. It’s based on interviews with recognized subject matter experts in the field of assistive software development plus the latest academic research, both backed up by industry data from companies using these tools right now to ship better software, faster.\nDownload the report and learn:",
+  "excerpt": "The pressure to adopt generative AI is intense. Yet the field is so new, how do you choose which tool is right for you? How do you differentiate between ineffective (or even risky) solutions vs. safe and mature AI software tools?\nTabnine’s AI Code Assistant Buyer’s Guide is designed to guide engineering leaders through the critical considerations for choosing and adopting AI code generation technology, backed by real-world examples and expert insights.\nIn 2023, StackOverflow’s annual developer s",
+  "word_count": 213,
+  "scraped_at": "2026-02-24T08:16:23.779144+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "tabnine.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

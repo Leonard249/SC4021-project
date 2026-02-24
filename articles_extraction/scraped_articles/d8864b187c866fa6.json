@@ -1,0 +1,25 @@
+{
+  "url": "https://cursor.com/",
+  "normalized_url": "https://cursor.com",
+  "source_type": "corporate_blog",
+  "title": "Cursor · Cursor: The best way to code with AI",
+  "author": null,
+  "date": "2026-02-18",
+  "text": "CLI Improvements and Mermaid ASCII Diagrams\nBuilt to make you extraordinarily productive, Cursor is the best way to code with AI.\nTrusted every day by teams that build world-class software\nAgents turn ideas into code\nMagically accurate autocomplete\nIn every tool, at every step\nThe new way to build software.\nStay on the frontier\nUse the best model for every task\nComplete codebase understanding\nDevelop enduring software\nCursor is an applied research team focused on building the future of software development.\nRecent highlights\nTowards self-driving codebases\nWe're making a part of our multi-agent research harness available to try today in preview.\nSalesforce ships higher-quality code across 20,000 developers with Cursor\nOver 90% of developers at Salesforce now use Cursor, driving double-digit improvements in cycle time, PR velocity, and code quality.\nBest practices for coding with agents\nA comprehensive guide to working with coding agents, from starting with plans to managing context, customizing workflows, and reviewing code.",
+  "excerpt": "CLI Improvements and Mermaid ASCII Diagrams\nBuilt to make you extraordinarily productive, Cursor is the best way to code with AI.\nTrusted every day by teams that build world-class software\nAgents turn ideas into code\nMagically accurate autocomplete\nIn every tool, at every step\nThe new way to build software.\nStay on the frontier\nUse the best model for every task\nComplete codebase understanding\nDevelop enduring software\nCursor is an applied research team focused on building the future of software ",
+  "word_count": 156,
+  "scraped_at": "2026-02-24T08:09:51.852795+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "cursor.com/blog vibe coding OR AI OR copilot OR cursor",
+    "openai.com/blog vibe coding OR AI OR copilot OR cursor",
+    "anthropic.com vibe coding OR AI OR copilot OR cursor",
+    "ai.meta.com/blog vibe coding OR AI OR copilot OR cursor",
+    "linear.app/now vibe coding OR AI OR copilot OR cursor",
+    "uber.com/blog/engineering vibe coding OR AI OR copilot OR cursor",
+    "www.developing.dev vibe coding OR AI OR copilot OR cursor",
+    "aphyr.com vibe coding OR AI OR copilot OR cursor",
+    "coding with AI",
+    "cursor IDE coding"
+  ]
+}

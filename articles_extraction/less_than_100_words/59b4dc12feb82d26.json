@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/79764823/github-copilot-searching-for-unavailable-files",
+  "normalized_url": "https://stackoverflow.com/questions/79764823/github-copilot-searching-for-unavailable-files",
+  "source_type": "stackoverflow",
+  "title": "GitHub Copilot searching for unavailable files",
+  "author": "Sukesh 2",
+  "date": "2025-09-15",
+  "text": "I'm just getting started with GitHub Copilot. In the chat window, when I asked this question:\nWhat projects are in this solution and how do things work together?\nThere were some errors. It seems it is looking files by some pattern and those files are unavailable in the solution.\nThe provided answer is generic and clearly not related to the projects in the solution. And I guess this is because of those errors.\nAre these errors expected or am I missing any configurations?\nAlso, there is no TinyShop\nproject in the solution as suggested in the AI response.",
+  "excerpt": "I'm just getting started with GitHub Copilot. In the chat window, when I asked this question:\nWhat projects are in this solution and how do things work together?\nThere were some errors. It seems it is looking files by some pattern and those files are unavailable in the solution.\nThe provided answer is generic and clearly not related to the projects in the solution. And I guess this is because of those errors.\nAre these errors expected or am I missing any configurations?\nAlso, there is no TinySho",
+  "word_count": 98,
+  "scraped_at": "2026-02-24T08:20:36.050980+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

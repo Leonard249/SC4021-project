@@ -1,0 +1,16 @@
+{
+  "url": "https://www.bigtechnology.com/p/how-meta-built-llama-3",
+  "normalized_url": "https://www.bigtechnology.com/p/how-meta-built-llama-3",
+  "source_type": "personal_blog",
+  "title": "How Meta Built Llama 3",
+  "author": "Alex Kantrowitz",
+  "date": "2024-04-18",
+  "text": "Meta today announced the release of Llama 3, a new set of large language models that it’s immediately baking into its products, including WhatsApp and Messenger.\nThe company is releasing two smaller models today that it says exceed the performance of its previous Llama 2 model. And it’s still training a third, far more powerful version, likely to come t…",
+  "excerpt": "Meta today announced the release of Llama 3, a new set of large language models that it’s immediately baking into its products, including WhatsApp and Messenger.\nThe company is releasing two smaller models today that it says exceed the performance of its previous Llama 2 model. And it’s still training a third, far more powerful version, likely to come t…",
+  "word_count": 60,
+  "scraped_at": "2026-02-24T08:17:10.291267+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Big Technology Substack sitemap links"
+  ]
+}

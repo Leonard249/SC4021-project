@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78837188/copilot-studio-azure-open-ai-citation",
+  "normalized_url": "https://stackoverflow.com/questions/78837188/copilot-studio-azure-open-ai-citation",
+  "source_type": "stackoverflow",
+  "title": "Copilot Studio Azure Open AI Citation",
+  "author": "Manisha",
+  "date": "2024-08-06",
+  "text": "I am assuming you want to change the filename in the Copilot Studio. Yes you can do that.\nFollow this github code in the Topic where you are processing the query and posting the response with custom name for the citation\nhttps://github.com/pnp/powerplatform-snippets/blob/main/copilot-studio/citations-topic/source/citations.yaml\nvalue: |-\n=[\n{\nFileName: \"Azure%20-%20Compliance%20Offerings%20(June%202024)%20(1).pdf\",\nFileUrl: \"https://x.sharepoint.com/sites/KnowledgeBase/Shared%20Documents/Uploaded%20Files/Azure/Azure%20-%20Compliance%20Offerings%20(June%202024)%20(1).pdf\"\n},\n{\nFileName: \"Northwind_Standard_Benefits_Details%201.pdf\",\nFileUrl: \"https://x.sharepoint.com/sites/KnowledgeBase/Shared%20Documents/Uploaded%20Files/Northwind/Northwind_Standard_Benefits_Details%201.pdf\"\n},\n{\nFileName: \"Northwind_Health_Plus_Benefits_Details%201.pdf\",\nFileUrl: \"https://x.sharepoint.com/sites/KnowledgeBase/Shared%20Documents/Uploaded%20Files/Northwind/Northwind_Health_Plus_Benefits_Details%201.pdf\"\n}\n]",
+  "excerpt": "I am assuming you want to change the filename in the Copilot Studio. Yes you can do that.\nFollow this github code in the Topic where you are processing the query and posting the response with custom name for the citation\nhttps://github.com/pnp/powerplatform-snippets/blob/main/copilot-studio/citations-topic/source/citations.yaml\nvalue: |-\n=[\n{\nFileName: \"Azure%20-%20Compliance%20Offerings%20(June%202024)%20(1).pdf\",\nFileUrl: \"https://x.sharepoint.com/sites/KnowledgeBase/Shared%20Documents/Uploade",
+  "word_count": 64,
+  "scraped_at": "2026-02-24T08:20:54.902521+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

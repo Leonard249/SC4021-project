@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/70428218/accept-github-copilot-suggestions-line-by-line",
+  "normalized_url": "https://stackoverflow.com/questions/70428218/accept-github-copilot-suggestions-line-by-line",
+  "source_type": "stackoverflow",
+  "title": "Accept GitHub Copilot suggestions line by line",
+  "author": "Abraham",
+  "date": "2024-02-15",
+  "text": "Here you can add in your \"keybindings.json\"\nctrl+shift+p then navigate to keybindings.json file\nIf want to accept only 1 word\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inlineSuggest.acceptNextWord\",\n\"when\": \"inlineSuggestionVisible && !editorReadonly\"\n},\nif wants to accept only one line (first one)\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inlineSuggest.acceptNextLine\",\n\"when\": \"inlineSuggestionVisible && !editorReadonly\"\n},\nfor whole code accept use\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inlineSuggest.commit\",\n\"when\": \"textInputFocus && inlineSuggestionVisible && !editorTabMovesFocus\"\n},\nmostly i assigned like\n\"key\": \"tab\"\n--> will accept one line\n\"key\": \"ctrl+tab\"\n-> accept whole code",
+  "excerpt": "Here you can add in your \"keybindings.json\"\nctrl+shift+p then navigate to keybindings.json file\nIf want to accept only 1 word\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inlineSuggest.acceptNextWord\",\n\"when\": \"inlineSuggestionVisible && !editorReadonly\"\n},\nif wants to accept only one line (first one)\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inlineSuggest.acceptNextLine\",\n\"when\": \"inlineSuggestionVisible && !editorReadonly\"\n},\nfor whole code accept use\n{\n\"key\": \"tab\",\n\"command\": \"editor.action.inl",
+  "word_count": 83,
+  "scraped_at": "2026-02-24T08:14:20.071526+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

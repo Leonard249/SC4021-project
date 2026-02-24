@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/76765315/visual-studio-invalid-copilot-token-missing-token-404",
+  "normalized_url": "https://stackoverflow.com/questions/76765315/visual-studio-invalid-copilot-token-missing-token-404",
+  "source_type": "stackoverflow",
+  "title": "visual studio: \"invalid copilot token: missing token: 404\"",
+  "author": "Dr Phil",
+  "date": "2023-07-25",
+  "text": "I've been getting this error while trying to use github copilot in visual studio.\ninvalid copilot token: missing token: 404 auth status: notauthorized\nThings I tried but didn't help - logging out / in; uninstall / reinstall extension(s).\nAny ideas?",
+  "excerpt": "I've been getting this error while trying to use github copilot in visual studio.\ninvalid copilot token: missing token: 404 auth status: notauthorized\nThings I tried but didn't help - logging out / in; uninstall / reinstall extension(s).\nAny ideas?",
+  "word_count": 40,
+  "scraped_at": "2026-02-24T08:21:37.088639+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

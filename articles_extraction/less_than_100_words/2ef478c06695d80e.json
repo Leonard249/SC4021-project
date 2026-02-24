@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/12/slashdot/",
+  "normalized_url": "https://simonwillison.net/2025/oct/12/slashdot",
+  "source_type": "personal_blog",
+  "title": "A quote from Slashdot",
+  "author": "Simon Willison",
+  "date": "2025-10-12",
+  "text": "12th October 2025\nSlashdot: What's the reason OneDrive tells users this setting can only be turned off 3 times a year? (And are those any three times — or does that mean three specific days, like Christmas, New Year's Day, etc.)\n[Microsoft's publicist chose not to answer this question.]\n— Slashdot, asking the obvious question\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "12th October 2025\nSlashdot: What's the reason OneDrive tells users this setting can only be turned off 3 times a year? (And are those any three times — or does that mean three specific days, like Christmas, New Year's Day, etc.)\n[Microsoft's publicist chose not to answer this question.]\n— Slashdot, asking the obvious question\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two",
+  "word_count": 94,
+  "scraped_at": "2026-02-24T08:22:10.505916+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}
