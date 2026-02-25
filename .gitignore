@@ -2,3 +2,9 @@ test_dataset
 pyproject.toml
 uv.lock
 .venv
+# HN Crawler data files (too large for git)
+hn-crawler/dataset/
+hn-crawler/test_output/
+hn-crawler/__pycache__/
+hn-crawler/*.pyc
+hn-crawler/venv/
