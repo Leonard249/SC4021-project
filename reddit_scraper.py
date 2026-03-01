@@ -7,39 +7,83 @@ import sys
 from datetime import datetime
 
 OUTPUT_FILE = 'dataset/vibe_coding_search.csv'
-TARGET_COUNT = 50000 
+TARGET_COUNT = 100000 
 
 SEARCH_QUERIES = [
-    "Cursor AI", "Cursor vs VSCode", "Windsurf editor", 
-    "Github Copilot review", "Copilot Workspace", "Vibe Coding", 
-    "AI coding assistant", "programming with LLMs", "Claude 3.5 Sonnet code", 
-    "OpenAI o1 coding", "Cursor.sh", "Supermaven", "Tabnine vs Copilot",
-    "is AI replacing developers", "junior developer AI", "coding future"
-]
-SEARCH_QUERIES = [
-    # Top Tools & Rivals
-    "Cursor vs Windsurf", "Cursor AI review", "Windsurf editor vs VSCode",
-    "Github Copilot vs Supermaven", "Cline VSCode extension", "Qodo AI",
-    
-    # The "Vibe" & Culture
-    "Vibe coding", "coding without reading code", "AI-native development",
-    "I don't write code anymore", "Cursor Composer mode", "coding with LLMs only",
-    
-    # Models
-    "Claude 3.5 Sonnet coding", "GPT-4o vs Claude 3.5 code", "DeepSeek coder",
-    "OpenAI o1 programming benchmarks", "local LLM for coding",
-    
-    # The Controversy (Job Market/Skills)
-    "AI replacing junior devs", "is software engineering dead", "AI code quality issues",
-    "junior developers struggling with AI", "copilot hallucinations", "AI skill rot",
-    "dependence on AI coding", "devin ai scam", "teamblocks ai","AI replacing junior developers 2026", "software engineering is dead",
-    "unable to find junior dev job AI", "AI code maintainability crisis",
+    # Prominent AI IDEs & Extensions (Broad net)
+    "Cursor AI", "Windsurf editor", "Cline VSCode", "Roo Code",
+    "GitHub Copilot", "Supermaven", "Codeium", "Tabnine", "Continue.dev",
+    "Qodo AI", "Aider AI", "PearAI", "Trae IDE", "Replit Agent",
+
+    # Tool Comparisons (These generate massive, long-winded debate threads)
+    "Cursor vs Windsurf", "Cursor vs Copilot", "Aider vs Cline",
+    "Supermaven vs Copilot", "Windsurf vs VSCode", "Codeium vs Copilot",
+    "Roo Code vs Cline", "Cursor vs Aider",
+
+    # "Vibe Coding" & Emerging Workflows
+    "Vibe coding", "Prompt-driven development", "AI-native development",
+    "Natural language programming", "coding without typing",
+    "Cursor Composer mode", "Windsurf Cascade", "Cursor rules file",
+    "English as a programming language", "LLM driven development",
+    "I don't write code anymore", "coding with LLMs only",
+
+    # UI/Web Generators & Autonomous Agents
+    "v0.dev", "Lovable AI", "Devin AI", "Teamblocks AI", "SWE-agent",
+    "OpenHands AI", "Magic.dev", "Bolt.new", "bolt web container",
+
+    # Models Specific to Coding (Including newer reasoning models)
+    "Claude 3.5 Sonnet coding", "Claude 3.7 coding", "GPT-4o coding", 
+    "GPT-4.5 code", "DeepSeek Coder", "DeepSeek R1 programming", 
+    "OpenAI o1 coding benchmarks", "OpenAI o3-mini coding", 
+    "Qwen2.5-Coder", "Llama 3 coding", "local LLM coding", "Ollama coding",
+
+    # The Controversy: Job Market & Future
+    "AI replacing junior devs", "is software engineering dead", "SWE jobs AI",
+    "entry level tech jobs AI", "junior developers struggling with AI",
+    "tech layoffs AI", "CS degree useless AI", "unable to find junior dev job AI",
+    "AI replacing programmers", "post-AI software engineering",
+    "AI replacing junior developers 2026",
+
+    # The Controversy: Code Quality & Maintenance
+    "AI code quality issues", "copilot hallucinations", "AI skill rot",
+    "dependence on AI coding", "AI code maintainability crisis",
     "spaghetti code from LLMs", "debugging AI generated code",
-    "junior devs skill issue AI", "copilot hallucinating libraries",
-    "security risks of AI coding assistants",
     "senior engineers fixing AI code", "overreliance on AI tools",
+    "AI tech debt", "AI generated code security vulnerabilities",
+    "junior devs skill issue AI", "copilot hallucinating libraries",
+
+    # Specific Use Cases & Daily Tasks (Catches the "how-to" threads)
+    "refactoring with AI", "writing tests with Copilot", "ChatGPT debugging",
+    "leetcode with AI", "AI code review tools", "generating unit tests AI",
+    "migrating codebase AI", "understanding legacy code AI"
 ]
 
+# SEARCH_QUERIES = [
+#     "Claude 3.5 Sonnet coding", "Claude 3.7 coding", "GPT-4o coding", 
+#     "GPT-4.5 code", "DeepSeek Coder", "DeepSeek R1 programming", 
+#     "OpenAI o1 coding benchmarks", "OpenAI o3-mini coding", 
+#     "Qwen2.5-Coder", "Llama 3 coding", "local LLM coding", "Ollama coding",
+
+#     # The Controversy: Job Market & Future
+#     "AI replacing junior devs", "is software engineering dead", "SWE jobs AI",
+#     "entry level tech jobs AI", "junior developers struggling with AI",
+#     "tech layoffs AI", "CS degree useless AI", "unable to find junior dev job AI",
+#     "AI replacing programmers", "post-AI software engineering",
+#     "AI replacing junior developers 2026",
+
+#     # The Controversy: Code Quality & Maintenance
+#     "AI code quality issues", "copilot hallucinations", "AI skill rot",
+#     "dependence on AI coding", "AI code maintainability crisis",
+#     "spaghetti code from LLMs", "debugging AI generated code",
+#     "senior engineers fixing AI code", "overreliance on AI tools",
+#     "AI tech debt", "AI generated code security vulnerabilities",
+#     "junior devs skill issue AI", "copilot hallucinating libraries",
+
+#     # Specific Use Cases & Daily Tasks (Catches the "how-to" threads)
+#     "refactoring with AI", "writing tests with Copilot", "ChatGPT debugging",
+#     "leetcode with AI", "AI code review tools", "generating unit tests AI",
+#     "migrating codebase AI", "understanding legacy code AI"
+# ]
 # rando user agents
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -75,9 +119,6 @@ def load_existing_ids():
     return count
 
 def fetch_json(url, params=None):
-    """
-    Robust fetcher with aggressive backoff for 'autonomous' recovery.
-    """
     retries = 0
     max_retries = 10  # Try for a long time before giving up
     
