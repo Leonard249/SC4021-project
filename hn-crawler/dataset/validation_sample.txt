@@ -1,0 +1,2006 @@
+RELEVANCE FILTER VALIDATION SAMPLE
+======================================================================
+
+Instructions: Review these samples to verify filter quality
+Mark any false positives or false negatives
+
+
+======================================================================
+SAMPLE 1/100
+======================================================================
+ID: 46794955
+Type: comment
+Author: elif
+URL: https://news.ycombinator.com/item?id=46794955
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: A few random notes from Claude coding quite a bit last few weeks
+
+Text (first 500 chars):
+Why am I not surprised that a blog was written about LLM coding going from 20% to 80% useful, yet all of the HN comments are still nit picking about some negative details rather than building positive ideas toward some progress...Is the programmer ego really this fragile? At least luddites had an ideological reasoning, whereas here we just seem to have emotional reflexes....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 2/100
+======================================================================
+ID: 43260539
+Type: comment
+Author: abalashov
+URL: https://news.ycombinator.com/item?id=43260539
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: vibe_coding
+Is Relevant: True
+
+Title: AI: Where in the Loop Should Humans Go?
+
+Text (first 500 chars):
+But bro, the next model is gonna do 10X PhD reasoning, its SWE bench stats are fire bro, it's like, agentic. I really feel the AGI in this one bro....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 3/100
+======================================================================
+ID: 31504257
+Type: comment
+Author: dhzhzjsbevs
+URL: https://news.ycombinator.com/item?id=31504257
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: issues
+Is Relevant: True
+
+Title: Not My Job
+
+Text (first 500 chars):
+There is a difference between quality and overengineered features nobody asked for.Nobody is suggesting we "do everything in the ideal way". We're suggesting taking 5 minutes to think about the thing you're writing in the next 30. It produces less buggy code, and likely, be able to complete the task with less iteration because you made the mistakes in your head and changed plans before you wrote them out.I close out 30 tickets a week, other teams at our company are lucky if they close out that m...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 4/100
+======================================================================
+ID: 9070128
+Type: comment
+Author: kaib
+URL: https://news.ycombinator.com/item?id=9070128
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding
+Is Relevant: True
+
+Title: Airline flights of the world visualized with WebGL
+
+Text (first 500 chars):
+More specifically when the user clicks on a specific point on the planet and moves the mouse cursor you want that point to still be under the cursor when the mouse button is released. You can extend this construct outside the central sphere into a camera control that works across the screen and feels very intuitive at any zoom level.Google "sgi trackball" for some interesting code to point the way....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 5/100
+======================================================================
+ID: 44862220
+Type: comment
+Author: FeepingCreature
+URL: https://news.ycombinator.com/item?id=44862220
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding, comparison
+Is Relevant: True
+
+Title: The current state of LLM-driven development
+
+Text (first 500 chars):
+Oh I see, I thought you were quoting [URL] "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"Which shows that LLMs, when given to devs who are inexperienced with LLMs but are very experienced with the code they're working on, don't provide a speedup even though it feels like it.Which is of course a very constrained scenario. IME the LLM speedup is mostly in greenfield projects using APIs and libraries you're not very experienced with....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 6/100
+======================================================================
+ID: 47037724
+Type: comment
+Author: amluto
+URL: https://news.ycombinator.com/item?id=47037724
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues
+Is Relevant: True
+
+Title: Evaluating AGENTS.md: are they helpful for coding agents?
+
+Text (first 500 chars):
+My personal experience is that it’s worthwhile to put instructions, user-manual style, into the context. These are things like:- How to build.- How to run tests.- How to work around the incredible crappiness of the codex-rs sandbox.I also like to put in basic style-guide things like “the minimum Python version is 3.12.” Sadly I seem to also need “if you find yourself writing TypeVar, think again” because (unscientifically) it seems that putting the actual keyword that the agent should try not to...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 7/100
+======================================================================
+ID: 32533143
+Type: comment
+Author: criloz2
+URL: https://news.ycombinator.com/item?id=32533143
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Coping with Copilot
+
+Text (first 500 chars):
+I have been using copilot for two months and I find it more annoying than useful, am the only one that feel like this?, I also used tabnine, and it gives a lot of syntax errors in rust, so I could barely use it for a week. I definitely can agree that copilot is better than tabnine, but I feel like writing code is the easy part of programming, and copilot doesn't offer a crazy help to justify the monthly payment and that my private code is uploaded to Microsoft servers. Not only that, but I find ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 8/100
+======================================================================
+ID: 44163799
+Type: comment
+Author: matt_s
+URL: https://news.ycombinator.com/item?id=44163799
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: vibe_coding, comparison
+Is Relevant: True
+
+Title: My AI skeptic friends are all nuts
+
+Text (first 500 chars):
+> This was the craftsman’s ‘Golden Age’ and much time and trouble was taken over the design of tools. Craftsmen were being called upon to do more skilful and exacting work and the use of tools and the interest in development had become very widespread.Above pulled from A Brief History of the Woodworking Plane [0]. A woodworking tool that has evolved over 2,000 years. Now there are electric planers, handheld electric planers and lots of heavy machinery that do the same thing in a very automated w...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 9/100
+======================================================================
+ID: 45204768
+Type: story
+Author: jomadu
+URL: https://news.ycombinator.com/item?id=45204768
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: Show HN: AI Rules Manager – Package manager for AI coding assistant rules
+
+Text (first 500 chars):
+I built ARM (AI Rules Manager) to solve a problem that's been bugging me: managing AI rules across projects is broken.If you use Cursor, GitHub Copilot, or Amazon Q, you know how powerful custom rules can be for guiding AI behavior. But right now, everyone just copies `.cursorrules` files around manually. Once copied, they're orphaned – no updates, no version control, no way to know if changes will break your AI's behavior.ARM treats AI rules like npm packages. You can:- Install versioned rulese...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 10/100
+======================================================================
+ID: 7834881
+Type: comment
+Author: notarockstar
+URL: https://news.ycombinator.com/item?id=7834881
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: productivity, vibe_coding, issues
+Is Relevant: True
+
+Title: Ask HN: Who wants to be hired? (June 2014)
+
+Text (first 500 chars):
+Location: Norwich, VT | Remote or local (no relocation) | Full timeStack: C++/C#/ASP.NET/WebAPI Azure, AWS, AngularJS, Flex Framework, QT, SQLite, MS SQLServerResume: [URL] jeremyx@gmail.com15 years experience coding mostly full-stack web apps. Some native C/C++ with QT framework and SQLite. I am the type of engineer who can pick up new languages and frameworks and quickly come up to speed. My passion is working on software that genuinely helps people and is delightful to use.In my job search, I...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 11/100
+======================================================================
+ID: 46987538
+Type: comment
+Author: mr_mitm
+URL: https://news.ycombinator.com/item?id=46987538
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding
+Is Relevant: True
+
+Title: From specification to stress test: a weekend with Claude
+
+Text (first 500 chars):
+Does "vibe coding" now mean the agent needs to produce a working product in one shot? Or not even just working, but meeting unspecified requirements? I thought in the original phrasing by Karpathy it meant that you don't care about the code, yet you may still iterate because you might care about the product. I tried out the "Impeccable" skill for Claude Code and found it to be very useful if you care about visual aspects and good UI/UX. (I vibe coded a web app for tracking personal finances wher...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 12/100
+======================================================================
+ID: 47061874
+Type: comment
+Author: threethirtytwo
+URL: https://news.ycombinator.com/item?id=47061874
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: AI has fixed my productivity
+
+Text (first 500 chars):
+>but reviewing that code (alongside other institutional issues) remains a bottleneck.AI can review my code....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 13/100
+======================================================================
+ID: 45684013
+Type: story
+Author: vinhnx
+URL: https://news.ycombinator.com/item?id=45684013
+
+Relevance Score: 0.200
+Opinion Score: 0.704
+Categories: ai_tools
+Is Relevant: True
+
+Title: Show HN: VT Code – LLM-agnostic coding agent with MCP/ACP and sandboxed tools
+
+Text (first 500 chars):
+VT Code is a Rust CLI/TUI coding agent that works semantically on code (Tree-sitter + ast-grep), routes across multiple LLMs (incl. local via Ollama), and integrates with editors via ACP and external tools via MCP. It focuses on safety (workspace boundaries, per-tool Allow/Prompt/Deny, sandboxed commands/timeouts) and reproducibility (TOML config, caching, summarization).What’s different: - AST-aware search/refactors with preview-before-apply - Provider-agnostic routing with failover and cost/la...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 14/100
+======================================================================
+ID: 9169804
+Type: comment
+Author: neshmi
+URL: https://news.ycombinator.com/item?id=9169804
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: Help virtually restore the Mosul Museum
+
+Text (first 500 chars):
+It isn't impractical, but our cursory searches revealed few images of the museum. Unfortunately it has been closed for over a decade, meaning very few people with digital cameras have been in there in recent years. But, we can use scanned slides and frames from videos too....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 15/100
+======================================================================
+ID: 46946424
+Type: comment
+Author: acjohnson55
+URL: https://news.ycombinator.com/item?id=46946424
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: productivity, vibe_coding, comparison
+Is Relevant: True
+
+Title: Stop generating, start thinking
+
+Text (first 500 chars):
+> But you miss a lot of experiences compared to when you’re actually in the code trenches reading, designing, and tinkering with code on your own.Completely agree. Working with this tooling is a fundamentally different practice.I'm not trying to suggest that agentic coding is superior in every way. I simply believe that in my own experience, the current gains exceed the drawbacks by a large margin for many applications, and that significantly higher gains are within close reach (e.g. weeks).I sp...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 16/100
+======================================================================
+ID: 46702645
+Type: comment
+Author: jmillikin
+URL: https://news.ycombinator.com/item?id=46702645
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues, comparison
+Is Relevant: True
+
+Title: Libbbf: Bound Book Format, A high-performance container for comics and manga
+
+Text (first 500 chars):
+I use CBZ to archive both physical and digital comic books so I was interested in the idea of an improved container format, but the claimed improvements here don't make sense.---For example they make a big deal about each archive entry being aligned to a 4 KiB boundary "allowing for DirectStorage transfers directly from disk to GPU memory", but the pages within a CBZ are going to be encoded (JPEG/PNG/etc) rather than just being bitmaps. They need to be decoded first, the GPU isn't going to let y...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 17/100
+======================================================================
+ID: 43863431
+Type: comment
+Author: throw14082020
+URL: https://news.ycombinator.com/item?id=43863431
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Ask HN: Who is hiring? (May 2025)
+
+Text (first 500 chars):
+Drone startup | Product Engineer (Typescript) | 1 day/week in the office (London, UK) | Citizens of the UNITED KINGDOM onlyYou'd be working with engineers who previously worked at Google, Amazon, Helsing, Darktrace and an F1 team. We build drones (software and hardware)We're looking for engineers that straddle real world problems, and use technology as a solution. We prefer personal projects or relevant hobbies, not hard leetcode questions. We value collaboration: pair programming, discussing, t...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 18/100
+======================================================================
+ID: 33852242
+Type: comment
+Author: bvoq
+URL: https://news.ycombinator.com/item?id=33852242
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: Placing #1 in Advent of Code with GPT-3
+
+Text (first 500 chars):
+I use it daily in UI development for boiler-plate code. Though you need to be extra careful and read it twice, cus bugs sneak in quite easily. I believe it's harder to remember 100x commands than starting an implementation of gradient descent and have the AI write the rest for you.Code-completion > Abstraction....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 19/100
+======================================================================
+ID: 9495068
+Type: comment
+Author: misteredison12
+URL: https://news.ycombinator.com/item?id=9495068
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: A multiplayer Tron-like game with curves
+
+Text (first 500 chars):
+I liked cursors.io better....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 20/100
+======================================================================
+ID: 37506335
+Type: comment
+Author: DaiPlusPlus
+URL: https://news.ycombinator.com/item?id=37506335
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, comparison
+Is Relevant: True
+
+Title: Hutter Prize for compressing human knowledge
+
+Text (first 500 chars):
+> It's not an unreasonable definition, if you are aware of Kolmogorov complexity and Solomonoff inductionI was already familiar with Kolmogorov Complexity, but not _Solomonoff's theory of inductive inference_ - I skimmed the Wikipedia article just now and I think/hope I get the general gist of it - so thank you for that.> Intelligence is intimately connected to the ability to predict and model thingsI agree with that statement - but I am unsure how this relates to other aspects of intelligence -...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 21/100
+======================================================================
+ID: 22392272
+Type: comment
+Author: hadtodoit
+URL: https://news.ycombinator.com/item?id=22392272
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Drug dealer loses codes for €53.6m Bitcoin accounts
+
+Text (first 500 chars):
+Don't make light of cannabis, it is a drug and like all drugs has side effects. Even moderate use can seriously retard and arrest brain development in teenagers and it can accelerate the onset of schizophrenia in those who are at risk. It's also been associated with lack of motivation, focus, bipolar disorder, depression, and anxiety among a host of other issues later in life.Fully grown adults should be able to choose to do what they want but people who peddle drugs to children deserve nothing ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 22/100
+======================================================================
+ID: 46878635
+Type: comment
+Author: openclawai
+URL: https://news.ycombinator.com/item?id=46878635
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues
+Is Relevant: True
+
+Title: Qwen3-Coder-Next
+
+Text (first 500 chars):
+For context on what cloud API costs look like when running coding agents:With Claude Sonnet at $3/$15 per 1M tokens, a typical agent loop with ~2K input tokens and ~500 output per call, 5 LLM calls per task, and 20% retry overhead (common with tool use): you're looking at roughly $0.05-0.10 per agent task.At 1K tasks/day that's ~$1.5K-3K/month in API spend.The retry overhead is where the real costs hide. Most cost comparisons assume perfect execution, but tool-calling agents fail parsing, need v...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 23/100
+======================================================================
+ID: 44320226
+Type: comment
+Author: codingdave
+URL: https://news.ycombinator.com/item?id=44320226
+
+Relevance Score: 0.800
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues, comparison
+Is Relevant: True
+
+Title: Ask HN: Is AI 'context switching' exhausting?
+
+Text (first 500 chars):
+I do not find it exhausting at all, but I'm a technical product manager, not a full-time coder. So even before LLMs came out, I was in the mode of delegating some work, doing other work, and validating the work when it came back from delegation. That decision of "do vs. delegate" is just part of that job, at least in the gigs I've done. AI simply speeds up the task completion and feedback cycle when delegating....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 24/100
+======================================================================
+ID: 9682072
+Type: comment
+Author: tptacek
+URL: https://news.ycombinator.com/item?id=9682072
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: “A Statement with My View on Curtis Yarvin and Strange Loop”
+
+Text (first 500 chars):
+If that's true, that wasn't a great thing for him to have done.Later: a cursory look at Klabnik's feed suggests it's likely to be true. Again: not a great thing for Klabnik to have done....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 25/100
+======================================================================
+ID: 4575418
+Type: comment
+Author: bunderbunder
+URL: https://news.ycombinator.com/item?id=4575418
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, productivity
+Is Relevant: True
+
+Title: Developer interest in Windows 8 is stagnant, new line of worry for Microsoft
+
+Text (first 500 chars):
+Well, there are a few good reasons for that: coding for WinRT is harder than it should beA lot of us haven't even gotten far enough to figure that out. Microsoft just switched us all over to a new UI toolkit (Windows Presentation Foundation) with the release of .NET 3 five or so years ago. We've invested a lot of time and money into getting up to speed with this new technology. And now we're already being asked to migrate away from it and onto yet another Next Big Thing.Meanwhile, Microsoft zing...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 26/100
+======================================================================
+ID: 46946723
+Type: comment
+Author: bluGill
+URL: https://news.ycombinator.com/item?id=46946723
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: AI Doesn't Reduce Work–It Intensifies It
+
+Text (first 500 chars):
+AI might be 100x faster than me at writing code - but writing code is a tiny portion of the work I do. I need to understand the problem before I can write code. I need to understand my whole system. I need to test that my code really works - this is more than 50% of the work I do, and automated tests are not enough - too often the automated test doesn't model the real world in some unexpected way. I review code that others write. I answer technical questions for others. There is a lot of release...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 27/100
+======================================================================
+ID: 9382864
+Type: comment
+Author: magicalist
+URL: https://news.ycombinator.com/item?id=9382864
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: No Longer an Inspiration
+
+Text (first 500 chars):
+> On the other side of this, according to the NMC[0] only 10.69% of Nurses in 2008 were men (UK). I've personally never seen anyone highlight this as a diversity issueYes, this always comes up in these discussions, and as is always pointed out, you haven't heard of it because you aren't in that industry and you haven't done even a cursory google search of the topic.Seriously, there are a ton of efforts to bring better diversity to the nursing field....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 28/100
+======================================================================
+ID: 9404568
+Type: comment
+Author: vegabook
+URL: https://news.ycombinator.com/item?id=9404568
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Google got it wrong. The open-office trend is destroying the workplace
+
+Text (first 500 chars):
+I can't help thinking this whole trend started with the industry which epitomises the values that our working society holds, that is finance, and the trading floor. I worked on one of these for 15 years - it was fantastic for getting deals done and increasing teamwork when sales, trading, and research all need to work together. Indeed it was when research was moved off the trading floor in around 2005 that I decided to leave, because in that industry, not being "in the thick of it" a huge disadv...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 29/100
+======================================================================
+ID: 45996081
+Type: story
+Author: ericcurtin
+URL: https://news.ycombinator.com/item?id=45996081
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, productivity
+Is Relevant: True
+
+Title: Show HN: Docker Model Runner Integrates vLLM for High-Throughput Inference
+
+Text (first 500 chars):
+Hi HN, I’m one of the authors of this post.We’ve updated Docker Model Runner to support vLLM alongside the existing llama.cpp backend. The goal is to bridge the gap between local prototyping (often done with GGUF/llama.cpp) and high-throughput production (often done with Safetensors/vLLM) using a consistent Docker workflow.Key technical details:Auto-routing: The tool detects the model format. If you pull a GGUF model, it routes to llama.cpp. If you pull a Safetensors model, it routes to vLLM.API...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 30/100
+======================================================================
+ID: 46703148
+Type: comment
+Author: embedding-shape
+URL: https://news.ycombinator.com/item?id=46703148
+
+Relevance Score: 0.760
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding
+Is Relevant: True
+
+Title: The Agentic AI Handbook: Production-Ready Patterns
+
+Text (first 500 chars):
+> The Real Bottleneck: TimeAlready a "no", the bottleneck is "drowning under your own slop". Ever noticed how fast agents seems to be able to do their work in the beginning of the project, but the larger it grows, it seems to get slower at doing good changes that doesn't break other things?This is because you're missing the "engineering" part of software engineering, where someone has to think about the domain, design, tradeoffs and how something will be used, which requires good judgement and g...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 31/100
+======================================================================
+ID: 42085305
+Type: comment
+Author: pcblues
+URL: https://news.ycombinator.com/item?id=42085305
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Methodology is bullshit: principles for product velocity
+
+Text (first 500 chars):
+I've found that people who do this have just told your company they are not worth the money to employ them, and they go in the next downsize. If the sixty days is enforced by being the actual deadline, all the important steps (documentation, testing, future-proofing, extensibility, simplicity of design, etc.) should be done, along with a new set of custom tools to make the same type of job take a week next time it is asked for. By somebody else if necessary. Ironically (?) the best developers bu...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 32/100
+======================================================================
+ID: 46794076
+Type: comment
+Author: bodge5000
+URL: https://news.ycombinator.com/item?id=46794076
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: vibe_coding
+Is Relevant: True
+
+Title: Doing the thing is doing the thing
+
+Text (first 500 chars):
+> Are there really people who "spend weeks planning the perfect architecture" to build some automation tools for themselves?Ironically, I see this very often with AI/vibe coding, and whilst it does happen with traditional coding too, it happens with AI to an extreme degree. Spend 5 minutes on twitter and you'll see a load of people talking about their insane new vibe coding setup and next to nothing of what they're actually building...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 33/100
+======================================================================
+ID: 837346
+Type: comment
+Author: cracki
+URL: https://news.ycombinator.com/item?id=837346
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: vibe_coding, issues
+Is Relevant: True
+
+Title: Why Pair Programming Is Not For the Masses
+
+Text (first 500 chars):
+that one guy at work, he either doesn't shower often enough for his type or he never heard of deodorant.as long as the wind blows away from him (windows open), that's not a bother though.edit: i thought i should share some of my pair programming experiences and insights...one time a friend and I programmed some ATmega embedded assignment for a course. what happened was that we sat down on a couch in the library (our faculty cares!), laptops on our laps.and then the mind meld began...i mostly tal...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 34/100
+======================================================================
+ID: 47139533
+Type: comment
+Author: verdverm
+URL: https://news.ycombinator.com/item?id=47139533
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: issues
+Is Relevant: True
+
+Title: Ask HN: Is AI Alignment about to be solved, for profit?
+
+Text (first 500 chars):
+I think anyone who uses the word "solve" is exaggerating because nothing is ever solved, only mitigated. I'd also be suspect of the source, being a social media influencer and involved with a startup trying to sell this.What I do think more generally is that AI companies have incentives to address alignment, hallucinations, and factuality on their own, for trust and profits....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 35/100
+======================================================================
+ID: 46703931
+Type: comment
+Author: cybercageio-dev
+URL: https://news.ycombinator.com/item?id=46703931
+
+Relevance Score: 0.640
+Opinion Score: 1.000
+Categories: ai_tools, productivity
+Is Relevant: True
+
+Title: Show HN: CyberCage – Control what data reaches AI tools without blocking them
+
+Text (first 500 chars):
+Hey HN,Builders use AI tools to create beautiful things. Claude, ChatGPT, Copilot — they're part of the workflow now.But if you're running a team, you probably want some visibility into what's being shared.We built Network Inspection to CyberCage so teams can keep using these tools without worrying about what slips through.What you can do:- See which AI tools your team actually uses- Block file uploads while keeping chat working- Set size limits (small questions OK, large uploads flagged)- Confi...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 36/100
+======================================================================
+ID: 8100256
+Type: comment
+Author: patio11
+URL: https://news.ycombinator.com/item?id=8100256
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: The Financial Side of Building Mac Apps
+
+Text (first 500 chars):
+I know a few dozen apps that fit that bill. Bingo Card Creator started as a cross-platform desktop app (that was my only product from 2006 through 2009, when I released the online version). It was bootstrapped and was/is profitable.A few others off the top of my head: Perfect Table Plan, Poker CoPilot, Mixed In Key, Balsamiq Mockups (though that eventually turned into "a company"), etc. You'll note that BCC doesn't belong in the same league with any of the above....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 37/100
+======================================================================
+ID: 44303762
+Type: comment
+Author: quantadev
+URL: https://news.ycombinator.com/item?id=44303762
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: LLMs pose an interesting problem for DSL designers
+
+Text (first 500 chars):
+> DSLs look like noiseExactly right. Now that we're in the era of LLMs and Coding Agents it's never been more clear that DSLs should be avoided; because LLMs cannot reason about them as well as popular languages, and that's just a fact. You don't need to dig any further, to think about pros and cons, imo.The fewer languages there are in the world (as a general rule) the better off everyone is. We do need a low level language like C++ to exist and a high level one like TypeScript, but we don't _n...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 38/100
+======================================================================
+ID: 29411298
+Type: comment
+Author: seattle_spring
+URL: https://news.ycombinator.com/item?id=29411298
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: productivity, vibe_coding, issues
+Is Relevant: True
+
+Title: My worst tech interview experience
+
+Text (first 500 chars):
+I've had a ton of bad interview experiences, but my worst was still Google. This was circa 2012 or so, was my 2nd session of an on-site day. I guess I didn't grow up around a lot of people with thick accents because I could literally not understand a single word this guy was saying, and he didn't seem to understand me. He wanted me to explain the solution before writing any code, but since we were having communication issues I asked if I could write pseudocode.He slammed (SLAMMED) his fist onto ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 39/100
+======================================================================
+ID: 45777277
+Type: comment
+Author: strgcmc
+URL: https://news.ycombinator.com/item?id=45777277
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: productivity, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: How to build silos and decrease collaboration on purpose
+
+Text (first 500 chars):
+In such scenarios (data engineering / DS / analytics is my personal background), I have learned not to underestimate the value of, explicitly declaring within Team X, that person X1 is dedicated to line L1, person X2 is dedicated to line L2, etc. (aka similar to your last line about embedding a person with that line of business).In theory, it doesn't actually "change" anything, because Team X is still stuck supporting exactly the same number of dependencies + the same volume and types of request...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 40/100
+======================================================================
+ID: 40177381
+Type: comment
+Author: alimnes
+URL: https://news.ycombinator.com/item?id=40177381
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, vibe_coding
+Is Relevant: True
+
+Title: Leaving Rust gamedev after 3 years
+
+Text (first 500 chars):
+Many people are choosing Rust because they want to use Rust. Rust has the reputation being "the best" programming language: Fast, safe, reliable, modern. I can rely on that very much. Who wouldn't like the feeling of using the best tech for their project.What many overlook is that using Rust has very high costs, but the edge over alternative languages is often only marginally - depending on the use case of course.Those costs of Rust get in the way of developing the actual product. You loose spee...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 41/100
+======================================================================
+ID: 29085771
+Type: comment
+Author: ryanSrich
+URL: https://news.ycombinator.com/item?id=29085771
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Launch HN: Typedream (YC W20) – WYSIWYG website builder
+
+Text (first 500 chars):
+Interesting UX.Certainly more complex sites would need more complex controls. I have a love hate relationship with Webflow. On one hand I'm much faster coding HTML and CSS by hand, but Webflow handles the things I don't want to handle. Stuff like collections, pagination, forms, etc. Can I build all of those things? Sure, but it's a waste of my time if I can click a button and get a form up that sends me an email in less than 30 seconds.There are so many things that Webflow does not do though. St...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 42/100
+======================================================================
+ID: 42505618
+Type: comment
+Author: LVB
+URL: https://news.ycombinator.com/item?id=42505618
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding
+Is Relevant: True
+
+Title: Ask HN: Programmers who don't use autocomplete/LSP, how do you do it?
+
+Text (first 500 chars):
+Appreciate the thoughts on this. I've been very conflicted about this topic lately. I'm an old Vim programmer, but I've leapt into AI-assistance earnestly. First it was out of curiosity and some amazement at how well they worked. Then, especially with Cursor, it was like, "Holy shit I'm flying through this stuff, basically hitting just tab. It's reading my mind."But do I feel something weakening in me? Yeah. I don't have nearly the intimate mental model of where things are in code and how it tie...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 43/100
+======================================================================
+ID: 44615968
+Type: comment
+Author: AnotherGoodName
+URL: https://news.ycombinator.com/item?id=44615968
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, productivity
+Is Relevant: True
+
+Title: A 14kb page can load much faster than a 15kb page (2022)
+
+Text (first 500 chars):
+Math expressions are like regex to me nowadays. I ask the llm coding assistant to write it and it’s very very good at it. I’ll probably forget the syntax soon but no big deal.“MathML for {very rough textual form of the equation}” seems to give a 100% hit rate for me. Even when i want some formatting change i can ask the llm and that pretty much always has a solution (mathml can render symbols and subscripts in numerous ways but the syntax is deep). It’ll even add the css needed to change it up i...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 44/100
+======================================================================
+ID: 5128973
+Type: comment
+Author: fghh45sdfhr3
+URL: https://news.ycombinator.com/item?id=5128973
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: productivity, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Why do game developers prefer Windows?
+
+Text (first 500 chars):
+The main reason is that debugging is terrible on Linux. gdb is just bad to useI am a cross platform developer. I have spent years developing on Windows, Linux, and OSX. (Also on other OSs, but what ever.)Debugging with gdb is very different from debugging with a GUI IDE like Visual Studio. And if you are coming form Visual Studio to gdb, then debugging with gdb might seem down right impossible.However, if debugging with gdb is so terrible, that means that each and every UNIX and all the software...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 45/100
+======================================================================
+ID: 46547834
+Type: comment
+Author: nyrikki
+URL: https://news.ycombinator.com/item?id=46547834
+
+Relevance Score: 1.000
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: AI coding assistants are getting worse?
+
+Text (first 500 chars):
+> If an assistant offered up suggested code, the code ran successfully, and the user accepted the code, that was a positive signal, a sign that the assistant had gotten it right. If the user rejected the code, or if the code failed to run, that was a negative signal, and when the model was retrained, the assistant would be steered in a different direction.> This is a powerful idea, and no doubt contributed to the rapid improvement of AI coding assistants for a period of time. But as inexperience...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 46/100
+======================================================================
+ID: 46953554
+Type: comment
+Author: kasey_junk
+URL: https://news.ycombinator.com/item?id=46953554
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: ai_tools, productivity, comparison
+Is Relevant: True
+
+Title: Another GitHub outage in the same day
+
+Text (first 500 chars):
+In testing for my workflows copilot significantly underperforms the SOTA agents, even when using the exact same models. It's not particularly close either.This has lead to 2 classes of devs at my company a) AI hesitant, who for many copilot is their only interaction, having their worst fears confirmed about how bad AI is. b) AI enthusiasts who are irritated by dealing with management that don't know the difference pushing back on their asks for access to SOTA agents.If I were the frontier labs, ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 47/100
+======================================================================
+ID: 46313675
+Type: comment
+Author: gaigalas
+URL: https://news.ycombinator.com/item?id=46313675
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: issues
+Is Relevant: True
+
+Title: Your job is to deliver code you have proven to work
+
+Text (first 500 chars):
+> Make your coding agent prove it firstAgents love to cheat. That's an issue I don't see a horizon for change.Here's Opus 4.5 trying to cheat its way out of properly implementing compatibility and cross-platform, despite the clear requirements:[URL] Should popen handles work with fgets/fread/fwrite? PHP supports this. Option A: Create a minimal pipe_io_stream device / Option B: Store FILE* in io_private with a flag / Option C: Only support pclose, require explicit stream wrapper for reads.If I a...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 48/100
+======================================================================
+ID: 47008727
+Type: comment
+Author: dakolli
+URL: https://news.ycombinator.com/item?id=47008727
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding
+Is Relevant: True
+
+Title: GPT-5.2 derives a new result in theoretical physics
+
+Text (first 500 chars):
+Yeah but you know what, this is a complete psyop.They just want people to think the barrier of entry has dropped to the ground and that value of labour is getting squashed, so society writes a permission slip for them to completely depress wages and remove bargaining chips from the working class.Don't fall for this, they want to destroy any labor that deals with computer I/0, not just SWE. This is the only value "agentic tooling" provides to society, slaves for the ruling class. They yearn for t...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 49/100
+======================================================================
+ID: 21122778
+Type: comment
+Author: xvector
+URL: https://news.ycombinator.com/item?id=21122778
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Great apes appear to have “theory of mind”
+
+Text (first 500 chars):
+Multiple hominid species on Earth have had a technology gap on an unfathomable timescale. Indeed, the Denisovans developed stone tools tens of thousands of years before our own species.We often look to the stars and wonder what other intelligent life is out there. I'm sure it's captured every one of our minds at some point. Dark Forest theory of the Fermi Paradox be damned, we want to share in the comfort of knowing that intelligent life exists. That we are not all alone.But I wonder - had thing...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 50/100
+======================================================================
+ID: 46858116
+Type: comment
+Author: michaelcampbell
+URL: https://news.ycombinator.com/item?id=46858116
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: ai_tools, comparison
+Is Relevant: True
+
+Title: Claude Code is suddenly everywhere inside Microsoft
+
+Text (first 500 chars):
+Can you (or anyone) explain how this might be? The "agent" is just a passthrough for the model, no? How is one CLI/TUI tool better than any other, given the same model that it's passing your user input to?I am familiar with copilot cli (using models from different providers), OpenCode doing the same, and Claude with just the \A models, but if I ask all 3 the same thing using the same \A model, I SHOULD be getting roughly the same output, modulo LLM nondeterminism, right?...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 51/100
+======================================================================
+ID: 46076378
+Type: comment
+Author: mayas1212
+URL: https://news.ycombinator.com/item?id=46076378
+
+Relevance Score: 0.640
+Opinion Score: 0.772
+Categories: productivity, vibe_coding
+Is Relevant: True
+
+Title: [dead]
+
+Text (first 500 chars):
+As Thanksgiving approached, Harvest Analytics was gearing up for its biggest sales event of the year. With customers eager to secure the best deals, the team knew they needed real-time visibility into their sales data to drive informed decisions. But they faced a critical challenge: how could they efficiently query streaming data from Kafka while still getting instant access to key metrics?The ChallengeHarvest Analytics relied heavily on a lakehouse architecture, using kafka_fdw to pull streamin...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 52/100
+======================================================================
+ID: 45257010
+Type: comment
+Author: debo_
+URL: https://news.ycombinator.com/item?id=45257010
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Linux phones are more important now than ever
+
+Text (first 500 chars):
+In giant font at the top of the linked post:> apparently it needs to be said that I am not suggesting you switch to Linux on your phone today; just that development needs to accelerate. Please don’t be one of the 34 people that replied to tell me Linux is not ready....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 53/100
+======================================================================
+ID: 45527116
+Type: comment
+Author: cheema33
+URL: https://news.ycombinator.com/item?id=45527116
+
+Relevance Score: 0.880
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Two things LLM coding agents are still bad at
+
+Text (first 500 chars):
+A computer science degree in most US colleges takes about 4 years of work. Boot camps try to cram that into 6 months. All the while many students have other full-time jobs. This is simply not enough training for the students to start solving complex real world problem. Even 4 years is not enough.Many companies were willing to hire fresh college grads in the hopes that they could solve relatively easy problems for a few years, gain experience and become successful senior devs at some point.Howeve...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 54/100
+======================================================================
+ID: 47031068
+Type: comment
+Author: davnicwil
+URL: https://news.ycombinator.com/item?id=47031068
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Why I don't think AGI is imminent
+
+Text (first 500 chars):
+I don't think this is how it'll play out, and I'm generally a bit skeptical of the 'agent' paradigm per se.There doesn't seem to be a reason why AIs should act as these distinct entities that manage each other or form teams or whatever.It seems to me way more likely that everything will just be done internally in one monolithic model. The AIs just don't have the constraints that humans have in terms of time management, priority management, social order, all the rest of it that makes teams of ind...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 55/100
+======================================================================
+ID: 41768015
+Type: comment
+Author: MeetingsBrowser
+URL: https://news.ycombinator.com/item?id=41768015
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, comparison
+Is Relevant: True
+
+Title: Ask HN: In 2024, is SWE a sustainable career?
+
+Text (first 500 chars):
+There may be a small bit of truth in each claim, but they are mostly false.> LLMs and Agents are not automating SWE, but they are changing it.LLMs are maybe a slightly larger threat to SWE careers than the ability to copy/paste code from stack overflow.> Interviews have become nightmaresInterviews if anything have gotten slightly better. Companies stopped asking riddles like, “how many windows are in Seattle”.> A lot of SWE work is objectively make-work, and a lot of startups are building fluff ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 56/100
+======================================================================
+ID: 31337765
+Type: comment
+Author: oliver910
+URL: https://news.ycombinator.com/item?id=31337765
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: ai_tools, issues, comparison
+Is Relevant: True
+
+Title: Effective altruism and the current funding situation
+
+Text (first 500 chars):
+Exactly. Even in the short term, there are some very worrying behaviours in AI systems which have real consequences. For instance:* Some researchers recently built an AI system to generate low-toxicity molecules as candidates for medicines. They realised if they changed their system to maximise toxicity, it designed thousands of toxic molecule candidates including the VX nerve agent ([URL] When GitHub released their Copilot AI code completion tool, it could autocomplete things like `API_KEY: `* ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 57/100
+======================================================================
+ID: 47150109
+Type: comment
+Author: ralfd
+URL: https://news.ycombinator.com/item?id=47150109
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: LLM=True
+
+Text (first 500 chars):
+Similarly law professor Rob Anderson joked on X that llm hallucinated cases are good law:[URL] Indeed hallucinated cases are "better law." Drawing on Ronald Dworkin's theory of law as integrity, which posits that ideal legal decisions must "fit" existing precedents while advancing principled justice, this article argues that these hallucinations represent emergent normative ideals. AI models, trained on vast corpora of real case law, synthesize patterns to produce rulings that optimally align wi...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 58/100
+======================================================================
+ID: 43601209
+Type: comment
+Author: pmarreck
+URL: https://news.ycombinator.com/item?id=43601209
+
+Relevance Score: 0.640
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding
+Is Relevant: True
+
+Title: Blacksmithing and Lisp
+
+Text (first 500 chars):
+That's not remotely "vibe coding" though. Vibe coding would be like using Claude Code or Codeium Windsurf with a recent model. Something that does the code edits for you and optionally lets you code-review them first to approve/deny. Not copy-pasting GPT4o-produced bupkis....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 59/100
+======================================================================
+ID: 43954385
+Type: comment
+Author: LegionMammal978
+URL: https://news.ycombinator.com/item?id=43954385
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: issues, comparison
+Is Relevant: True
+
+Title: Title of work deciphered in sealed Herculaneum scroll via digital unwrapping
+
+Text (first 500 chars):
+To add to this, the main ML parts, as I understand it, are for the initial unrolling of layers, and for the detection of ink vs. no-ink (the position of the 'splotches'). Both of these are trained and calibrated from human observations.All interpretation of ink as Greek letters is done purely by human inference. This may lead to errors, especially in parts where the ink is preserved especially poorly or where the text is totally different from expectations, but it would be classic human error in...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 60/100
+======================================================================
+ID: 4549556
+Type: comment
+Author: adrianhoward
+URL: https://news.ycombinator.com/item?id=4549556
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: issues, comparison
+Is Relevant: True
+
+Title: VirtualBox broken on Ivy Bridge Macbooks after 10.8.2 and Firmware Update
+
+Text (first 500 chars):
+As I read it, the suggestion wasn't that you replace your virtualized Linux with physical hardware, it was that you replace your Macbook with a system that does what you need.That was the question I was attempting to answer - I have obviously failed :-) Let me try again.A Macbook + virtualised environment does exactly what I need.I happen to prefer Apple HW and the OS X GUI. My partner prefers Ubuntu. We both run dev environment in a VM because automating the creation and deployment on a virtual...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 61/100
+======================================================================
+ID: 47007129
+Type: comment
+Author: mjr00
+URL: https://news.ycombinator.com/item?id=47007129
+
+Relevance Score: 0.760
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues
+Is Relevant: True
+
+Title: I'm not worried about AI job loss
+
+Text (first 500 chars):
+I'm one of those developers who is now writing probably ~80% of my code via Claude. For context, I have >15 years experience and former AWS so I'm not a bright-eyed junior or former product manager who now believes themselves a master developer.I'm not worried about AI job loss in the programming space. I can use Claude to generate ~80% of my code precisely because I have so much experience as a developer. I intuitively know what is a simple mechanical change; that is to say, uninteresting editi...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 62/100
+======================================================================
+ID: 35901854
+Type: comment
+Author: tuanm
+URL: https://news.ycombinator.com/item?id=35901854
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: Supertokens: Open-Source Alternative to Auth0 / Firebase Auth / AWS Cognito
+
+Text (first 500 chars):
+Hmm, to be honest, I don't know. But I just found an article from Codeium and they stated some problems with licensing stuff with GitHub Copilot, here: [URL]...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 63/100
+======================================================================
+ID: 8668992
+Type: comment
+Author: nkurz
+URL: https://news.ycombinator.com/item?id=8668992
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: The Unreasonable Effectiveness of C (2013)
+
+Text (first 500 chars):
+If tracking changes in the specs, you'd be right, but I'm referring more to the mindset. And I don't mean to imply this is anything sudden --- if pressed, I'd probably roughly gesture in the direction of 1998-2000, possibly related to a slow "changing of the guard". In this incredibly long but fantastic thread, Anton Ertl points to GCC 2.9.5 as the turning point. [URL] (search for Ertl). His rhetoric might be excessive, but he makes a good point that in practical terms, his research on "threaded...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 64/100
+======================================================================
+ID: 8175930
+Type: comment
+Author: spiralganglion
+URL: https://news.ycombinator.com/item?id=8175930
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Poll: What is your #1 productivity killer?
+
+Text (first 500 chars):
+I must second this point. I'm fortunate enough to work a job where, every few months, I manage to shirk all of my day-to-day duties and get to spend a few weeks just hacking on some big, long-term, greenfield project of my choosing.After seeing how productive I am during those windows of pure, blissful coder-escapism, getting back to the emails and little issues on GitHub and helping my coworkers... it absolutely shatters my productivity. Not because I don't like doing the little things (they gi...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 65/100
+======================================================================
+ID: 8714461
+Type: comment
+Author: MichaelCrawford
+URL: https://news.ycombinator.com/item?id=8714461
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: I Don't Agree That There Really Is a Tech Worker Shortage
+
+Text (first 500 chars):
+My observation is that quite a lot of folks know all about computer science, they might well know how operating systems work, but are clueless as to what happens when they combine the two.Consider that with certain exceptions, QuickSort is widely regarded as the very best way to sort.What happens when you sort a memory buffer on a Mac OS X box? Well that depends on a whole lot of things. How big is the buffer? If it's really large, you will cause paging no matter what you do to avoid it.However ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 66/100
+======================================================================
+ID: 7309070
+Type: comment
+Author: basicallydan
+URL: https://news.ycombinator.com/item?id=7309070
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Atom
+
+Text (first 500 chars):
+Minimising context switching is a big part of improving programmer productivity, as I'm sure you're aware. This may not seem like much, but large increases in productivity can be achieved through small increases building up; every little helps.Plus, it's cool....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 67/100
+======================================================================
+ID: 7859393
+Type: comment
+Author: mikecb
+URL: https://news.ycombinator.com/item?id=7859393
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: issues
+Is Relevant: True
+
+Title: I Sold My Startup for $25.5 Million
+
+Text (first 500 chars):
+Ahhh, I just came from the Vodaphone comments, and my context switching is slow.It's true that the legal side is onerous. We like to think that it prevents more trouble than it causes, but reasonable minds may differ.I still think my question is an interesting one, even if it's not what you were saying. I don't know that there's any public precedent on the matter, but I imagine it's not as rare as one might think given all the different sort of public and private NDAs that exist....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 68/100
+======================================================================
+ID: 42667408
+Type: comment
+Author: ako
+URL: https://news.ycombinator.com/item?id=42667408
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues
+Is Relevant: True
+
+Title: Ask HN: Are there any real examples of AI agents doing work?
+
+Text (first 500 chars):
+I’m a pm, today I built a working mockup with windsurf (golang + wails + vuejs +duckd). Windsurf uses codeium, branded as the first agentic IDE.Your requirements will improve, not sure if in the long I still need developers to build the actual software.The development process with windsurf is a bit like throwing a dice, hoping for a 6. A lot of trial and error, but if you check the git log, you see about 15 minutes between commit per feature request. Windsurf does a good job to summarize the ent...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 69/100
+======================================================================
+ID: 8679762
+Type: comment
+Author: waps
+URL: https://news.ycombinator.com/item?id=8679762
+
+Relevance Score: 0.800
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues, comparison
+Is Relevant: True
+
+Title: Java for Everything
+
+Text (first 500 chars):
+Still don't understand. Let's take the changes you need to make : Foo.java ... class Foo { ... } SomeOtherFile.java ... Foo x = new Foo(); ... Equivalent in Python: some_file_in_a_library.py class Foo: ... some_other_part_of_the_program.py: x = Foo() Keystrokes to change the name "Foo", in Java :1) Position cursor on Foo.2) Alt-shift-R "Bar" (+ enter)Keystrokes to change this name, in Python :1) position cursor on Foo2) Change to bar (5 or 6 keystrokes)3) Open some_file_in_a_library.py (couple d...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 70/100
+======================================================================
+ID: 46988784
+Type: comment
+Author: alxfoster
+URL: https://news.ycombinator.com/item?id=46988784
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: vibe_coding
+Is Relevant: True
+
+Title: AI agent opens a PR write a blogpost to shames the maintainer who closes it
+
+Text (first 500 chars):
+Unfortunately I think you’re on to something here. I love ‘vibe coding’ in a deliberate directed controlled way but I consult with mostly non technical clients and what you describe is becoming more and more commonplace -specifically within non-technical executives towards those actual experts who try to explain the implications and realities and limitations of AI itself....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 71/100
+======================================================================
+ID: 47024986
+Type: comment
+Author: markbao
+URL: https://news.ycombinator.com/item?id=47024986
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: vibe_coding
+Is Relevant: True
+
+Title: AI is going to kill app subscriptions
+
+Text (first 500 chars):
+Yes, that’s a possibility! And for app types that have a limited ceiling of how much value they can provide, that will definitely be a thing as an AI app can saturate all of that value.But for apps that have a lot of ceiling, people will still gravitate to apps that have had more care and attention than someone vibe coding it once and throwing it on the store, just like how people choose those well-built and maintained apps today over using their built-in Reminders app....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 72/100
+======================================================================
+ID: 46997239
+Type: comment
+Author: reikonomusha
+URL: https://news.ycombinator.com/item?id=46997239
+
+Relevance Score: 0.560
+Opinion Score: 1.000
+Categories: vibe_coding, issues
+Is Relevant: True
+
+Title: I Wrote a Scheme in 2025
+
+Text (first 500 chars):
+I mean the following with all due respect—and I have a lot of respect for your many efforts and contributions—but it will sound a little blunt, especially as a written comment."We have one," no, this is a consistent problem with people who evangelize Lisp. We have had "IDEs" for decades. Most of them, except the couple commercially supported ones, were "experimental", "incomplete", "buggy", etc. This includes the one you link here.Are these projects valuable as a starting point for other hackers...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 73/100
+======================================================================
+ID: 8567513
+Type: comment
+Author: edw519
+URL: https://news.ycombinator.com/item?id=8567513
+
+Relevance Score: 0.640
+Opinion Score: 1.000
+Categories: vibe_coding, issues
+Is Relevant: True
+
+Title: Ask HN: How do I get my team to write better code?
+
+Text (first 500 chars):
+I review commits now and then and find some of these issues - but due to the nature and timeline fo the project cannot do it for each and ever commit of course.Why not? I do.I have 8 direct reports and I review every single line of code that they write. Some days this is all I do.Others think I'm crazy but our group outperforms every other group by any measure. I'm convinced it's because of peer review.A few thoughts:1. Regarding resources and timelines: It's not when you start, it's when you fi...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 74/100
+======================================================================
+ID: 7450253
+Type: comment
+Author: dkulchenko
+URL: https://news.ycombinator.com/item?id=7450253
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, vibe_coding
+Is Relevant: True
+
+Title: New study shows we work harder when we are happy
+
+Text (first 500 chars):
+It's interesting that the difference in productivity is only 12%. I'd think a happy developer would be significantly more productive than a miserable one, far beyond 12%, just from personal experience of coding when I'm down and when I'm not....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 75/100
+======================================================================
+ID: 7896581
+Type: comment
+Author: twotwotwo
+URL: https://news.ycombinator.com/item?id=7896581
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Brotli Compressed Data Format
+
+Text (first 500 chars):
+Context: rev 2.0 of the Web font standard was going to use LZMA, it had issues (IP, decoding speed, clear spec for independent implementations), so Google proposed a new format.WOFF report on Brotli: [URL]#candidateb (and #candidatea says what they thought of LZMA)Reference code: [URL] (this aims for very slow but good compression, like their zopfli zlib encoder)Google's presentation: [URL] the authors, I suspect it was a feature that it's 'just' DEFLATE with 4MB windows + more context for entro...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 76/100
+======================================================================
+ID: 43104495
+Type: comment
+Author: idamantium
+URL: https://news.ycombinator.com/item?id=43104495
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: productivity, vibe_coding
+Is Relevant: True
+
+Title: The Generative AI Con
+
+Text (first 500 chars):
+The mismatch between AI’s actual utility and its hype reminded me of Prediction Machines[1], which frames technological change as progressing from point solutions → platform solutions → system solutions.We’re still in the “what the heck is the point solution here” phase, with a lot of anticipation for platform and system-level shifts. There are some point solutions—like coding assistants—that make existing workflows more efficient and higher quality, but they haven’t translated easily to other d...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 77/100
+======================================================================
+ID: 47011124
+Type: comment
+Author: sho_hn
+URL: https://news.ycombinator.com/item?id=47011124
+
+Relevance Score: 0.280
+Opinion Score: 0.699
+Categories: vibe_coding
+Is Relevant: True
+
+Title: An AI agent published a hit piece on me – more things have happened
+
+Text (first 500 chars):
+Also ironic: When the same professionals advocating "don't look at the code anymore" and "it's just the next level of abstraction" respond with outrage to a journalist giving them an unchecked article.Read through the comments here and mentally replace "journalist" with "developer" and wonder about the standards and expectations in play.Food for thought on whether the users who rely on our software might feel similarly.There's many places to take this line of thinking to, e.g. one argument would...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 78/100
+======================================================================
+ID: 39061010
+Type: comment
+Author: ben_w
+URL: https://news.ycombinator.com/item?id=39061010
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Germany's parliament approves easing dual citizenship
+
+Text (first 500 chars):
+> What’s the alternative?Funny you should mention it; one of the election posters in Alexanderplatz is for the Partei für schulmedizinische Verjüngungsforschung ("Party for Biomedical Rejuvenation Research") — a single-issue political party in Germany that seeks to accelerate the development of medicine to reverse the aging process.I can't vote here, but if I could, this is appealing.(I might still not actually vote for them, it depends on the details of the voting system and single-issue partie...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 79/100
+======================================================================
+ID: 45148605
+Type: comment
+Author: WhyNotHugo
+URL: https://news.ycombinator.com/item?id=45148605
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: Let us git rid of it, angry GitHub users say of forced Copilot features
+
+Text (first 500 chars):
+> During Microsoft's July 30, 2025 earnings call, CEO Satya Nadella said GitHub Copilot continued to exhibit strong momentum and had reached 20 million users.Considering that they force it upon users and user cannot disable it, this sounds like a worthless metric.I get an email every month telling me that my Copilot access has been renewed for another month. I'm probably being counted amongst those 20M users.I could stand at the train station and yell "Cthulhu is our saviour" all day and later c...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 80/100
+======================================================================
+ID: 46928926
+Type: comment
+Author: bodge5000
+URL: https://news.ycombinator.com/item?id=46928926
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Coding agents have replaced every framework I used
+
+Text (first 500 chars):
+On the face of it, this or at least acting as a code reviewer from an experienced point of view seems like the solution, the problem is that we all naturally get lazy and complacent. I actually think AI was at its best for coding a year or so ago, when it could kind of do part of the work but theres no way you could ever ship it. Code that works today but breaks in 6 months is far more insidious....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 81/100
+======================================================================
+ID: 46913976
+Type: comment
+Author: maxkfranz
+URL: https://news.ycombinator.com/item?id=46913976
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: GPT-5.3-Codex
+
+Text (first 500 chars):
+It worked for me after I configured mise. I needed the mise setup in both `.zprofile` and `.zshrc` for Codex to pick it up. I think mise sets up itself in one of those by default, but Codex uses the other. I expect the same problem would present itself with nvm.I.e. `eval "$(/Users/max/.local/bin/mise activate zsh)"` in `.zprofile` and `.zshrc`Then Codex will respect whatever node you've set as default, e.g.: mise install node@24 mise use -g node@24 Codex might respect your project-local `.nvmrc...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 82/100
+======================================================================
+ID: 46745721
+Type: comment
+Author: signatoremo
+URL: https://news.ycombinator.com/item?id=46745721
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: Wilson Lin on FastRender: a browser built by parallel agents
+
+Text (first 500 chars):
+Basically your arguments are:1) The CEO said there was a JS engine, but it didn't work.2) It didn't build when they published the blog post.Therefore it lacks integrity! Except that it built (I took Simon's words for it), and building a browser is beside the point, there are a few other big projects listed (Java LSP, Windows 7 emulator, Excel, etc.)The blog stated:"Our goal is to understand how far we can push the frontier of agentic coding for projects that typically take human teams months to ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 83/100
+======================================================================
+ID: 46993571
+Type: comment
+Author: raw_anon_1111
+URL: https://news.ycombinator.com/item?id=46993571
+
+Relevance Score: 0.360
+Opinion Score: 1.000
+Categories: ai_tools
+Is Relevant: True
+
+Title: GPT‑5.3‑Codex‑Spark
+
+Text (first 500 chars):
+You’re mixing up Open AI for Anthropic.Anthropic is actually sort of concerned with not burning through cash and charging people a reasonable price. Open AI doesn’t care. I can use Codex CLI all day and not approach any quotas with just my $20 a month ChatGPT subscription.I treat coding agents like junior developers and never take my hand off the wheel except for boilerplate refactoring....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 84/100
+======================================================================
+ID: 44132191
+Type: comment
+Author: nyrulez
+URL: https://news.ycombinator.com/item?id=44132191
+
+Relevance Score: 0.760
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding
+Is Relevant: True
+
+Title: Net-Negative Cursor
+
+Text (first 500 chars):
+"Mastering" is a strong term and is even misleading, especially when talking about tools that give you leverage. I mean if someone masters running, does it mean you never use a car? There are thousands and thousands of instances in everyday programming where AI is going to be 10x-100x faster than any human, especially at the function level and even file/script level.I can give you a concrete example since things sometimes can be so philosophical. The other day I needed a LIS code (Longest Increa...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 85/100
+======================================================================
+ID: 46862962
+Type: comment
+Author: jtrn
+URL: https://news.ycombinator.com/item?id=46862962
+
+Relevance Score: 1.000
+Opinion Score: 1.000
+Categories: ai_tools, productivity, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: The Codex App
+
+Text (first 500 chars):
+People's mileage may vary, but in my instance, this was so bad that I actually got angry while trying to use it.It's slow and stupid. It does not do proper research. It does not follow instructions. It randomly decides to stop being agentic, and instead just dumps the code for me to paste. It has the extremely annoying habit of just doing stuff without understanding what I meant, making a mess, then claiming everything is fine. The outdated training data is extremely annoying when working with N...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 86/100
+======================================================================
+ID: 4074732
+Type: comment
+Author: vannevar
+URL: https://news.ycombinator.com/item?id=4074732
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Steve Yegge: Programming's Dirtiest Little Secret
+
+Text (first 500 chars):
+All else being equal, it's better to be a quick typist, no doubt. But I've been around programmers who can type as fast as they think, and that can lead to a sort of stream-of-consciousness style that literally leaves them (and their teammates) buried in their own code. There's something to be said for thoughtful pauses while coding, time to consider the approach you're about to take to that class or that algorithm. As the saying goes, sometimes you have to slow down to speed up....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 87/100
+======================================================================
+ID: 9789050
+Type: comment
+Author: anaolykarpov
+URL: https://news.ycombinator.com/item?id=9789050
+
+Relevance Score: 0.280
+Opinion Score: 1.000
+Categories: issues
+Is Relevant: True
+
+Title: The Three Great Virtues of a Programmer: Laziness, Impatience, and Hubris
+
+Text (first 500 chars):
+I'm a Perl dev for less than 5 years. Since last week I changed the company I work for. The new company has a project which is 12+ years old.This project has a code base written in Perl which seemingly violates all programming best practices: files of 50k LoC,functions of several thousands of lines, there are frequently 5-6+ levels of nested ifs. It contains all the technical debt it acquired during these 12+ years.However, it took me less than an hour from the moment I got access to a working v...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 88/100
+======================================================================
+ID: 47001945
+Type: comment
+Author: bothlabs
+URL: https://news.ycombinator.com/item?id=47001945
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: ai_tools, productivity, issues
+Is Relevant: True
+
+Title: GPT‑5.3‑Codex‑Spark
+
+Text (first 500 chars):
+The Cerebras partnership is the most interesting part of this announcement to me. 1000+ tok/s changes how you interact with a coding model. At that speed the bottleneck shifts from waiting for the model to keeping up with it yourself.Curious how the capability tradeoff plays out in practice though. SWE-Bench Pro scores are noticeably lower than full 5.3-Codex. For quick edits and rapid prototyping that's probably fine, but I wonder where the line is where you'd rather wait 10x longer for a corre...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 89/100
+======================================================================
+ID: 46921805
+Type: comment
+Author: therealdrag0
+URL: https://news.ycombinator.com/item?id=46921805
+
+Relevance Score: 0.600
+Opinion Score: 1.000
+Categories: productivity, issues, comparison
+Is Relevant: True
+
+Title: How to effectively write quality code with AI
+
+Text (first 500 chars):
+Honestly it’s not that hard. I already coded less and less as part of my job as I get more senior and just didn’t have time, but I was still easy to do code reviews and fix bugs, sit down and whip out a thousand lines in a power session. Once you learn it doesn’t take much practice to maintain it. A lot of traditional coding is very inefficient. With AI it’s like we’re moving from combustion cars to EVs, the energy efficiency is night and day, for doing the same thing.That said, the next generat...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 90/100
+======================================================================
+ID: 47023561
+Type: comment
+Author: ineedasername
+URL: https://news.ycombinator.com/item?id=47023561
+
+Relevance Score: 0.360
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: IBM tripling entry-level jobs after finding the limits of AI adoption
+
+Text (first 500 chars):
+Yeah, tokens per second can very much influence the work style and therefore mindset a person should bring to usage. You can also build on the results of a faster but less than SOTA class model in different ways. I can let a coding tuned 7-12b model “sketch” some things at higher speed, or even a variety of things, and I can review real time, and pass off to a slower more capable model to say “this is structural sound, or at least the right framing, tighten it all up in the following ways…” and ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 91/100
+======================================================================
+ID: 40793702
+Type: comment
+Author: eternityforest
+URL: https://news.ycombinator.com/item?id=40793702
+
+Relevance Score: 0.800
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Ask HN: What brought back the joy of programming for you?
+
+Text (first 500 chars):
+Pytest, Playwright, and Pre-commit, rewriting to use more modern frameworks, Codeium, poetry, taking some time to set up VS code extensions.Also, being way more selective with personal projects. Having too many of them can make other, unrelated projects at work miserable, by messing with your schedule.When I had my own note taking app, it would sometimes take an hour a day. That's more than enough to affect social life or make someone tired at work the next day.Especially with hardware related p...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 92/100
+======================================================================
+ID: 43556459
+Type: comment
+Author: munksbeer
+URL: https://news.ycombinator.com/item?id=43556459
+
+Relevance Score: 0.480
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding
+Is Relevant: True
+
+Title: Show HN: I vibecoded a 35k LoC recipe app
+
+Text (first 500 chars):
+Wow, I can't believe how many people seem to be missing the point here and being overly negative. The fact that you can have an ai assistant code something like this by giving it instructions would be utterly miraculous 10 years ago, even less.Whatever the ultimate usefulness of the website is, the point is using it is slick. It works and it works well.Very nice demo of vibe coding Tom. I appreciate it....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 93/100
+======================================================================
+ID: 36739101
+Type: comment
+Author: fuzzieozzie
+URL: https://news.ycombinator.com/item?id=36739101
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: productivity, issues
+Is Relevant: True
+
+Title: Ask HN: How to price your first enterprise customer?
+
+Text (first 500 chars):
+What is your target market for "making money"? (large or small customers). If you expect to make real money on large customers then negotiating a special relationship where you actually "get in bed" with the large customer to learn their requirements will really accelerate your product development focus - ie. give them even more of a price break IF they commit resources to help direct your product.The reality is you WILL have problems with this large customer and you want to lay the groundwork f...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 94/100
+======================================================================
+ID: 9063972
+Type: comment
+Author: dlu
+URL: https://news.ycombinator.com/item?id=9063972
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: vibe_coding
+Is Relevant: True
+
+Title: Windows 10 Observations
+
+Text (first 500 chars):
+"Win8 apps that use the AppBar are going to need to be rewritten to avoid it. The AppBar is really hard to bring up in touch mode..."This was always the infuriating part of making a Win8 app, the guidelines were terrible and you could either follow them to try and feel like a native app (with a sucky UX) or you could tweak them or invent your own, which made your app feel like a one-off with a steeper learning curve...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 95/100
+======================================================================
+ID: 38198566
+Type: comment
+Author: robbomacrae
+URL: https://news.ycombinator.com/item?id=38198566
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: ai_tools, issues
+Is Relevant: True
+
+Title: We wrote the OpenAI Wanderlust app in pure Python using Solara
+
+Text (first 500 chars):
+I was a bit surprised about their choice of example app. With tour guide/info you need to be re-assured the information you're giving is correct. But asking LLM's to write it for you is a recipe for hallucinations. I built Summer AI to do audio tour guides using old fashioned web scraping and then piping the output through LLM's just to summarize and even then use a couple of extra steps to ensure factual accuracy.During testing I found any other approach would always inevitably make stuff up.No...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 96/100
+======================================================================
+ID: 41440329
+Type: comment
+Author: alidastjerdi
+URL: https://news.ycombinator.com/item?id=41440329
+
+Relevance Score: 1.000
+Opinion Score: 0.726
+Categories: ai_tools, productivity, vibe_coding, issues, comparison
+Is Relevant: True
+
+Title: Ask HN: Who is hiring? (September 2024)
+
+Text (first 500 chars):
+Raylu | AI Engineer | Onsite - NYC| Full-time | $4M Seed funded * Apply Here : [URL] is AI for financial services. Our product combines domain-trained and specialized financial LLM systems with a workflow, prompt, and knowledge base builder - giving funds accurate and cutting-edge AI that is deeply bespoke to their needsRaylu’s engineering team of 5 people is looking to expand and hire an AI Engineer. We are looking for an engineer who is comfortable working with complex LLM systems, excel’s at ...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 97/100
+======================================================================
+ID: 23276440
+Type: comment
+Author: onemoresoop
+URL: https://news.ycombinator.com/item?id=23276440
+
+Relevance Score: 0.200
+Opinion Score: 1.000
+Categories: productivity
+Is Relevant: True
+
+Title: Breathing habits are related to physical and mental health
+
+Text (first 500 chars):
+Always when im zoned out drawing or painting i notice the pattern in my breath, it’s much slower and holds a bit at the end. The effect is super calming. I wonder what other activities people do to get this type of breathing. For coding Im so concentrated at times that I zone out 100%, dont even notice that im breathing. However, coding while stressed out makes the breathing shallow, quick and unsatisfying....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 98/100
+======================================================================
+ID: 32792083
+Type: comment
+Author: edmundsauto
+URL: https://news.ycombinator.com/item?id=32792083
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: issues, comparison
+Is Relevant: True
+
+Title: Is engineering management bullshit?
+
+Text (first 500 chars):
+> Engineers are fighting with the law of physics. You can't bullshit your way out of a formula or a bug in your codeI mean, structural engineers are fighting physics. Software engineers, generally, are fighting information theory. FWLIW, I spent 15 years as a (quite successful) programmer with a lot of bullshittery going on about what code works. Have you never shipped buggy code and played it down b/c of time constraints or you were just tired or not motivated or realized this bit doesn't actua...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 99/100
+======================================================================
+ID: 640698
+Type: comment
+Author: oomkiller
+URL: https://news.ycombinator.com/item?id=640698
+
+Relevance Score: 0.400
+Opinion Score: 1.000
+Categories: issues, comparison
+Is Relevant: True
+
+Title: Security hole found in Rails 2.3's http_authentication.rb
+
+Text (first 500 chars):
+IMO, you should write your own code, instead of relying on someone else's possibly buggy code. If you are going to use somebody else's code, you should at LEAST look at it to make sure its correct, especially something as terse as this....
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
+
+======================================================================
+SAMPLE 100/100
+======================================================================
+ID: 46496030
+Type: comment
+Author: zen4ttitude
+URL: https://news.ycombinator.com/item?id=46496030
+
+Relevance Score: 0.680
+Opinion Score: 1.000
+Categories: ai_tools, vibe_coding, issues
+Is Relevant: True
+
+Title: Web development is fun again
+
+Text (first 500 chars):
+Agree, I developed a 150K line stock analytics Saas that started with the will to provide my son with some tools to analyse stocks.I enjoyed this experience of CLI coding so much that I developed Market Sentiment parsing 300,000 business articles and news daily, a dividend based strategy with calendar of payouts and AI optimised strategies to extract every drop of interest, an alert system for a strategy you backtested in the playground and its key triggers are tracked automatically so you can r...
+
+[ ] CORRECT  [ ] FALSE POSITIVE  [ ] FALSE NEGATIVE
