@@ -10,7 +10,7 @@ from pathlib import Path
 
 def test_imports():
     """Test that required packages are available"""
-    print("\n🧪 Testing imports...")
+    print("\n Testing imports...")
     
     tests = [
         ("requests", "Core HTTP library"),
@@ -23,9 +23,9 @@ def test_imports():
     for module, description in tests:
         try:
             __import__(module)
-            print(f"  ✓ {module:20} {description}")
+            print(f"  {module:20} {description}")
         except ImportError:
-            print(f"  ✗ {module:20} {description} - MISSING")
+            print(f"  {module:20} {description} - MISSING")
             failed.append(module)
     
     # Optional packages
@@ -38,9 +38,9 @@ def test_imports():
     for module, description in optional:
         try:
             __import__(module)
-            print(f"  ✓ {module:20} {description}")
+            print(f" {module:20} {description}")
         except ImportError:
-            print(f"  ○ {module:20} {description} - not installed")
+            print(f" {module:20} {description} - not installed")
     
     if failed:
         print(f"\nMissing required packages: {', '.join(failed)}")
@@ -112,7 +112,7 @@ def test_scripts_exist():
 
 def test_minimal_crawl():
     """Test a minimal crawl with one keyword"""
-    print("\n🧪 Testing minimal crawl (this may take 30-60 seconds)...")
+    print("\n Testing minimal crawl (this may take 30-60 seconds)...")
     
     try:
         from hn_scraper import HNScraper
@@ -212,7 +212,7 @@ def main():
     all_passed = all(results.values())
     
     if all_passed:
-        print("\n🎉 All tests passed! System is ready to use.")
+        print("\n All tests passed! System is ready to use.")
         print("\nRun the crawler with:")
         print("  python3 hn_pipeline.py --output-dir ./dataset")
         print("\nOr use the quick start:")
