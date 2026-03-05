@@ -1,0 +1,15 @@
+[project]
+name = "sc4021-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "elasticsearch>=9.3.0",
+    "ipykernel>=7.2.0",
+    "langdetect>=1.0.9",
+    "nltk>=3.9.2",
+    "pandas>=3.0.0",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.3",
+]
