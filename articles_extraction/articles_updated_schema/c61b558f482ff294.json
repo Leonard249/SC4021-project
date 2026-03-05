@@ -1,0 +1,12 @@
+{
+    "ID": "article_c61b558f482ff294",
+    "Source": "corporate_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "@lamhieu on Hugging Face: \"Copilot, Cursor and all those new AI-driven extensions are rising fast \u2014 they\u2026\"",
+    "Text": "So yeah, we\u2019re coding faster than ever, but are we also opening the door to a whole new wave of vulnerabilities?\n\ud83d\udc49 Is this the hidden threat waiting to hit the next era of \u201cvibe-coding\u201d?\nJoin the community of Machine Learners and AI enthusiasts.\nSign UpBut here\u2019s the flip side: once these tools start peeking into .env files, nodes, and source code, the risk of leaking critical keys or sensitive info becomes very real.\nPeople who have such sensitive stuff should have the due diligence to pay for a model that fits their privacy needs.\nUsing some shady free API for building such stuff is a skill issue.\nAt the company where I work, we always use paid tools to build features and support tools such as Copilot, OpenAI APIs, Gemini, Vertex, and so on. But for example, with Copilot, it\u2019s very difficult to know whether they don\u2019t use enterprise data for training. Of course, we always see those \u2018terms\u2019 stated, but you know, the data passes through so many layers.",
+    "Score": 0,
+    "Date": "2025-08-24",
+    "Word_Count": 171,
+    "Comments": []
+}

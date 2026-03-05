@@ -1,0 +1,12 @@
+{
+    "ID": "article_6c79c7013494ed69",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Rick Hightower",
+    "Title": "What Is GSD? Spec-Driven Development Without the Ceremony",
+    "Text": "Member-only story\nWhat Is GSD? Spec-Driven Development Without the Ceremony\nHow AI agents forget what they\u2019re building , and how to fix it\nArticle 1 of 3 in the GSD Deep Dive series\nYour AI coding agent starts a session on fire. The first feature lands clean. Requirements are tracked. Code is well-structured. This is spec-driven development working as promised.\nBy task ten, the agent is \u201cbeing more concise.\u201d By task fifteen, it has forgotten half the requirements. By task twenty, you are fighting the agent more than the problem.\nThis is context rot: the quality degradation that happens as an AI agent fills its context window with accumulated discussion, partial decisions, and outdated intent. Every developer working with AI coding agents has experienced it. The agent is not getting dumber; its working memory is filling up with noise until the signal gets buried.\nGSD was built to fix this.\nWhy should I care about SDD?\nBefore diving into GSD, let\u2019s clarify why spec-driven development matters \u2014 and how it transforms you from a \u2018vibe coder\u2019 reacting to AI chaos into an \u2018AI architect\u2019 directing the build.\nThe Core Problem Spec-Driven Development Solves At its heart, spec-driven development\u2026",
+    "Score": 0,
+    "Date": "2026-02-23",
+    "Word_Count": 198,
+    "Comments": []
+}

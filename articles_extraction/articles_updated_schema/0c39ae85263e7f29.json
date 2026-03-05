@@ -1,0 +1,12 @@
+{
+    "ID": "article_0c39ae85263e7f29",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": "Martin Fowler",
+    "Title": "We need to talk about vibe coding | Martin Fowler",
+    "Text": "A great chance to listen to some experienced developers seriously discuss the phenomenon of \"vibe coding\".\nNew podcast episode on the Thoughtworks Technology Podcast: \"We need to talk about vibe coding\" https://lnkd.in/dMvEJFBt Lilly Ryan Premanand Chandrasekaran Neal Ford\nFrom the interview: \"The danger I think here is a mode that I've seen, this used to drive me crazy when I used to teach a lot of classes in person of developers who, when a mistake would occur, rather than try to understand what the mistake was, just make a random change and then try it again to see if it works.\" :) I agree wholeheartedly with this quote. The danger in \"VibeCoding\" via chatting with an AI bot and pasting spaghetti code together in hopes of a 5-star meal, is all in the declarative trap: \"if I don't understand *how* it works.... (to paraphrase Kent Beck) \"where oh where do I even begin to figure out where bugs are much less understand why they exist and how they can be be fixed?\" I recently asked an AI LLM (won't name the product) the same relatively simple coding question 20 separate times about achieving sorting derived/calculated fields in EF and got 20 completely different answers. Some worked partially. Some did not work at all. Beware the \"AI\" advice your take as gospel. It's an AID. And pls understand the output of these things. Imagine if we could all build nuclear bombs following steps from an AI chatbot, yet we had no idea how they actually work or become \"armed for launch\" or might.. \"detonate\" \ud83d\ude10\nYou just gave me homework for today\nI agree",
+    "Score": 0,
+    "Date": "2025-04-03",
+    "Word_Count": 273,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_7df867c744119aaf",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "I\u2019ve been loving Claude Code on the Web",
+    "Text": "I\u2019ve been loving Claude Code on the Web\nThis week, I\u2019ve been voraciously using Claude Code on the web.\nIt\u2019s very much a \u201cv1\u201d product. You type a prompt to start a new thread, it launches a little container for your agent to work in, and you can keep talking to it. It produces a branch, which you can open a PR for (that\u2019s the only way to see a diff of the changes Claude Code made, for now). Or if you want to keep working locally, you can copy a claude --teleport <uuid>\ncommand that brings the branch down onto your computer and continues the same thread with Claude Code locally.\nSomething about this early product is really great. I\u2019ve been using it as a \u201cto-do list that does itself\u201d \u2014 when I think of something small that I want to tweak, across a variety of projects (work, work-related side project, side project, open source project) I just throw it into a thread. Then I come back, sometimes later in the day and sometimes days later, to see what Claude did and to finish things up.\nIt\u2019s also available in the Claude iOS app, which has been great. When I\u2019m walking and have a thought for something I want to know more about (for example, \u201cWhat screens could be impacted by this change that I should test more thoroughly?\u201d), I can just ask and know that the answer will be there for me when I come back.\nCursor built this same thing 4 months ago. I\u2019ve tried their version a few times since, and I\u2019ve never liked this much. Why?\nI had trouble nailing down an answer, but I think the answer is actually just product quality. Cursor\u2019s implementation is a bit finicky, loading states a bit jumpy, and things feel fragile. The font\u2019s too small too, in my opinion.\nClaude Code on the web feels very solid and dependable. And for some reason, that\u2019s made the difference for me this week.",
+    "Score": 0,
+    "Date": "2025-10-25",
+    "Word_Count": 333,
+    "Comments": []
+}

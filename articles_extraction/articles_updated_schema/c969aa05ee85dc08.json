@@ -1,0 +1,12 @@
+{
+    "ID": "article_c969aa05ee85dc08",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Andy Nguyen",
+    "Title": "VisionClaw: The Open-Source AI Assistant That Sees What You See and Acts on Your Voice",
+    "Text": "Member-only story\nVisionClaw: The Open-Source AI Assistant That Sees What You See and Acts on Your Voice\nImagine wearing smart glasses that don\u2019t just record your life \u2014 they understand it, respond to it, and take action on your behalf.\nThe future of wearable AI isn\u2019t coming. It\u2019s already here, and it\u2019s open-source.\nLast week, I stumbled upon a GitHub repository that made me do a double-take. It\u2019s called VisionClaw, and it might just be the most exciting project in the wearable AI space right now.\nWhy? Because it transforms ordinary Meta Ray-Ban smart glasses into a real-time, voice-and-vision AI assistant that can see what you see, hear what you say, and \u2014 here\u2019s the kicker \u2014 actually do things for you.\nWhat Exactly Is VisionClaw?\nVisionClaw is an open-source iOS app that connects your Meta Ray-Ban smart glasses to Google\u2019s Gemini Live API. But it\u2019s more than just a voice assistant with eyes.\nThink of it as Jarvis for your face.\nWhen you put on your glasses and tap the AI button, here\u2019s what becomes possible:\n- \u201cWhat am I looking at?\u201d \u2014 Gemini sees through your glasses camera and describes the scene in real-time\n- \u201cAdd milk to my shopping list\u201d \u2014 It actually adds it to your connected\u2026",
+    "Score": 0,
+    "Date": "2026-02-10",
+    "Word_Count": 211,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_187b523e58bfa735",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "Anti-Virus for Autonomous Agents",
+    "Text": "Runtime security that intercepts every command your AI agent runs. Block dangerous actions, redact leaked secrets, and detect prompt injection \u2014 before damage is done.\nnpm i -g @contextfort-ai/openclaw-secure\nStatic analysis engine that inspects every shell command before execution.\nPowered by the Tirith rule engine, the Bash Guard intercepts every child_process call (spawn, exec, execFile) and runs static analysis checks before the command executes. It catches dangerous patterns like recursive deletes, privilege escalation, data exfiltration via curl/wget, and obfuscated payloads. Commands are blocked before they ever run \u2014 the LLM never sees the output.\nIf you need cloud/self-hosted management for an enterprise deployment, contact us.\nBook Demo",
+    "Score": 0,
+    "Date": "2026-01-01",
+    "Word_Count": 107,
+    "Comments": []
+}

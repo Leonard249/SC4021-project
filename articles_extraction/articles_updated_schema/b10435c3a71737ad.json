@@ -1,0 +1,12 @@
+{
+    "ID": "article_b10435c3a71737ad",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Ferreiradev",
+    "Title": "((FileSystemError): Error: EBADF: bad file descriptor, write) - Cannot save file with Cursor IDE",
+    "Text": "Problem:\nRunning a fresh install of Cursor IDE, from Cursor.com, a fork of VS Code, I get a FileSystemError\nwhen trying to save any file. As such, I am unable to save the python file from the IDE with Ctrl-S or File->Save.\nError detail:\nFailed to save 'filename.py': Unable to write file '\\Project\\filename.py' (Unknown (FileSystemError): Error: EBADF: bad file descriptor, write)\nEnvironment details:\n- I can save files just fine in VS Code and notepad.\n- This is happening in Windows 10, and will occur regardless of the file type (.txt, .md, .py, .cs, etc)\n- Running as administrator does not fix the issue.\nSample file:\n\"\"\"filename.py\"\"\"\nprint(\"some-statement\")",
+    "Score": 0,
+    "Date": "2024-10-18",
+    "Word_Count": 108,
+    "Comments": []
+}

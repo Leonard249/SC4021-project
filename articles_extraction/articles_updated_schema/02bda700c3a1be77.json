@@ -1,0 +1,12 @@
+{
+    "ID": "article_02bda700c3a1be77",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Minseo Jang",
+    "Title": "Claude Skills: Transform Claude into an audio AI expert.",
+    "Text": "Claude Skills: Transform Claude into an audio AI expert.\nI\u2019ve always wondered why our AI assistants are mostly \u201cdeaf\u201d to the rich context of sounds around us. To bridge this gap, I developed sense-claude, a plugin that connects Cochl.Sense\u2019s powerful audio recognition with Claude Code.\nWhether it\u2019s monitoring CCTV audio or analyzing car engine health, AI can now \u201clisten\u201d and react. Just a few commands, and you\u2019re all set.\n1. Add Plugin to Claude Code\nFirst, register the marketplace and install the sense-claude plugin.\n# Add the marketplace\n/plugin marketplace add meanmin/sense-claude\n# Install the plugin\n/plugin install cochl-sense-api\n2. Set Up Python Environment\nConfigure the necessary environment by running the setup script for your OS.\n# For macOS/Linux\n./setup.sh\n# For Windows\nsetup.bat\n3. Get Your Cochl.Sense Project Key\nYou need an API key to enable audio recognition.\n- Visit the Cochl.Sense Dashboard.\n- Go to the Projects tab and select your project.\n- Navigate to Settings and copy your Project Key.\n4. Start Talking to Claude\nNow, simply ask Claude to handle audio tasks using natural language.\n- Example: \u201cCreate a dashboard that analyzes the audio from this CCTV footage and shows a timeline of detected sounds by time slot.\u201d\nI\u2019m curious to see how you\u2019ll push the boundaries of sense-claude. Give it a try, experiment with different audio sources, and let me know if you hit any creative breakthroughs (or bugs!).\nYour feedback and stars on GitHub mean the world to me. What should Claude listen to next?\u201d\n\ud83d\udd17 Github repository: https://github.com/meanmin/sense-claude",
+    "Score": 0,
+    "Date": "2026-02-24",
+    "Word_Count": 255,
+    "Comments": []
+}

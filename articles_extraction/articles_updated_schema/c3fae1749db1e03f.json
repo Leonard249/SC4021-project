@@ -1,0 +1,12 @@
+{
+    "ID": "article_c3fae1749db1e03f",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "TIL: Exploring OpenAI\u2019s deep research API model o4-mini-deep-research",
+    "Text": "18th October 2025 - Link Blog\nTIL: Exploring OpenAI's deep research API model o4-mini-deep-research. I landed a PR by Manuel Solorzano adding pricing information to llm-prices.com for OpenAI's o4-mini-deep-research and o3-deep-research models, which they released in June and document here.\nI realized I'd never tried these before, so I put o4-mini-deep-research\nthrough its paces researching locations of surviving orchestrions for me (I really like orchestrions).\nThe API cost me $1.10 and triggered a small flurry of extra vibe-coded tools, including this new tool for visualizing Responses API traces from deep research models and this mocked up page listing the 19 orchestrions it found (only one of which I have fact-checked myself).\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-10-18",
+    "Word_Count": 150,
+    "Comments": []
+}

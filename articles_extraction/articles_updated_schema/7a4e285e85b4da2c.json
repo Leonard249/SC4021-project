@@ -1,0 +1,12 @@
+{
+    "ID": "article_7a4e285e85b4da2c",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Valdarix Games",
+    "Title": "The Day AI Finally Understood My Terrible Code Comments",
+    "Text": "Member-only story\nThe Day AI Finally Understood My Terrible Code Comments\nHow OpenAI\u2019s Codex transforms ChatGPT from a coding companion into a full-fledged engineering partner\nIt was 1AM, and I was having another heated argument with ChatGPT about why my function wasn\u2019t working. You know the drill \u2014 paste in some code, get a suggestion that looks perfect, implement it, watch it fail spectacularly, then spend another twenty minutes explaining what you actually meant. I\u2019d been doing this dance with AI coding assistants for years, always feeling like I was teaching a brilliant but literal-minded intern who couldn\u2019t quite grasp the bigger picture.\nThen, last week, everything changed.\nOpenAI launched Codex, a cloud-based software engineering agent that transforms ChatGPT from a helpful coding companion into something far more powerful OpenAI launches Codex, an AI coding agent, in ChatGPT | TechCrunch. This isn\u2019t just another incremental update or a fancy wrapper around GPT \u2014 it\u2019s a fundamental shift in how we interact with AI for software development.\nBeyond the Chat Window\nHere\u2019s what makes Codex different: it doesn\u2019t just talk about code; it lives in code. Each task runs in its own cloud sandbox environment, preloaded with your repository\u2026",
+    "Score": 0,
+    "Date": "2025-06-26",
+    "Word_Count": 198,
+    "Comments": []
+}

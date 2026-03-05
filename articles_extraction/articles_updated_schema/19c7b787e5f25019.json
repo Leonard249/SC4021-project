@@ -1,0 +1,12 @@
+{
+    "ID": "article_19c7b787e5f25019",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "User",
+    "Title": "AWS copilot with Django never finishes deploying",
+    "Text": "I've followed the this short guide to create a django app with docker https://docs.docker.com/compose/django/\nand then following copilot instructional to push up the container to ECS: https://aws.amazon.com/blogs/containers/introducing-aws-copilot/\nI've also used this sample to test everything -- which works out fine: https://github.com/aws-samples/aws-copilot-sample-service The deploy completes and outputs and URL endpoint.\nIn my case, the everything is successfully built, but once the test environment is being deployed it just continuously builds at this:\n72ff4719 size: 3055\n\u280f Deploying load-bal:7158348 to test.\nand never finishes. I've even downsized my requirements.txt to a bare minimum.\nMy Dockerfile\nFROM python:3.7.4\nENV PYTHONUNBUFFERED=1\nRUN mkdir /code\nWORKDIR /code\nCOPY requirements.txt /code/\nRUN pip install -r requirements.txt\nEXPOSE 80\nCOPY . /code/\ndocker-compose.yml\nversion: \"3.8\"\nservices:\ndb:\nimage: postgres\nenvironment:\n- POSTGRES_DB=postgres\n- POSTGRES_USER=postgres\n- POSTGRES_PASSWORD=postgres\nweb:\nbuild: .\ncommand: python manage.py runserver 0.0.0.0:8000\nvolumes:\n- .:/code\nports:\n- \"8000:8000\"\ndepends_on:\n- db\nrequirements.txt\nDjango==3.0.8\ndjangorestframework==3.11.0\ngunicorn==20.0.4\npipenv==2020.6.2\npsycopg2-binary==2.8.5\nvirtualenv==16.7.6\nInstructions I follow:\nsudo docker-compose run web django-admin startproject composeexample .\nSuccessfully creates the Django App\ncopilot init\nSetup naming for app and load balancer\nChoose to create test environment\nEverything builds successfully and then just sits here. I've tried a number of variations, but the only one that works is just doing the copilot instructional without django involved.\n6f3494a64128: Pushed\ncfe650cc4def: Pushed\na477d6671cc7: Pushed\n90df760355a7: Pushed\n574ea6c52bdd: Pushed\nd1573fad78d1: Pushed\n14c1ff636882: Pushed\n48ebd1638acd: Pushed\n31f78d833a92: Pushed\n2ea751c0f96c: Pushed\n7a435d49206f: Pushed\n9674e3075904: Pushed\n831b66a484dc: Pushed\nini: digest: sha256:b7460876bc84b1a26e7513fa6d17b5bffd5560ae958a933984376ed2c9fe53f3 size: 3052\n\u280f Deploying aiinterview-lb:ini to test.",
+    "Score": 0,
+    "Date": "2021-07-22",
+    "Word_Count": 248,
+    "Comments": []
+}

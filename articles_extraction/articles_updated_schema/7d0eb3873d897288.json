@@ -1,0 +1,12 @@
+{
+    "ID": "article_7d0eb3873d897288",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Guy",
+    "Title": "How to change GitHub Copilot model in IntelliJ?",
+    "Text": "In VS Code there is simply a button at the bottom to pick what LLM model you want to use, I haven't been able to figure out how to do it in IntelliJ.\nMore specifically I would like to use Claude Sonnet, if anyone knows a work around.\nIn VS Code there is simply a button at the bottom to pick what LLM model you want to use, I haven't been able to figure out how to do it in IntelliJ.\nMore specifically I would like to use Claude Sonnet, if anyone knows a work around.\nThis is available on the released plugin. If you don't see the option be sure to upgrade the plugin to the latest version.\nThis is now available in the nightly build of the plugin: https://github.com/orgs/community/discussions/149173 (thank you fmsedrez!)\nIt took me a few tries for the drop down to show up (restarting IntelliJ, resizing the panel, etc). I'm not sure if the issue is in the UI or somewhere else.\nThe IntelliJ plugin lags behind the VSCode plugin and switching models is not implemented (which sucks).\nIf you want to chat, you can go to the copilot chat page on github and select a different model. The main drawback is that the model won't have access to the context in IntelliJ so you would need to provide more data in your questions.\nAnother alternative is to have the project open on VSCode too and do any heavy chat there.\nIt's a real shame as GPT 4o often fails to answer questions or it goes into a loop repeating the last 2 answers compared to Claude 3.5 or o1.\nIf you would like to see this soon, please vote or comment on one or all of the open discussions that have raised this:",
+    "Score": 0,
+    "Date": "2025-01-18",
+    "Word_Count": 298,
+    "Comments": []
+}

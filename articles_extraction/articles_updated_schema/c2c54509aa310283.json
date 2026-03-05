@@ -1,0 +1,12 @@
+{
+    "ID": "article_c2c54509aa310283",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Leo",
+    "Title": "Copilot stuck at activating",
+    "Text": "I am currently connected to my school server through SSH and school VPN.\nI am using VS Code with the following details:\nVersion: 1.78.1 (user setup)\nCommit: 6a995c4f4cc2ced6e3237749973982e751cb0bf9\nDate: 2023-05-04T09:48:08.683Z\nElectron: 22.5.1\nChromium: 108.0.5359.215\nNode.js: 16.17.1\nV8: 10.8.168.25-electron.0\nOS: Windows_NT x64 10.0.22621\nSandboxed: No\nI have tried to install GitHub Copilot (locally) and GitHub Copilot Nightly (On SSH) respectively. But none of them worked, it shows that they are undergoing 'activating' forever.\nCopilot works fine if I use a local workspace but it is working when I SSH connect to a server.\nThe output log is empty for Github Copilot.\nHow can I troubleshoot this?",
+    "Score": 0,
+    "Date": "2023-05-11",
+    "Word_Count": 105,
+    "Comments": []
+}

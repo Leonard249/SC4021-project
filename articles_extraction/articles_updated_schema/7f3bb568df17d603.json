@@ -1,0 +1,12 @@
+{
+    "ID": "article_7f3bb568df17d603",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Modexa",
+    "Title": "Augmented Coding, Not Autopilot",
+    "Text": "Member-only story\nAugmented Coding, Not Autopilot\nSix practical ways AI pair-programmers boost quality, speed, and developer happiness \u2014 without replacing human judgment.\nAugmented coding in practice: 6 ways AI helps developers \u2014 code search, refactoring, tests, docs, debugging, and migrations \u2014 with examples and workflows.\nWe don\u2019t need more hype. We need fewer tabs and faster \u201caha\u201d moments. That\u2019s what augmented coding delivers: AI that amplifies human developers rather than trying to replace them. Think less autopilot, more super-power loupe \u2014 magnifying context, catching edge cases, and removing glue work so you can design the stuff that actually matters.\nLet\u2019s get concrete.\n1) Instant Context: From Code Search to Code Sense\nOpening an unfamiliar repo used to mean spelunking through files and praying the README wasn\u2019t lying. AI turns this into a conversation.\nWhat it looks like\n- Ask: \u201cWhere does payment retries happen and what schedules them?\u201d\n- Get: a short path map, key functions, and a cross-referenced summary of retry intervals \u2014 with links to definitions.\nWhy it matters\n- Reduces ramp-up for new\u2026",
+    "Score": 0,
+    "Date": "2025-11-14",
+    "Word_Count": 176,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_e57a98b9a0e3f1be",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Merzmensch",
+    "Title": "Codex by OpenAI, in Action",
+    "Text": "Member-only story\nCodex by OpenAI, in Action\nPowerful AI-driven support for everyone who codes (or even for those who don\u2019t).\nThe code is the Digital Layer DNA of our world. By mastering the code \u2014 its features and peculiarities \u2014 you build up the digital reality we are all living in. Today, OpenAI revealed a new milestone to our AI spring (Reminder: the AI Winter is over), which will enable more people to create:\nCODEX\nOfficial Blog: https://openai.com/blog/openai-codex/\nPaper: https://arxiv.org/abs/2107.03374\nJoin the Waitlist: https://openai.com/join\nWhat is Codex?\nOpenAI Codex is a descendant of GPT-3; its training data contains both natural language and billions of lines of source code from publicly available sources, including code in public GitHub repositories. OpenAI Codex is most capable in Python, but it is also proficient in over a dozen languages including JavaScript, Go, Perl, PHP, Ruby, Swift and TypeScript, and even Shell. It has a memory of 14KB for Python code, compared to GPT-3\u2026",
+    "Score": 0,
+    "Date": "2021-08-10",
+    "Word_Count": 159,
+    "Comments": []
+}

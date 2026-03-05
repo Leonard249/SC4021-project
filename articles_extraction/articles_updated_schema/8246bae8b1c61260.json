@@ -1,0 +1,12 @@
+{
+    "ID": "article_8246bae8b1c61260",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Mordor",
+    "Title": "Get github copilot suggestions only when requested",
+    "Text": "Is there any GH Copilot configuration setting for getting suggestions only when I request them? Like a shortcut or something like that... I haven't found any similar in it's documentation\n-\n5Did you find a satisfying solution? In the same boat right now!RogerKint\u2013 RogerKint2022-07-23 11:22:01 +00:00Commented Jul 23, 2022 at 11:22\n-\nDorin Botan's solution was good enough (stackoverflow.com/a/72828447/12615886), Although the suggestions are not inline but in a new tabMordor1110\u2013 Mordor11102022-07-24 16:55:42 +00:00Commented Jul 24, 2022 at 16:55\n1 Answer\nYou can disable inline suggestions with the github.copilot.inlineSuggest.enable\nsetting, or with the Trigger Inline Suggesion hotkey (Alt\n+ \\\non Win/Linux, \u2325\n+ \\\non Mac).\nTo ask for a suggesion, use Open GitHub Copilot (additional suggestions in separate pane)\nhotkey (Ctrl\n+ Enter\non Win/Linux, Ctrl\n+ Return\non Mac).\n1 Comment\nixx\nNo shortcut to just reopen the last inline suggestion (I sometimes reject them by mistake)?",
+    "Score": 0,
+    "Date": "2023-06-01",
+    "Word_Count": 149,
+    "Comments": []
+}

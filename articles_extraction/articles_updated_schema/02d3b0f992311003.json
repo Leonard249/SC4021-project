@@ -1,0 +1,12 @@
+{
+    "ID": "article_02d3b0f992311003",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "AI coding is less fun",
+    "Text": "I\u2019ve been doing \u201cagentic coding\u201d for some time, and well, it\u2019s weird. On stable, mature technology (in my case, the C#/.NET stack), it is beneficial, as it significantly boosts productivity.\nBut, there\u2019s a bit, and that\u2019s that I\u2019m not programming anymore, or very little now, and I love coding. I love entering \u201cthe zone\u201d and solving complex problems, one at a time. It\u2019s always been my superpower. Will I still have fun in the future now that I can delegate most tasks to Claude Code?\nIn his The Hidden Cost of AI Coding, Matheus Lima expresses the same concern:\nInstead of that deep immersion where I\u2019d craft each function, I\u2019m now more like a curator? I describe what I want, evaluate what the AI gives me, tweak the prompts, and iterate. It\u2019s efficient, yes. Revolutionary, even. But something essential feels missing \u2014 that state of flow where time vanishes and you\u2019re completely absorbed in creation. If this becomes the dominant workflow across teams, do we risk an industry full of highly productive yet strangely detached developers?\nI\u2019m afraid there\u2019s no going back; agentic coding is so helpful that it\u2019s tough to let go, especially in tiny teams like mine. Matheus suggests we preserve some space in our work where the flow can still happen, and that\u2019s probably what I\u2019m going to do: on some projects, maybe the open-source ones I maintain, resist the temptation of a claude /init\nand keep going like the good old times. One can at least try.",
+    "Score": 0,
+    "Date": "2025-06-19",
+    "Word_Count": 251,
+    "Comments": []
+}

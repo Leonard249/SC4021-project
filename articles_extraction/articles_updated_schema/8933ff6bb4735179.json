@@ -1,0 +1,12 @@
+{
+    "ID": "article_8933ff6bb4735179",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Mohammed Arif",
+    "Title": "Azure Open AI Studio - Deploy to a copilot stuck and not proceeding to copilot studio",
+    "Text": "I am trying to integrate my Azure OpenAI chat to copilot studio via the \"Deploy\" option, so that in copilot studo I can use MS teams channel to implement the chatbot in teams. However, when clicking on the Deploy to --> to a new copilot in Copilot Studio --> \"Continue in copilot studio\" the link is taking me nowhere and is kind of stuck.\nCan someone please help me understand, is it the preview feature that is not allowing me proceed or something else? It seems I have everything right from the chat standpoint.\nPlease note that I have used \"gpt-35-turbo\" model as my base model for the deployment. I also created a web App based on this model which is working perfectly fine.",
+    "Score": 0,
+    "Date": "2024-08-27",
+    "Word_Count": 124,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_3beca95a51b5f7f9",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Antirez",
+    "Title": "<antirez>",
+    "Text": "Automatic programming\n\u25bcIn my YouTube channel, for some time now I started to refer to the process of writing software using AI assistance (soon to become just \"the process of writing software\", I believe) with the term \"Automatic Programming\". In case you didn't notice, automatic programming produces vastly different results with the same LLMs depending on the human that is guiding the process with their intuition, design, continuous steering and idea of software. Please, stop saying \"Claude vibe coded this software for me\". Vibe coding is the process of generating software using AI without being part of the process at all. You describe what you want in very general terms, and the LLM will produce whatever happens to be the first idea/design/code it would spontaneously, given the training, the specific sampling that happened to dominate in that run, and so forth. The vibe coder will, at most, report things not working or not in line with what they expected.",
+    "Score": 0,
+    "Date": "2015-08-25",
+    "Word_Count": 159,
+    "Comments": []
+}

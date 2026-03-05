@@ -1,0 +1,12 @@
+{
+    "ID": "article_c79109981ed89368",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Alan Wk",
+    "Title": "How can I put Copilot chat back in the main sidebar",
+    "Text": "In VSCode, Copilot now appears in the second sidebar on the right.\nHow can I move the Copilot chat back to the main sidebar on the left?\nI checked the settings but couldn't find the option. Rolling back the version didn't work either.\nIn VSCode, Copilot now appears in the second sidebar on the right.\nHow can I move the Copilot chat back to the main sidebar on the left?\nI checked the settings but couldn't find the option. Rolling back the version didn't work either.\nI was having the same issue, and stumbled upon this documentation. You just need to Drag and Drop the icons from the secondary sidebar to the primary like this: https://code.visualstudio.com/docs/editor/custom-layout",
+    "Score": 0,
+    "Date": "2024-11-06",
+    "Word_Count": 116,
+    "Comments": []
+}

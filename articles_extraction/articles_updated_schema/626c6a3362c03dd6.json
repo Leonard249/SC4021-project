@@ -1,0 +1,12 @@
+{
+    "ID": "article_626c6a3362c03dd6",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "David Gallivan",
+    "Title": "Prompt Driven Development: Moving Beyond Vibe Coding",
+    "Text": "Member-only story\nPrompt Driven Development: Moving Beyond Vibe Coding\nAI-assisted coding has taken the software world by storm. You\u2019ve probably already experimented with tools like Copilot, Claude, or Cursor. Maybe you\u2019ve even tried \u201cvibe coding\u201d \u2014 typing vague prompts and letting the AI fill in the gaps.\nBut as these tools evolve, so must our approach. The future isn\u2019t just vibe coding. It\u2019s Prompt Driven Development (PDD) \u2014 a structured, intentional way to guide AI coding assistants.\nLet\u2019s walk through what that shift looks like, why it matters, and how you can start practicing it today.\nFrom Vibe Coding to Prompt-Driven Development\n1. Vibe Coding\nAt first, AI-assisted coding felt like magic. You typed a few words or half a thought, and the AI tried to complete it. Sometimes it nailed it, other times it wandered.\n- Strengths: Fast experiments, fun discovery.\n- Weaknesses: Inconsistent results, lack of repeatability, and hard to debug later.\nThink of it like jamming on a guitar: it\u2019s creative, but messy.\n2. Prompt Coding\nThe next step forward is prompt coding. Here, you\u2019re more deliberate with your requests. Instead of \u201cmake me a login system,\u201d you\u2026",
+    "Score": 0,
+    "Date": "2025-09-28",
+    "Word_Count": 191,
+    "Comments": []
+}

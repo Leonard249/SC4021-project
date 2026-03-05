@@ -1,0 +1,12 @@
+{
+    "ID": "article_ae5b4406157a4a90",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Dennis",
+    "Title": "How to Disable Kite Copilot Feature?",
+    "Text": "I recently installed Kite for Spyder 4. I think I wanted to give it a try for several weeks and see how it performs.\nOne feature called Kite-copilot annoys me, it pops up whenever I opened spyder. I don't really use that feature much since it is in the new window (it would cover my workspace if it is always on top, and it would be covered by spyder if it didn't).\nSo is there a way to disable this particular feature? I know I can just close it right away whenever it pops out, but it is kinda annoying that I always need to close it first whenever I opened spyder.",
+    "Score": 0,
+    "Date": "2020-05-14",
+    "Word_Count": 112,
+    "Comments": []
+}

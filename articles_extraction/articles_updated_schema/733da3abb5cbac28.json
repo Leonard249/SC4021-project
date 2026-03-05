@@ -1,0 +1,12 @@
+{
+    "ID": "article_733da3abb5cbac28",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Code Coup",
+    "Title": "How LLM agents rewired my entire coding workflow",
+    "Text": "Member-only story\nHow LLM agents rewired my entire coding workflow\nLLM coding agents changed how I write software. Less typing, more thinking.\nI didn\u2019t notice it happening at first.\nThat\u2019s the scary part.\nOne week, I was still typing most of my code, fighting with edge cases, leaning on autocomplete like a crutch.\nA few weeks later I was mostly\u2026 talking. To a model. In English.\nAnd the code just appeared.\nNot toy code. Real code. The kind you ship and then have to maintain when you\u2019re tired, annoyed, and slightly resentful of your past self.\nI have been programming for seven years. I\u2019ve lived through frameworks, rewrites, microservices, monorepos, and the endless parade of \u201cthis will change everything.\u201d\nNothing moved this fast.\nNothing changed my muscle memory this deeply.\nSo these are just notes. From the last few weeks of coding, almost entirely with agents.\nSomewhere between November and December, my workflow flipped.\nIt went from 80% manual coding + autocomplete, 20% agents\nto 80% agents, 20% edits and touchups.\nWhich means something slightly embarrassing to admit out loud:",
+    "Score": 0,
+    "Date": "2026-02-03",
+    "Word_Count": 180,
+    "Comments": []
+}

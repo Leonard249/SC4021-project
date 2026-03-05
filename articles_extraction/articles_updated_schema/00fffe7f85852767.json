@@ -1,0 +1,12 @@
+{
+    "ID": "article_00fffe7f85852767",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "Data Oriented Programming in Java: Chapter 7 Progress (2025-04-20)",
+    "Text": "Data Oriented Programming in Java: Chapter 7 Progress (2025-04-20)\nPublished: 2025-04-20\nEarly Access here: Data Oriented Programming in Java\nCurrent Stats:\n- Words: 9464\n- Listings: 29\n- Figures Used: 17 (Lotta picture making since the last update!)\n- Figures Made: 26\nA lot of life can happen over the course of a book.\nDespite being on \"pause,\" I continued to occasionally work on the draft for chapter 7. It's comforting to have something I control amongst a sea of things I do not.\nI've started leaning harder into the underlying \"math\" (used loosely) that underpins the algebraic properties that we're studying in the chapter. Including doing something controversial: using some mathematical notation (gasp!). We'll see how the reviewers feel about it. They've made some very good arguments in the past for avoiding even basic set builder notation, but this chapter has abandoned all of that advice and has embraced using wacky upside down letters like this: $\\forall$.\nAt some point, I think you've got to trust the reader. If they've followed the denotational reasoning up to this point, they have all the tools needed to understand statements like \"for all of the items in that set...\"\nThe chapter has really become about correctness. The wave of vibe coded AI slop is already breaking against the shore. The more formal we can be about what it means for an implementation to be correct, the better we'll be able to keep that slop under control.",
+    "Score": 0,
+    "Date": "2025-04-20",
+    "Word_Count": 244,
+    "Comments": []
+}

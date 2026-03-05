@@ -1,0 +1,12 @@
+{
+    "ID": "article_0392cf2873a94e9f",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "No code is dead. Long live vibe coding. | Kenneth Auchenberg",
+    "Text": "It\u2019s 2025, and it\u2019s time to call it: No-code is dead.\nThe last decade of no- and low-code abstractions promised a revolution \u2014 they would democratize software creation. But let\u2019s be honest: none of them broke through. No-code didn\u2019t replace code or traditional programming. It didn\u2019t even come close.\nNow, a decade later, we\u2019re watching something else emerge: vibe coding \u2014 a new breed of tools powered by AI and LLMs that can write real, production-grade code from natural language. Tools like Bolt, Lovable, v0, and others are showing that prompt-to-code workflows are not only possible \u2014 they\u2019re better.\nNatural language is proving to be a more powerful interface than drag-and-drop WYSIWYG editors. And most importantly, people don\u2019t want to be locked into proprietary runtimes. They want actual code. They want control. They want to scaffold, edit, and deploy anywhere.\nIt turns out people didn\u2019t want less code \u2014 they wanted a better way to write code.\nThe previous generation of platforms like Webflow and Retool tried to do it all: editor, hosting, runtime, components \u2014 bundled and closed. But now? Turns out LLMs can generate clean, idiomatic React, write to open standards, leverage industry best practices, and deploy to open infrastructure.\nThis is the unbundling of no-code.\n/k",
+    "Score": 0,
+    "Date": "2025-04-10",
+    "Word_Count": 209,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_2e107a474b8e6bc2",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Ankit",
+    "Title": "lovable.dev review: Build full-stack apps with AI (No-code revolution)",
+    "Text": "Member-only story\nlovable.dev review: Build full-stack apps with AI (No-code revolution)\nAre no-code AI tools finally good enough to replace coders \u2014 or just expensive hype in a prettier package?\nWhat Exactly Is Lovable.dev?\nLovable.dev is an AI-powered platform that turns plain English prompts into full-stack web applications. We\u2019re talking React + Tailwind CSS on the front end, Supabase handling your database, authentication, and storage on the back end \u2014 all generated from a text description.\nYou type something like: \u201cBuild a task management app with user login, real-time updates, and email notifications\u201d \u2014 and lovable.dev builds it. Not a mockup. Not a wireframe. An actual deployable app.\nIt hit \u00a313.5 million ARR just three months after launch in late 2024, with a growth rate of 2,816% that year. Co-founder Osaka has said there are at least 25,000 apps being built on the platform every single day. That\u2019s not a niche tool \u2014 that\u2019s a movement.\nWhat Lovable.dev Is Actually Good At\nLet me be real with you: for a specific use case, lovable.dev is genuinely impressive.\nSpeed to MVP is unreal. One user on Trustpilot said they did \u201c6 months of work in 2 days.\u201d A developer named Fahim ul Haq built an e-commerce prototype in 20 minutes \u2014 complete with Stripe and MongoDB integration. One Product Hunt reviewer said building their entire front-end UI/UX took \u201cweeks instead of months.\u201d These\u2026",
+    "Score": 0,
+    "Date": "2026-02-18",
+    "Word_Count": 232,
+    "Comments": []
+}

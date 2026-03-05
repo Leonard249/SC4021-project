@@ -1,0 +1,12 @@
+{
+    "ID": "article_dfd2036b44277c69",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Kapil Viren Ahuja",
+    "Title": "The CTO\u2019s Context Dilemma",
+    "Text": "Member-only story\nThe CTO\u2019s Context Dilemma\nHere\u2019s the 7-dimension framework for the decision most teams are getting wrong - plus a ready-to-use scoring template and 3 AI prompts to evaluate your own setup.\nThe Grep That Broke the Pipeline\nI had been wrong for five months. I just hadn\u2019t told anyone yet.\nTanu walked into my office with the kind of urgency that meant either the build was broken, or someone had challenged her architecture. Today, she carried her laptop like a weapon.\n\u201cYou need to see this,\u201d she said, setting it down and pulling up the RAG pipeline she had spent three weeks building for our coding agents. Vector database, embedding pipeline, reranker, orchestration layer \u2014 the works. Six components, carefully tuned, running on infrastructure that cost us $380 to $3,300 a month before we processed a single query.\nI turned my laptop around to face her. On my screen: Claude Code navigating the PhoenixOS codebase. Grep. Glob. Read. A 50-year-old Unix utility and two of its friends.\nHere is the part I should have told her sooner.",
+    "Score": 0,
+    "Date": "2026-02-24",
+    "Word_Count": 179,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_eedd79453aac2a54",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "llm-gemini 0.27",
+    "Text": "18th November 2025 - Link Blog\nllm-gemini 0.27. New release of my LLM plugin for Google's Gemini models:\n- Support for nested schemas in Pydantic, thanks Bill Pugh. #107\n- Now tests against Python 3.14.\n- Support for YouTube URLs as attachments and the\nmedia_resolution\noption. Thanks, Duane Milne. #112- New model:\ngemini-3-pro-preview\n. #113\nThe YouTube URL feature is particularly neat, taking advantage of this API feature. I used it against the Google Antigravity launch video:\nllm -m gemini-3-pro-preview \\\n-a 'https://www.youtube.com/watch?v=nTOVIGsqCuY' \\\n'Summary, with detailed notes about what this thing is and how it differs from regular VS Code, then a complete detailed transcript with timestamps'\nHere's the result. A spot-check of the timestamps against points in the video shows them to be exactly right.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-18",
+    "Word_Count": 166,
+    "Comments": []
+}

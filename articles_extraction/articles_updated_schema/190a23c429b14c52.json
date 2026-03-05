@@ -1,0 +1,12 @@
+{
+    "ID": "article_190a23c429b14c52",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Dock",
+    "Title": "aws nlb socket.io ssl via copilot",
+    "Text": "Context\nI'm trying to create a load balancer with AWS Copilot that runs socket.io instances.\nLocally and in an HTTP environment, I can successfully connect to the socket instance via the load balancer (ws://{id}.elb.{region}.amazonaws.com:8080/socket.io/?EIO=4&transport=websocket\n).\nProblem\nWhen I'm in the HTTPS context and try to connect, it fails and I get the error message Error: Websocket error\nwith no real error message or status code (wss://{id}.elb.{region}.amazonaws.com:8080/socket.io/?EIO=4&transport=websocket\n).\nWith ws://\neverything works and in wss://\nit does not work.\nCode Snippets\nAWS Copilot manifest.yml\nname: websocket-service\ntype: Load Balanced Web Service\nhttp:\npath: '/'\nhealthcheck: '/health'\nnlb:\nport: 8080/tcp\nServer\nimport {Server} from 'https'; // I use HTTPS here\n// ...\nthis._io = socketIo(server);\n// ...\nClient\n// ...\nconst client = socketClient(url, {\ntransports: ['websocket']\n});\n// ...\nAWS Console\nEC2 -> Load Balancing -> Load Balancers -> {target} -> Listeners",
+    "Score": 0,
+    "Date": "2022-03-14",
+    "Word_Count": 141,
+    "Comments": []
+}

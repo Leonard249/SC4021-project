@@ -1,0 +1,12 @@
+{
+    "ID": "article_b9a69c7313b54266",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Dhiman Seal",
+    "Title": "Over-Engineering AI For More Than Coding",
+    "Text": "Member-only story\nMy most-used programming language is Markdown. My busiest project contains zero code. And somehow, this is the most productive I\u2019ve ever been as a software engineer.\nI spend my days building backend systems - Java microservices, distributed systems, the usual. But when I looked at my WakaTime stats recently, the numbers told a different story about what AI-empowered engineering actually looks like.\nMarkdown: 36.25%. Java \u2014 my actual job \u2014 sits at 26%. If you add up all the \u201cdocumentation languages\u201d (Markdown, Mermaid, YAML, JSON, CSV), they account for nearly half of my coding time.\nAnd the project I spend the most time in? A knowledge base covering 24 microservices across 3 domains, with ~30 runbooks, ~28 incident investigations, and 169 documented database tables. Not a single line of application code.\nThis is a data point about a shift. When you treat AI as a genuine engineering partner, the bottleneck moves. You stop spending all your time writing code and start spending it structuring knowledge so that your AI tools can actually help you ship. The question becomes: how do you make that work?",
+    "Score": 0,
+    "Date": "2026-02-24",
+    "Word_Count": 186,
+    "Comments": []
+}

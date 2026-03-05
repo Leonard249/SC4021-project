@@ -1,0 +1,12 @@
+{
+    "ID": "article_8ccc951615424fe1",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Nicholas Carlini",
+    "Text": "20th November 2025\nPreviously, when malware developers wanted to go and monetize their exploits, they would do exactly one thing: encrypt every file on a person's computer and request a ransome to decrypt the files. In the future I think this will change.\nLLMs allow attackers to instead process every file on the victim's computer, and tailor a blackmail letter specifically towards that person. One person may be having an affair on their spouse. Another may have lied on their resume. A third may have cheated on an exam at school. It is unlikely that any one person has done any of these specific things, but it is very likely that there exists something that is blackmailable for every person. Malware + LLMs, given access to a person's computer, can find that and monetize it.\n\u2014 Nicholas Carlini, Are large language models worth it? Misuse: malware at scale\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-20",
+    "Word_Count": 187,
+    "Comments": []
+}

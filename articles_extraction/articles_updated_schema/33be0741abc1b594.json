@@ -1,0 +1,12 @@
+{
+    "ID": "article_33be0741abc1b594",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Chris Dunlop",
+    "Title": "Cursor vs Warp Review: Warp 3x Faster & 1/6th of the cost of Cursor",
+    "Text": "Member-only story\nCursor vs Warp Review: Warp 3x Faster & 1/6th of the cost of Cursor\nI\u2019ve run these AI coding tool comparisons before. 3 months ago, I compared Windsurf to Cursor, I built the same Kanban board in both to see which was faster and better.\nCursor demolished Windsurf. It was 3.3x faster, 5x cheaper, and the output was way better.\nBut then I discovered Warp.\nSo I thought it was a good chance for another comparison, this time between Cursor and Warp.\nNot a Medium member? Keep reading for free by clicking here.\nWhy Kanban Boards Are The Perfect Test\nI find that Kanban boards are the perfect comparison project for AI tools.\nHere\u2019s why:\nThey test everything:\n- Database schema (boards, columns, cards)\n- UI components (drag and drop)\n- State management\n- Real-time updates\n- Package installation (drag and drop libraries)\nIn my Windsurf vs Cursor test, this is exactly what exposed Windsurf\u2019s weaknesses. It struggled with migrations, the drag and drop didn\u2019t work properly, and it kept stopping every 15\u201325 calls.",
+    "Score": 0,
+    "Date": "2025-10-30",
+    "Word_Count": 176,
+    "Comments": []
+}

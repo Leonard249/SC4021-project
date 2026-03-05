@@ -1,0 +1,12 @@
+{
+    "ID": "article_2c1e81bf705c3bae",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Context plumbing",
+    "Text": "29th November 2025 - Link Blog\nContext plumbing. Matt Webb coins the term context plumbing to describe the kind of engineering needed to feed agents the right context at the right time:\nContext appears at disparate sources, by user activity or changes in the user\u2019s environment: what they\u2019re working on changes, emails appear, documents are edited, it\u2019s no longer sunny outside, the available tools have been updated.\nThis context is not always where the AI runs (and the AI runs as closer as possible to the point of user intent).\nSo the job of making an agent run really well is to move the context to where it needs to be. [...]\nSo I\u2019ve been thinking of AI system technical architecture as plumbing the sources and sinks of context.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-29",
+    "Word_Count": 168,
+    "Comments": []
+}

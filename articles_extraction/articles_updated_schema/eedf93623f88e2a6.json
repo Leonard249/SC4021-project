@@ -1,0 +1,12 @@
+{
+    "ID": "article_eedf93623f88e2a6",
+    "Source": "substack",
+    "Type": "Article",
+    "Author": "Paul Goldsmith-Pinkham",
+    "Title": "Setting up Github Copilot and VSCode",
+    "Text": "Copilot is pretty incredible. Still not enough to pull me away from rstudio for R work, but for everything else it's got me solidly in vscode so I can use copilot.\nI have found Copilot chat more frustrating than I expected -- having the two VS Codes installed side-by-side has created more issues for me. Has that been your experience?\nIt should work in the basic VS Code. Just use the copilot nightly extension (although it seems they've moved chat out of beta recently?).\nI too was frustrated with the multiple VS Code installations. So I just deleted the \"insiders\" one and tried installing chat on the original one, and it worked! So you might try that.\nI haven't yet used copilot for writing but it is amazing at doing nitty-gritty unpleasant coding tasks, like writing unit tests or even completing array index patterns.\nThis is so great! Your tweet the other day got me to look into setting this up more and what I landed on was that if you use VS Code Insiders and the Copilot nightly build you can also use the Copilot chat: https://www.youtube.com/watch?v=3surPGP7_4o",
+    "Score": 0,
+    "Date": "2023-06-19",
+    "Word_Count": 188,
+    "Comments": []
+}
