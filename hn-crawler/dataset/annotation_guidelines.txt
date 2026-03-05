@@ -1,0 +1,120 @@
+
+ANNOTATION GUIDELINES FOR HACKERNEWS OPINION DATASET
+=====================================================
+
+OBJECTIVE:
+Label 1,000+ HackerNews comments/stories for subjectivity and sentiment
+to evaluate the opinion search engine's classification accuracy.
+
+REQUIREMENTS:
+- Minimum 1,000 labeled records
+- ≥80% inter-annotator agreement
+- Two annotators per record (recommended)
+
+=====================================================
+STEP 1: SUBJECTIVITY LABELING
+=====================================================
+
+Label each record as either:
+
+NEUTRAL:
+- Factual statements without personal opinion
+- Technical descriptions
+- Objective information
+- Examples: "The API returns JSON", "It was released in 2023"
+
+OPINIONATED:
+- Personal experiences, feelings, judgments
+- Recommendations, preferences
+- Evaluative language (good/bad, love/hate)
+- First-person statements (I think, I found)
+- Examples: "Copilot is amazing", "I hate the autocomplete"
+
+GUIDELINES:
+- If uncertain, mark as NEUTRAL
+- Mixed content: choose the dominant characteristic
+- Sarcasm/irony: mark as OPINIONATED
+
+=====================================================
+STEP 2: POLARITY LABELING (OPINIONATED RECORDS ONLY)
+=====================================================
+
+For records labeled OPINIONATED, assign polarity:
+
+POSITIVE:
+- Favorable opinion about AI coding tools
+- Benefits, advantages, improvements mentioned
+- Examples: "productivity boost", "saves time", "amazing"
+
+NEGATIVE:
+- Unfavorable opinion about AI coding tools
+- Problems, issues, criticisms mentioned
+- Examples: "buggy", "slows me down", "hallucinations"
+
+NEUTRAL:
+- Mixed sentiment (both positive and negative)
+- Factual personal experience without clear judgment
+- Comparative statements without preference
+- Examples: "different but not better", "works for some tasks"
+
+GUIDELINES:
+- Focus on the overall sentiment about AI coding tools
+- If comparing (e.g., "X better than Y"), consider net sentiment
+- Mixed reviews: mark as NEUTRAL if roughly balanced
+
+=====================================================
+ANNOTATION WORKFLOW
+=====================================================
+
+1. Open eval_dataset.csv in Excel or Google Sheets
+
+2. For each row:
+   a. Read the 'text' column
+   b. Fill in 'subjectivity' column: neutral OR opinionated
+   c. If opinionated, fill in 'polarity': positive OR negative OR neutral
+   d. Add any notes to 'notes' column
+   e. Put your name/ID in 'annotator' column
+
+3. Use filters to spot-check consistency:
+   - High opinion_score_auto → should mostly be opinionated
+   - Low opinion_score_auto → check for false negatives
+
+4. Save frequently to avoid losing work
+
+=====================================================
+INTER-ANNOTATOR AGREEMENT
+=====================================================
+
+To achieve ≥80% agreement:
+
+1. Two annotators label the same records independently
+2. Calculate agreement: (matching labels) / (total records)
+3. Discuss disagreements and establish consensus
+4. Document decision rules for edge cases
+
+COMMON EDGE CASES:
+- Sarcasm → Opinionated (even if factual sounding)
+- Technical comparisons → Neutral (unless judgment expressed)
+- "I use X" → Neutral (unless accompanied by evaluation)
+- "I love/hate X" → Opinionated Positive/Negative
+
+=====================================================
+QUALITY CHECKS
+=====================================================
+
+Before submission:
+✓ All records have subjectivity label
+✓ All opinionated records have polarity label
+✓ Annotator name filled in
+✓ At least 1,000 records completed
+✓ Second annotator has reviewed
+✓ Agreement calculated (target: ≥80%)
+
+=====================================================
+QUESTIONS?
+=====================================================
+
+Refer to project documentation or contact team lead.
+
+Remember: Consistency is more important than perfection.
+When in doubt, document your reasoning in the notes column.
