@@ -1,9 +1,11 @@
 import json
 import re
 from datetime import datetime
+import os
 
-INPUT_FILE = 'raw_tweets.json'
-OUTPUT_FILE = 'twitter_standardized.json'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_FILE = os.path.join(SCRIPT_DIR, 'raw_tweets.json')
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, 'twitter_standardized.json')
 
 def clean_tweet_text(text):
     """
@@ -12,8 +14,8 @@ def clean_tweet_text(text):
     if not text:
         return ""
     
-    # Remove @mentions (e.g., @username)
-    text = re.sub(r'@\w+', '', text)
+    # # Remove @mentions (e.g., @username)
+    # text = re.sub(r'@\w+', '', text)
     
     # Convert to lowercase to match the Reddit schema example
     text = text.lower()
