@@ -2,3 +2,5 @@ test_dataset
 dataset
 .venv
 final_dataset
+data/processed
+data/raw
