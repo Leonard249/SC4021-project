@@ -2,5 +2,6 @@ test_dataset
 dataset
 .venv
 final_dataset
-data/processed
+data/processed/raw_data.json
+data/processed/temp.json
 data/raw
