@@ -1,3 +1,7 @@
 nltk
 langdetect 
 elasticsearch
+emoji
+wordsegment
+pyspellchecker
+spacy
