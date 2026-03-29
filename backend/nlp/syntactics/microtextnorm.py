@@ -174,12 +174,24 @@ class MicrotextNormalizer:
         """
         source = record.get("Source", "")
         run_spell = apply_spellcheck and source in spellcheck_sources
-
+ 
+        # HackerNews-specific: many posts store their body in Title with an empty Text field. If Text is empty and Title is non-empty, use Title
+        # as the normalization input. Raw fields are never modified.
+        raw_text  = (record.get("Text")  or "").strip()
+        raw_title = (record.get("Title") or "").strip()
+ 
+        if source == "HackerNews" and not raw_text and raw_title:
+            text_to_normalize = raw_title
+            record["Text_Source"] = "title"   # audit flag for reproducibility
+        else:
+            text_to_normalize = raw_text
+            record["Text_Source"] = "text"
+ 
         record["Normalized_Text"] = self._normalize_text(
-            record.get("Text", ""), record, run_spell
+            text_to_normalize, record, run_spell
         )
         record["Normalized_Word_Count"] = len(record["Normalized_Text"].split())
-
+ 
         # Normalize comments recursively — comments are short-form so
         # spellcheck can be applied regardless of source.
         for comment in record.get("Comments") or []:
@@ -187,7 +199,7 @@ class MicrotextNormalizer:
                 comment.get("Text", ""), comment, apply_spellcheck
             )
             comment["Normalized_Word_Count"] = len(comment["Normalized_Text"].split())
-
+ 
         return record
 
     def normalize_corpus(
