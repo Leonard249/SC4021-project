@@ -15,7 +15,7 @@ print("INDEXING DATA INTO ELASTICSEARCH")
 print("="*70)
 
 # Connect
-print("\n🔌 Connecting to Elasticsearch...")
+print("\n Connecting to Elasticsearch...")
 es = Elasticsearch(['http://localhost:9200'])
 if not es.ping():
     print("ERROR: Elasticsearch not running!")
