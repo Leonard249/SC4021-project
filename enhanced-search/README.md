@@ -241,9 +241,43 @@ Text-only results lack pattern insights and analytical depth.
 
 ### Prerequisites
 
-- Python 3.8+
-- Elasticsearch 7.17.4 (via Homebrew OR Docker)
-- Modern web browser (Chrome, Firefox, Safari)
+- **Python:** 3.10, 3.11, 3.12, or 3.13
+- **pip:** Latest version (upgrade with `pip install --upgrade pip`)
+- **Elasticsearch:** 7.17.4 (via Homebrew OR Docker)
+- **Modern web browser:** Chrome, Firefox, Safari
+
+**Check your Python version:**
+```bash
+python3 --version
+```
+
+**Note:** Python 3.9 or older is not supported. Please upgrade to Python 3.10+
+
+---
+
+### Python Setup (Required)
+
+**Create a virtual environment** to avoid dependency conflicts:
+```bash
+# Navigate to project directory
+cd enhanced-search
+
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate it
+source .venv/bin/activate  # macOS/Linux
+# OR
+.venv\Scripts\activate     # Windows
+
+# Upgrade pip (important!)
+pip install --upgrade pip
+
+# Verify activation (should see (.venv) in prompt)
+which python  # Should point to .venv/bin/python
+```
+
+---
 
 ### Option 1: Homebrew Installation (macOS 13 and below)
 
@@ -260,12 +294,16 @@ brew install elasticsearch-full
 
 **3. Install Python Dependencies:**
 ```bash
+# Make sure virtual environment is activated!
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
 ---
 
-### Option 2: Docker Installation (macOS 14+, Windows, Linux)
+### Option 2: Docker Installation (macOS 14+, Windows, Linux) - Recommended
 
 **1. Install Docker Desktop:**
 - Download from: https://www.docker.com/products/docker-desktop
@@ -286,33 +324,18 @@ docker run -d \
 
 **3. Install Python Dependencies:**
 ```bash
+# Create and activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+# OR
+.venv\Scripts\activate     # Windows
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install dependencies (may take 5-10 minutes)
 pip install -r requirements.txt
 ```
-
----
-
-## Running the System
-
-### Step 1: Start Elasticsearch
-
-**For Homebrew:**
-```bash
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
-elasticsearch
-```
-
-**For Docker:**
-```bash
-docker start elasticsearch
-```
-
-**Verify Elasticsearch is running:**
-```bash
-curl http://localhost:9200
-# Should return cluster information JSON
-```
-
----
 
 ### Step 2: Prepare and Index Data (First Time Only)
 
