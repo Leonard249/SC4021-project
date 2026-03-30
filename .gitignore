@@ -3,3 +3,9 @@ pyproject.toml
 uv.lock
 .venv
 bry_note
+dataset
+.venv
+final_dataset
+data/processed/raw_data.json
+data/processed/temp.json
+data/raw
