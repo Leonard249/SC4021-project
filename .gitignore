@@ -5,3 +5,7 @@ final_dataset
 data/processed/raw_data.json
 data/processed/temp.json
 data/raw
+
+utils/__pycache__
+semantics/__pycache__
+syntactics/__pycache__

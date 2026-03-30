@@ -55,8 +55,8 @@ logger = logging.getLogger(__name__)
 
 # Threshold band: scores outside [LOWER, UPPER] are decided by the lexicon.
 # Scores inside the band are escalated to the transformer.
-LOWER_THRESHOLD = 0.25
-UPPER_THRESHOLD = 0.65
+LOWER_THRESHOLD = 0.20
+UPPER_THRESHOLD = 0.75
 
 # First-person pronouns — strong subjectivity signal
 FIRST_PERSON = {
@@ -105,7 +105,7 @@ TECH_OPINION_ADJ_AND_VERBS = {
     "recommend", "love", "enjoy",
     # Negative Verbs
     "crash", "break", "hallucinate", "freeze", "fail", "suck", 
-    "waste", "ruin", "force", "complicate"
+    "waste", "ruin", "force", "complicate",
 
     # Emotional reactions — very common in tool reviews
     "disappointed", "disappointing", "surprised", "impressed", "shocked",
@@ -128,8 +128,8 @@ TECH_OPINION_ADJ_AND_VERBS = {
 
 # Weights for each lexicon signal (contribution to subjectivity score)
 SIGNAL_WEIGHTS = {
-    "mpqa":          0.25,   # MPQA strongsubj/weaksubj lexicon
-    "vader":         0.15,   # VADER compound score absolute value
+    "mpqa":          0.20,   # MPQA strongsubj/weaksubj lexicon
+    "vader":         0.20,   # VADER compound score absolute value
     "first_person":  0.18,   # presence of I/me/my etc.
     "opinion_adverb":0.10,   # honestly, frankly, personally...
     "hedge":         0.08,   # maybe, seems, think...
@@ -295,10 +295,12 @@ class SubjectivityDetector:
 
             
             word_count = len(sentence.split())
+            in_uncertain_band = self.lower < lexicon_score < self.upper
             force_transformer = (
                 self.use_transformer
                 and word_count <= 10
                 and lexicon_score > 0.05
+                and in_uncertain_band
             )
 
             if not force_transformer and lexicon_score >= self.upper:
@@ -311,9 +313,16 @@ class SubjectivityDetector:
                     t_label, t_score = self._transformer_score(
                         sentence, context=parent_context
                     )
-                    label = t_label
-                    score = round(0.5 * lexicon_score + 0.5 * t_score, 4)
-                    method = "transformer"
+                    # Flip to subjective if transformer sees strong opinion signals in an otherwise objective sentence
+                    if t_label == "objective" and t_score < 0.6:
+                        has_first_person = bool(re.search(r'\b(i|my|me|we|our)\b', sentence, re.IGNORECASE))
+                        has_stance = bool(re.search(r'\b(i think|i feel|imo|imho|ngl|tbh|never|always)\b', sentence, re.IGNORECASE))
+                        if has_first_person and has_stance:
+                            t_label = "subjective"
+                            t_score = 1.0 - t_score
+                    score = round(0.4 * lexicon_score + 0.6 * t_score, 4)
+                    label = "subjective" if score >= 0.5 else "objective"
+                    method = "lexicon and transformer"
                 else:
                     label = "subjective" if lexicon_score >= 0.5 else "objective"
                     score = lexicon_score
@@ -348,99 +357,39 @@ class SubjectivityDetector:
         blended = 0.4 * mean_score + 0.6 * max_score
 
         # Slightly lower decision boundary than 0.5 since we're blending
-        label = "subjective" if blended >= 0.45 else "objective"
+        label = "subjective" if blended >= 0.48 else "objective"
         return label, round(blended, 4)
 
     # ------------------------------------------------------------------
     # Lexicon scoring
     # ------------------------------------------------------------------
 
-    def _lexicon_score(
-        self,
-        sentence: str,
-        pos_lookup: dict[str, tuple[str, str, str]],
-    ) -> float:
-        """
-        Compute a subjectivity score in [0, 1] using weighted lexicon signals.
-
-        Signals (weights defined in SIGNAL_WEIGHTS at module level):
-            textblob      — TextBlob's own subjectivity score
-            first_person  — presence of I/me/my
-            opinion_adverb — honestly, frankly, personally...
-            hedge         — maybe, seems, think...
-            intensifier   — very, really, so...
-            tech_opinion  — domain opinion adjectives
-            emoticon      — [bracket emoticon] tokens
-            exclamation   — ! present in sentence
-        """
+    def _lexicon_score(self, sentence, pos_lookup):
         tokens = [t.strip('.,!?()[]"').lower() for t in sentence.split()]
         token_set = set(tokens)
-        signals: dict[str, float] = {}
 
-        # TextBlob subjectivity (0=objective, 1=subjective)
-        if self._mpqa:
-            strong_hits = sum(
-                1 for t in tokens
-                if self._mpqa.get(t, {}).get("type") == "strongsubj"
-            )
-            weak_hits = sum(
-                1 for t in tokens
-                if self._mpqa.get(t, {}).get("type") == "weaksubj"
-            )
-            # Strong hits worth 1.0, weak hits worth 0.5, cap at 1.0
-            signals["mpqa"] = min((strong_hits * 1.0 + weak_hits * 0.5) / 3, 1.0)
-        else:
-            signals["mpqa"] = 0.0
-        
+        # Base score from VADER — this is the foundation, not just one signal
         if self._vader:
-            clean_sentence = re.sub(r"<CODE>|\[[^\]]+\]", "", sentence).strip()
-            vader_scores = self._vader.polarity_scores(clean_sentence)
-            signals["vader"] = min(abs(vader_scores["compound"]), 1.0)
+            clean = re.sub(r"<CODE>|\[[^\]]+\]", "", sentence).strip()
+            vader_compound = abs(self._vader.polarity_scores(clean)["compound"])
         else:
-            signals["vader"] = 0.0
+            vader_compound = 0.5   # unknown → push to transformer
 
-        # First-person pronouns — any presence → 1.0
-        signals["first_person"] = 1.0 if token_set & FIRST_PERSON else 0.0
+        # Heuristic adjustment — each signal shifts the base score
+        adjustment = 0.0
+        if token_set & FIRST_PERSON:          adjustment += 0.12
+        if token_set & OPINION_ADVERBS:       adjustment += 0.08
+        if token_set & HEDGE_WORDS:           adjustment += 0.06
+        if token_set & INTENSIFIERS:          adjustment += 0.05
+        if token_set & TECH_OPINION_ADJ_AND_VERBS:  adjustment += 0.10
+        if self._mpqa:
+            strong = sum(1 for t in tokens if self._mpqa.get(t, {}).get("type") == "strongsubj")
+            weak   = sum(1 for t in tokens if self._mpqa.get(t, {}).get("type") == "weaksubj")
+            adjustment += min((strong * 0.08 + weak * 0.04), 0.15)
+        if re.search(r"\[[^\]]+\]", sentence):  adjustment += 0.04   # emoticon
+        if "!" in sentence:                     adjustment += 0.03
 
-        # Opinion adverbs
-        signals["opinion_adverb"] = 1.0 if token_set & OPINION_ADVERBS else 0.0
-
-        # Hedge words
-        signals["hedge"] = 1.0 if token_set & HEDGE_WORDS else 0.0
-
-        # Intensifiers
-        signals["intensifier"] = 1.0 if token_set & INTENSIFIERS else 0.0
-
-        # Domain opinion adjectives and verbs (check lemmas from POS_Tags if available)
-        opinion_hits = token_set & TECH_OPINION_ADJ_AND_VERBS
-        # Also check POS_Tags lemmas for morphological variants
-        pos_opinion_hits = {
-            lemma for _, pos, lemma in (pos_lookup.get(t, ("", "", t)) for t in tokens)
-            if lemma in TECH_OPINION_ADJ_AND_VERBS
-        }
-        signals["tech_opinion"] = 1.0 if opinion_hits or pos_opinion_hits else 0.0
-
-        # Emoticon tokens — [bracket text] pattern
-        emoticon_count = len(re.findall(r"\[[^\]]+\]", sentence))
-        signals["emoticon"] = min(emoticon_count, 1.0)
-
-        # Exclamation marks
-        signals["exclamation"] = 1.0 if "!" in sentence else 0.0
-
-
-        # Weighted sum — normalise by available weight in case lexicons are absent
-        available_weight = sum(
-            w for key, w in SIGNAL_WEIGHTS.items()
-            if not (key == "mpqa" and not self._mpqa)
-            and not (key == "vader" and not self._vader)
-        )
-        score = sum(
-            SIGNAL_WEIGHTS[key] * value
-            for key, value in signals.items()
-        ) / available_weight
-
-
-        # Clamp to [0, 1]
+        score = vader_compound + adjustment
         return min(max(score, 0.0), 1.0)
 
     # ------------------------------------------------------------------
