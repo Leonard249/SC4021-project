@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Large data files
+*.npy
+indexed_dataset.json
+raw_data.json
+data/raw_data.json
+data/*.json
+data/*.npy
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

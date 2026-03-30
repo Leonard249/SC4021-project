@@ -1,0 +1,2594 @@
+{
+  "classified": {
+    "0006877b70976545": {
+      "url": "https://github.com/roboco-io/awesome-vibecoding",
+      "title": "GitHub - roboco-io/awesome-vibecoding: A curated list of resources, tutorials, best practices, and examples for Vibe Coding, the emerging paradigm of intuitive, AI-driven software development. Explore how vibe-driven collaboration between humans and AI is reshaping the future of programming.",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:17:27.372996"
+    },
+    "001535cfa23e785d": {
+      "url": "https://stackoverflow.blog/2025/11/13/one-thing-enterprise-ai-projects-need-to-succeed-community/",
+      "title": "One thing enterprise AI projects need to succeed? Community.",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:17:44.449409"
+    },
+    "0036f2d9e9698150": {
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "title": "My AI Adoption Journey",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:17:59.320274"
+    },
+    "003e3b4f70736c98": {
+      "url": "https://medium.com/@TaniaNoronha/why-digital-transformations-fail-and-how-process-excellence-saves-the-day-in-2026-c82ee14b6620",
+      "title": "Why Digital Transformations Fail and How Process Excellence Saves the Day in 2026",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:18:54.098433"
+    },
+    "0064e13aa87b6b65": {
+      "url": "https://codingplainenglish.medium.com/cursor-vs-copilot-vs-codeium-the-real-winner-in-2025-2f88d4c24787",
+      "title": "Cursor vs. Copilot vs. Codeium — The Real Winner in 2025",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:19:09.587320"
+    },
+    "00658ccd81a946c7": {
+      "url": "https://simonwillison.net/2025/Dec/18/swift-justhtml/",
+      "title": "swift-justhtml",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:19:20.688926"
+    },
+    "00bdd5d879d5b8e2": {
+      "url": "https://sourcegraph.com/blog/the-death-of-the-junior-developer",
+      "title": "The death of the junior developer | Sourcegraph Blog",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:22:52.823727"
+    },
+    "00cdd1208ed171b0": {
+      "url": "https://medium.com/@altafahmedpc/ai-robots-future-home-helpers-2026-0fbda579acd3",
+      "title": "AI Robots: Future Home Helpers? (2026)",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:23:10.617832"
+    },
+    "00fab88c6b2ad921": {
+      "url": "https://www.altexsoft.com/blog/cursor-pros-and-cons/",
+      "title": "The Good and Bad of Cursor AI Code Editor",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:23:19.177723"
+    },
+    "00fffe7f85852767": {
+      "url": "https://chriskiehl.com/article/dopij-progress-update-2025-04-20",
+      "title": "Data Oriented Programming in Java: Chapter 7 Progress (2025-04-20)",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:23:48.619591"
+    },
+    "0179158d76570484": {
+      "url": "https://about.gitlab.com/topics/devops/ai-code-generation-guide/",
+      "title": "AI Code Generation Explained: A Developer's Guide",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:24:22.681631"
+    },
+    "01ac46e1f6cafb27": {
+      "url": "https://medium.com/@tirthshah04/the-paywall-of-innovation-is-true-ai-development-becoming-exclusive-20b92b5089bb",
+      "title": "The “Paywall” of Innovation: Is True AI Development Becoming Exclusive?",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:24:43.777925"
+    },
+    "01b6dadca626099d": {
+      "url": "https://blog.fsck.com/2025/10/09/superpowers/",
+      "title": "Superpowers: How I'm using coding agents in October 2025",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:24:59.446529"
+    },
+    "01c5ed2fa8440c86": {
+      "url": "https://alyosha.net/posts/simple-non-hype-agentic-coding-workflow-that-works-for-well-established-codebases/",
+      "title": "Simple non-hype agentic coding workflow that works for well-established codebases",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:25:16.812236"
+    },
+    "01cb84cbe3d1e76a": {
+      "url": "https://dataengineeringcentral.substack.com/p/building-agentic-ai-fancy",
+      "title": "Building Agentic AI ... Fancy.",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:25:26.878680"
+    },
+    "021492869f876668": {
+      "url": "https://medium.com/@lowhangwei/ai-wont-replace-leaders-and-it-will-amplify-them-dbe0cf287f51",
+      "title": "AI Won’t Replace Leaders and It Will Amplify Them",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:25:56.435855"
+    },
+    "027ef08e79c8289e": {
+      "url": "https://medium.com/@napnox.pro/the-future-of-ai-tools-in-2026-survival-over-hype-981ba2bc3205",
+      "title": "🚀 The Future of AI Tools in 2026: Survival Over Hype",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:26:27.561346"
+    },
+    "0285a3dc7425ba9c": {
+      "url": "https://simonwillison.net/2025/Dec/30/liz-fong-jones/",
+      "title": "A quote from Liz Fong-Jones",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:26:47.989596"
+    },
+    "02bda700c3a1be77": {
+      "url": "https://medium.com/cochl/claude-skills-transform-claude-into-an-audio-ai-expert-ad738131edc8",
+      "title": "Claude Skills: Transform Claude into an audio AI expert.",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:27:12.068805"
+    },
+    "02d3b0f992311003": {
+      "url": "https://nicolaiarocci.com/ai-coding-is-less-fun/",
+      "title": "AI coding is less fun",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:27:22.958457"
+    },
+    "02d64f46454d12d3": {
+      "url": "https://pieces.app/blog/9-best-ai-code-generation-tools",
+      "title": "10 Best AI code generators in 2025 [Free & Paid]",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:27:41.028463"
+    },
+    "02dcd6e283c97171": {
+      "url": "https://medium.com/@bobmain49/github-copilot-with-vs-code-here-we-go-d9dd29512866",
+      "title": "GitHub Copilot with VS Code: Here we go!",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:27:53.858945"
+    },
+    "02e3aa162daa59d1": {
+      "url": "https://lukasatkinson.de/2025/net-negative-cursor/",
+      "title": "Net-Negative Cursor",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:28:03.445911"
+    },
+    "02f95e46cb81deeb": {
+      "url": "https://stackoverflow.blog/2025/07/31/the-innovation-leadership-and-team-agility-inside-u-s-bank-s-cloud-journey/",
+      "title": "The innovation, leadership, and team agility inside U.S. Bank’s cloud journey",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:28:20.790327"
+    },
+    "0305b5bd7cb9773d": {
+      "url": "https://meta.stackoverflow.com/questions/421831/policy-generative-ai-e-g-chatgpt-is-banned",
+      "title": "Policy: Generative AI (e.g., ChatGPT) is banned",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:28:37.548569"
+    },
+    "0367695c7ed9d7f2": {
+      "url": "https://medium.com/@authority_94905/the-assisted-coding-revolution-1952-present-from-autocode-to-vibe-coding-timeline-f83c33581887",
+      "title": "The Assisted Coding Revolution (1952 → Present): From Autocode to Vibe Coding Timeline",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:28:54.986154"
+    },
+    "0380853b5cfde49c": {
+      "url": "https://www.thealgorithmicbridge.com/p/why-you-cant-trust-most-ai-studies",
+      "title": "Why You Can’t Trust Most AI Studies",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:29:04.934424"
+    },
+    "0389562e50008055": {
+      "url": "https://medium.com/@adam.ginsburg/ai-can-build-apps-instantly-but-will-they-survive-success-68acaffd0726",
+      "title": "AI can build apps instantly — but will they survive success?",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:29:20.258670"
+    },
+    "0392cf2873a94e9f": {
+      "url": "https://kenneth.io/post/no-code-is-dead-long-live-vibe-coding",
+      "title": "No code is dead. Long live vibe coding. | Kenneth Auchenberg",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:29:35.082698"
+    },
+    "03a77941baa9775f": {
+      "url": "https://medium.com/@AI-on-Databricks/vibe-coding-your-first-databricks-app-8d662f41b959",
+      "title": "Vibe Coding Your First Databricks App",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:29:51.576900"
+    },
+    "03a89053f2f115c3": {
+      "url": "https://huggingface.co/",
+      "title": "Hugging Face – The AI community building the future.",
+      "source_type": "corporate_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:30:06.148404"
+    },
+    "03e3a4ad64271caa": {
+      "url": "https://saeidehbakhshi.substack.com/p/how-to-use-codex-to-run-end-to-end",
+      "title": "5-minute end-to-end data analysis with Codex",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:30:21.432707"
+    },
+    "04022675816ecdc9": {
+      "url": "https://rdel.substack.com/p/rdel-84-what-influences-developers",
+      "title": "RDEL #84: What influences developers' trust in adopting AI-assisted coding tools?",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:30:38.389625"
+    },
+    "0411ce8486a18386": {
+      "url": "https://medium.com/@sai.methukupally.1/enhancing-agentic-ai-web-applications-with-human-in-the-loop-ai-using-langgraph-717d3661a6e7",
+      "title": "Enhancing Agentic AI Web Applications with Human-in-the-Loop AI Using LangGraph",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:30:50.079307"
+    },
+    "045d9c2587afb7c6": {
+      "url": "https://stackoverflow.blog/2019/09/17/joel-spolsky-clive-thompson-discuss-coders-software-programming/",
+      "title": null,
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:31:03.394198"
+    },
+    "0468bafab6f72b5b": {
+      "url": "https://aps.autodesk.com/blog/vibe-coding-part-1-build-aps-viewer-minutes",
+      "title": "Vibe Coding - Part 1: Build an APS Viewer in Minutes",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:31:23.312027"
+    },
+    "0477c8fc5f5000b9": {
+      "url": "https://martinfowler.com/articles/20251204-frags.html",
+      "title": "Fragments Dec 4",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:31:41.128501"
+    },
+    "048804ba2a3861ee": {
+      "url": "https://blog.alexsanjoseph.com/posts/20250815-working-with-ai/",
+      "title": "Software Engineering (for small teams) with Agentic AI",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:31:57.988458"
+    },
+    "04a1c021190a0d96": {
+      "url": "https://forum.cursor.com/t/an-ai-engineers-intro-to-vibe-coding-with-cursor-uv-claude-3-7-sonnet/56587",
+      "title": "An AI Engineer's Intro to Vibe Coding with Cursor, uv, Claude 3.7 sonnet",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:32:10.225912"
+    },
+    "04bd08ed9a2ee2f9": {
+      "url": "https://medium.com/@diabolikss/beyond-the-code-how-replit-empowers-the-non-technical-creator-7a481d254834",
+      "title": "Beyond the Code: How Replit Empowers the Non-Technical Creator",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:32:24.742240"
+    },
+    "04c7814e1034e4d3": {
+      "url": "https://daavoo.github.io/2025/04/13/why-i-dont-use-ai-coding-assistants/",
+      "title": "Why I don't use AI coding assistants",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:32:54.316810"
+    },
+    "04e9b83ab5ecc827": {
+      "url": "https://blog.postman.com/engineering/smart-api-security-the-power-of-llms-and-postman-mcp/",
+      "title": "Smart API Security: The Power of LLMs and Postman MCP",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:33:10.034643"
+    },
+    "052af2431d57e3e7": {
+      "url": "https://ghiculescu.substack.com/p/ai-coding-plateauing-but-also-accelerating",
+      "title": "AI coding: plateauing but also accelerating",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:33:39.208126"
+    },
+    "057106ea4ae367ef": {
+      "url": "https://belajarvibecoding.id/beda/cursor-dan-copilot",
+      "title": "Cursor AI vs GitHub Copilot",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:33:53.808254"
+    },
+    "059ec76326029429": {
+      "url": "https://addyo.substack.com/p/my-llm-coding-workflow-going-into",
+      "title": "My LLM coding workflow going into 2026",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:34:09.934942"
+    },
+    "05f098d68e4111d8": {
+      "url": "https://www.linkedin.com/posts/hillel-wayne_paradoxically-i-feel-like-vibe-coding-has-activity-7313283876691267584-p4mj",
+      "title": "Paradoxically, I feel like vibe coding has made me MORE creative, by pushing me to constantly ask \"What are some things a person *with a different skillset than me* can solve with just a little… | Hillel Wayne",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:34:26.677660"
+    },
+    "05f3fc7fcce8bc15": {
+      "url": "https://alexzhang13.github.io/blog/2024/neurips2023/",
+      "title": "Alex L. Zhang | Highlights of NeurIPS 2023 from Reading All 3584 Abstracts",
+      "source_type": "other_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:34:51.257998"
+    },
+    "0607840669502e11": {
+      "url": "https://simonwillison.net/2025/Dec/22/claude-chrome-cloudflare/",
+      "title": "Using Claude in Chrome to navigate out the Cloudflare dashboard",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:35:04.287051"
+    },
+    "060a830ee0716a3e": {
+      "url": "https://tribalknowledge.substack.com/p/i-tried-github-copilot",
+      "title": "I tried GitHub Copilot",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:37:01.576879"
+    },
+    "0618258d7439419a": {
+      "url": "https://boristane.com/blog/how-i-use-claude-code/",
+      "title": "How I Use Claude Code | Boris Tane",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:37:26.057998"
+    },
+    "061b613a70b8dd44": {
+      "url": "https://natesnewsletter.substack.com/p/codex-53-vs-opus-46-two-agent-philosophies",
+      "title": "Codex 5.3 vs. Opus 4.6: Why your AI agent choice compounds faster than you think + the workflow audit that prevents the wrong one",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:37:46.052347"
+    },
+    "063efa0d8da8316b": {
+      "url": "https://fly.io/blog/youre-all-nuts/",
+      "title": "My AI Skeptic Friends Are All Nuts",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:37:58.122044"
+    },
+    "0651efd2cc5b34fd": {
+      "url": "https://github.com/jarv/newsgoat",
+      "title": "GitHub - jarv/newsgoat: NewsGoat is a terminal-based RSS reader",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:38:09.773944"
+    },
+    "0659a0a7d98b67e0": {
+      "url": "https://medium.com/@Micheal-Lanham/can-vibe-coding-work-for-production-code-cacd8f52c807",
+      "title": "Can Vibe Coding Work for Production Code?",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:38:27.005775"
+    },
+    "068e96c16ff52ebc": {
+      "url": "https://brandur.org/nanoglyphs/048-llms",
+      "title": "The AI Edition",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:38:42.118608"
+    },
+    "06ac62d2732111ed": {
+      "url": "https://medium.com/@armankamran/gen-z-ai-how-generative-ai-is-reshaping-the-future-of-an-entire-generation-3ed4f497be79",
+      "title": "Gen-Z-AI: How Generative AI is Reshaping the Future of an Entire Generation",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:38:55.594284"
+    },
+    "06ad62c13cc3e7a8": {
+      "url": "https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and",
+      "title": "AI-Driven Prototyping: v0, Bolt, and Lovable Compared",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:39:14.983038"
+    },
+    "06c0f5a8bf0b1b7c": {
+      "url": "https://simonwillison.net/2025/Nov/11/six-coding-agents-at-once/",
+      "title": "Six coding agents at once",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:39:26.911577"
+    },
+    "06d5cf432169b24b": {
+      "url": "https://medium.com/predict/the-death-of-coding-is-cancelled-why-your-ai-assistant-is-quickly-becoming-an-imbecile-e4d0236c6f07",
+      "title": "The Death of Coding Is Cancelled: Why Your AI Assistant Is Quickly Becoming an Imbecile",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:39:46.310495"
+    },
+    "07607739154df340": {
+      "url": "https://medium.com/@mariyamappdev/from-customer-complaints-to-strategic-intelligence-how-aspect-based-sentiment-analysis-can-4d6f1631212b",
+      "title": "From Customer Complaints to Strategic Intelligence: How Aspect-Based Sentiment Analysis Can…",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:40:05.557064"
+    },
+    "0767e7a5c9aa146e": {
+      "url": "https://tante.cc/2025/05/23/on-vibe-coding/",
+      "title": "On \"Vibe Coding\"",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:40:21.035226"
+    },
+    "0769a9732584cd5a": {
+      "url": "https://stackoverflow.com/questions/68253302/github-copilot-commands-not-working-and-showing-error",
+      "title": "GitHub Copilot Commands not working and showing error",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:40:32.802481"
+    },
+    "078b8e0624f58f66": {
+      "url": "https://www.understandingai.org/p/17-predictions-for-ai-in-2026",
+      "title": "17 predictions for AI in 2026",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:40:47.529693"
+    },
+    "07a899f98667c944": {
+      "url": "https://simonwillison.net/2026/Jan/19/nanolang/",
+      "title": "jordanhubbard/nanolang",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:41:00.992185"
+    },
+    "07bf4f88088f560b": {
+      "url": "https://manjit28.medium.com/my-first-impressions-of-github-copilots-coding-agent-bae730a1d69d",
+      "title": "My First Impressions of GitHub Copilot’s Coding Agent",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:41:18.158435"
+    },
+    "0835e50bca69637e": {
+      "url": "https://stackoverflow.blog/2025/07/10/there-is-no-golden-path-anymore-engineering-practices-are-being-rewritten/",
+      "title": "There is no golden path anymore: Engineering practices are being rewritten",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:41:29.647790"
+    },
+    "087e3798e65c5609": {
+      "url": "https://medium.com/@yonkidev/ai-tdd-when-tests-stop-being-silent-664f53388a5b",
+      "title": "AI-TDD: When Tests Stop Being Silent",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:41:51.346489"
+    },
+    "08933a2dcc993716": {
+      "url": "https://medium.com/@jeslurrahman/how-to-become-an-ai-era-software-engineer-bd40657efd8e",
+      "title": "How to Become an AI-Era Software Engineer",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:42:10.484833"
+    },
+    "089ff1e3723b4190": {
+      "url": "https://mitchellh.com/writing/feel-it",
+      "title": "You Have to Feel It",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:42:23.966045"
+    },
+    "08aa87d1a6c0ecb9": {
+      "url": "https://medium.com/@rogt.x1997/cognitive-debt-in-the-age-of-agentic-ai-when-velocity-outruns-understanding-5d4a1298f3c0",
+      "title": "Cognitive Debt in the Age of Agentic AI: When Velocity Outruns Understanding",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:42:39.597237"
+    },
+    "08b0ad048a84ffb2": {
+      "url": "https://clkao.substack.com/p/why-we-arent-achieving-the-copilot",
+      "title": "Why We Aren't Achieving the Copilot Experience in Data Systems",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:42:54.816421"
+    },
+    "08ca5523053fd6b0": {
+      "url": "https://alitu.com/creator/workflow/what-is-vibe-coding/",
+      "title": "What is Vibe Coding? How Creators Can Build Software Without Writing Code",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:43:14.081650"
+    },
+    "08d69fe078630bf1": {
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/the-future-of-ai-structured-vibe-coding---an-improved-approach-to-ai-software-de/4461275",
+      "title": "Structured Vibe Coding: A Smarter Way to Build AI Agents with GitHub Copilot",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:43:29.110308"
+    },
+    "09366255d4d9b0d2": {
+      "url": "https://www.superhuman.ai/p/ai-customization-made-easy",
+      "title": "🧰 AI customization made easy",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:43:45.250119"
+    },
+    "0937cc896a17e1cf": {
+      "url": "https://github.com/resources/articles/what-is-ai-code-generation",
+      "title": "What is AI code generation?",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:44:12.179133"
+    },
+    "096d02c8ea890dad": {
+      "url": "https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering",
+      "title": "How AI-assisted coding will change software engineering: hard truths",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:44:31.199324"
+    },
+    "096d8ebdfe5cbf1a": {
+      "url": "https://elixirforum.com/t/whos-gonna-help-vibe-coders-with-new-tech-stacks-now/73977?page=3",
+      "title": "Who's gonna help vibe coders with new tech stacks now?",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:44:50.005129"
+    },
+    "098d9fdb79ab8460": {
+      "url": "https://medium.com/@zoomphant/beyond-ai-slop-is-the-tool-to-blame-41a6db1b2575",
+      "title": "Beyond ‘AI Slop’: Is the Tool to Blame?",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:45:06.391526"
+    },
+    "09af0492895e1f8d": {
+      "url": "https://startupcto.medium.com/how-software-engineers-can-survive-ai-cfa51b957c35",
+      "title": "How Software Engineers Can Survive AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:45:13.471643"
+    },
+    "09bc44fc52a79efb": {
+      "url": "https://medium.com/@xsantoshrout/what-breaks-when-agents-build-software-without-you-4212a196e2fd",
+      "title": "What Breaks When Agents Build Software Without You",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:45:39.144562"
+    },
+    "09f339624a534731": {
+      "url": "https://osnews.com/story/142956/vibe-coding-yourself-into-irrelevance/",
+      "title": "Vibe-coding your profession into irrelevance",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:46:04.578030"
+    },
+    "09f7cf2170f49479": {
+      "url": "https://stackoverflow.blog/2025/11/25/essential-ingredients-for-enterprise-ai-success/",
+      "title": "Essential ingredients for enterprise AI success",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:46:24.353074"
+    },
+    "09ff513fc3cf3b58": {
+      "url": "https://stripe.dev/blog/ai-agents-terraform-stripe-infrastructure",
+      "title": "Configuring Stripe using Terraform and AI agents",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:46:34.662306"
+    },
+    "0a2e1c7a3ab91c09": {
+      "url": "https://medium.com/@christianbourlier/your-ai-agent-has-amnesia-youre-the-cure-f13b0f325f74",
+      "title": "Your AI Agent Has Amnesia. You’re the Cure.",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:46:49.614715"
+    },
+    "0a2e504cd36c6657": {
+      "url": "https://www.swyx.io/cloudflare-go",
+      "title": "Eating the Cloud from Outside In",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:46:56.111659"
+    },
+    "0a2eee61919aea8e": {
+      "url": "https://www.thealgorithmicbridge.com/p/how-ai-is-quietly-changing-what-it",
+      "title": "How AI Is Quietly Changing What It Means to Be Alone",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:47:06.881596"
+    },
+    "0a6b7f0bd53369db": {
+      "url": "https://ai.meta.com/blog/segment-anything-model-3/",
+      "title": "Introducing Meta Segment Anything Model 3 and Segment Anything Playground",
+      "source_type": "corporate_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:47:25.564702"
+    },
+    "0a723b24ae81f5a1": {
+      "url": "https://ismatbabir.medium.com/99-of-developers-are-overlooking-claude-code-sub-agents-heres-why-it-matters-more-than-you-think-57e088a795f9",
+      "title": "99% of Developers Are Overlooking Claude Code Sub Agents: Here’s Why It Matters More Than You Think",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:47:34.185394"
+    },
+    "0a92992fb7cc74dd": {
+      "url": "https://simonwillison.net/2025/Dec/10/html-tools/",
+      "title": "Useful patterns for building HTML tools",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:47:47.505167"
+    },
+    "0a92fb233145fc00": {
+      "url": "https://medium.com/@namanver.2002/what-i-learned-from-anthropics-claude-code-in-action-course-34e29c86361c",
+      "title": "What I Learned from Anthropic’s “Claude Code in Action” Course",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:48:00.290838"
+    },
+    "0a963b376a0e725b": {
+      "url": "https://simonwillison.net/2025/Dec/14/justhtml/",
+      "title": "JustHTML is a fascinating example of vibe engineering in action",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:48:13.589000"
+    },
+    "0acebf0ce05fc89c": {
+      "url": "https://vegapunk.medium.com/that-1970s-bug-that-still-haunts-modern-ai-9ec34e32a617",
+      "title": "That 1970s Bug That Still Haunts Modern AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:48:27.083081"
+    },
+    "0b076de95001fb82": {
+      "url": "https://cevheri.medium.com/merdiven-paradoksu-ai-%C3%A7a%C4%9F%C4%B1nda-yaz%C4%B1l%C4%B1m-m%C3%BChendisi-olman%C4%B1n-yeni-yol-haritas%C4%B1-96e174a07a69",
+      "title": "Merdiven Paradoksu: AI Çağında Yazılım Mühendisi Olmanın Yeni Yol Haritası",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:48:43.756801"
+    },
+    "0b289e117aedbc43": {
+      "url": "https://handyai.substack.com/p/cursors-agent-autonomously-codes",
+      "title": "Cursor's agent autonomously codes a browser in a week",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:48:58.096417"
+    },
+    "0b2990133c8c8da3": {
+      "url": "https://www.artificialintelligence.com",
+      "title": "ArtificialIntelligence.com",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:49:13.013008"
+    },
+    "0b33d5d1471782d3": {
+      "url": "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
+      "title": "How Codex is built",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:49:29.360590"
+    },
+    "0b6aca70df51571b": {
+      "url": "https://www.swyx.io/api-economy",
+      "title": "The Light and Dark Side of the API Economy",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:49:50.054659"
+    },
+    "0b6f7047bbacaaff": {
+      "url": "https://medium.com/@akshaydhillon4812/my-take-why-ai-will-not-replace-software-developers-the-real-problem-everyone-misses-7d9bdd08dfc2",
+      "title": "My Take: Why AI Will Not Replace Software Developers — The Real Problem Everyone Misses",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:50:05.877601"
+    },
+    "0ba6cbcf88baf36a": {
+      "url": "https://basta.substack.com/p/the-imminent-risk-of-vibe-coding",
+      "title": "The imminent risk of vibe coding",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:50:23.557177"
+    },
+    "0bb15923765e59aa": {
+      "url": "https://medium.com/@ismailsaleem/codex-by-chatgpt-revolutionizing-software-development-with-ai-b166d8b2b7f7",
+      "title": "Codex by ChatGPT: Revolutionizing Software Development with AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:50:34.898222"
+    },
+    "0bb1b68fdba6da8c": {
+      "url": "https://antirez.com/news/159",
+      "title": "<antirez>",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:50:56.416564"
+    },
+    "0bde4f81f558ba5f": {
+      "url": "https://medium.com/kbtg-life/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-multi-repo-git-vscode-extension-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-ai-%E0%B9%83%E0%B8%BD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-git-client-%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%95%E0%B8%AD%E0%B8%9B%E0%B9%82%E0%B8%88%E0%B8%97%E0%B8%A2%E0%B9%8C-2123b3d81772",
+      "title": "สร้าง Multi-Repo Git VSCode Extension ใช้เองด้วย AI ในวันที่ Git Client ทั่วไปเริ่มไม่ตอบโจทย์",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:51:22.386901"
+    },
+    "0c39ae85263e7f29": {
+      "url": "https://www.linkedin.com/posts/martin-fowler-com_we-need-to-talk-about-vibe-coding-activity-7313560863175528448-WOV0",
+      "title": "We need to talk about vibe coding | Martin Fowler",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:51:36.087276"
+    },
+    "0c50fdbbed65665f": {
+      "url": "https://www.rocket.new/blog/cursor-alternatives",
+      "title": "Cursor Alternatives",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:51:45.872312"
+    },
+    "0c915192a1f764ed": {
+      "url": "https://simonwillison.net/2026/Jan/15/open-responses/",
+      "title": "Open Responses",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:51:58.690706"
+    },
+    "0ca6521157ee31fc": {
+      "url": "https://medium.com/@anindyaju99/a-beginners-guide-to-ai-assisted-coding-3c46bd2d867b",
+      "title": "A Beginner’s Guide to AI Assisted Coding",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:52:14.362787"
+    },
+    "0cd6e95bf1251e17": {
+      "url": "https://simonwillison.net/2025/Aug/29/the-perils-of-vibe-coding/",
+      "title": "The perils of vibe coding",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:52:26.101618"
+    },
+    "0d0e5739546e7c4d": {
+      "url": "https://elite-ai-assisted-coding.dev/p/copilot-agentic-coding-gpt-5-vs-claude-4-sonnet",
+      "title": "Complex Agentic Coding with Copilot: GPT-5 vs Claude 4 Sonnet",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:52:42.700446"
+    },
+    "0d2978a8a1c320fe": {
+      "url": "https://www.canva.com/ai-code-generator/",
+      "title": "AI Code Generator: Transform your designs with coding-free creations | Canva",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:53:00.096379"
+    },
+    "0d6bd10309e1eefb": {
+      "url": "https://shopify.engineering/building-a-shopifyql-code-editor",
+      "title": "Building a ShopifyQL Code Editor - Shopify",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:53:17.130895"
+    },
+    "0da4cc8a37609a57": {
+      "url": "https://www.hackerrank.com/ai/astra-reports",
+      "title": "HackerRank ASTRA Report",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:53:33.146509"
+    },
+    "0dc8a5a75f8d24d1": {
+      "url": "https://simonwillison.net/2025/Nov/17/the-fate-of-small-open-source/",
+      "title": "The fate of “small” open source",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:53:46.526045"
+    },
+    "0df31711a1a9e98c": {
+      "url": "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
+      "title": "Prompt Engineering",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:54:01.267253"
+    },
+    "0e07f4e3e5e83215": {
+      "url": "https://developer.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes",
+      "title": "Complete Beginner's Guide to Vibe Coding an App in 5 Minutes - Microsoft for Developers",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:54:30.365273"
+    },
+    "0e10a5583c31eb19": {
+      "url": "https://vickiboykis.com/",
+      "title": null,
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:54:46.327477"
+    },
+    "0e1cac8890970cd8": {
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "title": "Vibe coding - Wikipedia",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:55:03.358892"
+    },
+    "0e5541dd7d73e41d": {
+      "url": "https://medium.com/@agarwal.astha3/agent-loop-with-microsoft-agent-framework-why-iterative-workflows-beat-one-shot-prompts-41fb73a9aea9",
+      "title": "Agent Loop with Microsoft Agent Framework: Why Iterative Workflows Beat One-Shot Prompts",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:55:35.864683"
+    },
+    "0e6bfc956a430d95": {
+      "url": "https://simonwillison.net/2025/May/20/after-months-of-coding-with-llms/",
+      "title": "After months of coding with LLMs, I’m going back to using my brain",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:55:51.698418"
+    },
+    "0e909f4615b9d482": {
+      "url": "https://every.to/vibe-check/vibe-check-opus-4-5-is-the-coding-model-we-ve-been-waiting-for",
+      "title": "Vibe Check: Opus 4.5 Is the Coding Model We've Been Waiting For",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:56:12.283823"
+    },
+    "0e9b58021b381d17": {
+      "url": "https://stackoverflow.com/questions/79312425/copilot-studio-sql-connector",
+      "title": "Copilot Studio SQL connector",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:56:27.895627"
+    },
+    "0ec149096eda66da": {
+      "url": "https://simonwillison.net/2025/Oct/21/introducing-chatgpt-atlas/",
+      "title": "Introducing ChatGPT Atlas",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:56:47.855734"
+    },
+    "0ee1986e19319745": {
+      "url": "https://alexp.pl/2025/02/19/vibe-coding.html",
+      "title": "Vibe Coding and the Future of Software Engineering",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:57:04.296459"
+    },
+    "0efeb58acc16da53": {
+      "url": "https://www.coursera.org/articles/ai-engineer",
+      "title": "What Is an AI Engineer? (And How to Become One)",
+      "source_type": "other_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T18:57:35.367434"
+    },
+    "0f2eefb95e910894": {
+      "url": "https://blog.strnisa.com/p/ai-calls-editor",
+      "title": "AI-calls-Editor",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:57:48.972600"
+    },
+    "0f4d57ecfa3e0ef9": {
+      "url": "https://thetechenabler.substack.com/p/my-guidelines-for-vibe-coding",
+      "title": "My guidelines for vibe-coding",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:58:21.459725"
+    },
+    "0f59b0ef7254faf8": {
+      "url": "https://www.vincentschmalbach.com/always-use-max-models-in-cursor-ide/",
+      "title": "Always Use Max Models in Cursor IDE",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:58:36.345592"
+    },
+    "0f5cea76cbd07842": {
+      "url": "https://aitoolshub.medium.com/my-replit-ai-coding-environment-review-2026-is-this-the-future-of-vibe-coding-1a122f6803d0",
+      "title": "My Replit AI Coding Environment Review 2026: Is This the Future of Vibe Coding?",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:58:54.134258"
+    },
+    "0fa72b2849b254fa": {
+      "url": "https://zackproser.com/blog/github-copilot-review",
+      "title": "GitHub Copilot review",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:59:07.803139"
+    },
+    "0faeb759edd3e9a2": {
+      "url": "https://paulgp.substack.com/p/setting-up-github-copilot-and-vscode",
+      "title": "Setting up Github Copilot and VSCode",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:59:20.906792"
+    },
+    "0fd3175a0e5b9ac9": {
+      "url": "https://medium.com/@roberto.g.infante/mastering-cursor-ide-10-best-practices-building-a-daily-task-manager-app-0b26524411c1",
+      "title": "Mastering Cursor IDE: 10 Best Practices (Building a Daily Task Manager App)",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:59:36.659709"
+    },
+    "0ff6a20be871d115": {
+      "url": "https://simonwillison.net/2025/Oct/16/riana-pfefferkorn/",
+      "title": "A quote from Riana Pfefferkorn",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T18:59:52.258177"
+    },
+    "1065d88fcdd7ca5c": {
+      "url": "https://www.linkedin.com/posts/mobbai_vibecoding-aitools-devsecops-activity-7328883352587890690-c-zK",
+      "title": "AI coding tools: GitHub Copilot, Cursor, Codeium, CodeWhisperer, Replit AI, Cody, Windsurf, Tabnine, Lovable, Mobb | Mobb posted on the topic | LinkedIn",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:00:06.480742"
+    },
+    "106da3ded71f8cf6": {
+      "url": "https://medium.com/how-to-become-a-data-architect/using-github-copilot-see-what-it-changes-before-it-breaks-your-project-7488fd14cca6",
+      "title": "Copilot - See What It Changes Before It Breaks Your Project",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:00:19.359620"
+    },
+    "10bd1378231607dd": {
+      "url": "https://fly.io/blog/code-and-let-live/",
+      "title": "Code And Let Live",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:00:40.246011"
+    },
+    "111549441b65ad8f": {
+      "url": "https://pgaleone.eu/ai/coding/2025/01/26/using-ai-for-coding-my-experience/",
+      "title": "Using AI for Coding: My Journey with Cline and Large Language Models",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:00:52.557163"
+    },
+    "11364e944c6cef16": {
+      "url": "https://messyprogress.substack.com/p/using-codex-well-experiences-so-far",
+      "title": "Using Codex Well (Experiences so Far)",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:01:05.998214"
+    },
+    "116f45fe6004dd51": {
+      "url": "https://huggingface.co/blog/chansung/gemini-max-playground",
+      "title": "Use hallucination as feature for vibe coding",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:01:19.853612"
+    },
+    "11701a791012af07": {
+      "url": "https://codefaster.substack.com/p/llm-workflows",
+      "title": "LLM workflows",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:02:04.614500"
+    },
+    "117611b147994f9c": {
+      "url": "https://simonwillison.net/2025/Nov/11/agentic-pelican-on-a-bicycle/",
+      "title": "Agentic Pelican on a Bicycle",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:02:28.259073"
+    },
+    "119b840b5d3aca71": {
+      "url": "https://medium.com/@sugamsays/how-i-set-up-claude-code-locally-and-why-it-changed-my-dev-workflow-overnight-51224c567eb3",
+      "title": "How I Set Up Claude Code Locally (And Why It Changed My Dev Workflow Overnight)",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:02:42.628422"
+    },
+    "11dd71666dc65116": {
+      "url": "https://medium.datadriveninvestor.com/system-design-for-agentic-ai-projects-what-to-do-what-not-to-do-and-when-7b5ed06e52bf",
+      "title": "System Design for Agentic AI Projects: What to Do, What Not to Do, and When",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:02:57.002303"
+    },
+    "1205accda84533a1": {
+      "url": "https://www.interconnects.ai/p/evals-are-marketing",
+      "title": "Big Tech's LLM evals are just marketing",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:03:13.453136"
+    },
+    "12328290e59976be": {
+      "url": "https://medium.com/@kapildevkhatik2/the-death-of-syntax-why-coding-is-becoming-a-product-engineering-role-in-2026-a0c8314a980e",
+      "title": "The Death of Syntax: Why “Coding” is Becoming a Product Engineering Role in 2026",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:03:27.343061"
+    },
+    "12638594598a2176": {
+      "url": "https://www.bigtechnology.com/p/ai-and-the-age-of-individual-empowerment",
+      "title": "AI and the Age of Individual Empowerment",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:03:45.080498"
+    },
+    "126e07cf0d684e03": {
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Effective context engineering for AI agents",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:04:12.220985"
+    },
+    "127cc2225a415b24": {
+      "url": "https://stackoverflow.com/questions/79305422/why-is-github-copilot-chat-inline-not-working-despite-copilot-and-copilot-chat-f",
+      "title": "Why is GitHub Copilot Chat Inline not working despite Copilot and Copilot Chat functioning correctly?",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:04:28.475465"
+    },
+    "12983d2bc12f25bc": {
+      "url": "https://geekorthodox.substack.com/p/why-is-ai-so-good-at-coding",
+      "title": "Why Is AI So Good at Coding?",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:04:39.597788"
+    },
+    "129cc8e37ea8f8ea": {
+      "url": "https://www.cloudflare.com/learning/ai/how-to-get-started-with-vibe-coding/",
+      "title": "How to get started vibe coding",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:04:58.359564"
+    },
+    "12aab091b81ed91e": {
+      "url": "https://simonwillison.net/2026/Jan/12/superhuman-ai-exfiltrates-emails/",
+      "title": "Superhuman AI Exfiltrates Emails",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:05:09.745464"
+    },
+    "12b27d47fa9c5a80": {
+      "url": "https://stackoverflow.com/questions/76702250/issue-to-use-github-copilot",
+      "title": "Issue to use GitHub Copilot",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:05:19.119790"
+    },
+    "12e183f9c71f0253": {
+      "url": "https://arxiv.org/abs/2601.15494",
+      "title": "Vibe Coding Kills Open Source",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:05:41.968946"
+    },
+    "12ea46360989ad31": {
+      "url": "https://darkomedin.substack.com/p/openai-codex-review",
+      "title": "OpenAI Codex Review",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:06:01.915265"
+    },
+    "1300327d5ef08459": {
+      "url": "https://blog.replit.com/what-is-vibe-coding",
+      "title": "Replit — What is Vibe Coding? How To Vibe Your App to Life",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:06:11.626956"
+    },
+    "134020e4731f97bd": {
+      "url": "https://machinethoughts.substack.com/p/how-i-levelled-up-my-github-copilot",
+      "title": "How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:06:24.145447"
+    },
+    "1370bd11f9991f01": {
+      "url": "https://www.superhuman.ai/p/ai-is-shifting-from-tool-to-teammate",
+      "title": "AI is shifting from tool to teammate",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:06:45.968269"
+    },
+    "13d43140a57ef61e": {
+      "url": "https://arxiv.org/abs/2602.01465",
+      "title": "Agyn: A Multi-Agent System for Team-Based Autonomous Software Engineering",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:06:55.471458"
+    },
+    "13d8dffbab3d71c7": {
+      "url": "https://chriskiehl.com/article/2025",
+      "title": "2025",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:07:21.373574"
+    },
+    "13d96f6971fff698": {
+      "url": "https://github.com/anthropics/claude-code",
+      "title": "GitHub - anthropics/claude-code: Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:07:35.979224"
+    },
+    "1404220851c1429b": {
+      "url": "https://huggingface.co/blog/vibegame",
+      "title": "VibeGame: Exploring Vibe Coding Games",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:07:56.041791"
+    },
+    "14487b290f36fc6e": {
+      "url": "https://simonwillison.net/2025/Dec/31/the-year-in-llms/",
+      "title": "2025: The year in LLMs",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:08:27.089450"
+    },
+    "145b5d6df9add784": {
+      "url": "https://medium.com/@jblakemartin/you-are-the-copilot-why-engineers-must-master-context-engineering-for-ai-success-37f61079a571",
+      "title": "You Are the Copilot: Why Engineers Must Master Context Engineering for AI Success",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:08:45.883714"
+    },
+    "147f3549a8b776c1": {
+      "url": "https://tejaskulkarni.substack.com/p/vibe-coding-a-3d-game-using-ai",
+      "title": "Vibe Coding a Multi-player 3D FPS Game using AI",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:09:05.951154"
+    },
+    "14a7eacfb27d1920": {
+      "url": "https://observer.com/2026/02/andrej-karpathy-new-term-ai-coding/",
+      "title": "‘Vibe Coding’ Inventor Andrej Karpathy Has a New Term for A.I. Engineering",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:09:17.302546"
+    },
+    "14fffbbfd9945c2b": {
+      "url": "https://www.tabnine.com/blog/how-to-avoid-vibe-coding-your-way-into-a-tsunami-of-tech-debt/",
+      "title": "How to avoid vibe coding your way into a tsunami of tech debt - Tabnine",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:09:39.550402"
+    },
+    "151a6d091a0a151f": {
+      "url": "https://socs.binus.ac.id/2025/10/18/vibe-coding-paradigma-baru-pemrograman-di-era-kecerdasan-buatan/",
+      "title": "Vibe Coding: Paradigma Baru Pemrograman di Era Kecerdasan Buatan",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:09:58.543854"
+    },
+    "152691f8af0d6d0b": {
+      "url": "https://addyo.substack.com/p/coding-for-the-future-agentic-world",
+      "title": "Coding for the Future Agentic World",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:10:11.926232"
+    },
+    "15823ae5556ea01d": {
+      "url": "https://openai.com/index/introducing-the-codex-app/",
+      "title": "Introducing the Codex app",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:10:31.611619"
+    },
+    "15b3af6e062bafc5": {
+      "url": "https://simonwillison.net/2025/Nov/24/claude-opus-45-system-prompt/",
+      "title": "A quote from Claude Opus 4.5 system prompt",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:10:44.694406"
+    },
+    "1626ffedaf610b95": {
+      "url": "https://medium.com/@DaveThackeray/how-im-learning-to-code-with-ai-4bbde6b4e84a",
+      "title": "How I’m learning to code with AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:10:57.444896"
+    },
+    "163c3e7957ec8e1d": {
+      "url": "https://simonwillison.net/2024/Dec/10/chatgpt-canvas/",
+      "title": "ChatGPT Canvas can make API requests now, but it’s complicated",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:11:19.688237"
+    },
+    "165878bfbf14f4f8": {
+      "url": "https://medium.com/@anandnair/coding-at-the-speed-of-thought-my-experience-with-cursor-ide-and-claude-sonnet-12e6d3bda00a",
+      "title": "Coding at the Speed of Thought: My Experience with Cursor IDE and Claude Sonnet",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:11:33.707163"
+    },
+    "167666faf852ae7c": {
+      "url": "https://medium.datadriveninvestor.com/i-tested-5-code-assistants-to-write-code-so-you-dont-have-to-a685d80cfdf2",
+      "title": "I Tested 5 Code Assistants to Write Code So You Don’t Have To.",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:11:48.368370"
+    },
+    "16a5442c93f00b5c": {
+      "url": "https://medium.com/realworld-ai-use-cases/debate-welcome-andrej-karpathy-on-what-cursor-can-automate-and-what-still-needs-you-513eb80461ce",
+      "title": "Debate Welcome — Andrej Karpathy on what Cursor can automate and what still needs you",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:12:04.998516"
+    },
+    "16baa2d395b31687": {
+      "url": "https://addyo.substack.com/p/speech-to-code-vibe-coding-with-voice",
+      "title": "Speech-to-Code: Vibe Coding with Voice",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:12:29.790279"
+    },
+    "16be4a740b54d934": {
+      "url": "https://blog.vaxry.net/articles/2024-cursors",
+      "title": "Vaxry's Blog",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:12:49.818178"
+    },
+    "171ec785f019680c": {
+      "url": "https://weberdominik.com/blog/ai-coding-enjoyable/",
+      "title": "AI made coding more enjoyable",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:13:05.563318"
+    },
+    "17364a1b77df508e": {
+      "url": "https://linear.app/now/how-we-built-triage-intelligence",
+      "title": "How we built Triage Intelligence - Linear",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:13:17.049953"
+    },
+    "1741914b9f6c0dd6": {
+      "url": "https://securelist.com/open-source-package-for-cursor-ai-turned-into-a-crypto-heist/116908/",
+      "title": "The Solidity Language open-source package was used in a $500,000 crypto heist",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:13:26.817235"
+    },
+    "1779f76408fc7641": {
+      "url": "https://medium.com/@niall.mcnulty/getting-started-with-cursor-ai-86c1add6d701",
+      "title": "Getting Started with Cursor AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:13:39.256488"
+    },
+    "178301be81e6d8cb": {
+      "url": "https://www.linkedin.com/posts/hillel-wayne_vibe-coding-is-great-a-friend-invited-me-activity-7310493285314109441-62XF",
+      "title": "How I used LLM to get concert lyrics | Hillel Wayne posted on the topic | LinkedIn",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:13:50.278248"
+    },
+    "1792262b4575163f": {
+      "url": "https://andrewships.substack.com/p/vibe-coding-vs-prompt-driven-development",
+      "title": "Vibe Coding vs. Prompt Driven Development (PDD)",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:14:01.875496"
+    },
+    "17b0087dc5f7f587": {
+      "url": "https://aboukone.substack.com/p/coding-with-ai-the-good-the-bad-and",
+      "title": "Coding with AI: The Good, The Bad, and The Ugly",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:14:22.411687"
+    },
+    "1818dc8549820357": {
+      "url": "https://vercel.com/blog/skills-night-69000-ways-agents-are-getting-smarter",
+      "title": "Skills Night: 69,000+ ways agents are getting smarter - Vercel",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:14:37.756739"
+    },
+    "181b56657e511a37": {
+      "url": "https://www.honeycomb.io/blog/how-i-code-with-llms-these-days",
+      "title": "How I Code With LLMs These Days",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:14:49.760461"
+    },
+    "181c872a98751952": {
+      "url": "https://vickiboykis.com/2024/05/20/dont-worry-about-llms/",
+      "title": "Don't worry about LLMs",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:15:04.400946"
+    },
+    "185b2a0d7b9c58bc": {
+      "url": "https://lucasaguiar.xyz/posts/vibe-coding-pitfalls/",
+      "title": "Why I'm Breaking Up With Vibe Coding",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:15:15.768701"
+    },
+    "18740a7c024f47cb": {
+      "url": "https://techpoint.africa/guide/i-tested-copilot-vs-cursor-ai-for-vibe-coding/",
+      "title": "5 Key Comparisons: Copilot vs Cursor AI for Vibe Coding",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:15:35.884996"
+    },
+    "187b523e58bfa735": {
+      "url": "https://contextfort.ai/",
+      "title": "Anti-Virus for Autonomous Agents",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:15:46.096917"
+    },
+    "18a90d492fdb98f2": {
+      "url": "https://www.technologyreview.com/2025/12/23/1130396/how-i-learned-to-stop-worrying-and-love-ai-slop/",
+      "title": "How I learned to stop worrying and love AI slop",
+      "source_type": "other_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:02.196768"
+    },
+    "18af77dfbabfe341": {
+      "url": "https://www.infoq.com/news/2026/02/ai-coding-skill-formation/",
+      "title": "Anthropic Study: AI Coding Assistance Reduces Developer Skill Mastery by 17%",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:13.307469"
+    },
+    "18befaaf5cb85ca9": {
+      "url": "https://simonwillison.net/2025/Nov/20/nano-banana-pro/",
+      "title": "Nano Banana Pro aka gemini-3-pro-image-preview is the best available image generation model",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:21.592878"
+    },
+    "18c79a9c4af447df": {
+      "url": "https://www.superhuman.ai/p/the-do-anything-ai-agent",
+      "title": "The \"Do Anything\" AI agent",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:31.176457"
+    },
+    "18e30591f04499ad": {
+      "url": "https://medium.com/@mockingbird_71808/ai-tools-that-actually-help-you-prepare-for-coding-interviews-283ddc07bb56",
+      "title": "AI tools that actually help you prepare for coding interviews",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:41.116672"
+    },
+    "18f42141b1735c6b": {
+      "url": "https://blog.jetbrains.com/ai/2025/10/jetbrains-zed-open-interoperability-for-ai-coding-agents-in-your-ide/",
+      "title": "JetBrains × Zed: Open Interoperability for AI Coding Agents in Your IDE | The JetBrains AI Blog",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:16:50.695058"
+    },
+    "190a23c429b14c52": {
+      "url": "https://stackoverflow.com/questions/71471404/aws-nlb-socket-io-ssl-via-copilot",
+      "title": "aws nlb socket.io ssl via copilot",
+      "source_type": "stackoverflow",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:16:58.850615"
+    },
+    "191eecb76b150dff": {
+      "url": "https://marcobenedetti.substack.com/p/vibe-coding-as-a-coding-veteran",
+      "title": "Vibe Coding as a Coding Veteran",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:17:08.671322"
+    },
+    "1928b65cf522b33e": {
+      "url": "https://newsletter.techworld-with-milan.com/p/70-of-developers-adopt-ai-stack-overflow",
+      "title": "70% Of Developers Adopt AI, Stack Overflow Survey 2023 Reveals",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:17:23.809214"
+    },
+    "1931812f5578be95": {
+      "url": "https://retool.com/blog/top-vibe-coding-tools",
+      "title": "Retool Blog | Vibe Coding Tools in 2026 | Enterprise-ready solutions, examined",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:17:34.493269"
+    },
+    "19854220518ec1fe": {
+      "url": "https://stratechery.com/2026/shopify-earnings-shopifys-ai-advantages/",
+      "title": "Shopify Earnings, Shopify’s AI Advantages",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:17:43.855500"
+    },
+    "199f642020f7c38a": {
+      "url": "https://every.to/source-code/teach-your-ai-to-think-like-a-senior-engineer-789ba7ca-ca7c-45a1-91fa-4178f59f226f",
+      "title": "Teach Your AI to Think Like a Senior Engineer",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:17:55.394132"
+    },
+    "19c7b787e5f25019": {
+      "url": "https://stackoverflow.com/questions/64627462/aws-copilot-with-django-never-finishes-deploying",
+      "title": "AWS copilot with Django never finishes deploying",
+      "source_type": "stackoverflow",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:18:14.967313"
+    },
+    "19ef067ab5af3ff0": {
+      "url": "https://simonwillison.net/2025/Oct/16/claude-skills/",
+      "title": "Claude Skills are awesome, maybe a bigger deal than MCP",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:18:24.021771"
+    },
+    "1a1a6c1cf29795ca": {
+      "url": "https://medium.com/@richardhightower/the-end-of-manual-agent-skill-invocation-event-driven-ai-agents-670b470f26e9",
+      "title": "The End of Manual Agent Skill Invocation: Event-Driven AI Agents",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:18:35.168300"
+    },
+    "1a3ba5fd1ea6bae0": {
+      "url": "https://simonwillison.net/2025/Dec/13/openai-codex-cli/",
+      "title": "A quote from OpenAI Codex CLI",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:18:50.054886"
+    },
+    "1a43134ca0008e94": {
+      "url": "https://www.qwords.com/blog/vibe-coding/",
+      "title": "Mengenal Vibe Coding: Era Baru Coding Pakai Bahasa Alami",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:19:02.571937"
+    },
+    "1a6d73dc286d959b": {
+      "url": "https://uibakery.io/blog/cursor-ai-vs-copilot",
+      "title": "Cursor AI vs Copilot: Which AI Coding Assistant Reigns Supreme? (2026)",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:19:13.107498"
+    },
+    "1a7e42c2a3249d4c": {
+      "url": "https://overreacted.io/coping-with-feedback/",
+      "title": "Coping with Feedback — overreacted",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:19:25.356653"
+    },
+    "1a833bb71901be5e": {
+      "url": "https://www.businessinsider.com/andrew-ng-vibe-coding-unfortunate-term-exhausting-job-2025-6",
+      "title": "Andrew Ng says vibe coding is a bad name for a very real and exhausting job",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:19:40.631482"
+    },
+    "1a8b4aad5ac066a0": {
+      "url": "https://sierra.ai/blog/meet-the-ai-agent-engineer",
+      "title": "Meet the AI agent engineer",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:19:50.052104"
+    },
+    "1a9e707300087c7f": {
+      "url": "https://stackoverflow.blog/2022/10/14/the-robots-are-coming-but-when-ep-496/",
+      "title": "The robots are coming… but when? (Ep 497)",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:20:09.100690"
+    },
+    "1aa5bf95f73d2646": {
+      "url": "https://medium.com/@shubham2.cantech/what-is-cloud-native-a-simple-guide-for-2026-504f1b5e31df",
+      "title": "What Is Cloud Native? A Simple Guide for 2026",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:20:28.688511"
+    },
+    "1afb8767a075e587": {
+      "url": "https://blog.cloudflare.com/cloudflare-developer-platform-keeps-getting-better-faster-and-more-powerful/",
+      "title": "Cloudflare's developer platform keeps getting better, faster, and more powerful. Here's everything that's new.",
+      "source_type": "corporate_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:20:38.558435"
+    },
+    "1b311821e0b4f4bf": {
+      "url": "https://arthala.medium.com/the-2-am-production-bug-that-changed-how-i-think-about-ai-coding-agents-999fdef2f4aa",
+      "title": "The 2 AM Production Bug That Changed How I Think About AI Coding Agents",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:20:47.685510"
+    },
+    "1b3ad3220cec60bb": {
+      "url": "https://newsletter.pragmaticengineer.com/p/ai-coding-agents",
+      "title": "How do AI software engineering agents work?",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:21:01.495250"
+    },
+    "1b43164b6fbc4050": {
+      "url": "https://www.geekwire.com/2025/coding-is-dead-uw-computer-science-program-rethinks-curriculum-for-the-ai-era/",
+      "title": "Coding is dead: UW computer science program rethinks curriculum for the AI era",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:21:11.959720"
+    },
+    "1b45a169a5b57410": {
+      "url": "https://www.tabnine.com/blog/ai-code-assistant-buyers-guide/",
+      "title": "AI Code Assistant Buyer's Guide - Tabnine",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:21:37.577584"
+    },
+    "1b58b41953cd434a": {
+      "url": "https://newsletter.eng-leadership.com/p/enforcing-the-use-of-ai-in-engineering",
+      "title": "Enforcing the Use of AI in Engineering Teams - Good or Bad Thing?",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:22:05.316819"
+    },
+    "1bb256bc1debcf73": {
+      "url": "https://stackoverflow.com/questions/75114315/how-to-accept-only-the-next-word-in-github-copilot-suggestion",
+      "title": "How to accept only the next word in GitHub Copilot suggestion?",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:22:16.397163"
+    },
+    "1bc086322b2eb00b": {
+      "url": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/google-ai-professional-certificate/",
+      "title": "Practical AI skills for everyone",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:22:54.892305"
+    },
+    "1bcbdfaf0c790d2e": {
+      "url": "https://blog.sshh.io/p/how-cursor-ai-ide-works",
+      "title": "How Cursor (AI IDE) Works",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:23:11.883909"
+    },
+    "1bd9e80f38a0bbf5": {
+      "url": "https://medium.com/@tobrien/stop-calling-it-vibe-coding-91b0daa726fb",
+      "title": "Stop Calling It Vibe Coding",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:23:38.994595"
+    },
+    "1c018cc07cd50907": {
+      "url": "https://medium.com/@mayurpanchal.cto/how-saudi-developers-are-thoughtfully-integrating-ai-into-modern-software-2cd7d9dc851d",
+      "title": "How Saudi Developers Are Thoughtfully Integrating AI Into Modern Software",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:24:02.536426"
+    },
+    "1c532f8fffe5e67f": {
+      "url": "https://stackoverflow.blog/2020/12/07/measuring-developer-productivity/",
+      "title": "Can developer productivity be measured?",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:24:29.038215"
+    },
+    "1c79d32012749e03": {
+      "url": "https://ethanholz.com/blog/my-ai-workflow-today/",
+      "title": "My LLM Coding Workflow Today",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:24:55.912831"
+    },
+    "1c80a398427eca9d": {
+      "url": "https://medium.com/@iamabdullah234/github-copilot-under-the-hood-and-into-production-8090180a6b14",
+      "title": "GitHub Copilot: Under the Hood and Into Production",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:25:19.307150"
+    },
+    "1c972db1e5741390": {
+      "url": "https://medium.com/@capodieci/the-rise-of-agentic-coding-2e0167d85854",
+      "title": "The Rise of Agentic Coding",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:25:50.313025"
+    },
+    "1cbc20f9896a9d5e": {
+      "url": "https://addyo.substack.com/p/why-i-use-cline-for-ai-engineering",
+      "title": "Why I use Cline for AI Engineering",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:26:20.270432"
+    },
+    "1cf870f86e8c76c5": {
+      "url": "https://simonwillison.net/2025/Dec/19/sam-rose-llms/",
+      "title": "Sam Rose explains how LLMs work with a visual essay",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:26:52.378904"
+    },
+    "1d0d926228e7d90e": {
+      "url": "https://stackoverflow.com/questions/75129990/github-copilot-extension-on-vs-2022",
+      "title": "GitHub Copilot extension on VS 2022",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:27:06.697461"
+    },
+    "1d218742c113d993": {
+      "url": "https://substack.com/home/post/p-139234457?utm_campaign=post&utm_medium=web",
+      "title": "First impressions on Github copilot with PowerShell",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:27:23.410157"
+    },
+    "1d43498da05fe2a8": {
+      "url": "https://ethanding.substack.com/p/windsurf-gets-margin-called",
+      "title": "windsurf gets margin called",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:27:51.359485"
+    },
+    "1d7886c606168751": {
+      "url": "https://www.qodo.ai/blog/best-ai-code-generators/",
+      "title": "17 Best AI Code Generators for 2025",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:28:09.410437"
+    },
+    "1d7ebfdd1da49e01": {
+      "url": "https://stackoverflow.blog/2023/05/22/modern-work-requires-attention-constant-alerts-steal-it/",
+      "title": "Modern work requires attention. Constant alerts steal it",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:28:35.003050"
+    },
+    "1e22b1ce9983ad01": {
+      "url": "https://overreacted.io/goodbye-clean-code/",
+      "title": "Goodbye, Clean Code — overreacted",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:29:01.587657"
+    },
+    "1e3ad4b96ed16af9": {
+      "url": "https://medium.com/@dickranguerguerian/the-ai-guardrail-test-why-unconstrained-models-win-arguments-they-cant-prove-850609f54311",
+      "title": "# The AI Guardrail Test: Why Unconstrained Models “Win” Arguments They Can’t Prove",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:29:22.785513"
+    },
+    "1e41047c915e26ba": {
+      "url": "https://fly.io/blog/everyone-write-an-agent/",
+      "title": "You Should Write An Agent",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:29:38.576651"
+    },
+    "1e4ada5fdca4b6ae": {
+      "url": "https://engineeringharmony.substack.com/p/pair-programming-in-2025",
+      "title": "Pair Programming in 2025",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:30:02.130820"
+    },
+    "1e759573146a3935": {
+      "url": "https://medium.com/@jmoral4/ai-pair-programming-my-journey-with-aider-2aef61394d27",
+      "title": "AI Pair Programming: My Journey with Aider",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:30:17.771603"
+    },
+    "1e972d5b61d0935c": {
+      "url": "https://stackoverflow.com/questions/74198524/can-github-copilot-draw-diagrams",
+      "title": "Can GitHub Copilot draw diagrams?",
+      "source_type": "stackoverflow",
+      "is_relevant": "yes",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:30:28.856103"
+    },
+    "1eb0207c18898a01": {
+      "url": "https://daliborbeli.substack.com/p/vibe-coding-is-the-future",
+      "title": "Vibe coding is the future!",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:30:45.543717"
+    },
+    "1eba12a4a8fa384c": {
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "title": "Building a C compiler with a team of parallel Claudes",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:30:58.331051"
+    },
+    "1eba8958bb4b045f": {
+      "url": "https://simonwillison.net/2025/Oct/20/deepseek-ocr-claude-code/",
+      "title": "Getting DeepSeek-OCR working on an NVIDIA Spark via brute force using Claude Code",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:31:15.854728"
+    },
+    "1ecb51259fe35002": {
+      "url": "https://newsletter.pragmaticengineer.com/p/ai-tooling-part-3",
+      "title": "AI Tooling for Software Engineers: Rolling it out company-wide (Part 3)",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:31:30.387083"
+    },
+    "1ecdb4b784c64915": {
+      "url": "https://simonwillison.net/2026/Feb/10/showboat-and-rodney/",
+      "title": "Introducing Showboat and Rodney, so agents can demo what they’ve built",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:31:46.956176"
+    },
+    "1ee1d6a988ba73e1": {
+      "url": "https://shiftmag.dev/stack-overflow-survey-2025-ai-5653/",
+      "title": "Dev paradox: 84% use AI, most don’t believe it!",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:32:02.534982"
+    },
+    "1eeaba8049b3a5ec": {
+      "url": "https://www.bigtechnology.com/p/google-deepmind-ceo-demis-hassabis",
+      "title": "Google DeepMind CEO Demis Hassabis: The Path To AGI, LLM Creativity, And Google Smart Glasses",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:32:29.980961"
+    },
+    "1ef951eb96b1099a": {
+      "url": "https://www.databricks.com/blog/ship-enterprise-apps-faster-databricks-appkit-and-replit",
+      "title": "Ship Enterprise Apps Faster with Databricks AppKit and Replit",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:32:53.124715"
+    },
+    "1f44c3f15e1fa79c": {
+      "url": "https://www.coursera.org/learn/learn-to-code-with-ai",
+      "title": "Learn to code with AI",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:33:08.579771"
+    },
+    "1f5af64ad906e62c": {
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "title": "How AI assistance impacts the formation of coding skills",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:33:24.871377"
+    },
+    "1fa97637e0844f60": {
+      "url": "https://medium.com/@sojibj1next/unveiling-the-worlds-first-human-like-ai-virtual-assistant-bdba958edd82",
+      "title": "Unveiling the World’s First “Human-Like” AI Virtual Assistant",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:33:41.958054"
+    },
+    "1fb280516c6c3ff5": {
+      "url": "https://ai.meta.com/blog/practical-ai-agent-security/",
+      "title": "Agents Rule of Two: A Practical Approach to AI Agent Security",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:34:04.486688"
+    },
+    "1fd1585e96a851a4": {
+      "url": "https://medium.com/design-bootcamp/i-built-an-app-in-58-days-with-ai-what-actually-worked-vs-the-hype-3d31d45c0983",
+      "title": "I Built an App in 58 Days With AI: What Actually Worked vs. The Hype",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:34:19.670764"
+    },
+    "1ff3f1bfa02f90d2": {
+      "url": "https://every.to/source-code/how-i-use-claude-code-to-ship-like-a-team-of-five-6f23f136-52ab-455f-a997-101c071613aa",
+      "title": "How I Use Claude Code to Ship Like a Team of Five",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:34:34.710928"
+    },
+    "1ff5171810d823ca": {
+      "url": "https://medium.com/vibecodinghq/claude-opus-4-6-is-live-and-its-free-for-48-hours-28fd982bf955",
+      "title": "Claude Opus 4.6 is live. And it’s free for 48 hours.",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:34:57.969322"
+    },
+    "205a0a6072887ec6": {
+      "url": "https://medium.com/@chuckyg/i-built-an-e-commerce-app-using-both-claude-code-and-github-copilot-heres-what-i-found-fb4079a1aa05",
+      "title": "I Built an E-Commerce App Using Both Claude Code and GitHub Copilot — Here’s What I Found",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:35:15.775780"
+    },
+    "208f10d8a60b9be4": {
+      "url": "https://stackoverflow.blog/2026/01/06/search-engine-bots-crawled-so-ai-bots-could-run/",
+      "title": "Search engine bots crawled so AI bots could run",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:35:31.543548"
+    },
+    "209c9cf93fba015f": {
+      "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+      "title": "Reward Hacking in Reinforcement Learning",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:35:48.343644"
+    },
+    "20a45ff717a84086": {
+      "url": "https://medium.com/@waranmadesh826/github-spark-build-full-stack-web-apps-using-plain-english-52d0337797f2",
+      "title": "GitHub Spark: Build Full-Stack Web Apps Using Plain English",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:36:07.496635"
+    },
+    "20a5250df2529e62": {
+      "url": "https://medium.com/@mauriziochirivainternati/vibe-coding-explained-how-anyone-can-build-an-app-in-2026-with-just-an-idea-6518259959b0",
+      "title": "Vibe Coding Explained: How Anyone Can Build an App in 2026 with Just an Idea",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:36:26.829939"
+    },
+    "20b2fc43087c526a": {
+      "url": "https://addyo.substack.com/p/the-trust-but-verify-pattern-for",
+      "title": "The \"Trust, But Verify\" Pattern For AI-Assisted Engineering",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:36:43.962872"
+    },
+    "210e865e25e4fb8c": {
+      "url": "https://medium.com/@prasanthyejje/vibe-coding-is-not-lazy-coding-using-windsurf-0b8bf0c05faa",
+      "title": "Vibe Coding Is Not Lazy Coding (Using Windsurf)",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:36:59.731322"
+    },
+    "211726ab457dbc9e": {
+      "url": "https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it",
+      "title": "🎧 How to Use Claude Code Like the People Who Built It",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:37:27.789386"
+    },
+    "21481fb202d379dc": {
+      "url": "https://medium.com/@TimSylvester/problems-in-agentic-coding-2866ca449ff0",
+      "title": "Problems in Agentic Coding",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:37:43.555026"
+    },
+    "214fe8b45eef727d": {
+      "url": "https://en.wikipedia.org/wiki/AI_slop",
+      "title": "AI slop - Wikipedia",
+      "source_type": "other_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:37:58.812321"
+    },
+    "215d1150d2237f7b": {
+      "url": "https://blog.pragmaticengineer.com/traveling-to-mongolia/",
+      "title": "A startup in Mongolia translated my book",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:38:14.637802"
+    },
+    "2193662527f963e3": {
+      "url": "https://blog.emilburzo.com/2026/01/running-claude-code-dangerously-safely/",
+      "title": "Running Claude Code dangerously (safely)",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:38:27.698379"
+    },
+    "21c10d2f6052dbc8": {
+      "url": "https://towardsai.net/p/machine-learning/i-vibe-coded-using-cursor-no-code-required",
+      "title": "I “Vibe Coded” Using Cursor (No Code Required) | Towards AI",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:38:40.488196"
+    },
+    "220a4a0db6f06929": {
+      "url": "https://pnetto.com/",
+      "title": "Pedro Netto",
+      "source_type": "other_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:38:55.418948"
+    },
+    "2218cec7985efddf": {
+      "url": "https://medium.com/@tonyjun00/the-moat-just-evaporated-why-mobile-app-developers-are-next-on-the-line-to-be-replaced-by-ai-2cdfafa5dda7",
+      "title": "The Moat Just Evaporated: Why Mobile App Developers Are Next on the Line to Be “Replaced” by AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:39:19.292557"
+    },
+    "22506016e8999b2a": {
+      "url": "https://jngiam.bearblog.dev/llm-tool-handling-airtable-hubspot/",
+      "title": "MCPs vs APIs: Why designing tools for LLMs is different",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:39:36.688879"
+    },
+    "2253bdfec0d930ce": {
+      "url": "https://www.langchain.com/state-of-agent-engineering",
+      "title": "State of AI Agents",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:39:47.967157"
+    },
+    "22541cf17e1e57a0": {
+      "url": "https://pavolkutaj.medium.com/the-most-interesting-mostly-tech-reads-of-2025-a43d6b05d40a",
+      "title": "The Most Interesting (mostly) Tech Reads of 2025",
+      "source_type": "medium",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:39:59.237489"
+    },
+    "22819702857085d7": {
+      "url": "https://ed-wentworth.medium.com/how-im-using-agentic-coding-with-claude-and-cursor-in-real-world-projects-b4b6694c132d",
+      "title": "How I’m Using Agentic Coding with Claude and Cursor in Real-World Projects",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:40:09.881667"
+    },
+    "228305266241a4cd": {
+      "url": "https://stackoverflow.blog/2024/12/24/you-should-keep-a-developer-s-journal/",
+      "title": "You should keep a developer’s journal",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:40:21.970162"
+    },
+    "228660db6ed79f0d": {
+      "url": "https://spectrum.ieee.org/ai-coding-degrades",
+      "title": "Newer AI Coding Assistants Are Failing in Insidious Ways",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:40:32.914435"
+    },
+    "228f8c9ae5832fc5": {
+      "url": "https://every.to/working-overtime/ai-isn-t-making-me-more-productive-it-s-making-it-possible-to-work-at-all",
+      "title": "AI Solved the Problem I Couldn't Explain to Managers",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:40:45.495726"
+    },
+    "230db63511651efa": {
+      "url": "https://capgemini.github.io/ai/prompt-driven-development/",
+      "title": "Prompt Driven Development",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:41:30.549588"
+    },
+    "230ef92bb0a87736": {
+      "url": "https://medium.com/@kanhaiya.jagnani/lessons-from-13-years-in-performance-engineering-cff4c5c226e9",
+      "title": "Lessons From 13 Years in Performance Engineering",
+      "source_type": "medium",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:41:46.037185"
+    },
+    "233ab77406e87391": {
+      "url": "https://blog.langchain.com/agent-engineering-a-new-discipline/",
+      "title": "Agent Engineering: A New Discipline",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:42:06.826432"
+    },
+    "237e908cf1047db1": {
+      "url": "https://www.facebook.com/code4func/posts/to%C3%A0n-b%E1%BB%99-anh-em-dev-s%E1%BA%BD-ph%E1%BA%A3i-chuy%E1%BB%83n-qua-vibe-engineering-t%E1%BA%A1i-%C4%91%C3%B3-anh-em-s%E1%BA%BD-t%E1%BA%ADp-trun/1630423405753767/",
+      "title": "Code4Func - Kỹ thuật lập trình",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:42:22.288088"
+    },
+    "23d6b98eccf04d07": {
+      "url": "https://addyo.substack.com/p/critical-thinking-during-the-age",
+      "title": "Critical Thinking during the age of AI",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:42:48.217722"
+    },
+    "240464b0ed9dae27": {
+      "url": "https://saropa-contacts.medium.com/the-agent-engineer-surviving-the-shift-from-code-to-logic-fd093856b161",
+      "title": "The Agent Engineer: Surviving the Shift from Code to Logic",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:43:01.915270"
+    },
+    "241f1aae418d9004": {
+      "url": "https://www.swyx.io/early-offsites",
+      "title": "Early Stage Company Offsites",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:43:17.360200"
+    },
+    "244f6535e7c6b997": {
+      "url": "https://medium.com/@einansatz/ai-pair-programming-is-powerful-but-only-if-your-stack-plays-nice-e8efef8b2f1f",
+      "title": "AI Pair Programming Is Powerful — But Only If Your Stack Plays Nice",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:43:30.785068"
+    },
+    "24505c1b066df300": {
+      "url": "https://embedding-shapes.github.io/cursor-implied-success-without-evidence/",
+      "title": "Cursor's latest \"browser experiment\" implied success without evidence",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:43:44.395787"
+    },
+    "247cd1b1de170880": {
+      "url": "https://akos.ma/blog/vibe-coding-with-cursor/",
+      "title": "Vibe Coding with Cursor",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:43:56.685431"
+    },
+    "247fa8ffd923236b": {
+      "url": "https://medium.com/@stephan_65217/the-self-healing-dev-loop-for-mobile-apps-1c41717140f6",
+      "title": "The Self-Healing Dev Loop for Mobile Apps",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:44:08.244830"
+    },
+    "250b54b32ab928e2": {
+      "url": "https://blog.kilocode.ai/p/kilo-code-speedrunning-open-source-coding-ai",
+      "title": "Kilo Code: speedrunning open source coding AI",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:44:20.481533"
+    },
+    "2541420b7bfb970e": {
+      "url": "https://www.superhuman.ai/p/ai-gets-a-memory-boost",
+      "title": "AI gets a memory boost",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:44:33.733599"
+    },
+    "25b1fd031a73f416": {
+      "url": "https://github.com/StrayDragon/awesome-stars",
+      "title": "GitHub - StrayDragon/awesome-stars: ✨🌟✨ my stars list, thx for https://github.com/maguowei/starred 😘",
+      "source_type": "other_blog",
+      "is_relevant": "no",
+      "has_opinion": "no",
+      "classified_at": "2026-02-24T19:44:45.878063"
+    },
+    "25d70e9c7831a95c": {
+      "url": "https://veekaybee.github.io/2026/02/21/querying-3-billion-vectors/",
+      "title": "Querying 3 billion vectors",
+      "source_type": "personal_blog",
+      "is_relevant": "partially",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:45:08.011248"
+    },
+    "260bb1e30b2f1d38": {
+      "url": "https://sourcegraph.com/blog/introducing-deep-search",
+      "title": "Introducing Deep Search: A faster way to understand your code | Sourcegraph Blog",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:45:21.999244"
+    },
+    "26203e3ed491fe4b": {
+      "url": "https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html",
+      "title": "Coding Assistants Threaten the Software Supply Chain",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:45:38.177005"
+    },
+    "26303657b7c285e6": {
+      "url": "https://medium.com/on-building-software/early-thoughts-on-coding-with-ai-533a629dc6d6",
+      "title": "Early thoughts on coding with AI",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:45:50.065134"
+    },
+    "263c4774a84cd9bc": {
+      "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver",
+      "title": "Using Claude Code to modernize a 25-year-old kernel driver",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:46:07.676431"
+    },
+    "265a4b2106cee378": {
+      "url": "https://medium.com/@fulk.it.pod/the-ai-hype-machine-0a80ccd325c3",
+      "title": "The AI Hype Machine",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:46:20.568145"
+    },
+    "267184b39bfd2e0b": {
+      "url": "https://webflow.copilotkit.ai/blog/announcing-copilotkit-mcp-client-vibe-coding-server",
+      "title": "Introducing the Vibe Coding Server + CopilotKit MCP Client",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:46:43.710926"
+    },
+    "2681674c33ff2719": {
+      "url": "https://dimillian.medium.com/the-state-of-agentic-ios-engineering-in-2026-c5f0cbaa7b34",
+      "title": "The State of Agentic iOS Engineering in 2026",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:46:58.333396"
+    },
+    "26e1093dbc0c8657": {
+      "url": "https://medium.com/@aswinalexandersam/context-engineering-vs-vibe-coding-why-structure-beats-vibes-in-ai-driven-development-de92e6ad1c28",
+      "title": "Context Engineering vs Vibe Coding: Why Structure Beats Vibes in AI-Driven Development",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:47:10.085712"
+    },
+    "26e705c3ab243dbd": {
+      "url": "https://julianajackson.substack.com/p/silicon-valley-vibe-coding",
+      "title": "How Silicon Valley’s hype machine continuously creates solutions nobody is asking for",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:47:24.692725"
+    },
+    "26f3becfd94467fa": {
+      "url": "https://allenpike.com/2025/coding-agents",
+      "title": "Spending Too Much Money on a Coding Agent",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:47:46.575825"
+    },
+    "2723c2cbdc883f59": {
+      "url": "https://medium.com/@s.hashwanth531/i-built-an-open-source-cli-that-sets-up-any-repo-for-ai-agent-development-in-30-seconds-51828ca19ee5",
+      "title": "I Built an Open-Source CLI That Sets Up Any Repo for AI Agent Development in 30 Seconds",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:48:01.748746"
+    },
+    "278f0f1001466556": {
+      "url": "https://medium.com/@mattia.darge/the-spec-to-code-workflow-building-software-using-only-llms-5e025cd28de0",
+      "title": "The Spec-to-Code Workflow: Building Software Using Only LLMs",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:48:13.615338"
+    },
+    "27b61d0017cae77d": {
+      "url": "https://dev.to/marciofrayze/what-it-was-like-to-spend-a-month-using-github-copilot-and-why-i-plan-to-not-use-it-next-month-3ao5",
+      "title": "What it was like to spend a month using GitHub Copilot and why I plan to not use it (next month)",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:48:27.446374"
+    },
+    "27c0bfcd6e55edd9": {
+      "url": "https://www.seangoedecke.com/weathering-the-ai-hype/",
+      "title": "Vibe coding and the silent AI war inside tech companies",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:48:48.151561"
+    },
+    "27e6493dd95b5920": {
+      "url": "https://aicodinghorrors.com/",
+      "title": "AICodingHorrors | Price of AI-assisted coding, literally!",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:48:59.695150"
+    },
+    "28160306e28583aa": {
+      "url": "https://joeyrideout.substack.com/p/vibe-coding-is-a-6gl",
+      "title": "Vibe Coding Is a 6GL",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:49:11.268702"
+    },
+    "283ac10aebffc0df": {
+      "url": "https://fasterthanli.me/articles/image-decay-as-a-service",
+      "title": "Image decay as a service",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:49:23.962192"
+    },
+    "283da724edf94d91": {
+      "url": "https://www.thealgorithmicbridge.com/p/the-ai-job-apocalypse-is-always-nigh",
+      "title": "The AI Job Apocalypse Is Always Nigh for the People Selling the Predictions",
+      "source_type": "personal_blog",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:49:37.910617"
+    },
+    "283ee5d55f83aa2c": {
+      "url": "https://satynath.medium.com/why-traditional-experience-models-fail-in-ai-accelerated-environments-aa292f10cf6b",
+      "title": "Why Traditional Experience Models Fail in AI‑Accelerated Environments",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:49:52.965513"
+    },
+    "284f92e69f847ae0": {
+      "url": "https://timeundertension.substack.com/p/are-you-vibe-coding-yet",
+      "title": "Are you vibe coding yet?",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:50:10.977867"
+    },
+    "28f3f108f44c3491": {
+      "url": "https://fly.io/blog/build-better-agents-with-morphllm/",
+      "title": "Build Better Agents With MorphLLM",
+      "source_type": "corporate_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:50:27.070639"
+    },
+    "2915c22bc9776467": {
+      "url": "https://medium.com/@designeeli2/how-to-get-ai-api-with-unlimited-requests-f31ee0cbb7fe",
+      "title": "How to get Ai API with unlimited requests?",
+      "source_type": "medium",
+      "is_relevant": "no",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:50:53.572444"
+    },
+    "292fa1a442018929": {
+      "url": "https://cendyne.dev/posts/2025-03-19-vibe-coding-vs-reality.html",
+      "title": "\"Vibe Coding\" vs Reality",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:51:05.900318"
+    },
+    "2935684c24a843f3": {
+      "url": "https://medium.com/@brahimg/vibe-coding-in-action-building-an-ai-app-from-scratch-using-cursor-and-gemma-dff44cb999c4",
+      "title": "Vibe Coding in Action: Building an AI App from Scratch Using Cursor and Gemma",
+      "source_type": "medium",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:51:28.377151"
+    },
+    "29549b9add066eb6": {
+      "url": "https://arxiv.org/html/2507.08149v2",
+      "title": "Code with Me or for Me? How Increasing AI Automation Transforms Developer Workflows",
+      "source_type": "other_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:51:41.363859"
+    },
+    "29699389fd7a20e3": {
+      "url": "https://somethingwithai.substack.com/p/why-vibe-coding-wont-replace-engineers",
+      "title": "Why vibe coding won't replace software engineers",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:51:54.014515"
+    },
+    "2980a204d1944eec": {
+      "url": "https://jamison.dance/02-02-2026/software-engineering-with-llms",
+      "title": "Software Engineering With LLMs",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:52:13.921784"
+    },
+    "29e1c1e25b996b17": {
+      "url": "https://stackoverflow.blog/2026/01/28/are-bugs-and-incidents-inevitable-with-ai-coding-agents/",
+      "title": "Are bugs and incidents inevitable with AI coding agents?",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:52:27.062053"
+    },
+    "29efa97520831543": {
+      "url": "https://alexpanetta.substack.com/p/the-tool-behind-the-ai-freakout-a",
+      "title": "The tool that triggered the AI freakout. A 5-minute crash course on Claude Code",
+      "source_type": "substack",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:52:53.510538"
+    },
+    "29f86b3e6b153c8e": {
+      "url": "https://simonwillison.net/2024/Mar/22/claude-and-chatgpt-case-study/",
+      "title": "Claude and ChatGPT for ad-hoc sidequests",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:53:07.218363"
+    },
+    "2a578c6d62662873": {
+      "url": "https://sam.sutch.net/posts/uninstailling-ai-coding-from-personal-computer",
+      "title": "I am uninstalling AI coding assistants from my personal computer",
+      "source_type": "personal_blog",
+      "is_relevant": "yes",
+      "has_opinion": "yes",
+      "classified_at": "2026-02-24T19:53:21.865748"
+    }
+  },
+  "skipped": {
+    "0ef6928d4ca1a57e": {
+      "reason": "404 Page Not Found",
+      "skipped_at": "2026-02-24T18:57:15.018494"
+    },
+    "1bbb882feaf004b6": {
+      "reason": "404 Page Not Found",
+      "skipped_at": "2026-02-24T19:22:32.556928"
+    },
+    "2391a17f51e40e01": {
+      "reason": "404 Page Not Found",
+      "skipped_at": "2026-02-24T19:42:34.220093"
+    }
+  }
+}
