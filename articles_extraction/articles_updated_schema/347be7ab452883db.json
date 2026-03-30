@@ -1,0 +1,12 @@
+{
+    "ID": "article_347be7ab452883db",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Jason Pereira",
+    "Title": "CoPilot CPIK map data download",
+    "Text": "I\u2019m working on integrating CPIK with our React Native app (currently working on Android but will also be adding iOS support soon).\nIt\u2019s mostly there, but the current issue I\u2019m struggling with is the initial map data download. My code at startup uses MapDataMgr.getInstalledMaps()\nto see if there\u2019s map data installed and if there\u2019s none it calls MapDataMgr.downloadMap()\n. This works, and I get onMapdataUpdate()\ncallbacks so I can display a progress bar.\nThe problem is when the download finishes, the map UI doesn\u2019t work. It shows a message \u201cmap not found\u201d with an OK button, and if I tap the OK button it changes to show a spinner but the map never appears. Also, after the download completes, getInstalledMaps()\nstill returns an empty list. I have to restart the app and then everything will work.\nIs there a way to fix the state of the UI after the download completes that doesn\u2019t require restarting the whole app?\nIs it possible to shutdown the map service and then start it again?",
+    "Score": 0,
+    "Date": "2020-01-10",
+    "Word_Count": 171,
+    "Comments": []
+}

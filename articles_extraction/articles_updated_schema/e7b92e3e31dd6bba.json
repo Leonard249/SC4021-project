@@ -1,0 +1,12 @@
+{
+    "ID": "article_e7b92e3e31dd6bba",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Coding without typing the code",
+    "Text": "16th October 2025\nLast year the most useful exercise for getting a feel for how good LLMs were at writing code was vibe coding (before that name had even been coined) - seeing if you could create a useful small application through prompting alone.\nToday I think there's a new, more ambitious and significantly more intimidating exercise: spend a day working on real production code through prompting alone, making no manual edits yourself.\nThis doesn't mean you can't control exactly what goes into each file - you can even tell the model \"update line 15 to use this instead\" if you have to - but it's a great way to get more of a feel for how well the latest coding agents can wield their edit tools.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-10-16",
+    "Word_Count": 166,
+    "Comments": []
+}

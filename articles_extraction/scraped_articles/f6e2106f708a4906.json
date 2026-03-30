@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2025/06/10/better-vibes-and-vibe-coding-with-gemini-2-5/",
+  "normalized_url": "https://stackoverflow.blog/2025/06/10/better-vibes-and-vibe-coding-with-gemini-2-5",
+  "source_type": "personal_blog",
+  "title": "Better vibes and vibe coding with Gemini 2.5",
+  "author": "Phoebe Sajor",
+  "date": "2025-06-10",
+  "text": "Ryan and Ben welcome Tulsee Doshi and Logan Kilpatrick from Google's DeepMind to discuss the advanced capabilities of the new Gemini 2.5, the importance of feedback loops for model improvement and reducing hallucinations, the necessity of great data for advancements, and enhancing developer experience through tool integration.\nEpisode notes:\nGemini 2.5 is DeepMind’s most advanced model yet, with strong reasoning and coding capabilities.\nConnect with Tulsee on LinkedIn.\nConnect with Logan on LinkedIn and Stack Overflow.\nCheck out our previous episode with Logan. We discussed his unique path from coding to AI to product, the challenges of non-determinism in AI models, and surprising lessons from working at the Apple Store.\nCongrats to Populist badge winner Pascal MARTIN for answering the question PHP echo vs PHP short echo tags.\nOur 2025 Developer Survey is live! We want to know what your developer life is like!",
+  "excerpt": "Ryan and Ben welcome Tulsee Doshi and Logan Kilpatrick from Google's DeepMind to discuss the advanced capabilities of the new Gemini 2.5, the importance of feedback loops for model improvement and reducing hallucinations, the necessity of great data for advancements, and enhancing developer experience through tool integration.\nEpisode notes:\nGemini 2.5 is DeepMind’s most advanced model yet, with strong reasoning and coding capabilities.\nConnect with Tulsee on LinkedIn.\nConnect with Logan on Link",
+  "word_count": 144,
+  "scraped_at": "2026-02-24T08:20:58.029536+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog multiple category sweep"
+  ]
+}

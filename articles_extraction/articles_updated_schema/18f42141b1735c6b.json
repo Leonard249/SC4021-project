@@ -1,0 +1,12 @@
+{
+    "ID": "article_18f42141b1735c6b",
+    "Source": "corporate_blog",
+    "Type": "Article",
+    "Author": "Viktor Kiselev",
+    "Title": "JetBrains \u00d7 Zed: Open Interoperability for AI Coding Agents in Your IDE | The JetBrains AI Blog",
+    "Text": "JetBrains AI\nSupercharge your tools with AI-powered features inside many JetBrains products\nJetBrains \u00d7 Zed: Open Interoperability for AI Coding Agents in Your IDE\nAt JetBrains, our mission is simple: help developers achieve engineering excellence without distractions or vendor lock-in. Today, we\u2019re excited to share that we\u2019re collaborating with Zed on the Agent Client Protocol (ACP) \u2013 an open protocol that lets AI coding agents work inside editors, including JetBrains IDEs, if both are ACP-compatible.\nWhy this collaboration matters\n- No vendor lock-in: Use the agent you prefer inside the IDE you love.\n- Confidence and control: See exactly what the agent is planning, review diffs, and approve actions.\n- A great UX in your IDE: Streaming updates, clear intent, and changes that fit naturally into editor workflows.\nWhat developers get in JetBrains IDEs\n- Bring your agent. The ACP protocol makes agents editor-agnostic, so agents work anywhere you code.\n- Full control. Going forward, your IDE will mediate access to files, the terminal, and other tools via the ACP protocol \u2013 you decide what runs.\n- The same workflows you\u2019re used to. Your environment stays yours by default.\n- Shorter feedback loops. Prompt, observe progress, and validate \u2013 all in one place.\nThe JetBrains \u00d7 Zed advantage\nZed has quickly innovated in protocol design and seen real-world adoption. JetBrains brings decades of IDE expertise, including refactoring, debugging, navigation, and performance at scale. Together, we\u2019re aligning on ACP-driven experiences that feel native in JetBrains IDEs while remaining open and portable across the ecosystem. The result is agents that are portable, powerful, and predictable inside your daily tools.\nWhat\u2019s next\nWe\u2019re working closely with Zed on the next milestones for ACP-powered experiences in JetBrains IDEs. As work progresses, we\u2019ll share details on early implementations, developer previews, and how partners can extend ACP-based integrations.\nOur goal hasn\u2019t changed: empower developers with freedom of choice, clarity of control, and first-class productivity with AI agents that feel at home in JetBrains IDEs.",
+    "Score": 0,
+    "Date": "2026-02-12",
+    "Word_Count": 328,
+    "Comments": []
+}

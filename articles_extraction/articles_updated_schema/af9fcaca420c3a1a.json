@@ -1,0 +1,12 @@
+{
+    "ID": "article_af9fcaca420c3a1a",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Shaw Talebi",
+    "Title": "How to Code 10X Faster Using AI (without the chaos)",
+    "Text": "Member-only story\nHow to Code 10X Faster Using AI (without the chaos)\nOutsource the coding, not the thinking\n6 min readOct 11, 2025\nThe AI use case generating the most economic value today is using it to code. If you\u2019re not careful, however, this can end up being more harmful than helpful. Here, I\u2019ll discuss 5 tactics I use to build software 10X faster using AI without the technical debt or painful refactoring.\nCoding with LLMs is like driving a Ferrari. If you know what you\u2019re doing, you can go fast. If not, you can have a bad time.\nFor example, you get GPT-5 to build your entire app in 30 seconds, but\u2026\n- You have no idea how it works\n- The app breaks every time you make a change\n- You spend 3 hours debugging and fixing things (which is longer than just coding it from scratch)\nLike many technical issues, however, the root cause isn\u2019t the technology. It\u2019s user error.",
+    "Score": 0,
+    "Date": "2025-10-11",
+    "Word_Count": 163,
+    "Comments": []
+}

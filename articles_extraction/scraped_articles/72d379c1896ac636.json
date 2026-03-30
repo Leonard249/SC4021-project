@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/16/new-chatgpt-images/",
+  "normalized_url": "https://simonwillison.net/2025/dec/16/new-chatgpt-images",
+  "source_type": "personal_blog",
+  "title": "The new ChatGPT Images is here",
+  "author": "Simon Willison",
+  "date": "2025-12-16",
+  "text": "16th December 2025 - Link Blog\nThe new ChatGPT Images is here. OpenAI shipped an update to their ChatGPT Images feature - the feature that gained them 100 million new users in a week when they first launched it back in March, but has since been eclipsed by Google's Nano Banana and then further by Nana Banana Pro in November.\nThe focus for the new ChatGPT Images is speed and instruction following:\nIt makes precise edits while keeping details intact, and generates images up to 4x faster\nIt's also a little cheaper: OpenAI say that the new gpt-image-1.5 API model makes image input and output \"20% cheaper in GPT Image 1.5 as compared to GPT Image 1\".\nI tried a new test prompt against a photo I took of Natalie's ceramic stand at the farmers market a few weeks ago:\nAdd two kakapos inspecting the pots\nHere's the result from the new ChatGPT Images model:\nAnd here's what I got from Nano Banana Pro:\nThe ChatGPT Kākāpō are a little chonkier, which I think counts as a win.\nI was a little less impressed by the result I got for an infographic from the prompt \"Infographic explaining how the Datasette open source project works\" followed by \"Run some extensive searches and gather a bunch of relevant information and then try again\" (transcript):\nSee my Nano Banana Pro post for comparison.\nBoth models are clearly now usable for text-heavy graphics though, which makes them far more useful than previous generations of this technology.\nUpdate 21st December 2025: I realized I already have a tool for accessing this new model via the API. Here's what I got from the following:\nOPENAI_API_KEY=\"$(llm keys get openai)\" \\\nuv run openai_image.py -m gpt-image-1.5\\\n'a raccoon with a double bass in a jazz bar rocking out'\nTotal cost: $0.2041.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "16th December 2025 - Link Blog\nThe new ChatGPT Images is here. OpenAI shipped an update to their ChatGPT Images feature - the feature that gained them 100 million new users in a week when they first launched it back in March, but has since been eclipsed by Google's Nano Banana and then further by Nana Banana Pro in November.\nThe focus for the new ChatGPT Images is speed and instruction following:\nIt makes precise edits while keeping details intact, and generates images up to 4x faster\nIt's also ",
+  "word_count": 342,
+  "scraped_at": "2026-02-24T08:17:53.567487+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

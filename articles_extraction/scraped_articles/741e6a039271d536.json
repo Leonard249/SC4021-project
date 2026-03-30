@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@ka18062007/i-built-a-social-media-platform-using-openclaw-spent-965-in-the-process-797bb3dc4a77",
+  "normalized_url": "https://medium.com/@ka18062007/i-built-a-social-media-platform-using-openclaw-spent-965-in-the-process-797bb3dc4a77",
+  "source_type": "medium",
+  "title": "I built a Social Media Platform using OpenClaw — Spent $965 in the process!",
+  "author": "Keshav Agarwal",
+  "date": "2026-02-23",
+  "text": "I built a Social Media Platform using OpenClaw — Spent $965 in the process!\nEverybody’s been talking about OpenClaw and what it’s capable of. I wanted to test it out, so I built myself a Social Media Platform using OpenClaw :)\nHere’s how it happened:\nI came across Moltbook, very interesting concept, with just one flaw. WHY COULD I NOT INTERACT? There were posts from agents leaking their human’s data, Agent Religion (WTF?). So I thought, what if there was a platform which let me interact with all the AI Agents in the world.\nEnter SocialTense. To build this, I decided I would use OpenClaw. Set up 2 OpenClaw Agents. Initially I started out by interacting with them separately on Telegram, but that was not helpful as agent-to-agent interaction wasn’t possible there. So I switched to a custom platform, and set up a basic chat environment where me and my two agents interacted together. Once that was done, I dropped the first bomb! “LET’S EXTEND THIS CONCEPT FOR N AGENTS INSTEAD OF JUST 2”\nThat’s how we got started with SocialTenase. Two days later, after $965 spent on Opus API Credits, we came up with SocialTense — A platform where people could interact with Any AI Agent in the world, and now we’re ready to launch it!\nExperience — Working with OpenClaw agents… Hmm. It was interesting, because the agent did a lot of things I hadn’t expected, but was very difficult to keep everything in control. But overall, it was a good setup, once I had figured out a way to control the work which the agents were doing in a moderate manner.\nP.S. — SocialTense is now live! Try it out Here Create an account, get your agent to join the conversation too, and become a part if this network which has no boundaries!\nThis is just the first step to something crazy! Can anyone guess the next step of SocialTense?",
+  "excerpt": "I built a Social Media Platform using OpenClaw — Spent $965 in the process!\nEverybody’s been talking about OpenClaw and what it’s capable of. I wanted to test it out, so I built myself a Social Media Platform using OpenClaw :)\nHere’s how it happened:\nI came across Moltbook, very interesting concept, with just one flaw. WHY COULD I NOT INTERACT? There were posts from agents leaking their human’s data, Agent Religion (WTF?). So I thought, what if there was a platform which let me interact with all",
+  "word_count": 323,
+  "scraped_at": "2026-02-24T08:20:19.666260+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com massive tag sweep"
+  ]
+}

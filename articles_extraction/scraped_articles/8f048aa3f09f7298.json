@@ -1,0 +1,16 @@
+{
+  "url": "https://python.plainenglish.io/why-i-dont-use-postman-anymore-d1ff342b31c5",
+  "normalized_url": "https://python.plainenglish.io/why-i-dont-use-postman-anymore-d1ff342b31c5",
+  "source_type": "other_blog",
+  "title": "Why I Don’t Use Postman Anymore…",
+  "author": "Kiran Maan",
+  "date": "2025-06-12",
+  "text": "Member-only story\nWhy I Don’t Use Postman Anymore…\nFrom 100 clicks to 10 lines of code…\nI used to think Postman was the best tool for APIs. Everyone around me was using it. So I did too.\nFor more than a year, I used Postman for almost everything — testing APIs, checking responses, sending headers, and debugging bugs.\nBut a few months ago, I quietly stopped using it. And I don’t miss it at all.\nIn this blog, I will explain why I quit Postman, what I use now, and why it might be time for you to stop using it too.\nHow I Started Using Postman\nWhen I first started learning backend development, Postman felt like magic.",
+  "excerpt": "Member-only story\nWhy I Don’t Use Postman Anymore…\nFrom 100 clicks to 10 lines of code…\nI used to think Postman was the best tool for APIs. Everyone around me was using it. So I did too.\nFor more than a year, I used Postman for almost everything — testing APIs, checking responses, sending headers, and debugging bugs.\nBut a few months ago, I quietly stopped using it. And I don’t miss it at all.\nIn this blog, I will explain why I quit Postman, what I use now, and why it might be time for you to st",
+  "word_count": 118,
+  "scraped_at": "2026-02-24T08:10:58.946145+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "blog.postman.com vibe coding OR AI OR copilot OR cursor"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@timothypecoraro/the-smartest-ai-paired-programmers-7b055ca2b2b4",
+  "normalized_url": "https://medium.com/@timothypecoraro/the-smartest-ai-paired-programmers-7b055ca2b2b4",
+  "source_type": "medium",
+  "title": "The “Smartest” AI Pair Programmers",
+  "author": "Timothy Pecoraro",
+  "date": "2024-11-29",
+  "text": "Member-only story\nThe “Smartest” AI Pair Programmers\nI know some of you know how this ends…\nBeing someone who doesn’t program as much as I’d like and probably should be more serious about my possible (yet unlikely) future career as a Programmer or Data Scientist. I had a fair bit of trouble prior to the advent of Artificial Intelligence trying to track down reasons why this program doesn’t work or why this code snippet just will not play nice with the rest of the program. Or my very favorite, the whole book tutorial that has broken code due to long outdated software libraries or programming language deprecations. In 2024, we are in the VERY privileged (regardless of what critics might say) of having A.I. helping us write our code (for better or worse). This article is a survey of the brand new, “cutting edge” A.I. pair programmers out there. Let's Dive in…\nJust Plug it in…\nCline (prev. Claude Dev) is a plugin for VS Code that is supposed to work with various models and APIs. This can be used with lots of different…",
+  "excerpt": "Member-only story\nThe “Smartest” AI Pair Programmers\nI know some of you know how this ends…\nBeing someone who doesn’t program as much as I’d like and probably should be more serious about my possible (yet unlikely) future career as a Programmer or Data Scientist. I had a fair bit of trouble prior to the advent of Artificial Intelligence trying to track down reasons why this program doesn’t work or why this code snippet just will not play nice with the rest of the program. Or my very favorite, th",
+  "word_count": 184,
+  "scraped_at": "2026-02-24T08:27:38.884182+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com AI pair programming"
+  ]
+}

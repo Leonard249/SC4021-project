@@ -1,0 +1,12 @@
+{
+    "ID": "article_ce0e3e2f0c7a8733",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Gigi Sayfan",
+    "Title": "Claude Code Deep Dive - Basics",
+    "Text": "Member-only story\nIn Confessions of an ex-coder I shared my workflow and how I let Claude Code do all the heavy lifting for me. It was super rewarding and productive, but I have used it at a very basic level. I promised to study it more deeply. This is it!\nMy way for studying anything is experimenting/building something and then writing about it. This is the first article in the CCDD (Claude Code Deep Dive) series.\nI\u2019ll cover some general and personal background and history of AI coding and then show some basic yet useful Claude Code tips.\n\u201cAI will soon be writing 90 percent of all code.\u201d \u2014 Dario Amodei, Anthropic CEO, March 10 2025\nIf you\u2019re not a member read this story for free on The Gigi Zone.\n\ud83d\uddfa\ufe0f Where are We? \ud83d\uddfa\ufe0f\nHumans shouldn\u2019t code professionally anymore. Period. LLMs are in general better and waaaaaay faster. I won\u2019t debate this, and you can save your counter examples. If you\u2019re an AI non-believer that\u2019s totally cool. Just wait and see.\nHumans will continue to code professionally for many years due to a variety of reasons, but not because humans are better. Of course, LLMs keep improving faster and faster, but they are already superior to top-notch professional software engineers. Humans still have a role as software architects and reviewers (I won\u2019t speculate for how long in this post).",
+    "Score": 0,
+    "Date": "2026-01-04",
+    "Word_Count": 230,
+    "Comments": []
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://huggingface.co/posts/lamhieu/733145648043305",
+  "normalized_url": "https://huggingface.co/posts/lamhieu/733145648043305",
+  "source_type": "corporate_blog",
+  "title": "@lamhieu on Hugging Face: \"Copilot, Cursor and all those new AI-driven extensions are rising fast — they…\"",
+  "author": null,
+  "date": "2025-08-24",
+  "text": "So yeah, we’re coding faster than ever, but are we also opening the door to a whole new wave of vulnerabilities?\n👉 Is this the hidden threat waiting to hit the next era of “vibe-coding”?\nJoin the community of Machine Learners and AI enthusiasts.\nSign UpBut here’s the flip side: once these tools start peeking into .env files, nodes, and source code, the risk of leaking critical keys or sensitive info becomes very real.\nPeople who have such sensitive stuff should have the due diligence to pay for a model that fits their privacy needs.\nUsing some shady free API for building such stuff is a skill issue.\nAt the company where I work, we always use paid tools to build features and support tools such as Copilot, OpenAI APIs, Gemini, Vertex, and so on. But for example, with Copilot, it’s very difficult to know whether they don’t use enterprise data for training. Of course, we always see those ‘terms’ stated, but you know, the data passes through so many layers.",
+  "excerpt": "So yeah, we’re coding faster than ever, but are we also opening the door to a whole new wave of vulnerabilities?\n👉 Is this the hidden threat waiting to hit the next era of “vibe-coding”?\nJoin the community of Machine Learners and AI enthusiasts.\nSign UpBut here’s the flip side: once these tools start peeking into .env files, nodes, and source code, the risk of leaking critical keys or sensitive info becomes very real.\nPeople who have such sensitive stuff should have the due diligence to pay for ",
+  "word_count": 171,
+  "scraped_at": "2026-02-24T08:10:38.868736+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "huggingface.co/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

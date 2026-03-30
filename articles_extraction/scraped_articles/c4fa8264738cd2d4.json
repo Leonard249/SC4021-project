@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/19/introducing-gpt-52-codex/",
+  "normalized_url": "https://simonwillison.net/2025/dec/19/introducing-gpt-52-codex",
+  "source_type": "personal_blog",
+  "title": "Introducing GPT-5.2-Codex",
+  "author": "Simon Willison",
+  "date": "2025-12-19",
+  "text": "19th December 2025 - Link Blog\nIntroducing GPT-5.2-Codex. The latest in OpenAI's Codex family of models (not the same thing as their Codex CLI or Codex Cloud coding agent tools).\nGPT‑5.2-Codex is a version of GPT‑5.2 further optimized for agentic coding in Codex, including improvements on long-horizon work through context compaction, stronger performance on large code changes like refactors and migrations, improved performance in Windows environments, and significantly stronger cybersecurity capabilities.\nAs with some previous Codex models this one is available via their Codex coding agents now and will be coming to the API \"in the coming weeks\". Unlike previous models there's a new invite-only preview process for vetted cybersecurity professionals for \"more permissive models\".\nI've been very impressed recently with GPT 5.2's ability to tackle multi-hour agentic coding challenges. 5.2 Codex scores 64% on the Terminal-Bench 2.0 benchmark that GPT-5.2 scored 62.2% on. I'm not sure how concrete that 1.8% improvement will be!\nI didn't hack API access together this time (see previous attempts), instead opting to just ask Codex CLI to \"Generate an SVG of a pelican riding a bicycle\" while running the new model (effort medium). Here's the transcript in my new Codex CLI timeline viewer, and here's the pelican it drew:\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "19th December 2025 - Link Blog\nIntroducing GPT-5.2-Codex. The latest in OpenAI's Codex family of models (not the same thing as their Codex CLI or Codex Cloud coding agent tools).\nGPT‑5.2-Codex is a version of GPT‑5.2 further optimized for agentic coding in Codex, including improvements on long-horizon work through context compaction, stronger performance on large code changes like refactors and migrations, improved performance in Windows environments, and significantly stronger cybersecurity cap",
+  "word_count": 244,
+  "scraped_at": "2026-02-24T08:18:11.873941+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

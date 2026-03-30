@@ -1,0 +1,17 @@
+{
+  "url": "https://medium.datadriveninvestor.com/system-design-for-agentic-ai-projects-what-to-do-what-not-to-do-and-when-7b5ed06e52bf",
+  "normalized_url": "https://medium.datadriveninvestor.com/system-design-for-agentic-ai-projects-what-to-do-what-not-to-do-and-when-7b5ed06e52bf",
+  "source_type": "personal_blog",
+  "title": "System Design for Agentic AI Projects: What to Do, What Not to Do, and When",
+  "author": "Muhammad Abiodun SULAIMAN",
+  "date": "2025-09-19",
+  "text": "Member-only story\nSystem Design for Agentic AI Projects: What to Do, What Not to Do, and When\nAgentic AI, where independent AI agents make complex decisions or orchestrate workflows, is revolutionizing business processes. Yet architecting such systems brings fresh design challenges and high stakes. Here are actionable principles, informed by real-world builds and strategic lessons, for designing robust, scalable Agentic AI solutions, complete with Python pseudocode examples to illustrate implementation patterns.\nWhat to Do: Core System Design Principles\nAnchor to Business Value\nStart by defining explicit, measurable business outcomes for the AI system. Every agent’s function should map directly to a high-impact organizational goal. Avoid speculative builds; only add autonomy where it demonstrably amplifies value and innovation.\nclass BusinessAlignedAgent:\ndef __init__(self, name, business_kpi, success_threshold):\nself.name = name\nself.business_kpi = business_kpi # e.g., \"customer_satisfaction_score\"\nself.success_threshold = success_threshold # e.g., 0.85\nself.metrics_tracker = MetricsTracker()\ndef execute_task(self, task_input):\nresult = self.process_task(task_input)\n# Always measure business impact\nkpi_value = self.metrics_tracker.measure_kpi(self.business_kpi…",
+  "excerpt": "Member-only story\nSystem Design for Agentic AI Projects: What to Do, What Not to Do, and When\nAgentic AI, where independent AI agents make complex decisions or orchestrate workflows, is revolutionizing business processes. Yet architecting such systems brings fresh design challenges and high stakes. Here are actionable principles, informed by real-world builds and strategic lessons, for designing robust, scalable Agentic AI solutions, complete with Python pseudocode examples to illustrate impleme",
+  "word_count": 156,
+  "scraped_at": "2026-02-24T08:09:52.845576+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 2 (balancing)",
+    "Substack and Medium final balancing batch 1"
+  ]
+}

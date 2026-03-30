@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/23/openai-no-longer-has-to-preserve/",
+  "normalized_url": "https://simonwillison.net/2025/oct/23/openai-no-longer-has-to-preserve",
+  "source_type": "personal_blog",
+  "title": "OpenAI no longer has to preserve all of its ChatGPT data, with some exceptions",
+  "author": "Simon Willison",
+  "date": "2025-10-23",
+  "text": "23rd October 2025 - Link Blog\nOpenAI no longer has to preserve all of its ChatGPT data, with some exceptions (via) This is a relief:\nFederal judge Ona T. Wang filed a new order on October 9 that frees OpenAI of an obligation to \"preserve and segregate all output log data that would otherwise be deleted on a going forward basis.\"\nI wrote about this in June. OpenAI were compelled by a court order to preserve all output, even from private chats, in case it became relevant to the ongoing New York Times lawsuit.\nHere are those \"some exceptions\":\nThe judge in the case said that any chat logs already saved under the previous order would still be accessible and that OpenAI is required to hold on to any data related to ChatGPT accounts that have been flagged by the NYT.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "23rd October 2025 - Link Blog\nOpenAI no longer has to preserve all of its ChatGPT data, with some exceptions (via) This is a relief:\nFederal judge Ona T. Wang filed a new order on October 9 that frees OpenAI of an obligation to \"preserve and segregate all output log data that would otherwise be deleted on a going forward basis.\"\nI wrote about this in June. OpenAI were compelled by a court order to preserve all output, even from private chats, in case it became relevant to the ongoing New York Ti",
+  "word_count": 180,
+  "scraped_at": "2026-02-24T08:22:58.646106+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

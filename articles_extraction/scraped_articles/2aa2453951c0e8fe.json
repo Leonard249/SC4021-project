@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2025/02/24/writing-tests-with-ai-but-not-llms/",
+  "normalized_url": "https://stackoverflow.blog/2025/02/24/writing-tests-with-ai-but-not-llms",
+  "source_type": "personal_blog",
+  "title": "Writing tests with AI, but not LLMs",
+  "author": "Eira May",
+  "date": "2025-02-24",
+  "text": "Animesh Mishra, senior solutions engineer at Diffblue, joins Ryan and Ben to talk about how AI agents can help you get better test coverage. Animesh explains how agentic AI can expedite and enhance automation and refactoring processes, how Diffblue leverages machine learning techniques to write effective unit tests, and why clear use cases and trust are so important in developing AI tools. Plus: Why Diffblue sees Copilot as a complement, not a competitor.\nEpisode notes:\nDiffblue Cover is an AI agent for testing complex Java code at scale. Check out their docs to get started automating unit tests today.\nThis article will help you understand the difference between Diffblue Cover and Copilot.\nFind Animesh on LinkedIn.\nStack Overflow user Keet Sugathadasa earned a Populist badge by answering a question in the CI/CD Collective: Gitlab CI CD variable are not getting injected while running gitlab pipeline.",
+  "excerpt": "Animesh Mishra, senior solutions engineer at Diffblue, joins Ryan and Ben to talk about how AI agents can help you get better test coverage. Animesh explains how agentic AI can expedite and enhance automation and refactoring processes, how Diffblue leverages machine learning techniques to write effective unit tests, and why clear use cases and trust are so important in developing AI tools. Plus: Why Diffblue sees Copilot as a complement, not a competitor.\nEpisode notes:\nDiffblue Cover is an AI a",
+  "word_count": 145,
+  "scraped_at": "2026-02-24T08:20:47.767405+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog multiple category sweep"
+  ]
+}

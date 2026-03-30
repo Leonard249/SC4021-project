@@ -1,0 +1,21 @@
+{
+  "url": "https://itnext.io/github-copilot-coding-agent-the-complete-architecture-behind-agentic-devops-at-enterprise-scale-1f42c1c132aa",
+  "normalized_url": "https://itnext.io/github-copilot-coding-agent-the-complete-architecture-behind-agentic-devops-at-enterprise-scale-1f42c1c132aa",
+  "source_type": "personal_blog",
+  "title": "GitHub Copilot Coding Agent: The Complete Architecture Behind Agentic DevOps at Enterprise Scale",
+  "author": "Dave R; AI MVP",
+  "date": "2026-02-20",
+  "text": "Member-only story\nGitHub Copilot Coding Agent: The Complete Architecture Behind Agentic DevOps at Enterprise Scale\nHow GitHub Is Replacing Solo Developers With Autonomous Agent Teams, and What That Means for Your SDLC.\nThis article is a technical deep dive into GitHub’s agentic development platform. I cover the architecture of the Copilot Coding Agent, its security safeguards, the Code Review Agent feedback loop, how to build custom agents with MCP servers, and the enterprise Agent Control Plane for governance at scale.\nReference here.\nThe Three Waves of AI in Software Development\nGitHub frames the evolution of AI-assisted development as three distinct waves. Understanding where you sit on this spectrum is critical for planning your adoption strategy.\nWave 1: Pair Programmer (2021 onwards). This began with GitHub Copilot’s launch, built on OpenAI’s Codex model. The experience was primarily code completion inside the IDE, an evolution of IntelliSense on steroids. You typed, and the AI predicted what came next. Powerful, but fundamentally synchronous: you had to be present for every keystroke.",
+  "excerpt": "Member-only story\nGitHub Copilot Coding Agent: The Complete Architecture Behind Agentic DevOps at Enterprise Scale\nHow GitHub Is Replacing Solo Developers With Autonomous Agent Teams, and What That Means for Your SDLC.\nThis article is a technical deep dive into GitHub’s agentic development platform. I cover the architecture of the Copilot Coding Agent, its security safeguards, the Code Review Agent feedback loop, how to build custom agents with MCP servers, and the enterprise Agent Control Plane",
+  "word_count": 168,
+  "scraped_at": "2026-02-24T08:15:14.826405+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium top publications sweep (balancing)",
+    "Substack and Medium final balancing batch 1",
+    "Substack and Medium final balancing batch 3",
+    "Substack and Medium final balancing batch 4",
+    "Substack and Medium final balancing batch 5",
+    "Substack and Medium final balancing batch 6"
+  ]
+}

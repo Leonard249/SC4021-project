@@ -1,0 +1,12 @@
+{
+    "ID": "article_1d0d926228e7d90e",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Helen",
+    "Title": "GitHub Copilot extension on VS 2022",
+    "Text": "I have installed the copilot on my VS 2022 successfully (My work laptop). I also have paid an annual fee. but when I log in and activate it (paste the code and the message 'Congratulations, you're all set! Your device is now connected.' shown on the browser ) I only can see the below message in VS, copilot output tab\n'14:14:36:648 Please open https://github.com/login/device and enter the device activation code AD05-A79D that has been copied to the clipboard.'\nIt seems to be stopped in this step and I can't activate it! any log to check? Any advice to fix it Note: I have installed it on the same version of VS on my personal laptop. Note: No filter from the IT side on the GitHub connection Thanks for your advice :)",
+    "Score": 0,
+    "Date": "2023-01-16",
+    "Word_Count": 131,
+    "Comments": []
+}

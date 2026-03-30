@@ -1,0 +1,16 @@
+{
+  "url": "https://www.uber.com/en-IN/blog/engineering/",
+  "normalized_url": "https://www.uber.com/en-in/blog/engineering",
+  "source_type": "other_blog",
+  "title": "Engineering Archives",
+  "author": null,
+  "date": "2026-02-24",
+  "text": "Resources for driving and delivering with Uber\nExperiences and information for people on the move\nTransforming the way companies move and feed their people\nEnhancing campus transportation\nExpanding the reach of public transportation\nThe technology behind Uber Engineering\nUber news and updates in your country\nProduct, how-to, and policy content—and more\nStay up to date with the latest from Uber Engineering\n19 February / Global\n12 February / Global\n5 February / Global\n1 January / Global\n16 January / Global\n13 January / Global\n6 January / Global\n18 December 2025 / Global\n16 December 2025 / Global\n15 December 2025 / Global\n11 December 2025 / Global\n9 December 2025 / Global\n4 December 2025 / Global\n2 December 2025 / Global\n24 November 2025 / Global\n20 November 2025 / Global\n18 November 2025 / Global\nEarn\nRide\nBusiness\nHigher Education\nTransit\nEngineering\nNewsroom\nUber.com",
+  "excerpt": "Resources for driving and delivering with Uber\nExperiences and information for people on the move\nTransforming the way companies move and feed their people\nEnhancing campus transportation\nExpanding the reach of public transportation\nThe technology behind Uber Engineering\nUber news and updates in your country\nProduct, how-to, and policy content—and more\nStay up to date with the latest from Uber Engineering\n19 February / Global\n12 February / Global\n5 February / Global\n1 January / Global\n16 January",
+  "word_count": 148,
+  "scraped_at": "2026-02-24T08:09:21.316837+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "uber.com/blog/engineering vibe coding OR AI OR copilot OR cursor"
+  ]
+}

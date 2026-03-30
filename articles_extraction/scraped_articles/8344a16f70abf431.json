@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/19/agent-skills/",
+  "normalized_url": "https://simonwillison.net/2025/dec/19/agent-skills",
+  "source_type": "personal_blog",
+  "title": "Agent Skills",
+  "author": "Simon Willison",
+  "date": "2025-12-19",
+  "text": "19th December 2025 - Link Blog\nAgent Skills. Anthropic have turned their skills mechanism into an \"open standard\", which I guess means it lives in an independent agentskills/agentskills GitHub repository now? I wouldn't be surprised to see this end up in the AAIF, recently the new home of the MCP specification.\nThe specification itself lives at agentskills.io/specification, published from docs/specification.mdx in the repo.\nIt is a deliciously tiny specification - you can read the entire thing in just a few minutes. It's also quite heavily under-specified - for example, there's a metadata\nfield described like this:\nClients can use this to store additional properties not defined by the Agent Skills spec\nWe recommend making your key names reasonably unique to avoid accidental conflicts\nAnd an allowed-skills\nfield:\nExperimental. Support for this field may vary between agent implementations\nExample:\nallowed-tools: Bash(git:*) Bash(jq:*) Read\nThe Agent Skills homepage promotes adoption by OpenCode, Cursor,Amp, Letta, goose, GitHub, and VS Code. Notably absent is OpenAI, who are quietly tinkering with skills but don't appear to have formally announced their support just yet.\nUpdate 20th December 2025: OpenAI have added Skills to the Codex documentation and the Codex logo is now featured on the Agent Skills homepage (as of this commit.)\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "19th December 2025 - Link Blog\nAgent Skills. Anthropic have turned their skills mechanism into an \"open standard\", which I guess means it lives in an independent agentskills/agentskills GitHub repository now? I wouldn't be surprised to see this end up in the AAIF, recently the new home of the MCP specification.\nThe specification itself lives at agentskills.io/specification, published from docs/specification.mdx in the repo.\nIt is a deliciously tiny specification - you can read the entire thing i",
+  "word_count": 245,
+  "scraped_at": "2026-02-24T08:18:08.022204+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

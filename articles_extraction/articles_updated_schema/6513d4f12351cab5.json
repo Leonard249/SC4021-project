@@ -1,0 +1,12 @@
+{
+    "ID": "article_6513d4f12351cab5",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "User",
+    "Title": "Copilot installed but not loaded",
+    "Text": "I use LazyVim, a nice preconfigured setup for NeoVim. I have fixed most of the issues but I can't get copilot working like it used to.\nIt doesn't show in installed section, but there are filles of copilot.vim in configs folder.\nHow do i get it to load?\nI feel like I'm missing a simple step and am hoping someone here can point me in the right direction...\nI've done the usual, fresh install, etc....it just looks like it's not loaded.\nI tried :Lazy load copilot.vim but it says a plugin is required.\n:Copilot setup gives Copilot is not an editor command, so yeah it isn't loaded....help!",
+    "Score": 0,
+    "Date": "2024-02-02",
+    "Word_Count": 107,
+    "Comments": []
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://tomaszs2.medium.com/how-does-openclaw-work-inside-the-agent-loop-that-powers-200-000-github-stars-e61db2bbfcbb",
+  "normalized_url": "https://tomaszs2.medium.com/how-does-openclaw-work-inside-the-agent-loop-that-powers-200-000-github-stars-e61db2bbfcbb",
+  "source_type": "medium",
+  "title": "🦞 How Does OpenClaw Work? Inside the Agent Loop That Powers 200,000+ GitHub Stars",
+  "author": "Tom Smykowski",
+  "date": "2026-02-19",
+  "text": "Member-only story\n🦞 How Does OpenClaw Work? Inside the Agent Loop That Powers 200,000+ GitHub Stars\n20 min read 3 days ago\nOpenClaw hit 200,000 GitHub stars in a week. Everyone talks about what it does, but few understand how it actually works. I spent hours reading the source code to find out. The architecture is surprisingly elegant. At its core sits a loop that turns chat messages into executable actions.\nThis loop runs in src/agents/pi-embedded-runner/run.ts\n. Today I'll show you exactly how it works.\nHi, my name is Tom Smykowski, I’m a staff software engineer. I build and scale products to millions of users. On this blog I write about software engineering and AI.\nHere’s the core loop, simplified:\nwhile (true) {\nconst attempt = await runEmbeddedAttempt({\nsessionId, sessionKey, prompt, model, tools, ...\n});\nif (attempt.success) break;\nif (attempt.contextOverflow) {\nawait compactSession();\ncontinue;\n}\nif (attempt.authError) {\nawait rotateApiKey();\ncontinue;\n}\nbreak; // Other errors exit the loop\n}\nA loop that keeps trying until it succeeds or hits an unrecoverable error. Everything else builds…",
+  "excerpt": "Member-only story\n🦞 How Does OpenClaw Work? Inside the Agent Loop That Powers 200,000+ GitHub Stars\n20 min read 3 days ago\nOpenClaw hit 200,000 GitHub stars in a week. Everyone talks about what it does, but few understand how it actually works. I spent hours reading the source code to find out. The architecture is surprisingly elegant. At its core sits a loop that turns chat messages into executable actions.\nThis loop runs in src/agents/pi-embedded-runner/run.ts\n. Today I'll show you exactly how",
+  "word_count": 176,
+  "scraped_at": "2026-02-24T08:21:21.281019+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium niche tags batch 1"
+  ]
+}

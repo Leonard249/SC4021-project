@@ -1,0 +1,16 @@
+{
+  "url": "https://nicolaiarocci.com/ai-coding-is-less-fun/",
+  "normalized_url": "https://nicolaiarocci.com/ai-coding-is-less-fun",
+  "source_type": "personal_blog",
+  "title": "AI coding is less fun",
+  "author": null,
+  "date": "2025-06-19",
+  "text": "I’ve been doing “agentic coding” for some time, and well, it’s weird. On stable, mature technology (in my case, the C#/.NET stack), it is beneficial, as it significantly boosts productivity.\nBut, there’s a bit, and that’s that I’m not programming anymore, or very little now, and I love coding. I love entering “the zone” and solving complex problems, one at a time. It’s always been my superpower. Will I still have fun in the future now that I can delegate most tasks to Claude Code?\nIn his The Hidden Cost of AI Coding, Matheus Lima expresses the same concern:\nInstead of that deep immersion where I’d craft each function, I’m now more like a curator? I describe what I want, evaluate what the AI gives me, tweak the prompts, and iterate. It’s efficient, yes. Revolutionary, even. But something essential feels missing — that state of flow where time vanishes and you’re completely absorbed in creation. If this becomes the dominant workflow across teams, do we risk an industry full of highly productive yet strangely detached developers?\nI’m afraid there’s no going back; agentic coding is so helpful that it’s tough to let go, especially in tiny teams like mine. Matheus suggests we preserve some space in our work where the flow can still happen, and that’s probably what I’m going to do: on some projects, maybe the open-source ones I maintain, resist the temptation of a claude /init\nand keep going like the good old times. One can at least try.",
+  "excerpt": "I’ve been doing “agentic coding” for some time, and well, it’s weird. On stable, mature technology (in my case, the C#/.NET stack), it is beneficial, as it significantly boosts productivity.\nBut, there’s a bit, and that’s that I’m not programming anymore, or very little now, and I love coding. I love entering “the zone” and solving complex problems, one at a time. It’s always been my superpower. Will I still have fun in the future now that I can delegate most tasks to Claude Code?\nIn his The Hid",
+  "word_count": 251,
+  "scraped_at": "2026-02-24T08:07:56.932372+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com high volume high quality batch 4"
+  ]
+}

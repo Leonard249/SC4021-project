@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/13/letter-from-openai/",
+  "normalized_url": "https://simonwillison.net/2025/nov/13/letter-from-openai",
+  "source_type": "personal_blog",
+  "title": "A quote from Nov 12th letter from OpenAI to Judge Ona T. Wang",
+  "author": "Simon Willison",
+  "date": "2025-11-13",
+  "text": "13th November 2025\nOn Monday, this Court entered an order requiring OpenAI to hand over to the New York Times and its co-plaintiffs 20 million ChatGPT user conversations [...]\nOpenAI is unaware of any court ordering wholesale production of personal information at this scale. This sets a dangerous precedent: it suggests that anyone who files a lawsuit against an AI company can demand production of tens of millions of conversations without first narrowing for relevance. This is not how discovery works in other cases: courts do not allow plaintiffs suing Google to dig through the private emails of tens of millions of Gmail users irrespective of their relevance. And it is not how discovery should work for generative AI tools either.\n— Nov 12th letter from OpenAI to Judge Ona T. Wang, re: OpenAI, Inc., Copyright Infringement Litigation\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "13th November 2025\nOn Monday, this Court entered an order requiring OpenAI to hand over to the New York Times and its co-plaintiffs 20 million ChatGPT user conversations [...]\nOpenAI is unaware of any court ordering wholesale production of personal information at this scale. This sets a dangerous precedent: it suggests that anyone who files a lawsuit against an AI company can demand production of tens of millions of conversations without first narrowing for relevance. This is not how discovery w",
+  "word_count": 177,
+  "scraped_at": "2026-02-24T08:21:05.861005+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

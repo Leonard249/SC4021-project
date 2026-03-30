@@ -1,0 +1,16 @@
+{
+  "url": "https://vegapunk.medium.com/that-1970s-bug-that-still-haunts-modern-ai-9ec34e32a617",
+  "normalized_url": "https://vegapunk.medium.com/that-1970s-bug-that-still-haunts-modern-ai-9ec34e32a617",
+  "source_type": "medium",
+  "title": "That 1970s Bug That Still Haunts Modern AI",
+  "author": "Sumit Shaw",
+  "date": "2025-07-01",
+  "text": "Member-only story\nThat 1970s Bug That Still Haunts Modern AI\n“Old bugs never die — they just evolve.”\nIn 1971, a subtle race condition brought down the launch of a NASA software system. In 2025, nearly the same logic flaw showed up again — but this time, buried inside the auto-generated code of an AI model used by millions.\nHow can a 50-year-old bug resurface in bleeding-edge AI systems?\nThe answer: we’ve gotten better at generating code, but not necessarily at understanding it.\nThe Original Bug: A Brief History\nThe bug was buried in a multi-threaded communication system. Two signals — “ready” and “acknowledge” — could fire in the wrong order due to shared memory issues. On paper, it seemed flawless. In real time? Crash.\nThis wasn’t exotic. It was a classic race condition — where two parts of a program access shared data without proper synchronization.\nThe fix? Introduce mutexes or semaphores to prevent unsafe simultaneous access. Old school, but effective.\nHow It Reappeared — 50 Years Later\nRecently, I asked an LLM (large language model) to build a Python script with basic file I/O and multithreading. The output worked… until it didn’t.",
+  "excerpt": "Member-only story\nThat 1970s Bug That Still Haunts Modern AI\n“Old bugs never die — they just evolve.”\nIn 1971, a subtle race condition brought down the launch of a NASA software system. In 2025, nearly the same logic flaw showed up again — but this time, buried inside the auto-generated code of an AI model used by millions.\nHow can a 50-year-old bug resurface in bleeding-edge AI systems?\nThe answer: we’ve gotten better at generating code, but not necessarily at understanding it.\nThe Original Bug",
+  "word_count": 194,
+  "scraped_at": "2026-02-24T08:26:31.106935+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 7 (balancing)"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/18/swift-justhtml/",
+  "normalized_url": "https://simonwillison.net/2025/dec/18/swift-justhtml",
+  "source_type": "personal_blog",
+  "title": "swift-justhtml",
+  "author": "Simon Willison",
+  "date": "2025-12-18",
+  "text": "18th December 2025 - Link Blog\nswift-justhtml. First there was Emil Stenström's JustHTML in Python, then my justjshtml in JavaScript, then Anil Madhavapeddy's html5rw in OCaml, and now Kyle Howells has built a vibespiled dependency-free HTML5 parser for Swift using the same coding agent tricks against the html5lib-tests test suite.\nKyle ran some benchmarks to compare the different implementations:\n- Rust (html5ever) total parse time: 303 ms\n- Swift total parse time: 1313 ms\n- JavaScript total parse time: 1035 ms\n- Python total parse time: 4189 ms\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "18th December 2025 - Link Blog\nswift-justhtml. First there was Emil Stenström's JustHTML in Python, then my justjshtml in JavaScript, then Anil Madhavapeddy's html5rw in OCaml, and now Kyle Howells has built a vibespiled dependency-free HTML5 parser for Swift using the same coding agent tricks against the html5lib-tests test suite.\nKyle ran some benchmarks to compare the different implementations:\n- Rust (html5ever) total parse time: 303 ms\n- Swift total parse time: 1313 ms\n- JavaScript total pa",
+  "word_count": 127,
+  "scraped_at": "2026-02-24T08:18:06.087321+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

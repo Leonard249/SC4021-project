@@ -1,0 +1,12 @@
+{
+    "ID": "article_11701a791012af07",
+    "Source": "substack",
+    "Type": "Article",
+    "Author": "Tyler Adams",
+    "Title": "LLM workflows",
+    "Text": "LLM workflows\nI\u2019ve been waiting to write about LLMs because I\u2019ve had very little to say about LLM\u2019s that isn\u2019t been obvious. All prompt engineering advice I\u2019ve had and came across online distilled down to:\nprompt better like you would to a human.\nTell the LLM to be good at it\u2019s job (fun quirk of LLMs is that it does the average of what it\u2019s seen, so careful prompting can deal with slop)\nand I don\u2019t need to tell you that. Most of my usage has been the obvious usage, and since I had nothing novel so say, I said nothing. However, lately I\u2019ve started to come across some non-obvious ways to use LLMs.\nSurgeon style programming\nWe can reorganize ourselves as a head surgeon from the surgical team in The Mythical Man Month. The book, from 50 years ago discusses that every surgical team needs a human language lawyer, human toolsmith, etc. but getting people to agree to that was hard\u2026",
+    "Score": 0,
+    "Date": "2024-09-22",
+    "Word_Count": 162,
+    "Comments": []
+}

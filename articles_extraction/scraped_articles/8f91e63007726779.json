@@ -1,0 +1,16 @@
+{
+  "url": "https://karpathy.ai/",
+  "normalized_url": "https://karpathy.ai",
+  "source_type": "personal_blog",
+  "title": "Andrej Karpathy",
+  "author": "Tianlin Shi; Andrej Karpathy; Linxi Fan; Jonathan Hernandez; Percy Liang",
+  "date": "2014-09-02",
+  "text": "2023 - 2024\nI came back to\nOpenAI where I built a new team working on midtraining and synthetic data generation.\n2015 - 2017\nI was a research scientist and a founding member at\nOpenAI.\n2011 - 2015\nMy PhD was focused on convolutional/recurrent neural networks and their applications in computer vision, natural language processing and their intersection. My adviser was\nFei-Fei Li at the Stanford Vision Lab and I also had the pleasure to work with\nDaphne Koller,\nAndrew Ng,\nSebastian Thrun and\nVladlen Koltun along the way during the first year rotation program.\nI designed and was the primary instructor for the first deep learning class Stanford -\nCS 231n: Convolutional Neural Networks for Visual Recognition. The class became one of the largest at Stanford and has grown from 150 enrolled in 2015 to 330 students in 2016, and 750 students in 2017.\nAlong the way I squeezed in 3 internships at (baby) Google Brain in 2011 working on learning-scale unsupervised learning from videos, then again in Google Research in 2013 working on large-scale supervised learning on YouTube videos, and finally at DeepMind in 2015 working on the deep reinforcement learning team with\nKoray Kavukcuoglu and\nVlad Mnih.\n2009 - 2011\nMSc at the University of British Columbia where I worked with\nMichiel van de Panne on learning controllers for physically-simulated figures (i.e., machine-learning for agile robotics but in a physical simulation).\n2005 - 2009\nBSc at the University of Toronto with a double major in computer science and physics and a minor in math. This is where I first got into deep learning, attending\nGeoff Hinton's class and reading groups.",
+  "excerpt": "2023 - 2024\nI came back to\nOpenAI where I built a new team working on midtraining and synthetic data generation.\n2015 - 2017\nI was a research scientist and a founding member at\nOpenAI.\n2011 - 2015\nMy PhD was focused on convolutional/recurrent neural networks and their applications in computer vision, natural language processing and their intersection. My adviser was\nFei-Fei Li at the Stanford Vision Lab and I also had the pleasure to work with\nDaphne Koller,\nAndrew Ng,\nSebastian Thrun and\nVladle",
+  "word_count": 273,
+  "scraped_at": "2026-02-24T08:06:20.735761+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "karpathy.ai vibe coding OR AI OR copilot OR cursor"
+  ]
+}

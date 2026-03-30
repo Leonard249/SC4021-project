@@ -1,0 +1,12 @@
+{
+    "ID": "article_9770e9fef8f01b74",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Civil Learning",
+    "Title": "Claude Code Agent Teams: Run Multiple AI Agents in Parallel",
+    "Text": "Member-only story\nClaude Code Agent Teams: Run Multiple AI Agents in Parallel\nIf you\u2019ve ever tried to refactor a large codebase with a single AI assistant, you\u2019ve probably felt this pain: too many files, too many dependencies, too many things that could go wrong.\nYou ask the model to \u201chandle it all,\u201d and it either:\n- Misses edge cases\n- Overwrites changes\n- Or gets stuck coordinating its own thoughts\nThe problem isn\u2019t intelligence. It\u2019s coordination.\nThat\u2019s exactly what Claude Code Agent Teams tries to fix.\nThe Core Idea\nAgent Teams lets you run multiple Claude instances at the same time, all working on the same task, but from different angles \u2014 and talking to each other.\nThink of it like this:\n- One Claude becomes the team lead\n- The lead spawns teammates\n- Each teammate owns a specific responsibility\n- Everyone shares a task list and can message each other directly\nThis is not \u201cone AI pretending to multitask.\u201d\nThese are independent sessions with shared coordination.",
+    "Score": 0,
+    "Date": "2026-02-24",
+    "Word_Count": 168,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_a482f1ee2eb1bd9e",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Deo Wetton",
+    "Title": "Vibe Coding Is Killing Open Source",
+    "Text": "Member-only story\nVibe Coding Is Killing Open Source\nThe prosperity of Vibe Coding may be built on the ruins of the open-source ecosystem.\nOver the past year, Vibe Coding has almost completely rewritten the way programming works.\nYou no longer need to \u201cwrite\u201d code line by line yourself. Just tell Cursor, Claude, or Copilot what feature you want, which tech stack to use, and preferably that it should \u201cfeel like a certain product,\u201d and let AI handle the rest.\nMany people who previously couldn\u2019t write code now, for the first time, have the ability to \u201cbuild something.\u201d From an individual perspective, this is almost a golden age of software development.\nBut there is an overlooked premise here: AI does not create code out of thin air. It calls upon and assembles the accumulated wisdom of humanity. When you say, \u201cHelp me build a website,\u201d AI is quietly referencing the logic and structure accumulated across countless open-source projects on GitHub.\nThe core capability of Vibe Coding is built precisely on learning from and recombining these open-source codebases.\nRecently, a research team from Central European University and the Kiel Institute for the World Economy published a paper titled \u201cVibe Coding Kills Open Source\u201d (https://arxiv.org/pdf/2601.15494v1), revealing the hidden crisis behind the prosperity of Vibe\u2026",
+    "Score": 0,
+    "Date": "2026-02-23",
+    "Word_Count": 211,
+    "Comments": []
+}

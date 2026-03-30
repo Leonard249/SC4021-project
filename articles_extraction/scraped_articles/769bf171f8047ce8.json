@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/18/google-antigravity/",
+  "normalized_url": "https://simonwillison.net/2025/nov/18/google-antigravity",
+  "source_type": "personal_blog",
+  "title": "Google Antigravity",
+  "author": "Simon Willison",
+  "date": "2025-11-18",
+  "text": "18th November 2025 - Link Blog\nGoogle Antigravity. Google's other major release today to accompany Gemini 3 Pro. At first glance Antigravity is yet another VS Code fork Cursor clone - it's a desktop application you install that then signs in to your Google account and provides an IDE for agentic coding against their Gemini models.\nWhen you look closer it's actually a fair bit more interesting than that.\nThe best introduction right now is the official 14 minute Learn the basics of Google Antigravity video on YouTube, where product engineer Kevin Hou (who previously worked at Windsurf) walks through the process of building an app.\nThere are some interesting new ideas in Antigravity. The application itself has three \"surfaces\" - an agent manager dashboard, a traditional VS Code style editor and deep integration with a browser via a new Chrome extension. This plays a similar role to Playwright MCP, allowing the agent to directly test the web applications it is building.\nAntigravity also introduces the concept of \"artifacts\" (confusingly not at all similar to Claude Artifacts). These are Markdown documents that are automatically created as the agent works, for things like task lists, implementation plans and a \"walkthrough\" report showing what the agent has done once it finishes.\nI tried using Antigravity to help add support for Gemini 3 to my llm-gemini\nplugin.\nIt worked OK at first then gave me an \"Agent execution terminated due to model provider overload. Please try again later\" error. I'm going to give it another go after they've had a chance to work through those initial launch jitters.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "18th November 2025 - Link Blog\nGoogle Antigravity. Google's other major release today to accompany Gemini 3 Pro. At first glance Antigravity is yet another VS Code fork Cursor clone - it's a desktop application you install that then signs in to your Google account and provides an IDE for agentic coding against their Gemini models.\nWhen you look closer it's actually a fair bit more interesting than that.\nThe best introduction right now is the official 14 minute Learn the basics of Google Antigrav",
+  "word_count": 304,
+  "scraped_at": "2026-02-24T08:21:22.490930+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

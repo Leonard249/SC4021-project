@@ -1,0 +1,12 @@
+{
+    "ID": "article_171ec785f019680c",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "AI made coding more enjoyable",
+    "Text": "AI made coding more enjoyable\nTo me, one of the most annoying parts of software engineering is writing code that doesn\u2019t require thinking. It\u2019s just a typing exercise, and that\u2019s boring.\nThat includes code outside of the happy path, like error handling and input validation. But also other typing exercises like processing an entity with 10 different types, where each type must be handled separately. Or propagating one property through the system on 5 different types in multiple layers.\nWriting tests is another enjoyable use-case. I design the architecture so the code is testable, write the first test so the AI knows how they should be written, and which cases should be tested. Then I tell the AI each test case and it writes them for me.\nThe only thing where I don\u2019t trust it yet is when code must be copy pasted. I can\u2019t trace if it actually cuts and pastes code, or if the LLM brain is in between. In the latter case there may be tiny errors that I\u2019d never find, so I\u2019m not doing that. But maybe I\u2019m paranoid.\nIn any case, this is incredible. In the past years I\u2019ve been handed tools that do the most tedious tasks of software engineering for me. And I love it.",
+    "Score": 0,
+    "Date": "2026-02-19",
+    "Word_Count": 212,
+    "Comments": []
+}

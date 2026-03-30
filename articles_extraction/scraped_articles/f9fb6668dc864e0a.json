@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Feb/13/anthropic-public-benefit-mission/",
+  "normalized_url": "https://simonwillison.net/2026/feb/13/anthropic-public-benefit-mission",
+  "source_type": "personal_blog",
+  "title": "Anthropic's public benefit mission",
+  "author": "Simon Willison",
+  "date": "2026-02-13",
+  "text": "13th February 2026\nSomeone asked if there was an Anthropic equivalent to OpenAI's IRS mission statements over time.\nAnthropic are a \"public benefit corporation\" but not a non-profit, so they don't have the same requirements to file public documents with the IRS every year.\nBut when I asked Claude it ran a search and dug up this Google Drive folder where Zach Stein-Perlman shared Certificate of Incorporation documents he obtained from the State of Delaware!\nAnthropic's are much less interesting that OpenAI's. The earliest document from 2021 states:\nThe specific public benefit that the Corporation will promote is to responsibly develop and maintain advanced Al for the cultural, social and technological improvement of humanity.\nEvery subsequent document up to 2024 uses an updated version which says:\nThe specific public benefit that the Corporation will promote is to responsibly develop and maintain advanced AI for the long term benefit of humanity.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "13th February 2026\nSomeone asked if there was an Anthropic equivalent to OpenAI's IRS mission statements over time.\nAnthropic are a \"public benefit corporation\" but not a non-profit, so they don't have the same requirements to file public documents with the IRS every year.\nBut when I asked Claude it ran a search and dug up this Google Drive folder where Zach Stein-Perlman shared Certificate of Incorporation documents he obtained from the State of Delaware!\nAnthropic's are much less interesting t",
+  "word_count": 189,
+  "scraped_at": "2026-02-24T08:20:22.769415+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

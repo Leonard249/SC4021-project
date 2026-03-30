@@ -1,0 +1,16 @@
+{
+  "url": "https://openai.com/sora/",
+  "normalized_url": "https://openai.com/sora",
+  "source_type": "corporate_blog",
+  "title": "Sora",
+  "author": null,
+  "date": null,
+  "text": "The new Sora app\nTurn your ideas into videos with hyperreal motion and sound.\nRolling out now.\nFrom words to worlds\nStart with a prompt or upload an image to create videos with unprecedented realism in any style: cinematic, animated, photorealistic, or surreal.\nCreate a funny video|\na retro futuristic world|\nYou’re the star\nCast yourself and your friends in videos as characters. You control how or when your character is used.\nRemix everything\nTake someone else’s creation and put your spin on it. Swap characters, change the vibe, add new scenes, or extend the story.\nOne wide shot of @daniel and @minnia working together in a drab cubicle office except Daniel only responds with meows|\nCue the sound\nMusic, sound effects, and dialogue are automatically included in videos to make every scene complete.",
+  "excerpt": "The new Sora app\nTurn your ideas into videos with hyperreal motion and sound.\nRolling out now.\nFrom words to worlds\nStart with a prompt or upload an image to create videos with unprecedented realism in any style: cinematic, animated, photorealistic, or surreal.\nCreate a funny video|\na retro futuristic world|\nYou’re the star\nCast yourself and your friends in videos as characters. You control how or when your character is used.\nRemix everything\nTake someone else’s creation and put your spin on it.",
+  "word_count": 134,
+  "scraped_at": "2026-02-24T08:12:41.466619+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "openai.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

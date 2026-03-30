@@ -1,0 +1,12 @@
+{
+    "ID": "article_74aec9908c9a667d",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A Software Library with No Code",
+    "Text": "10th January 2026 - Link Blog\nA Software Library with No Code. Provocative experiment from Drew Breunig, who designed a new library for time formatting (\"3 hours ago\" kind of thing) called \"whenwords\" that has no code at all, just a carefully written specification, an AGENTS.md and a collection of conformance tests in a YAML file.\nPass that to your coding agent of choice, tell it what language you need and it will write it for you on demand!\nThis meshes nearly with my recent interest in conformance suites. If you publish good enough language-independent tests it's pretty astonishing how far today's coding agents can take you!\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2026-01-10",
+    "Word_Count": 146,
+    "Comments": []
+}

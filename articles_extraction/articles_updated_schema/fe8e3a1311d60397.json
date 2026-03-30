@@ -1,0 +1,12 @@
+{
+    "ID": "article_fe8e3a1311d60397",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "simonw/actions-latest",
+    "Text": "28th December 2025 - Link Blog\nsimonw/actions-latest. Today in extremely niche projects, I got fed up of Claude Code creating GitHub Actions workflows for me that used stale actions: actions/setup-python@v4\nwhen the latest is actions/setup-python@v6\nfor example.\nI couldn't find a good single place listing those latest versions, so I had Claude Code for web (via my phone, I'm out on errands) build a Git scraper to publish those versions in one place:\nhttps://simonw.github.io/actions-latest/versions.txt\nTell your coding agent of choice to fetch that any time it wants to write a new GitHub Actions workflows.\n(I may well bake this into a Skill.)\nHere's the first and second transcript I used to build this, shared using my claude-code-transcripts tool (which just gained a search feature.)\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-12-28",
+    "Word_Count": 163,
+    "Comments": []
+}

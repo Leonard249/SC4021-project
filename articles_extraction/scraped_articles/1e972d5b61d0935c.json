@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/74198524/can-github-copilot-draw-diagrams",
+  "normalized_url": "https://stackoverflow.com/questions/74198524/can-github-copilot-draw-diagrams",
+  "source_type": "stackoverflow",
+  "title": "Can GitHub Copilot draw diagrams?",
+  "author": "User",
+  "date": "2023-09-17",
+  "text": "Have used GitHub Copilot for several months, and it is great for coding and other. Just wonder, can GitHub Copilot draw diagrams? like Sequence Diagram, Design Pattern or Strategy Diagram?\n4 Answers\nWell, I think that's rather ChatGPT territory. I've used ChatGPT-4 to create various mermaid diagram types. It cannot show them to you so far, but I like creating specifications in markdown format and write them with IntelliJ with the mermaid plugin installed, which can show these nicely. If you publish those markdown files on Github, that'll also show many mermaid diagram types.\nSince Github Copilot is kind of ChatGPT's little brother you might have some success if you write a text that contains information about the diagram you want to draw, say that you want e.g. a sequence diagram of that and insert\n```mermaid\nsequenceDiagram\nand get Copilot to complete that. I just tried and it generated an actual diagram, though it didn't make much sense in my case. I guess that depends on your text.\nI had ChatGPT-4 create some svg of dialog wireframes, for instance in here. That worked very nicely, though sometimes a little buggy. If you try something like that with Copilot, you get something but that doesn't really work. I guess you have to wait for half a year or a year for something like that. :-)",
+  "excerpt": "Have used GitHub Copilot for several months, and it is great for coding and other. Just wonder, can GitHub Copilot draw diagrams? like Sequence Diagram, Design Pattern or Strategy Diagram?\n4 Answers\nWell, I think that's rather ChatGPT territory. I've used ChatGPT-4 to create various mermaid diagram types. It cannot show them to you so far, but I like creating specifications in markdown format and write them with IntelliJ with the mermaid plugin installed, which can show these nicely. If you publ",
+  "word_count": 224,
+  "scraped_at": "2026-02-24T08:19:05.611109+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

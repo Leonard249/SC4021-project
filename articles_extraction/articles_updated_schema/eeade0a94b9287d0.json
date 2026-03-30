@@ -1,0 +1,12 @@
+{
+    "ID": "article_eeade0a94b9287d0",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Ishan",
+    "Title": "How to use GitHub Copilot for multiple files?",
+    "Text": "I am looking to explore GitHub Copilot. I don't have in-depth coding experience and I graduated just a few months ago. I was planning to build a small website to explore what GitHub copilot has to offer.\nWhen I added comments for the copilot to generate code, it wasn't generating the required code. In the html file, I commented that I want to create text with glitch animations and a section containing the header, navigation icon and to play a video on loop. It wasn't able to generate code that I wanted. So, how do I use it for code that requires reference for other files too(.css or .js files). I'm still learning about front end since I've most experience in C, C++ and Core Java.",
+    "Score": 0,
+    "Date": "2023-06-19",
+    "Word_Count": 126,
+    "Comments": []
+}

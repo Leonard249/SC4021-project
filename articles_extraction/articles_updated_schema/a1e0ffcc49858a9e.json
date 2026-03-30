@@ -1,0 +1,12 @@
+{
+    "ID": "article_a1e0ffcc49858a9e",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Steve Krouse",
+    "Text": "12th November 2025\nThe fact that MCP is a difference surface from your normal API allows you to ship MUCH faster to MCP. This has been unlocked by inference at runtime\nNormal APIs are promises to developers, because developer commit code that relies on those APIs, and then walk away. If you break the API, you break the promise, and you break that code. This means a developer gets woken up at 2am to fix the code\nBut MCP servers are called by LLMs which dynamically read the spec every time, which allow us to constantly change the MCP server. It doesn't matter! We haven't made any promises. The LLM can figure it out afresh every time\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-12",
+    "Word_Count": 156,
+    "Comments": []
+}

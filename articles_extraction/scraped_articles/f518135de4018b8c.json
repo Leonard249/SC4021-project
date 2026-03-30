@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@richardhightower/activating-agent-skills-at-the-right-time-with-agent-rulez-c148281667ab",
+  "normalized_url": "https://medium.com/@richardhightower/activating-agent-skills-at-the-right-time-with-agent-rulez-c148281667ab",
+  "source_type": "medium",
+  "title": "Activating Agent Skills at the Right Time with Agent RuleZ",
+  "author": "Rick Hightower",
+  "date": "2026-02-22",
+  "text": "Member-only story\nActivating Agent Skills at the Right Time with Agent RuleZ\nWhy skill activation should be event-driven, not manual; and how a policy engine becomes a skill switchboard.\nIf Your Agent Needs You to Remember Which Skill to Run, You Have Already Lost\nSkills are powerful. You install them. You configure them. You forget they exist. Three weeks later you are writing a CDK construct by hand because you forgot your/cdk-construct\nskill was sitting right there. The agent did not remind you. Why would it? It does not know what you are about to do until you tell it.\nThis is not a configuration problem. It is a timing problem.\nThe difference between “knowing a skill exists” and “being reminded at the right moment” is the difference between a reference manual and a co-pilot. Reference manuals sit on shelves. Co-pilots tap your shoulder.\nMost developers who use AI coding agents have experienced the skill gap firsthand. You install a skill for React components, another for database migrations, a third for CDK infrastructure. You list them in CLAUDE.md/AGENTS.md or your agent’s configuration file. For the first few hours, everything works. The agent knows about the skills. It references them. It uses them.",
+  "excerpt": "Member-only story\nActivating Agent Skills at the Right Time with Agent RuleZ\nWhy skill activation should be event-driven, not manual; and how a policy engine becomes a skill switchboard.\nIf Your Agent Needs You to Remember Which Skill to Run, You Have Already Lost\nSkills are powerful. You install them. You configure them. You forget they exist. Three weeks later you are writing a CDK construct by hand because you forgot your/cdk-construct\nskill was sitting right there. The agent did not remind y",
+  "word_count": 202,
+  "scraped_at": "2026-02-24T08:26:10.001455+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 4 (balancing)"
+  ]
+}

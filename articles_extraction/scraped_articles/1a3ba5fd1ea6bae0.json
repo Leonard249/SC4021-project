@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/13/openai-codex-cli/",
+  "normalized_url": "https://simonwillison.net/2025/dec/13/openai-codex-cli",
+  "source_type": "personal_blog",
+  "title": "A quote from OpenAI Codex CLI",
+  "author": "Simon Willison",
+  "date": "2025-12-13",
+  "text": "13th December 2025\nHow to use a skill (progressive disclosure):\n- After deciding to use a skill, open its\nSKILL.md\n. Read only enough to follow the workflow.- If\nSKILL.md\npoints to extra folders such asreferences/\n, load only the specific files needed for the request; don't bulk-load everything.- If\nscripts/\nexist, prefer running or patching them instead of retyping large code blocks.- If\nassets/\nor templates exist, reuse them instead of recreating from scratch.Description as trigger: The YAML\ndescription\ninSKILL.md\nis the primary trigger signal; rely on it to decide applicability. If unsure, ask a brief clarification before proceeding.\n— OpenAI Codex CLI, core/src/skills/render.rs, full prompt\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "13th December 2025\nHow to use a skill (progressive disclosure):\n- After deciding to use a skill, open its\nSKILL.md\n. Read only enough to follow the workflow.- If\nSKILL.md\npoints to extra folders such asreferences/\n, load only the specific files needed for the request; don't bulk-load everything.- If\nscripts/\nexist, prefer running or patching them instead of retyping large code blocks.- If\nassets/\nor templates exist, reuse them instead of recreating from scratch.Description as trigger: The YAML\nd",
+  "word_count": 146,
+  "scraped_at": "2026-02-24T08:17:37.951319+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

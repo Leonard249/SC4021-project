@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2025/05/08/moving-beyond-velocity-measuring-real-business-impact/",
+  "normalized_url": "https://stackoverflow.blog/2025/05/08/moving-beyond-velocity-measuring-real-business-impact",
+  "source_type": "personal_blog",
+  "title": "Moving beyond velocity: Measuring real business impact",
+  "author": "Katja Skafar",
+  "date": "2025-05-08",
+  "text": "In this episode of Leaders of Code, Dan Lines, cofounder and COO of LinearB; Ben Matthews, Senior Director of Engineering at Stack Overflow; and host Ben Popper talk about why velocity should be a diagnostic tool, not the primary goal of engineering teams. They also touch on the need for cross-disciplinary collaboration to align engineering with business objectives.\nThey also discuss:\n- AI's potential to automate repetitive tasks, allowing engineers to focus on more complex work.\n- The challenges of scaling organizations and the importance of centralized developer experience teams to improve productivity.\n- How non-technical staff can contribute to engineering tasks through the democratization of technology, enabling more innovation.\nEpisode notes:",
+  "excerpt": "In this episode of Leaders of Code, Dan Lines, cofounder and COO of LinearB; Ben Matthews, Senior Director of Engineering at Stack Overflow; and host Ben Popper talk about why velocity should be a diagnostic tool, not the primary goal of engineering teams. They also touch on the need for cross-disciplinary collaboration to align engineering with business objectives.\nThey also discuss:\n- AI's potential to automate repetitive tasks, allowing engineers to focus on more complex work.\n- The challenge",
+  "word_count": 112,
+  "scraped_at": "2026-02-24T08:20:54.597666+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog multiple category sweep"
+  ]
+}

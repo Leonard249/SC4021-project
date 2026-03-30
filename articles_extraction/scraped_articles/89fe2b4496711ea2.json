@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/66588240/aws-copilot-fails-to-create-pipeline",
+  "normalized_url": "https://stackoverflow.com/questions/66588240/aws-copilot-fails-to-create-pipeline",
+  "source_type": "stackoverflow",
+  "title": "AWS copilot fails to create pipeline",
+  "author": "User",
+  "date": "2021-03-11",
+  "text": "I have a repo for all my docker stuff.\nI would like to store copilot configs here as well, instead of adding a new copilot/ directory to the repo of every micro service. As far as I know this should be possible.\nSo now I have one single copilot dir in a separate repo which looks like this:\ncopilot\n.workspace\n...\n- some-service\n- mainfest.yml\n- other-service\n- manifest.yml\netc. This works, I can add more services and I can deploy them.\nHowever I tried to create a pipeline and that failed. According to the docs the pipeline should be able to handle multiple services, but I don't understand how.\nI can run\ncopilot pipeline init\nthen I pushed the resulting files to my repo.\nThen I tried:\ncopilot pipeline update\nBut this returns an error:\nACTION REQUIRED! Go to https://console.aws.amazon.com/codesuite/settings/connections to update the status of connection xy-user-service from PENDING to AVAILABLE.\n✘ Failed to create a new pipeline: pipeline-myApp-user-service.\n✘ create pipeline: check if changeset is empty: create change set copilot-51ef519a-711b-4126-bfbd-3d618ef824a5 for stack pipeline-myApp-user-service: ValidationError: Template format error: Unrecognized resource types: [AWS::CodeStarConnections::Connection]\nstatus code: 400, request id: 8a87f62a-ae14-4fe3-9a3e-8b965d2af794: describe change set copilot-51ef519a-711b-4126-bfbd-3d618ef824a5 for stack pipeline-myApp-user-service: ValidationError: Stack [pipeline-myApp-user-service] does not exist\nstatus code: 400, request id: 44927d7e-2514-466a-94ff-51e932042737\nThe xy-user-service connection didn't exist. The list of connections is empty. I tried to create it, linking my Bitbucket to AWS. But the error is still there..\nWhat am I doing wrong?\nAm I supposed to run copilot app init\nin the root dir of each and every micro service (they are in separate repos) and then should I create a separate pipeline for each?\nIs it not possible to just store copilot configs in one place?\nThanks in advance!",
+  "excerpt": "I have a repo for all my docker stuff.\nI would like to store copilot configs here as well, instead of adding a new copilot/ directory to the repo of every micro service. As far as I know this should be possible.\nSo now I have one single copilot dir in a separate repo which looks like this:\ncopilot\n.workspace\n...\n- some-service\n- mainfest.yml\n- other-service\n- manifest.yml\netc. This works, I can add more services and I can deploy them.\nHowever I tried to create a pipeline and that failed. Accordi",
+  "word_count": 288,
+  "scraped_at": "2026-02-24T08:20:49.963143+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/27/deepseek-math-v2/",
+  "normalized_url": "https://simonwillison.net/2025/nov/27/deepseek-math-v2",
+  "source_type": "personal_blog",
+  "title": "deepseek-ai/DeepSeek-Math-V2",
+  "author": "Simon Willison",
+  "date": "2025-11-27",
+  "text": "27th November 2025 - Link Blog\ndeepseek-ai/DeepSeek-Math-V2. New on Hugging Face, a specialist mathematical reasoning LLM from DeepSeek. This is their entry in the space previously dominated by proprietary models from OpenAI and Google DeepMind, both of which achieved gold medal scores on the International Mathematical Olympiad earlier this year.\nWe now have an open weights (Apache 2 licensed) 685B, 689GB model that can achieve the same. From the accompanying paper:\nDeepSeekMath-V2 demonstrates strong performance on competition mathematics. With scaled test-time compute, it achieved gold-medal scores in high-school competitions including IMO 2025 and CMO 2024, and a near-perfect score on the undergraduate Putnam 2024 competition.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "27th November 2025 - Link Blog\ndeepseek-ai/DeepSeek-Math-V2. New on Hugging Face, a specialist mathematical reasoning LLM from DeepSeek. This is their entry in the space previously dominated by proprietary models from OpenAI and Google DeepMind, both of which achieved gold medal scores on the International Mathematical Olympiad earlier this year.\nWe now have an open weights (Apache 2 licensed) 685B, 689GB model that can achieve the same. From the accompanying paper:\nDeepSeekMath-V2 demonstrates ",
+  "word_count": 144,
+  "scraped_at": "2026-02-24T08:21:46.712057+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

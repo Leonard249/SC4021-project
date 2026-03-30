@@ -1,0 +1,12 @@
+{
+    "ID": "article_2f3294823578941b",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": "Alex H Lee",
+    "Title": "Redis Creator on AI's Impact on Programming | Alex H. Lee posted on the topic | LinkedIn",
+    "Text": "Antirez just wrote the most honest take on AI + programming I've read. No hype. No doom. Just reality from the person who created Redis. Recent week for him: - Modified linenoise for UTF-8 support with full testing framework (hours vs. weeks) - Fixed transient Redis test failures autonomously - Built a pure C BERT inference library in 5 minutes - Reproduced weeks of Redis Streams work in 20 minutes The line that hit me: \"Writing code is no longer needed for the most part. It is now a lot more interesting to understand what to do, and how to do it.\" I'm living this building AI-powered document processing for HOAs. The bottleneck isn't implementation anymore - it's problem understanding, architecture decisions, knowing what to build. Like the open source movement of the 90s, this could level the playing field. But only if we engage with the tools instead of ignoring them. https://lnkd.in/gCDpS6Fc Worth your time if you're building, coding, or thinking about where this is headed.\nThanks for posting! Love this quote from antirez at the end and really relate to it: the fun is still there!!! > Yes, maybe you think that you worked so hard to learn coding, and now machines are doing it for you. But what was the fire inside you, when you coded till night to see your project working? It was building. And now you can build more and better, if you find your way to use AI effectively. The fun is still there, untouched. Side projects or ideas you had that seemed \u201cunreasonable\u201d to work on due to time demands can now be unreasonabled in an hour or two with great results!\nGreat read!",
+    "Score": 0,
+    "Date": "2026-01-11",
+    "Word_Count": 282,
+    "Comments": []
+}

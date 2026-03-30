@@ -1,0 +1,12 @@
+{
+    "ID": "article_8f048aa3f09f7298",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": "Kiran Maan",
+    "Title": "Why I Don\u2019t Use Postman Anymore\u2026",
+    "Text": "Member-only story\nWhy I Don\u2019t Use Postman Anymore\u2026\nFrom 100 clicks to 10 lines of code\u2026\nI used to think Postman was the best tool for APIs. Everyone around me was using it. So I did too.\nFor more than a year, I used Postman for almost everything \u2014 testing APIs, checking responses, sending headers, and debugging bugs.\nBut a few months ago, I quietly stopped using it. And I don\u2019t miss it at all.\nIn this blog, I will explain why I quit Postman, what I use now, and why it might be time for you to stop using it too.\nHow I Started Using Postman\nWhen I first started learning backend development, Postman felt like magic.",
+    "Score": 0,
+    "Date": "2025-06-12",
+    "Word_Count": 118,
+    "Comments": []
+}

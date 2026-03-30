@@ -1,0 +1,16 @@
+{
+  "url": "https://pub.towardsai.net/claude-cowork-is-a-new-ai-coworker-best-use-cases-4a6e3a855780",
+  "normalized_url": "https://pub.towardsai.net/claude-cowork-is-a-new-ai-coworker-best-use-cases-4a6e3a855780",
+  "source_type": "personal_blog",
+  "title": "Claude CoWork is a New “AI Coworker” — Best Use Cases",
+  "author": "Nikhil",
+  "date": "2026-02-23",
+  "text": "Member-only story\nClaude CoWork is a New “AI Coworker” — Best Use Cases\nClaude CoWork is a new “AI coworker” mode inside the Claude Desktop app that doesn’t just chat with you — it actually works on your files, runs multi-step workflows, and produces finished outputs on your Mac with very little supervision.\nWhat Claude Cowork actually is?\nCoWork is a special model in claude desktop app currently available only for macOS users in research preview where you can give claude access to your computer folders and then can ask tasks to perform autonomously.\nClaude Cowork can then plan the steps, read your files, and if required edit those filtes, accordingly create new files of different formats like spreadsheets, docs and presentations in order to achieve the task given to it.\nIn simplier terms, this is like a personal assistant suitable for non tech enthusiasts to automate their tasks. this is like having scripts written for your repetitive tasks by simply giving prompts in natural language.\nKey mindset shift: normal chatbots give advice; CoWork is about action. Traditional AI tells you how to do something; CoWork actually does it for you in your workspace.",
+  "excerpt": "Member-only story\nClaude CoWork is a New “AI Coworker” — Best Use Cases\nClaude CoWork is a new “AI coworker” mode inside the Claude Desktop app that doesn’t just chat with you — it actually works on your files, runs multi-step workflows, and produces finished outputs on your Mac with very little supervision.\nWhat Claude Cowork actually is?\nCoWork is a special model in claude desktop app currently available only for macOS users in research preview where you can give claude access to your computer",
+  "word_count": 194,
+  "scraped_at": "2026-02-24T08:11:13.411984+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium diverse tags batch 1"
+  ]
+}

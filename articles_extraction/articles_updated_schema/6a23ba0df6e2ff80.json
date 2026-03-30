@@ -1,0 +1,12 @@
+{
+    "ID": "article_6a23ba0df6e2ff80",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "AI Engineering",
+    "Title": "Anthropic Launches Claude Code Security: AI Begins Taking Over Code Security",
+    "Text": "Member-only story\nAnthropic Launches Claude Code Security: AI Begins Taking Over Code Security\nAnthropic has just introduced Claude Code Security, a tool that can scan codebases for vulnerabilities and generate repair patches. This isn\u2019t just another static analysis tool \u2014 it\u2019s an AI security expert that truly understands code logic.\nThe announcement immediately impacted the cybersecurity sector\u2019s stock prices. CrowdStrike dropped 7.66%, Okta fell 9.31%, and Cloudflare declined 7.19%. This isn\u2019t the first time \u2014 whenever AI demonstrates the ability to automate core functions of an industry, related stocks always take the initial hit.\nSecurity Detection Beyond Pattern Matching\nTraditional security tools rely on rule databases and can only identify known vulnerability patterns. They can catch common issues like exposed passwords and outdated encryption algorithms, but they\u2019re powerless against complex business logic flaws and permission control vulnerabilities.\nClaude Code Security takes a completely different approach. It reads code like a human security researcher: understanding how components interact, tracking data flow paths through\u2026",
+    "Score": 0,
+    "Date": "2026-02-22",
+    "Word_Count": 162,
+    "Comments": []
+}

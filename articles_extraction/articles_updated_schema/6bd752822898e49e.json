@@ -1,0 +1,12 @@
+{
+    "ID": "article_6bd752822898e49e",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Thomas Sch\u00e4tzing",
+    "Title": "vs code copilot icon gone",
+    "Text": "Here is the solution that worked for me. Copilot suddenly stopped working for me on 1 specific remote server (I'm using Remote SSH plugin). So I switched to older version of Copilot (4 days ago), and then rebooted connection, that solved the problem immidiately.\nBellow is the list of things I tried and they didn't work, but you can try them for yourself:\n- reboot vscode\n- reinstall copilot locally and on remote server\n- completely delete .vscode-server folder from remote server\nrm -rf ~/.vscode-server\nand then reload vs code\n- sign-out from github from vs code app and sign-in again\n- turned off all plugins and started only 1 plugin of copilot\nMy conclution: current version of copilot is buggy, I'll just wait for 2-3 weeks for new version where bug was fixed.",
+    "Score": 0,
+    "Date": "2025-09-24",
+    "Word_Count": 134,
+    "Comments": []
+}

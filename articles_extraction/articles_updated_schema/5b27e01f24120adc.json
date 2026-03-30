@@ -1,0 +1,12 @@
+{
+    "ID": "article_5b27e01f24120adc",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Bhagya Rana",
+    "Title": "Claude AI Agents Are Now Writing Code That Runs Itself \u2014 How Far Can This Go?",
+    "Text": "Member-only story\nClaude AI Agents Are Now Writing Code That Runs Itself \u2014 How Far Can This Go?\nThe Rise of Autonomously Looping Prompts and Task Chains\nClaude AI\u2019s autonomous agents are now capable of generating and executing self-evolving code \u2014 ushering in a new era of AI self-direction and code automation.\nIn July 2025, something quietly revolutionary happened in the world of artificial intelligence. Anthropic\u2019s Claude AI, known for its thoughtful reasoning and alignment safeguards, received a significant upgrade \u2014 one that is now redefining how we think about autonomous code generation. We\u2019re no longer just feeding AI a prompt and watching it return output. Instead, Claude\u2019s agents are generating, refining, and running their own code in continuous loops, guided by long-context reasoning and self-improving task chains.\nThis isn\u2019t science fiction. It\u2019s agentic AI in action \u2014 and it\u2019s happening faster than most realize.\nFrom Prompt to Process: The New Loop of Intelligence\nUntil recently, AI tools \u2014 even the most advanced \u2014 were reactive. You\u2019d prompt them, they\u2019d respond. Simple. But Claude\u2019s latest evolution introduces something far more profound: autonomous prompt loops.",
+    "Score": 0,
+    "Date": "2025-07-28",
+    "Word_Count": 184,
+    "Comments": []
+}

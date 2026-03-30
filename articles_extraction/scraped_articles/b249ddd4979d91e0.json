@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/design-bootcamp/from-claude-code-to-figma-cool-workflow-but-do-we-actually-need-it-4f46a58d9868",
+  "normalized_url": "https://medium.com/design-bootcamp/from-claude-code-to-figma-cool-workflow-but-do-we-actually-need-it-4f46a58d9868",
+  "source_type": "medium",
+  "title": "From Claude Code to Figma: Cool Workflow. But Do We Actually Need It?",
+  "author": "Bhinish Dhiman",
+  "date": "2026-02-23",
+  "text": "Member-only story\nFrom Claude Code to Figma: Cool Workflow. But Do We Actually Need It?\nFigma just announced Claude Code to Figma — a new integration that lets you take production code built in Claude Code, type “Send this to Figma,” and watch it appear on the Figma canvas as fully editable design layers.\nIt’s genuinely impressive.\nIt’s also worth asking: is this solving a real problem, or creating a more sophisticated version of the same friction?\n“Every tool that removes one handoff creates the illusion of progress — until you count the new handoffs it added.”\nWhat it actually does (the honest breakdown)\nBefore this existed, the workflow between code and design was broken in one direction:\n- Designers build in Figma → hand to developers → developers code it → and the Figma file goes stale.\n- Code evolves. Design file doesn’t. They diverge.\nClaude Code to Figma tries to fix the reverse direction:\nCode → Canvas, not just Canvas → Code.\nHere’s how it works:\n- Build something in Claude Code, preview it in your browser.\n- Type “Send this to Figma” in Claude Code.\n- A capture toolbar appears…",
+  "excerpt": "Member-only story\nFrom Claude Code to Figma: Cool Workflow. But Do We Actually Need It?\nFigma just announced Claude Code to Figma — a new integration that lets you take production code built in Claude Code, type “Send this to Figma,” and watch it appear on the Figma canvas as fully editable design layers.\nIt’s genuinely impressive.\nIt’s also worth asking: is this solving a real problem, or creating a more sophisticated version of the same friction?\n“Every tool that removes one handoff creates th",
+  "word_count": 193,
+  "scraped_at": "2026-02-24T08:20:42.294569+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com massive tag sweep"
+  ]
+}

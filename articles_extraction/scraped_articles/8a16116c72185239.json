@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@ThinkingLoop/7-times-claude-caught-my-logic-before-i-asked-cdd3c4b449a8",
+  "normalized_url": "https://medium.com/@thinkingloop/7-times-claude-caught-my-logic-before-i-asked-cdd3c4b449a8",
+  "source_type": "medium",
+  "title": "7 Times Claude Caught My Logic Before I Asked",
+  "author": "Thinking Loop",
+  "date": "2025-11-11",
+  "text": "Member-only story\n7 Times Claude Caught My Logic Before I Asked\nReal moments an AI co-pilot flagged bugs, blind spots, and shaky assumptions — saving hours and a little ego.\nSeven concrete examples where Claude pre-emptively debugged my logic — from off-by-ones to caching, SQL joins, and race conditions — plus prompts and snippets you can reuse.\nWe like to imagine we ask the perfect question and the AI returns the perfect answer. Reality: I ask a messy question, and Claude replies with, “Are you sure about that precondition?” And that’s the whole ballgame. The win isn’t just code generation — it’s the unsolicited guardrails. Here are seven times that “um, actually” saved me from myself.\n1) The Off-By-One That Hid in Plain Sight\nI was slicing a window of metrics to compute a rolling p95:\ndef p95(xs):\nk = int(len(xs) * 0.95)\nxs_sorted = sorted(xs)\nreturn xs_sorted[k] # bug: zero-indexed; 95th percentile should ceil-1\nBefore I asked for optimization, Claude highlighted: “If len(xs)=20\n, k=19\nreturns the 20th item; typical p95 uses ceil(0.95*n)-1\nand bounds checks.” It then proposed:\nimport math\ndef p95(xs):\nif not xs:\nreturn None\nxs_sorted = sorted(xs)…",
+  "excerpt": "Member-only story\n7 Times Claude Caught My Logic Before I Asked\nReal moments an AI co-pilot flagged bugs, blind spots, and shaky assumptions — saving hours and a little ego.\nSeven concrete examples where Claude pre-emptively debugged my logic — from off-by-ones to caching, SQL joins, and race conditions — plus prompts and snippets you can reuse.\nWe like to imagine we ask the perfect question and the AI returns the perfect answer. Reality: I ask a messy question, and Claude replies with, “Are you",
+  "word_count": 192,
+  "scraped_at": "2026-02-24T08:17:53.157967+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com targeted tag batch 2"
+  ]
+}

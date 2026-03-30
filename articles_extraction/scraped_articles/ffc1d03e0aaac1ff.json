@@ -1,0 +1,16 @@
+{
+  "url": "https://news.ycombinator.com/item?id=46913404",
+  "normalized_url": "https://news.ycombinator.com/item?id=46913404",
+  "source_type": "other_blog",
+  "title": "Hacker News",
+  "author": null,
+  "date": "2026-02-06",
+  "text": "Agentic coding (CC/Codex/Cursor/etc.) works best when the assistant can autonomously \"close the loop\", i.e. with shell access, a browser skill and full permissions (e.g. --dangerously-skip-permissions).\nThe naive approach of running it locally creates massive risk, both adversarial (\"lethal trifecta\") and accidental (rm -fr ~/). Since the agent needs to run dependencies and Docker-in-Docker remains a nightmare, it's natural to consider the decade-old `vagrant up` workflow based on local VMs for isolation and disk snapshots. See for example Emil Burzo's \"Running Claude Code dangerously (safely)\", on HN not even a month ago. However in 2026 paying the overhead of local VMs, especially on ARM CPUs, feels terrible.\nEnter fly.io's sprite backend: https://docs.sprites.dev/. In my (admittedly short) experience, sprites give me the best of all worlds — hardware‑isolated microVMs with fast startup, persistent disks, and checkpoint/restore — so I can keep a Vagrant‑style workflow without the VM overhead. As an added benefit, reduced latency to inference APIs makes the whole experience feel snappier.\nThis CLI tool provides me with a familiar command: `seven up` mirrors the old‑school `vagrant up` workflow, but is \"made of sprite\". Get it?\nGitHub: https://github.com/1to10partners/seven\nReferences:\n* Fly.io Sprite docs: https://docs.sprites.dev/\n* Fly.io Sprite announcement: https://fly.io/blog/code-and-let-live/\n* Fly.io Sprite technical explainer: https://fly.io/blog/design-and-implementation/\n* The “lethal trifecta” (Simon Willison): https://simonwillison.net/2025/Aug/9/bay-area-ai/\n* My AI adoption journey (Mitchell Hashimoto): https://mitchellh.com/writing/my-ai-adoption-journey\n* Running Claude Code dangerously safely (Emil Burzo): https://blog.emilburzo.com/2026/01/running-claude-code-dange...\n* HN: Running Claude Code dangerously safely: https://news.ycombinator.com/item?id=46690907\n* Ask HN: How are you sandboxing coding agents? https://news.ycombinator.com/item?id=46400129\n* Run Your Agent in Firejail and Stay Safe: https://softwareengineeringstandard.com/2025/12/15/ai-agents...",
+  "excerpt": "Agentic coding (CC/Codex/Cursor/etc.) works best when the assistant can autonomously \"close the loop\", i.e. with shell access, a browser skill and full permissions (e.g. --dangerously-skip-permissions).\nThe naive approach of running it locally creates massive risk, both adversarial (\"lethal trifecta\") and accidental (rm -fr ~/). Since the agent needs to run dependencies and Docker-in-Docker remains a nightmare, it's natural to consider the decade-old `vagrant up` workflow based on local VMs for ",
+  "word_count": 256,
+  "scraped_at": "2026-02-24T08:11:15.952313+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "fly.io/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

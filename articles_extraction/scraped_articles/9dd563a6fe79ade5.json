@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/77482352/github-copilot-running-in-single-file-mode",
+  "normalized_url": "https://stackoverflow.com/questions/77482352/github-copilot-running-in-single-file-mode",
+  "source_type": "stackoverflow",
+  "title": "Github Copilot running in single file mode?",
+  "author": "Jamesdlivesinatree",
+  "date": "2023-11-14",
+  "text": "Communities for your favorite technologies. Explore all Collectives\nStack Overflow for Teams is now called Stack Internal. Bring the best of human thought and AI automation together at your work.\nBring the best of human thought and AI automation together at your work. Learn more\nFind centralized, trusted content and collaborate around the technologies you use most.\nStack Internal\nKnowledge at work\nBring the best of human thought and AI automation together at your work.\nI'm running Github copilot on neovim. When I run :LspInfo, I see the following. Is this expected, or a configuration issue?\n:LspInfo\nThis is expected, copilot.vim currently only supports single file mode.\ncopilot.vim\nYou can see this for yourself in the copilot.vim github repository. In the lua file there is no reference to the root_dir field in the lsp start call.\nroot_dir\nAdd a comment\nRequired, but never shown\nBy clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.\nStart asking to get answers\nFind the answer to your question by asking.\nExplore related questions\nSee similar questions with these tags.",
+  "excerpt": "Communities for your favorite technologies. Explore all Collectives\nStack Overflow for Teams is now called Stack Internal. Bring the best of human thought and AI automation together at your work.\nBring the best of human thought and AI automation together at your work. Learn more\nFind centralized, trusted content and collaborate around the technologies you use most.\nStack Internal\nKnowledge at work\nBring the best of human thought and AI automation together at your work.\nI'm running Github copilot",
+  "word_count": 186,
+  "scraped_at": "2026-02-24T08:53:04.093600+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

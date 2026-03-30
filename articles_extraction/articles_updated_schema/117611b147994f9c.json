@@ -1,0 +1,12 @@
+{
+    "ID": "article_117611b147994f9c",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Agentic Pelican on a Bicycle",
+    "Text": "11th November 2025 - Link Blog\nAgentic Pelican on a Bicycle (via) Robert Glaser took my pelican riding a bicycle benchmark and applied an agentic loop to it, seeing if vision models could draw a better pelican if they got the chance to render their SVG to an image and then try again until they were happy with the end result.\nHere's what Claude Opus 4.1 got to after four iterations - I think the most interesting result of the models Robert tried:\nI tried a similar experiment to this a few months ago in preparation for the GPT-5 launch and was surprised at how little improvement it produced.\nRobert's \"skeptical take\" conclusion is similar to my own:\nMost models didn\u2019t fundamentally change their approach. They tweaked. They adjusted. They added details. But the basic composition\u2014pelican shape, bicycle shape, spatial relationship\u2014was determined in iteration one and largely frozen thereafter.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-11",
+    "Word_Count": 188,
+    "Comments": []
+}

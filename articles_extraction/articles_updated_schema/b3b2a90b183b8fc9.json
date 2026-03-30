@@ -1,0 +1,12 @@
+{
+    "ID": "article_b3b2a90b183b8fc9",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Maximilian Oliver",
+    "Title": "How I Use AI to Code Faster Than I Thought Possible (Without Losing My Sanity)",
+    "Text": "Member-only story\nHow I Use AI to Code Faster Than I Thought Possible (Without Losing My Sanity)\nReal Stories and Tactics from a Developer Who Uses Large Language Models Daily \u2014 Not Just for Fun, but for Real Delivery.\nAI isn\u2019t just changing how we code \u2014 it\u2019s changing who gets to code fast.\nIn this article, I\u2019m sharing my real-world, day-to-day experiences using AI tools like GPT-4, GitHub Copilot, and Cursor to reduce dev cycles from hours to minutes. No hype. No marketing fluff. Just the strategies that helped me ship faster, debug smarter, and focus deeper.\n1. How I Started Using LLMs in My Dev Workflow\nI first started using AI tools out of curiosity. It started small \u2014 asking ChatGPT to generate a regex here or a quick Python snippet there.\nNow, AI is woven into every part of my workflow.\nI don\u2019t treat ChatGPT or Copilot like magic \u2014 I treat them like junior devs who never sleep, and need clear direction. The better I prompt, the better they perform.\n2. From Blank Page to Working Prototype in Minutes\nThe most brutal part of software development? Starting.\nBefore:\nI\u2019d stare at a blank editor wondering how to architect a tool, write a test suite, or integrate an API.\nNow:\nI feed ChatGPT my intent + high-level plan, and it gives me a full draft.",
+    "Score": 0,
+    "Date": "2025-07-28",
+    "Word_Count": 228,
+    "Comments": []
+}

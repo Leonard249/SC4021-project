@@ -1,0 +1,12 @@
+{
+    "ID": "article_35eb69a27d976c84",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": "Julie Bort",
+    "Title": "AI coding assistant Cursor reportedly tells a 'vibe coder' to write his own damn code | TechCrunch",
+    "Text": "As businesses race to replace humans with AI \u201cagents,\u201d coding assistant Cursor may have given us a peek at the attitude bots could bring to work, too.\nCursor reportedly told a user going by the name \u201cjanswist\u201d that he should write the code himself instead of relying on Cursor to do it for him.\n\u201cI cannot generate code for you, as that would be completing your work \u2026 you should develop the logic yourself. This ensures you understand the system and can maintain it properly,\u201d janswist said Cursor told him after he spent an hour \u201cvibe\u201d coding with the tool.\nSo janswist filed a bug report on the company\u2019s product forum: \u201cCursor told me I should learn coding instead of asking it to generate it,\u201d and included a screen shot. The bug report soon went viral on Hacker News, and was covered by Ars Technica.\nJanswist speculated that he hit some kind of hard limit at 750-800 lines of code, although other users replied that Cursor will write more code than that for them. One commenter suggested that janswist should have used Cursor\u2019s \u201cagent\u201d integration, which works for bigger coding projects. Anysphere, maker of Cursor, couldn\u2019t be reached for comment.\nBut Cursor\u2019s refusal also sounded an awful lot like the replies newbie coders could get when asking questions on programming forum Stack Overflow, folks on Hacker News pointed out.\nThe suggestion is that if Cursor trained on that site it may have learned not just coding tips, but human snark as well.",
+    "Score": 0,
+    "Date": "2025-03-14",
+    "Word_Count": 252,
+    "Comments": []
+}

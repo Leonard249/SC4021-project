@@ -1,0 +1,12 @@
+{
+    "ID": "article_40abe6d2f1e51784",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Devrim Ozcay",
+    "Title": "I Used GitHub Copilot for 6 Months and Here\u2019s Why I\u2019m Going Back to Manual Coding",
+    "Text": "Member-only story\nI Used GitHub Copilot for 6 Months and Here\u2019s Why I\u2019m Going Back to Manual Coding\n\u201cThis Changes Everything!\u201d\nMarch 2024. GitHub Copilot just dropped for free, and the whole dev Twitter was losing its collective mind.\nDave (our team lead): \u201cGuys, we\u2019re all getting Copilot! Productivity is about to go through the roof!\u201d\nMe: \u201cFinally! No more Stack Overflow rabbit holes!\u201d\nSarah: \u201cI\u2019m gonna code so fast, I\u2019ll finish sprints in 2 days!\u201d\nNarrator: None of us finished sprints in 2 days.\nSix months later, I\u2019m sitting here, staring at my VS Code, and I just did something that would\u2019ve been unthinkable back then:\nI disabled GitHub Copilot.\nAnd honestly? I feel like I just woke up from a very expensive, very disappointing dream.\nWeek 1: \u201cHoly Shit, This Is Magic!\u201d\nFirst day with Copilot was like Christmas morning.\nI typed function calculateTax\nand BOOM \u2014 a complete, working tax calculation function appeared. Perfect syntax, proper edge cases, even JSDoc comments.\nMe (to myself): \u201cThis is it. This is the future. I\u2019m never writing boilerplate again.\u201d",
+    "Score": 0,
+    "Date": "2025-08-16",
+    "Word_Count": 179,
+    "Comments": []
+}

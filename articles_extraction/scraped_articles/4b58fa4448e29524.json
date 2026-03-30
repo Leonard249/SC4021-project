@@ -1,0 +1,16 @@
+{
+  "url": "https://vercel.com/templates/next.js/vibe-coding-platform",
+  "normalized_url": "https://vercel.com/templates/next.js/vibe-coding-platform",
+  "source_type": "corporate_blog",
+  "title": "Vibe Coding Platform",
+  "author": null,
+  "date": "2023-06-10",
+  "text": "An open-source vibe coding platform built with Next.js, AI SDK, GPT-5, and the Vercel AI Cloud. The platform combines real-time AI interactions with safe sandboxed execution environments and framework-defined infrastructure.\nFirst, run the development server:\nnpm run dev# oryarn dev# orpnpm dev# orbun dev\nOpen http://localhost:3000 in your browser to see the result.\nYou can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.\nThis project uses next/font to automatically optimize and load Geist, a new font family for Vercel.\nThe frontend is built with Next.js and AI SDK. User messages are submitted through the sendMessage API, which forwards the prompt and selected model (default GPT-5) to the backend.\nOnce deployed, Vercel automatically provisions infrastructure to:\nServe the frontend quickly through the Vercel CDN.\nHandle API calls with Vercel Functions.\nThe backend runs as a function on Fluid compute, optimized for prompt-based workloads. Since LLMs often idle while reasoning, Fluid compute reallocates unused cycles to serve other requests or reduce cost.\nconst result = streamText({model: \"openai/gpt-5\",system: prompt,messages,stopWhen: stepCountIs(20),tools});\nThe API call is powered by the AI SDK. It handles the conversation history, verifies the user with Vercel BotID, and routes through AI Gateway automatically.\nAI responses stream into an ephemeral sandbox. Each sandbox is stateless, isolated, and expires after a short timeout. It has no access to your projects or data, making it safe to run arbitrary code.\nThe sandbox streams real-time updates back to the frontend so users see progress instantly:\n{\"type\": \"data-run-command\",\"data\": {\n\"status\": \"done\", \"sandboxId\": \"sbx_123\", \"command\": \"npm install\", \"commandId\": \"cmd_abc\" } }\nThe platform protects high-value API calls with BotID for advanced bot detection and Vercel Firewall for rate limiting.",
+  "excerpt": "An open-source vibe coding platform built with Next.js, AI SDK, GPT-5, and the Vercel AI Cloud. The platform combines real-time AI interactions with safe sandboxed execution environments and framework-defined infrastructure.\nFirst, run the development server:\nnpm run dev# oryarn dev# orpnpm dev# orbun dev\nOpen http://localhost:3000 in your browser to see the result.\nYou can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.\nThis project uses next/font t",
+  "word_count": 280,
+  "scraped_at": "2026-02-24T08:13:42.340833+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "vercel.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

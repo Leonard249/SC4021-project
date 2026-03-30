@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/14/parakeet-mlx/",
+  "normalized_url": "https://simonwillison.net/2025/nov/14/parakeet-mlx",
+  "source_type": "personal_blog",
+  "title": "parakeet-mlx",
+  "author": "Simon Willison",
+  "date": "2025-11-14",
+  "text": "14th November 2025 - Link Blog\nparakeet-mlx. Neat MLX project by Senstella bringing NVIDIA's Parakeet ASR (Automatic Speech Recognition, like Whisper) model to to Apple's MLX framework.\nIt's packaged as a Python CLI tool, so you can run it like this:\nuvx parakeet-mlx default_tc.mp3\nThe first time I ran this it downloaded a 2.5GB model file.\nOnce that was fetched it took 53 seconds to transcribe a 65MB 1hr 1m 28s podcast episode (this one) and produced this default_tc.srt file with a timestamped transcript of the audio I fed into it. The quality appears to be very high.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "14th November 2025 - Link Blog\nparakeet-mlx. Neat MLX project by Senstella bringing NVIDIA's Parakeet ASR (Automatic Speech Recognition, like Whisper) model to to Apple's MLX framework.\nIt's packaged as a Python CLI tool, so you can run it like this:\nuvx parakeet-mlx default_tc.mp3\nThe first time I ran this it downloaded a 2.5GB model file.\nOnce that was fetched it took 53 seconds to transcribe a 65MB 1hr 1m 28s podcast episode (this one) and produced this default_tc.srt file with a timestamped ",
+  "word_count": 137,
+  "scraped_at": "2026-02-24T08:21:12.557218+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}
