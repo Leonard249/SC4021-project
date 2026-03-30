@@ -1,0 +1,16 @@
+{
+  "url": "https://levelup.gitconnected.com/how-i-turned-my-ai-coding-assistant-into-a-senior-engineer-with-one-simple-install-692d40ba184a",
+  "normalized_url": "https://levelup.gitconnected.com/how-i-turned-my-ai-coding-assistant-into-a-senior-engineer-with-one-simple-install-692d40ba184a",
+  "source_type": "other_blog",
+  "title": "How I Turned My AI Coding Assistant Into a Senior Engineer (With One Simple Install)",
+  "author": "ZIRU",
+  "date": "2026-01-31",
+  "text": "Member-only story\nHow I Turned My AI Coding Assistant Into a Senior Engineer (With One Simple Install)\nMy vibe coding was a mess until I found this secret weapon from the company behind Next.js\nYou know that feeling when your AI builds exactly what you asked for, but something still feels… wrong?\nI was there six months ago. My side project looked great on the surface. Features worked. Users could click buttons. Data showed up on the screen. But the app was slow. Really slow. And I had no idea why.\nThen I discovered something that changed everything. It came from a company called Vercel.\nWho is Vercel? (And Why You Should Care)\nIf you’ve ever built anything with React, you’ve probably heard of Next.js. It’s one of the most popular frameworks for building web applications. Companies like Netflix, TikTok, Nike, and Notion use it.\nVercel is the company that created Next.js. They also run one of the largest deployment platforms in the world. When developers talk about web development, Vercel is often called “the Apple of the web dev world.” That’s how much respect they have.\nHere’s what makes them special: they don’t just build tools. They set the standard for how modern…",
+  "excerpt": "Member-only story\nHow I Turned My AI Coding Assistant Into a Senior Engineer (With One Simple Install)\nMy vibe coding was a mess until I found this secret weapon from the company behind Next.js\nYou know that feeling when your AI builds exactly what you asked for, but something still feels… wrong?\nI was there six months ago. My side project looked great on the surface. Features worked. Users could click buttons. Data showed up on the screen. But the app was slow. Really slow. And I had no idea wh",
+  "word_count": 204,
+  "scraped_at": "2026-02-24T08:12:36.327611+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "vercel.com/blog vibe coding OR AI OR copilot OR cursor"
+  ]
+}

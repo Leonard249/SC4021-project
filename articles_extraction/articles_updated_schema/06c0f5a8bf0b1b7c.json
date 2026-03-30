@@ -1,0 +1,12 @@
+{
+    "ID": "article_06c0f5a8bf0b1b7c",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Six coding agents at once",
+    "Text": "11th November 2025\nI've been upgrading a ton of Datasette plugins recently for compatibility with the Datasette 1.0a20 release from last week - 35 so far.\nA lot of the work is very repetitive so I've been outsourcing it to Codex CLI. Here's the recipe I've landed on:\ncodex exec --dangerously-bypass-approvals-and-sandbox \\\n'Run the command tadd and look at the errors and then\nread ~/dev/datasette/docs/upgrade-1.0a20.md and apply\nfixes and run the tests again and get them to pass.\nAlso delete the .github directory entirely and replace\nit by running this:\ncp -r ~/dev/ecosystem/datasette-os-info/.github .\nRun a git diff against that to make sure it looks OK\n- if there are any notable differences e.g. switching\nfrom Twine to the PyPI uploader or deleting code that\ndoes a special deploy or configures something like\nplaywright include that in your final report.\nIf the project still uses setup.py then edit that new\ntest.yml and publish.yaml to mention setup.py not pyproject.toml\nIf this project has pyproject.toml make sure the license\nline in that looks like this:\nlicense = \"Apache-2.0\"\nAnd remove any license thing from the classifiers= array\nUpdate the Datasette dependency in pyproject.toml or\nsetup.py to \"datasette>=1.0a21\"\nAnd make sure requires-python is >=3.10'\nI featured a simpler version of this prompt in my Datasette plugin upgrade video, but I've expanded it quite a bit since then.\nAt one point I had six terminal windows open running this same prompt against six different repos - probably my most extreme case of parallel agents yet.\nHere are the six resulting commits from those six coding agent sessions:\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-11",
+    "Word_Count": 302,
+    "Comments": []
+}

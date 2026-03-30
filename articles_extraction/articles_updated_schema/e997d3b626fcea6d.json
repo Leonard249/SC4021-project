@@ -1,0 +1,12 @@
+{
+    "ID": "article_e997d3b626fcea6d",
+    "Source": "corporate_blog",
+    "Type": "Article",
+    "Author": "Serrana Aguirregaray; Nathaniel Jenkins",
+    "Title": "From Single-Node to Multi-GPU Clusters: How Discord Made Distributed Compute Easy for ML Engineers",
+    "Text": "How Discord ML Hit Its Scaling Limit\nAt Discord, our machine learning systems have evolved from simple classifiers to sophisticated models serving hundreds of millions of users. As our models grew more complex and datasets larger, we increasingly ran into scaling challenges: training jobs that needed multiple GPUs, datasets that wouldn\u2019t fit on single machines, and computational demands that outpaced our infrastructure.\nAccess to distributed compute was necessary \u2014 but not sufficient. We needed distributed ML to be easy. Ray, an open-source distributed computing framework, became our foundation. At Discord, we built a platform around it: custom CLI tooling, orchestration with Dagster + KubeRay, and an observability layer called X-Ray. Our focus was on developer experience, turning distributed ML from something hard to use into a system they are excited to work with.\nThis is how Discord went from no deep learning, to ad-hoc experiments, to a production orchestration platform, and how that work enabled models like Ads Ranking that delivered a +200% improvement on our business metrics.",
+    "Score": 0,
+    "Date": "2022-08-29",
+    "Word_Count": 168,
+    "Comments": []
+}

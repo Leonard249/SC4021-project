@@ -1,0 +1,12 @@
+{
+    "ID": "article_e96ec66e9e54bd27",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Elye",
+    "Title": "Mastering VS Code Copilot by Understanding Its Context Window",
+    "Text": "Member-only story\nLearning AI Coding\nMastering VS Code Copilot by Understanding Its Context Window\nExpanding Your AI Coding Skills by Understanding How VS Code Copilot Works Under the Hood and How Its Context Window Is Structured\nIf you\u2019ve enjoyed building software with AI and are amazed by what agentic coding can do, you may still wonder how to get the most out of it \u2014 while keeping token costs under control. Understanding what\u2019s happening under the hood makes a big difference. In this article, I break down how VS Code Copilot actually works behind the scenes.\nThe Basic of LLM for Agentic Coding\nThe real engine behind agentic AI coding is the LLM (Large Language Model). At its core, an LLM is software trained to predict and generate tokens in a way that aligns with real-world expectations, based on patterns learned from its training data.\nOn its own, an LLM is little more than a sophisticated \u201cchat\u201d machine. But when its outputs are treated as instructions for tools \u2014 such as reading, editing, or writing files, or running\u2026",
+    "Score": 0,
+    "Date": "2026-02-22",
+    "Word_Count": 178,
+    "Comments": []
+}

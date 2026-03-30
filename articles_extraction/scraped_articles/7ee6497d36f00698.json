@@ -1,0 +1,16 @@
+{
+  "url": "https://towardsdev.com/vibe-coding-in-action-building-a-data-analytics-app-without-writing-code-de847b17207f",
+  "normalized_url": "https://towardsdev.com/vibe-coding-in-action-building-a-data-analytics-app-without-writing-code-de847b17207f",
+  "source_type": "personal_blog",
+  "title": "Vibe Coding in Action: Building a Data Analytics App Without Writing Code",
+  "author": "Mohamad Mahmood",
+  "date": "2025-12-10",
+  "text": "Member-only story\nVibe Coding in Action: Building a Data Analytics App Without Writing Code\nVibe coding represents a fundamental shift in how software is created. Instead of writing code line by line, developers describe what they want in natural language and allow AI to generate the application structure, logic, and interface. This changes the developer’s role from being focused on syntax and configuration to becoming a director of ideas and system behavior. To test this concept in a real and practical way, I experimented with Lovable.dev, an AI-powered web app builder. What started as a single one-sentence prompt resulted in a fully functional CSV-based descriptive statistics analyzer built with a modern frontend stack.\nMy entire experiment began with a very simple instruction: “Create a web app that accepts CSV data and computes descriptive statistics\n.” I did not specify any frameworks, formulas, libraries, UI layouts, or technology preferences.\nDespite this, Lovable.dev immediately interpreted the request at both a functional and design level. It described the system as a CSV statistics analyzer with drag-and-drop upload, a data preview table, and automatic computation of mean, median, mode, standard deviation…",
+  "excerpt": "Member-only story\nVibe Coding in Action: Building a Data Analytics App Without Writing Code\nVibe coding represents a fundamental shift in how software is created. Instead of writing code line by line, developers describe what they want in natural language and allow AI to generate the application structure, logic, and interface. This changes the developer’s role from being focused on syntax and configuration to becoming a director of ideas and system behavior. To test this concept in a real and p",
+  "word_count": 187,
+  "scraped_at": "2026-02-24T08:09:20.532119+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium tool tags batch 1"
+  ]
+}

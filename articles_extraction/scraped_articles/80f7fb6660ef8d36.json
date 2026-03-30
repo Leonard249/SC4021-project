@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@aiteacher/how-ai-is-moving-from-co-pilots-to-auto-pilots-31de86ef4298",
+  "normalized_url": "https://medium.com/@aiteacher/how-ai-is-moving-from-co-pilots-to-auto-pilots-31de86ef4298",
+  "source_type": "medium",
+  "title": "How AI Is Moving from Co-Pilots to Auto-Pilots",
+  "author": "Demis Hassabis",
+  "date": "2026-02-18",
+  "text": "Member-only story\nHow AI Is Moving from Co-Pilots to Auto-Pilots\nFor the last few years, AI has mostly played a supporting role in enterprise software and knowledge work. We called it assistive AI, co-pilots, or AI copilots — systems designed to help humans work faster, write better, analyze quicker, or make more informed decisions.\nBut that phase is ending.\nA new model is emerging — one where AI doesn’t just assist but acts. Instead of waiting for instructions, these systems plan, decide, execute, observe outcomes, and adapt. This shift — from co-pilots to auto-pilots — marks the rise of agentic AI.\nThis transition is not incremental. It fundamentally changes how software behaves, how work gets done, and how organizations manage risk, accountability, and trust.\nThis article explores why AI is moving from co-pilots to auto-pilots, what makes agentic AI different, where the shift is already happening, and what enterprises must prepare for as autonomy becomes the norm.\nUnderstanding the Co-Pilot Era of AI\nBefore examining what’s changing, it’s important to understand what co-pilot AI actually represents.\nWhat AI Co-Pilots Were Designed to Do\nCo-pilots are systems that:\n- Respond to user prompts\n- Suggest actions or content\n- Augment human decision-making\n- Require explicit…",
+  "excerpt": "Member-only story\nHow AI Is Moving from Co-Pilots to Auto-Pilots\nFor the last few years, AI has mostly played a supporting role in enterprise software and knowledge work. We called it assistive AI, co-pilots, or AI copilots — systems designed to help humans work faster, write better, analyze quicker, or make more informed decisions.\nBut that phase is ending.\nA new model is emerging — one where AI doesn’t just assist but acts. Instead of waiting for instructions, these systems plan, decide, execu",
+  "word_count": 204,
+  "scraped_at": "2026-02-24T08:19:40.269963+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com massive tag sweep"
+  ]
+}

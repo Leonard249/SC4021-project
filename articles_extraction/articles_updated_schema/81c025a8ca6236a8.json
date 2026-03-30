@@ -1,0 +1,12 @@
+{
+    "ID": "article_81c025a8ca6236a8",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Jason Gorman",
+    "Text": "29th December 2025\nThe hard part of computer programming isn't expressing what we want the machine to do in code. The hard part is turning human thinking -- with all its wooliness and ambiguity and contradictions -- into computational thinking that is logically precise and unambiguous, and that can then be expressed formally in the syntax of a programming language.\nThat was the hard part when programmers were punching holes in cards. It was the hard part when they were typing COBOL code. It was the hard part when they were bringing Visual Basic GUIs to life (presumably to track the killer's IP address). And it's the hard part when they're prompting language models to predict plausible-looking Python.\nThe hard part has always been \u2013 and likely will continue to be for many years to come \u2013 knowing exactly what to ask for.\n\u2014 Jason Gorman, The Future of Software Development Is Software Developers\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-12-29",
+    "Word_Count": 193,
+    "Comments": []
+}

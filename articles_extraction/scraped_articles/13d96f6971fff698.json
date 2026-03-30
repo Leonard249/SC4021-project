@@ -1,0 +1,16 @@
+{
+  "url": "https://github.com/anthropics/claude-code",
+  "normalized_url": "https://github.com/anthropics/claude-code",
+  "source_type": "other_blog",
+  "title": "GitHub - anthropics/claude-code: Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+  "author": "Anthropics",
+  "date": "2025-02-22",
+  "text": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows -- all through natural language commands. Use it in your terminal, IDE, or tag @claude on Github.\nLearn more in the official documentation.\nNote\nInstallation via npm is deprecated. Use one of the recommended methods below.\nFor more installation options, uninstall steps, and troubleshooting, see the setup documentation.\n-\nInstall Claude Code:\nMacOS/Linux (Recommended):\ncurl -fsSL https://claude.ai/install.sh | bash\nHomebrew (MacOS/Linux):\nbrew install --cask claude-code\nWindows (Recommended):\nirm https://claude.ai/install.ps1 | iex\nWinGet (Windows):\nwinget install Anthropic.ClaudeCode\nNPM (Deprecated):\nnpm install -g @anthropic-ai/claude-code\n-\nNavigate to your project directory and run\nclaude\n.\nThis repository includes several Claude Code plugins that extend functionality with custom commands and agents. See the plugins directory for detailed documentation on available plugins.\nWe welcome your feedback. Use the /bug\ncommand to report issues directly within Claude Code, or file a GitHub issue.\nJoin the Claude Developers Discord to connect with other developers using Claude Code. Get help, share feedback, and discuss your projects with the community.\nWhen you use Claude Code, we collect feedback, which includes usage data (such as code acceptance or rejections), associated conversation data, and user feedback submitted via the /bug\ncommand.\nSee our data usage policies.\nWe have implemented several safeguards to protect your data, including limited retention periods for sensitive information, restricted access to user session data, and clear policies against using feedback for model training.\nFor full details, please review our Commercial Terms of Service and Privacy Policy.",
+  "excerpt": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows -- all through natural language commands. Use it in your terminal, IDE, or tag @claude on Github.\nLearn more in the official documentation.\nNote\nInstallation via npm is deprecated. Use one of the recommended methods below.\nFor more installation options, uninstall steps, and troubleshooting, see the ",
+  "word_count": 270,
+  "scraped_at": "2026-02-24T08:17:26.150177+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "claude code"
+  ]
+}

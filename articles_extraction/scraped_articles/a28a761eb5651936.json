@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/27/john-cena/",
+  "normalized_url": "https://simonwillison.net/2025/dec/27/john-cena",
+  "source_type": "personal_blog",
+  "title": "Pluribus training data",
+  "author": "Simon Willison",
+  "date": "2025-12-27",
+  "text": "27th December 2025\nIn advocating for LLMs as useful and important technology despite how they're trained I'm beginning to feel a little bit like John Cena in Pluribus.\nPluribus spoiler (episode 6)\nGiven our druthers, would we choose to consume HDP? No. Throughout history, most cultures, though not all, have taken a dim view of anthropophagy. Honestly, we're not that keen on it ourselves. But we're left with little choice.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "27th December 2025\nIn advocating for LLMs as useful and important technology despite how they're trained I'm beginning to feel a little bit like John Cena in Pluribus.\nPluribus spoiler (episode 6)\nGiven our druthers, would we choose to consume HDP? No. Throughout history, most cultures, though not all, have taken a dim view of anthropophagy. Honestly, we're not that keen on it ourselves. But we're left with little choice.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd Februa",
+  "word_count": 109,
+  "scraped_at": "2026-02-24T08:18:26.235789+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

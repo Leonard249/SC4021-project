@@ -1,0 +1,16 @@
+{
+  "url": "https://effective-programmer.com/prompt-driven-development-ship-first-change-later-7449799b571b",
+  "normalized_url": "https://effective-programmer.com/prompt-driven-development-ship-first-change-later-7449799b571b",
+  "source_type": "other_blog",
+  "title": "Prompt-Driven Development: Ship First, Change Later",
+  "author": "Naveed Khan",
+  "date": "2025-07-21",
+  "text": "Member-only story\nFeatured\nPrompt Driven Development: Ship First, Change Later\nRemember when we used to care, I mean really care, about perfect code? When every function was a small work of art, every variable name carefully chosen, every architectural decision debated like we were designing the next great cathedral?\nToday? AI writes most of it and multi-million vibe coded products are a reality. I believe the first billion-dollor vibe coded company is within striking distance. The fact is we’re not artisans anymore. We’re maestros at an orchestra. And you know what? That’s not necessarily a bad thing.\nWhat Used to be “Great”\nThere was a time when we treated software development like a sacred craft. Clean Code sat on our desks like a bible. We quoted Uncle Bob’s SOLID principles in code reviews. We debated whether to use factories or builders with the passion of medieval theologians arguing about angels on pinheads.\nWe thought we were building pyramids — monuments to engineering excellence that would stand the test of time. Every line of code was polished to perfection, every abstraction carefully considered. We wrote tests not just for coverage, but for the pure joy of knowing our code was bulletproof.\nThe Pragmatic Programmer wasn’t just a book; it was a way of life. We believed in the power of beautiful…",
+  "excerpt": "Member-only story\nFeatured\nPrompt Driven Development: Ship First, Change Later\nRemember when we used to care, I mean really care, about perfect code? When every function was a small work of art, every variable name carefully chosen, every architectural decision debated like we were designing the next great cathedral?\nToday? AI writes most of it and multi-million vibe coded products are a reality. I believe the first billion-dollor vibe coded company is within striking distance. The fact is we’re",
+  "word_count": 220,
+  "scraped_at": "2026-02-24T08:05:42.779456+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "prompt-driven development"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_c28e5ba60febacd4",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": "Aakarsh Singh",
+    "Title": "Joel Spolsky's timeless advice on coding | Aakarsh Singh posted on the topic | LinkedIn",
+    "Text": "Read a 25 year old article which surprisingly still holds value. Stackflow's co-founder Joel Spolsky's \"Things You Should Never Do, Part I\". The top takeaways for me are: 1. Old Code Contains Crucial Embedded Knowledge 2. The Illusion of Better / Cleaner New Code 3. Incremental Improvement is Preferable / Superior 4. Rewriting Code from Scratch Is a Strategic Mistake Thanks Lakshmikanthan Selvarajan for sharing! Original Article: https://lnkd.in/gqQ66yYF\nThis is one of my favorite blog posts and bookmarked permanently. Your takeaways are spot on. Rewriting working software from scratch is a strategic folly. Refactoring and improving/replacing the bad parts in the code is anyday a better option.\nAbsolutely agree with these takeaways. They\u2019re foundational truths in software engineering and still incredibly relevant. While full rewrites stall product momentum and often reintroduce past bugs, refactoring gives you the best of both worlds. You modernize safely, preserve knowledge and keep delivering value.",
+    "Score": 0,
+    "Date": "2025-05-15",
+    "Word_Count": 150,
+    "Comments": []
+}

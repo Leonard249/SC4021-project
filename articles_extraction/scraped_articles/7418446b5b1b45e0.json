@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Jan/17/jeremy-daer/",
+  "normalized_url": "https://simonwillison.net/2026/jan/17/jeremy-daer",
+  "source_type": "personal_blog",
+  "title": "A quote from Jeremy Daer",
+  "author": "Simon Willison",
+  "date": "2026-01-17",
+  "text": "17th January 2026\n[On agents using CLI tools in place of REST APIs] To save on context window, yes, but moreso to improve accuracy and success rate when multiple tool calls are involved, particularly when calls must be correctly chained e.g. for pagination, rate-limit backoff, and recognizing authentication failures.\nOther major factor: which models can wield the skill? Using the CLI lowers the bar so cheap, fast models (gpt-5-nano, haiku-4.5) can reliably succeed. Using the raw APl is something only the costly \"strong\" models (gpt-5.2, opus-4.5) can manage, and it squeezes a ton of thinking/reasoning out of them, which means multiple turns/iterations, which means accumulating a ton of context, which means burning loads of expensive tokens. For one-off API requests and ad hoc usage driven by a developer, this is reasonable and even helpful, but for an autonomous agent doing repetitive work, it's a disaster.\n— Jeremy Daer, 37signals\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "17th January 2026\n[On agents using CLI tools in place of REST APIs] To save on context window, yes, but moreso to improve accuracy and success rate when multiple tool calls are involved, particularly when calls must be correctly chained e.g. for pagination, rate-limit backoff, and recognizing authentication failures.\nOther major factor: which models can wield the skill? Using the CLI lowers the bar so cheap, fast models (gpt-5-nano, haiku-4.5) can reliably succeed. Using the raw APl is something",
+  "word_count": 188,
+  "scraped_at": "2026-02-24T08:20:49.129733+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

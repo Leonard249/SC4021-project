@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Oct/11/sub-agents/",
+  "normalized_url": "https://simonwillison.net/2025/oct/11/sub-agents",
+  "source_type": "personal_blog",
+  "title": "Claude Code sub-agents",
+  "author": "Simon Willison",
+  "date": "2025-10-11",
+  "text": "11th October 2025\nClaude Code includes the ability to run sub-agents, where a separate agent loop with a fresh token context is dispatched to achieve a goal and report back when it's done. I wrote a bit about how these work in June when I traced Claude Code's activity by intercepting its API calls.\nI recently learned that you can deliberately trigger Claude Code to use sub-agents just by telling it to do so!\nHere's an example. I ran this using Claude Code against a fresh checkout of simonw/datasette (commit ec38ad37689f3c14d307770977a17aed5efc5cb9\n), with no additional custom instructions:\nWrite markdown documentation for the context passed to each of the templates in this project. Use sub-agents.\nHere's a snippet of the output:\n⏺ I'll help you write markdown documentation for the context passed to each template in this project. Let me start by exploring the codebase to understand the template structure and then use sub-agents to document them comprehensively.\n⏺ Search(pattern: \"**/*.html\") ⎿ Found 47 files (ctrl+o to expand) ⏺ Search(pattern: \"render.*template|render_template\") ⎿ Found 16 files (ctrl+o to expand)\n[...]\n⏺ Now let me launch sub-agents to analyze different template contexts in parallel:\n⏺ Task(Document index template context) ⎿ Done (12 tool uses · 86.4k tokens · 1m 13s) ⏺ Task(Document database template context) ⎿ Done (15 tool uses · 55.4k tokens · 1m 41s) ⏺ Task(Document table template context) ⎿ Done (14 tool uses · 85.2k tokens · 1m 44s) ⏺ Task(Document query/row template contexts) ⎿ Done (17 tool uses · 78.7k tokens · 1m 55s) ⏺ Task(Document special template contexts) ⎿ Done (26 tool uses · 116.1k tokens · 1m 50s)\nIt churned away for a couple of minutes (those sub-agents execute in parallel, another benefit of this pattern) and made me this template_contexts.md markdown file. It's very comprehensive.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "11th October 2025\nClaude Code includes the ability to run sub-agents, where a separate agent loop with a fresh token context is dispatched to achieve a goal and report back when it's done. I wrote a bit about how these work in June when I traced Claude Code's activity by intercepting its API calls.\nI recently learned that you can deliberately trigger Claude Code to use sub-agents just by telling it to do so!\nHere's an example. I ran this using Claude Code against a fresh checkout of simonw/datas",
+  "word_count": 338,
+  "scraped_at": "2026-02-24T08:22:04.926460+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 6-10"
+  ]
+}

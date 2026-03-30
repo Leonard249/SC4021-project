@@ -1,0 +1,12 @@
+{
+    "ID": "article_83922ff3a44159d7",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Chunting Wu",
+    "Title": "GitHub Copilot Agent: A Disappointing Review",
+    "Text": "Member-only story\nGitHub Copilot Agent: A Disappointing Review\nDiscover the fatal flaws that make Copilot\u2019s agent mode unusable for serious tasks\nNot a member? You can still check out this article through here.\nGitHub Copilot was one of the earliest providers when the concept of vibe coding emerged. However, this glory was short-lived, as commercial software like Cursor and open-source software like Cline quickly overshadowed GitHub Copilot.\nThe fundamental reason is that Copilot\u2019s AI functionality remained at the most basic level, namely auto-completion. However, Cursor and Cline had already entered the realm of Agentic AI, demonstrating how effortless it could be to delegate tasks to an agent for execution.\nGitHub Copilot thus nearly disappeared from the battlefield. Until the latter half of 2025, Copilot finally introduced Agent mode, but by then it was already too late.\nHowever, keeping the spirit of trying everything, I recently spent some time testing it out. After a week of use, my impression is that it\u2019s really not good.\nMajor Problems\nI will list two serious issues that I believe are most critical.\nAs for whether the effect is good or bad, or whether AI is intelligent, I believe\u2026",
+    "Score": 0,
+    "Date": "2025-08-25",
+    "Word_Count": 194,
+    "Comments": []
+}

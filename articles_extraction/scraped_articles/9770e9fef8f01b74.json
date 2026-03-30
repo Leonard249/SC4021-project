@@ -1,0 +1,16 @@
+{
+  "url": "https://civillearning.medium.com/claude-code-agent-teams-run-multiple-ai-agents-in-parallel-44ad1135acfe",
+  "normalized_url": "https://civillearning.medium.com/claude-code-agent-teams-run-multiple-ai-agents-in-parallel-44ad1135acfe",
+  "source_type": "medium",
+  "title": "Claude Code Agent Teams: Run Multiple AI Agents in Parallel",
+  "author": "Civil Learning",
+  "date": "2026-02-24",
+  "text": "Member-only story\nClaude Code Agent Teams: Run Multiple AI Agents in Parallel\nIf you’ve ever tried to refactor a large codebase with a single AI assistant, you’ve probably felt this pain: too many files, too many dependencies, too many things that could go wrong.\nYou ask the model to “handle it all,” and it either:\n- Misses edge cases\n- Overwrites changes\n- Or gets stuck coordinating its own thoughts\nThe problem isn’t intelligence. It’s coordination.\nThat’s exactly what Claude Code Agent Teams tries to fix.\nThe Core Idea\nAgent Teams lets you run multiple Claude instances at the same time, all working on the same task, but from different angles — and talking to each other.\nThink of it like this:\n- One Claude becomes the team lead\n- The lead spawns teammates\n- Each teammate owns a specific responsibility\n- Everyone shares a task list and can message each other directly\nThis is not “one AI pretending to multitask.”\nThese are independent sessions with shared coordination.",
+  "excerpt": "Member-only story\nClaude Code Agent Teams: Run Multiple AI Agents in Parallel\nIf you’ve ever tried to refactor a large codebase with a single AI assistant, you’ve probably felt this pain: too many files, too many dependencies, too many things that could go wrong.\nYou ask the model to “handle it all,” and it either:\n- Misses edge cases\n- Overwrites changes\n- Or gets stuck coordinating its own thoughts\nThe problem isn’t intelligence. It’s coordination.\nThat’s exactly what Claude Code Agent Teams t",
+  "word_count": 168,
+  "scraped_at": "2026-02-24T08:18:27.490499+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com targeted tag batch 2"
+  ]
+}

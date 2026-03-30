@@ -1,0 +1,12 @@
+{
+    "ID": "article_26303657b7c285e6",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Ka Wai Cheung",
+    "Title": "Early thoughts on coding with AI",
+    "Text": "Early thoughts on coding with AI\nFor a few months, I\u2019ve been building software with AI. My early observations\u2026\nI once built software in a methodical way. Start with a small ball of clay. Slowly mush that piece around. Add two things to it. Take away one. A slow, progressive march to a thing. Understanding the shape of what I was building as it was coming into form.\nWith AI, the approach is more like starting with a larger, complex piece of clay already mushed \u2014 51 to 90% the way you intended. Most of the time is spent figuring out the 10 to 49% that wasn\u2019t.\nIt is thrilling to get 51 to 90% of the thing done in a sliver of the time it would take it to do it the old way. The climb is to get good at understanding the 10 to 49% that needs a rethink.\nAt first, I found myself asking for huge chunks because why not? Later I find myself asking AI for smaller chunks because the reason why is that figuring out the wrong parts is far easier to do on smaller chunks.\nAnd that is what most of coding with AI has been for me early on\u2014figuring out what I don\u2019t like about what was produced. Being a step ahead of my copilot who is so sharp at so many things yet still ignorant about others.\nGetting better at the asking.\nGetting better at the fixing.\nGetting better at the cadence of asking and fixing.\nCoding with AI feels is like a picture of a man walking a dog. To a sentient being who has never seen man or dog, it may seem that the dog is leading his owner but the owner is, we hope, in control.\nAt the same time, I\u2019ve also begun to question the traditional best practices of programming. Many principles are principles because they help the human maintain the codebase better. Even without AI, what qualified for better was always a contentious debate.\nAnd as AI tools get better, maybe some of those principles we hold dearly will begin to dwindle in importance\u2014particularly when AI gets better and reduces that 10 to 49% part down to 1\u20132%, and eventually down to 0 to 0.0001%.",
+    "Score": 0,
+    "Date": "2024-11-27",
+    "Word_Count": 378,
+    "Comments": []
+}

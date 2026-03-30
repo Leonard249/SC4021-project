@@ -1,0 +1,12 @@
+{
+    "ID": "article_30053d8a254bc211",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Boaz Barak, Gabriel Wu, Jeremy Chen and Manas Joglekar",
+    "Text": "15th January 2026\nWhen we optimize responses using a reward model as a proxy for \u201cgoodness\u201d in reinforcement learning, models sometimes learn to \u201chack\u201d this proxy and output an answer that only \u201clooks good\u201d to it (because coming up with an answer that is actually good can be hard). The philosophy behind confessions is that we can train models to produce a second output \u2014 aka a \u201cconfession\u201d \u2014 that is rewarded solely for honesty, which we will argue is less likely hacked than the normal task reward function. One way to think of confessions is that we are giving the model access to an \u201canonymous tip line\u201d where it can turn itself in by presenting incriminating evidence of misbehavior. But unlike real-world tip lines, if the model acted badly in the original task, it can collect the reward for turning itself in while still keeping the original reward from the bad behavior in the main task. We hypothesize that this form of training will teach models to produce maximally honest confessions.\n\u2014 Boaz Barak, Gabriel Wu, Jeremy Chen and Manas Joglekar, OpenAI: Why we are excited about confessions\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2026-01-15",
+    "Word_Count": 228,
+    "Comments": []
+}

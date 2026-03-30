@@ -1,0 +1,12 @@
+{
+    "ID": "article_83e67e291015c14d",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Thomas Reid",
+    "Title": "Calling AWS Bedrock from code",
+    "Text": "Member-only story\nCalling AWS Bedrock from code\nUsing Python in a Jupyter notebook\nMany of you will know that every man and his dog are producing AI products or LLM\u2019s and integrating them with their products. Not surprisingly AWS \u2014 the biggest cloud services provider \u2014 is also getting in on the act.\nWhat is bedrock?\nIts AI offering is called Bedrock and the following blurb from it\u2019s website describes what Bedrock is.\nAmazon Bedrock is a fully managed service that offers a choice of high-performing foundation models (FMs) from leading AI companies like AI21 Labs, Anthropic, Cohere, Meta, Stability AI, and Amazon via a single API, along with a broad set of capabilities you need to build generative AI applications, simplifying development while maintaining privacy and security. With Amazon Bedrock\u2019s comprehensive capabilities, you can easily experiment with a variety of top FMs, privately customize them with your data using techniques such as fine-tuning and retrieval augmented generation (RAG), and create managed agents that execute complex business tasks \u2014 from booking travel and processing insurance claims to creating ad campaigns and managing inventory \u2014 all without writing any code. Since Amazon Bedrock is serverless, you don\u2019t have to manage any infrastructure, and you can securely integrate and deploy generative AI\u2026",
+    "Score": 0,
+    "Date": "2023-10-02",
+    "Word_Count": 210,
+    "Comments": []
+}

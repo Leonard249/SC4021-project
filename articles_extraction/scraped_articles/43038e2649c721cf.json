@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2023/11/28/can-genai-10x-developer-productivity/",
+  "normalized_url": "https://stackoverflow.blog/2023/11/28/can-genai-10x-developer-productivity",
+  "source_type": "personal_blog",
+  "title": "Can GenAI 10X developer productivity?",
+  "author": "Eira May",
+  "date": "2023-11-28",
+  "text": "Bito AI is an AI coding tool that helps developers work more productively with features like code completion within the IDE and personalized answers drawn from your codebase. Get started with their docs here.\nICYMI: Retrieval augmented generation (RAG) is a way of addressing LLM hallucinations and outdated training data.\nListen to our recent episode about how an original architect of Jira is rethinking meaningful engineering metrics.\nConnect with Anand on LinkedIn or Twitter.com.\nShoutout to Stack Overflow user Jan Kardaš, whose answer to Go: Retrieve a string from between two characters or other strings earned them a Lifeboat badge.",
+  "excerpt": "Bito AI is an AI coding tool that helps developers work more productively with features like code completion within the IDE and personalized answers drawn from your codebase. Get started with their docs here.\nICYMI: Retrieval augmented generation (RAG) is a way of addressing LLM hallucinations and outdated training data.\nListen to our recent episode about how an original architect of Jira is rethinking meaningful engineering metrics.\nConnect with Anand on LinkedIn or Twitter.com.\nShoutout to Sta",
+  "word_count": 100,
+  "scraped_at": "2026-02-24T08:20:37.976520+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow blog multiple category sweep"
+  ]
+}

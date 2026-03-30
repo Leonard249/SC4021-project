@@ -1,0 +1,12 @@
+{
+    "ID": "article_eb422f6d20cf9099",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Arman Asgharpoor",
+    "Title": "Copilot Chat icon not showing vscode",
+    "Text": "I received the email saying that Copilot Chat is now enabled on my account. I followed the instructions to enable it on my VSCode, but I still don't see it on my activity bar.\nHow could I solve this problem?\nI got the email below:\nWelcome to the Copilot chat private beta! You're off the waitlist and can start using Copilot chat.\nGetting Started Here are the instructions to get started:\nBefore starting, please make sure that the GitHub ID you intend to use has an active subscription to GitHub Copilot and matches the ID that you used to join the GitHub Copilot chat waitlist.\nFor Visual Studio Code:\nDownload and install Visual Studio Code - Insiders Already on the Insiders build? Make sure you are on the latest version! In VS Code Insiders, go to the Extensions tab (Cmd+Shift+X) in the activity panel and search for and install the GitHub Copilot Nightly extension. If you have not previously authorized VS Code Insiders in your GitHub account, follow the steps to do so, you will be prompted to sign in. A new Chat icon appears in the activity panel. Click on it to see the conversation interface. If that doesn't work, restart the editor and authorize GitHub Copilot to see the chat window. For Visual Studio:\nEnsure you're running Visual Studio 2022 17.5.1 or higher. If not, please update. Download and install the Visual Studio extension for GitHub Copilot - Preview Ensure you are logged in to Visual Studio using the same GitHub ID that you signed up for the waitlist using. If you are not signed with an authorized account you\u2019ll be prompted to do so. If you are already logged in with your GitHub ID in your Visual Studio, please check you don\u2019t need to re-enter your GitHub credentials. Here is the link with instructions to Add your GitHub ID to your Visual Studio signin. Start Visual Studio. Once fully loaded, check that the GitHub Copilot chat window shows on your View menu. Then verify that \u201cAsk Copilot\u201d appears at the top of the right click menu in your code editor when a code file is open.",
+    "Score": 0,
+    "Date": "2023-05-27",
+    "Word_Count": 359,
+    "Comments": []
+}

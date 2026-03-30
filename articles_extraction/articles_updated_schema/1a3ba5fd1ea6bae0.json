@@ -1,0 +1,12 @@
+{
+    "ID": "article_1a3ba5fd1ea6bae0",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from OpenAI Codex CLI",
+    "Text": "13th December 2025\nHow to use a skill (progressive disclosure):\n- After deciding to use a skill, open its\nSKILL.md\n. Read only enough to follow the workflow.- If\nSKILL.md\npoints to extra folders such asreferences/\n, load only the specific files needed for the request; don't bulk-load everything.- If\nscripts/\nexist, prefer running or patching them instead of retyping large code blocks.- If\nassets/\nor templates exist, reuse them instead of recreating from scratch.Description as trigger: The YAML\ndescription\ninSKILL.md\nis the primary trigger signal; rely on it to decide applicability. If unsure, ask a brief clarification before proceeding.\n\u2014 OpenAI Codex CLI, core/src/skills/render.rs, full prompt\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-12-13",
+    "Word_Count": 146,
+    "Comments": []
+}

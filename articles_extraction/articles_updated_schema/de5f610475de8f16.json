@@ -1,0 +1,12 @@
+{
+    "ID": "article_de5f610475de8f16",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Ulas Can Cengiz",
+    "Title": "Integrating Psychology into Software Development",
+    "Text": "Member-only story\nIntegrating Psychology into Software Development\nEmotional Architecture in Software Design\nThe Psychological Underpinnings of Software Development\nImagine sitting down at your desk to untangle a particularly complex piece of software code. Your eyes scan lines packed with logical operations and function calls. Somewhere in this intricate weave, a bug lurks, derailing the application\u2019s performance. This scenario, familiar to many developers, isn\u2019t just a test of technical skill; it\u2019s a psychological challenge. The frustration and cognitive fatigue that often accompany such tasks can cloud judgment and prolong resolution. It\u2019s in moments like these that the intersection of psychology and software development comes into sharp focus.\nCognitive load theory, originally applied to educational psychology, has profound implications for managing complexity in software projects. It posits that our working memory has a limited capacity for processing new information. In the context of software development, this translates to the need for clean, readable code and well-architected systems that minimize the cognitive load on developers. By understanding and applying this theory, we can create development environments that reduce unnecessary complexity and allow developers to allocate their cognitive resources\u2026",
+    "Score": 0,
+    "Date": "2023-11-10",
+    "Word_Count": 185,
+    "Comments": []
+}

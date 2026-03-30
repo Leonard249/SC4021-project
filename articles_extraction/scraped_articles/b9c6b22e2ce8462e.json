@@ -1,0 +1,16 @@
+{
+  "url": "https://cursor.com/changelog/2-1",
+  "normalized_url": "https://cursor.com/changelog/2-1",
+  "source_type": "corporate_blog",
+  "title": "Improved Plan Mode, AI Code Review in Editor, and Instant Grep",
+  "author": null,
+  "date": "2025-11-21",
+  "text": "2.1 · Changelog\nImproved Plan Mode, AI Code Review in Editor, and Instant Grep\nImproved Plan Mode\nWhen creating plans, Cursor responds with clarifying questions to improve the plan quality. Cursor now shows an interactive UI to easily answer questions.\nYou can also ⌘+F to search inside generated plans.\nAI Code Reviews\nYou can now find and fix bugs directly in Cursor with AI code reviews. It will look at your changes and find issues which you can see in the sidepanel.\nThis is in addition to Bugbot, which runs on your source control provider like GitHub (including Enterprise Server), GitLab, and more.\nInstant Grep (Beta)\nAll grep commands run by the agent are now instant.\nInstant grep is supported by all models in Cursor. It is also used when manually searching the codebase from the sidebar, including regexes and matching on word boundaries.\nThis improvement is slowly rolling out to 2.1 users over the next week.",
+  "excerpt": "2.1 · Changelog\nImproved Plan Mode, AI Code Review in Editor, and Instant Grep\nImproved Plan Mode\nWhen creating plans, Cursor responds with clarifying questions to improve the plan quality. Cursor now shows an interactive UI to easily answer questions.\nYou can also ⌘+F to search inside generated plans.\nAI Code Reviews\nYou can now find and fix bugs directly in Cursor with AI code reviews. It will look at your changes and find issues which you can see in the sidepanel.\nThis is in addition to Bugbo",
+  "word_count": 157,
+  "scraped_at": "2026-02-24T08:05:24.702869+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "AI coding research and sentiment batch 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.blog/2026/01/13/vibe-code-anything-in-a-hanselminute/",
+  "normalized_url": "https://stackoverflow.blog/2026/01/13/vibe-code-anything-in-a-hanselminute",
+  "source_type": "personal_blog",
+  "title": "Vibe code anything in a Hanselminute",
+  "author": "Phoebe Sajor",
+  "date": "2026-01-13",
+  "text": "They cover the ways it can really improve the software development lifecycle, the importance of keeping human judgement in software so developers can truly understand their code, and how AI can be leveraged as a learning tool…like when Scott vibe coded a simple app over lunch.\nScott last sat down with us in 2017 to discuss his journey into tech and his advice for supporting the next generation of developers.\nYou can learn more about Scott’s work at his website. If you love the sound of his voice, you can also check out his podcasts Hanselminutes, Azure Friday, and his show with Microsoft Azure CTO Mark Russinovich: Scott & Mark Learn To. You can also check out the app he vibe coded over lunch on his GitHub.\nThis week’s shoutout goes to user Keavon for their answer to Move Line Up/Down shortcut in Visual Studio, which won them a Populist badge.",
+  "excerpt": "They cover the ways it can really improve the software development lifecycle, the importance of keeping human judgement in software so developers can truly understand their code, and how AI can be leveraged as a learning tool…like when Scott vibe coded a simple app over lunch.\nScott last sat down with us in 2017 to discuss his journey into tech and his advice for supporting the next generation of developers.\nYou can learn more about Scott’s work at his website. If you love the sound of his voice",
+  "word_count": 151,
+  "scraped_at": "2026-02-24T08:17:34.728159+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Stack Overflow AI category page links"
+  ]
+}

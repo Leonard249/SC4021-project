@@ -1,0 +1,12 @@
+{
+    "ID": "article_519b96cd6b3c7500",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Reza Rezvani",
+    "Title": "Claude Code Complete Mastery Guide: For Solo Developers Using Claude Code",
+    "Text": "Member-only story\nClaude Code Complete Mastery Guide: For Solo Developers Using Claude Code\nWhy 85% of developers use AI tools, but only 15% build the context systems that make them reliable.\nDisclosure: I used AI tools to help refine and structure this content. The insights and code examples are from my direct work experience or my own research and investigational work.\nThe Wake-Up Call\nThree months into a six-week consulting project, I sat staring at deployment errors at night. The client email had arrived an hour earlier: \u201cWe need to discuss timeline adjustments.\u201d\nTranslation: You\u2019re behind, and we\u2019re worried.\nI\u2019d been using Claude Code for months. Daily. But my outputs looked like they came from someone who\u2019d just discovered autocomplete \u2014 fast, yes, but brittle. Code that worked until it didn\u2019t. Documentation that explained what but never why.\nThat\u2019s when I realized:\nClaude Code\u2019s future isn\u2019t about writing code faster. It\u2019s about thinking about systems differently.\nAfter restructuring my entire workflow around that insight, I shipped what should have been three weeks of work in four days. Debugging time dropped 65%. More importantly, the architecture\u2026",
+    "Score": 0,
+    "Date": "2025-11-03",
+    "Word_Count": 185,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_ddc746b858ffc0d9",
+    "Source": "other_blog",
+    "Type": "Article",
+    "Author": null,
+    "Title": "Vibe coding isn\u2019t the same as engineering, and I caught myself drifting too.",
+    "Text": "When almost every one of us is chasing flashy demos and quick wins, many of us still struggle to build something as fundamental as a proper auth system.\nI\u2019m not pretending I was immune.\nTo break that pattern, I\u2019ve planned to start a 3-Month Sprint Plan leading up to my graduation, focused purely on the skills that separate engineers from \u201cjust vibe-coding developers.\u201d\nThis sprint is about depth, not dopamine.\nThe focus:\n\u2022 System Design (HLD & LLD)\n\u2022 Architecture Design\n\u2022 Core Backend Principles\n\u2022 Distributed Systems & Scalability\n\u2022 DBMS internals & indexing\n\u2022 OS concepts (memory, concurrency, scheduling)\n\u2022 Computer Networks\n\u2022 Caching, queues, API gateways\n\u2022 Docker, CI/CD & deployment\n\u2022 AI systems basics (RAG pipelines, vector DBs, inference)\n\u2022 Daily LeetCode for interview readiness\nLeetCode problems + concept revision\nWhat I learned from articles, docs & engineering blogs\nProject & FYP feature implementations\nBackend & AI architecture experiments\nFor anyone who wants to follow along, I\u2019ll mainly be learning from resources like:\nhttps://tech-blogs.dev/list\nhttps://teachyourselfcs.com/\nhttps://interviewready.io/blog/\nhttps://blog.bytebytego.com/archive?sort=top\nhttps://bytebytego.com/guides/\nhttps://www.hellointerview.com/learn/system-design/in-a-hurry/introduction\nhttps://engineeringblogs.xyz/\nhttps://www.thoughtworks.com/engineering\nhttps://martinfowler.com/architecture/\nhttps://jvns.ca/\nhttps://architecturenotes.co/archive?sort=top\nhttps://use-the-index-luke.com/\nhttps://www.redblobgames.com/\nI\u2019ll deliberately limit what I read at one time. Too many resources create distractions, and distractions quietly kill productivity.\nThere\u2019s no \u201csomeday\u201d in this plan.\nI\u2019m starting today. What about you?\nDaily updates will go live between 9:00 PM and 11:59 PM.\nLet\u2019s see what disciplined consistency can build in three months.\nTake care.\n0\n16\n0",
+    "Score": 0,
+    "Date": "2026-02-02",
+    "Word_Count": 237,
+    "Comments": []
+}

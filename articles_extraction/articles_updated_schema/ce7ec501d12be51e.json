@@ -1,0 +1,12 @@
+{
+    "ID": "article_ce7ec501d12be51e",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simra Husain",
+    "Title": "I Paid $20 to Test Claude Opus 4.6. It Passed Every Test Except the One That Matters.",
+    "Text": "Member-only story\nI Paid $20 to Test Claude Opus 4.6. It Passed Every Test Except the One That Matters.\nFrom \u201cGhost Packages\u201d to \u201cPhysics Failures\u201d \u2014 here is the 24-hour review no one else is writing.\nThe tech world is currently obsessed with \u201cVibe Coding.\u201d Anthropic just dropped Claude Opus 4.6, and the benchmarks are staggering. It currently leads the industry in Terminal-Bench 2.0 (65.4%) and dominates the GDPval-AA (1364 Elo), which measures economically valuable knowledge work.\nBut I don\u2019t ship benchmarks. I ship production Flutter apps.\nI spent the last 24 hours entering a \u201cLogic Battle\u201d with Opus 4.6 to see if a Senior Architect can actually trust it. The results? It is the most brilliant \u201cSenior-Junior\u201d I\u2019ve ever hired \u2014 and it will lie to your face to keep you happy.\n1. The Physics Fail: \u201cGenius with no Common Sense\u201d\nI started with a classic spatial reasoning test. If an AI is going to refactor my architecture, it needs to understand physical reality, not just text patterns.\nThe Setup: I asked Claude to physically rotate an analog clock showing 3:15 PM by 90 degrees counter-clockwise and tell me what an observer would see.",
+    "Score": 0,
+    "Date": "2026-02-14",
+    "Word_Count": 195,
+    "Comments": []
+}

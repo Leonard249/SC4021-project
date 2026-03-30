@@ -1,0 +1,16 @@
+{
+  "url": "https://www.deeplearning.ai/short-courses/pair-programming-llm/",
+  "normalized_url": "https://www.deeplearning.ai/short-courses/pair-programming-llm",
+  "source_type": "other_blog",
+  "title": "Pair Programming with a Large Language Model",
+  "author": null,
+  "date": "2023-09-27",
+  "text": "Pair Programming with a Large Language Model\nInstructor: Laurence Moroney\n- Beginner\n- 1 Hour 4 Minutes\n- 6 Video Lessons\n- 4 Code Examples\n- Instructor: Laurence Moroney\nWhat you'll learn\nUse LLMs to simplify your code and become a more productive software engineer\nReduce technical debt by explaining and documenting a complex existing code base\nGet free access to the PaLM API for use throughout the course\nAbout this course\nAI pair programming is being rapidly adopted by developers to help with tasks across the tech stack, from catching bugs to quickly inserting entire code snippets.\nLearn how LLMs can enhance, debug, and document your code in this new course built in collaboration with Google.\nGet free access to Google’s PaLM API and get hands-on experience that you can apply to your own projects. You’ll learn how to use an LLM in pair programming to:\n- Simplify and improve your code\n- Write test cases\n- Debug and refactor your code\n- Explain and document any complex code written in any coding language\nWho should join?\nAnyone with basic Python knowledge interested in using LLMs for pair programming.\nCourse Outline\n6 Lessons・4 Code ExamplesIntroduction\nVideo・2 mins\nGetting Started\nVideo with code examples・15 mins\nUsing a String Template\nVideo with code examples・10 mins\nPair Programing Scenarios\nVideo with code examples・27 mins\nTechnical Debt\nVideo with code examples・8 mins\nConclusion\nVideo・1 min\nQuiz\nReading・1 min\nInstructor\nPair Programming with a Large Language Model\n- Beginner\n- 1 Hour 4 Minutes\n- 6 Video Lessons\n- 4 Code Examples\n- Instructor: Laurence Moroney\nCourse access is free for a limited time during the DeepLearning.AI learning platform beta!\nWant to learn more about Generative AI?\nKeep learning with updates on curated AI news, courses, and events, as well as Andrew’s thoughts from DeepLearning.AI!",
+  "excerpt": "Pair Programming with a Large Language Model\nInstructor: Laurence Moroney\n- Beginner\n- 1 Hour 4 Minutes\n- 6 Video Lessons\n- 4 Code Examples\n- Instructor: Laurence Moroney\nWhat you'll learn\nUse LLMs to simplify your code and become a more productive software engineer\nReduce technical debt by explaining and documenting a complex existing code base\nGet free access to the PaLM API for use throughout the course\nAbout this course\nAI pair programming is being rapidly adopted by developers to help with ",
+  "word_count": 301,
+  "scraped_at": "2026-02-24T08:09:53.171206+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "AI pair programming"
+  ]
+}

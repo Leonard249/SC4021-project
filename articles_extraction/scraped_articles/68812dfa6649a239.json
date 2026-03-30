@@ -1,0 +1,16 @@
+{
+  "url": "https://andrew-larse514.medium.com/9-lessons-learned-from-using-cursor-coding-agents-in-production-a494dc9020d7",
+  "normalized_url": "https://andrew-larse514.medium.com/9-lessons-learned-from-using-cursor-coding-agents-in-production-a494dc9020d7",
+  "source_type": "medium",
+  "title": "9 lessons learned from using Cursor coding agents in production",
+  "author": "Andrew Larsen",
+  "date": "2026-01-14",
+  "text": "Member-only story\n9 lessons learned from using Cursor coding agents in production\nIt feels like AI coding agents have crossed the “good enough” threshold recently. I’ve gone from skeptic to believer in just the past couple of months. But what I’ve found is they’re not “good enough” out of the box. Our industry is trying to figure out how best to leverage tools like Claude code, Gemini, Cursor, etc but we’re all still trying to coalesce around how we approach this new way of working.\nOver the past few weeks, I’ve been using a more formal agentic development process, coined by others as Spec-Driven-Development.\nBelow are my learnings and observations from having used SDD with cursor to build real customer features and products over the last few months\nPhases Beat Prompts\nThe biggest improvements I saw didn’t come from better prompting — it came from forcing the work into phases:\nresearch → plan → implement\nWhen agents are constrained to think in stages, output quality improves dramatically. Fewer hallucinations. Fewer wrong turns. Better alignment with intent.\nAt this point, I won’t do serious feature work without some version of this pattern.",
+  "excerpt": "Member-only story\n9 lessons learned from using Cursor coding agents in production\nIt feels like AI coding agents have crossed the “good enough” threshold recently. I’ve gone from skeptic to believer in just the past couple of months. But what I’ve found is they’re not “good enough” out of the box. Our industry is trying to figure out how best to leverage tools like Claude code, Gemini, Cursor, etc but we’re all still trying to coalesce around how we approach this new way of working.\nOver the pas",
+  "word_count": 191,
+  "scraped_at": "2026-02-24T08:28:21.384937+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com cursor IDE coding"
+  ]
+}

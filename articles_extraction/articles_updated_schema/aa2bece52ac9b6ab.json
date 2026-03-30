@@ -1,0 +1,12 @@
+{
+    "ID": "article_aa2bece52ac9b6ab",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Nov 12th letter from OpenAI to Judge Ona T. Wang",
+    "Text": "13th November 2025\nOn Monday, this Court entered an order requiring OpenAI to hand over to the New York Times and its co-plaintiffs 20 million ChatGPT user conversations [...]\nOpenAI is unaware of any court ordering wholesale production of personal information at this scale. This sets a dangerous precedent: it suggests that anyone who files a lawsuit against an AI company can demand production of tens of millions of conversations without first narrowing for relevance. This is not how discovery works in other cases: courts do not allow plaintiffs suing Google to dig through the private emails of tens of millions of Gmail users irrespective of their relevance. And it is not how discovery should work for generative AI tools either.\n\u2014 Nov 12th letter from OpenAI to Judge Ona T. Wang, re: OpenAI, Inc., Copyright Infringement Litigation\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-13",
+    "Word_Count": 177,
+    "Comments": []
+}

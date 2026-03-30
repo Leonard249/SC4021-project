@@ -1,0 +1,21 @@
+{
+  "url": "https://blog.stackademic.com/vibe-coding-is-killing-open-source-2f729e8a29f0",
+  "normalized_url": "https://blog.stackademic.com/vibe-coding-is-killing-open-source-2f729e8a29f0",
+  "source_type": "personal_blog",
+  "title": "Vibe Coding Is Killing Open Source",
+  "author": "Deo Wetton",
+  "date": "2026-02-23",
+  "text": "Member-only story\nVibe Coding Is Killing Open Source\nThe prosperity of Vibe Coding may be built on the ruins of the open-source ecosystem.\nOver the past year, Vibe Coding has almost completely rewritten the way programming works.\nYou no longer need to “write” code line by line yourself. Just tell Cursor, Claude, or Copilot what feature you want, which tech stack to use, and preferably that it should “feel like a certain product,” and let AI handle the rest.\nMany people who previously couldn’t write code now, for the first time, have the ability to “build something.” From an individual perspective, this is almost a golden age of software development.\nBut there is an overlooked premise here: AI does not create code out of thin air. It calls upon and assembles the accumulated wisdom of humanity. When you say, “Help me build a website,” AI is quietly referencing the logic and structure accumulated across countless open-source projects on GitHub.\nThe core capability of Vibe Coding is built precisely on learning from and recombining these open-source codebases.\nRecently, a research team from Central European University and the Kiel Institute for the World Economy published a paper titled “Vibe Coding Kills Open Source” (https://arxiv.org/pdf/2601.15494v1), revealing the hidden crisis behind the prosperity of Vibe…",
+  "excerpt": "Member-only story\nVibe Coding Is Killing Open Source\nThe prosperity of Vibe Coding may be built on the ruins of the open-source ecosystem.\nOver the past year, Vibe Coding has almost completely rewritten the way programming works.\nYou no longer need to “write” code line by line yourself. Just tell Cursor, Claude, or Copilot what feature you want, which tech stack to use, and preferably that it should “feel like a certain product,” and let AI handle the rest.\nMany people who previously couldn’t wr",
+  "word_count": 211,
+  "scraped_at": "2026-02-24T08:10:18.593938+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium top publications sweep (balancing)",
+    "Substack and Medium final balancing batch 1",
+    "Substack and Medium final balancing batch 3",
+    "Substack and Medium final balancing batch 4",
+    "Substack and Medium final balancing batch 5",
+    "Substack and Medium final balancing batch 6"
+  ]
+}

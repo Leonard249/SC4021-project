@@ -1,0 +1,12 @@
+{
+    "ID": "article_7c2eb9e6b336793d",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "MatthewH",
+    "Title": "How to disable Copilot using PowerShell?",
+    "Text": "I am new to scripting/coding. My work has tasked me to get rid of or disable copilot from showing up and being utilized till we get all the greenlight from our state IT people to use it. This is what I have so far and I am running into errors that I can't seem to see.\n- # Create a new instance of the Windows Script Shell object\n$objShell = New-Object -ComObject \"WScript.Shell\"\n# Modify registry key for Copilot eligibility\n$RegPath1 = \"HKCU\\Software\\Microsoft\\Windows\\Shell\\Copilot\\BingChat\"\n$objShell.RegWrite(\"$RegPath1\\IsUserEligible\", \"0\", \"REG_DWORD\")\nStart-Sleep -10\n# Modify registry key to show Copilot button in Windows Explorer\n$RegPath2 = \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\"\n$objShell.RegWrite(\"$RegPath2\\ShowCopilotButton\", \"1\", \"REG_DWORD\")\nIt seems to work but I am getting an error message that I can't get PS to show. I have tried modifying the regedit but that option isn't available on my end for some reason. I have changed the start sleep to 10 instead of milliseconds 3000.",
+    "Score": 0,
+    "Date": "2024-02-29",
+    "Word_Count": 152,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_b12231b4adb6f0cb",
+    "Source": "substack",
+    "Type": "Article",
+    "Author": "Anton Osika",
+    "Title": "GPT Engineer - A platform for devs to tinker with AI code generation tools",
+    "Text": "GPT Engineer - A platform for devs to tinker with AI code generation tools\nWanted to share a project I\u2019ve been working on during my spare time.\nGPT Engineer\u2019s mission: Be the open platform for devs to tinker with and build their personal code-generation toolbox.\nDemo: GPT Engineer launch\nI believe that it's valuable for us devs to engage in how building software can, and will, inevitably change.\nThe GitHub project is quickly improving, getting stable and solving more problems. The focus is to set up a benchmark for ensuring the code is in a good state, for us all to follow the progress, and know its current limitations.\nYou can find more about the technical philosophy, current features, and information for those that might be interested in contributing on GitHub.\nGenerally, a community is forming around creating and evolving a \u201cpersonal AI toolbox\u201d, which I think is great.\nAppreciate any suggestions, experiences, or ideas on this project!",
+    "Score": 0,
+    "Date": "2023-06-18",
+    "Word_Count": 158,
+    "Comments": []
+}

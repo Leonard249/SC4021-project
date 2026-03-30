@@ -1,0 +1,12 @@
+{
+    "ID": "article_4b310355103d5387",
+    "Source": "stackoverflow",
+    "Type": "Article",
+    "Author": "Ajnabz",
+    "Title": "Using copilot with logic apps",
+    "Text": "I have a logic app that sends a request to copilot to reformat a piece of code. I have a large number of code blocks to convert using copilot (~1000) so I am trying to query copilot in a loop however it is only doing 5 requests per hour then timing out and failing. I was wondering whether anyone knew how to avoid this and send more requests to copilot every hour?\n1 Answer\nthe logic app connector for Microsoft copilot foe security allows a total of 600 calls per 60 seconds for a single API connection. Here is a reference to the Throttling limits\nBased on the observed behavior, it is likely that you are reaching security compute unit(SCU)\nlimit or your Microsoft Copilot for Security. Once the limit has been reached, the copilot cannot process any additional prompts, and the capacity would be available in the next hour.\nYou can monitor and view the usage of these compute units by following the steps in the article - Monitor security compute units use. If you identify this to be the cause of your issue, you can update the SCU limit by following the steps under section Update the provisioned security compute units (SCUs)\nIf you still encounter issues after trying the above steps, you can contact support by creating a ticket",
+    "Score": 0,
+    "Date": "2024-08-09",
+    "Word_Count": 222,
+    "Comments": []
+}

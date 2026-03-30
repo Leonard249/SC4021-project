@@ -1,0 +1,12 @@
+{
+    "ID": "article_0659a0a7d98b67e0",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Micheal Lanham",
+    "Title": "Can Vibe Coding Work for Production Code?",
+    "Text": "Member-only story\nCan Vibe Coding Work for Production Code?\nAn Honest Look at Using AI to Write Your Software\nVibe coding \u2014 building software by instructing an AI through simple human language \u2014 is the hot new trend making waves across the developer community. But can we really trust AI-generated code in a production environment? Let\u2019s dive into the good, the bad, and the practical to find out.\nWhat Exactly is Vibe Coding?\nVibe coding is essentially programming by giving instructions to AI language models like GPT-4, Claude, or GitHub Copilot, instead of writing every line yourself. You describe what you want, and the AI provides the actual code snippets.\nAndrej Karpathy, an AI pioneer, humorously described it as, \u201cIt\u2019s not really coding \u2014 I just see stuff, say stuff, run stuff, and copy-paste stuff, and it mostly works.\u201d This casual, conversational approach makes vibe coding attractive to developers who want to prototype rapidly. It blends traditional programming with natural language interaction, making it accessible and intuitive for those who might feel intimidated by traditional coding practices.\nHere\u2019s a simple example comparing traditional coding to vibe coding:\nTraditional Coding:\n# Manually writing a function to find\u2026",
+    "Score": 0,
+    "Date": "2025-03-24",
+    "Word_Count": 196,
+    "Comments": []
+}

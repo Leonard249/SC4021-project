@@ -1,0 +1,12 @@
+{
+    "ID": "article_cbe989b83af4c32c",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Dqj",
+    "Title": "Post-AI Era: Will the Spiral of Strong vs. Weak Presuppositions Continue?",
+    "Text": "Member-only story\nPost-AI Era: Will the Spiral of Strong vs. Weak Presuppositions Continue?\n5 min readFeb 11, 2026\nFrom rigid rules to runtime inference \u2014 every major shift in computing has been a spiral of loosening presuppositions while preserving what must remain strong. In the age of powerful AI, does this pattern still hold, or are we finally breaking free?\nIf presuppositions are always caught in a tug-of-war between strength and weakness, then isn\u2019t the history of code, databases, RAG, and AI itself just one long series of spirals?\nWe keep seeing the same pattern repeat:\n- Start with extremely strong presuppositions (explicit rules, hard-coded everything) for predictability and control\n- Discover that the world changes too fast, turning those strong commitments into shackles\n- Introduce weaker presuppositions (learned patterns, runtime decisions) for adaptability\n- But the new weakness brings opacity, non-determinism, and loss of auditability \u2014 so we hybridize, seeking balance\n- Each cycle is not replacement, but ascent: retaining the core value of the previous layer while moving toward later, weaker, more flexible commitments",
+    "Score": 0,
+    "Date": "2026-02-11",
+    "Word_Count": 176,
+    "Comments": []
+}

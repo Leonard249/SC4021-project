@@ -1,0 +1,16 @@
+{
+  "url": "https://newsletter.pragmaticengineer.com/p/compensation-at-tech-companies",
+  "normalized_url": "https://newsletter.pragmaticengineer.com/p/compensation-at-tech-companies",
+  "source_type": "personal_blog",
+  "title": "Compensation at Publicly Traded Tech Companies",
+  "author": "Gergely Orosz",
+  "date": "2023-05-09",
+  "text": "Compensation at Publicly Traded Tech Companies\nInsights from 100 tech companies, and a list of those paying the most median total compensation.\nI’m back from my spring break which I spent with my in-laws in sunny Florida, so the usual cadence of two issues per week resumes. Thank you for your support during the break: we’re now back into the thick of it!\nIn 2015, the US Securities and Exchange Commission issued a rule which mandates publicly traded US companies to disclose their compensation details. Every year, 3 data points need to be made public:\nThe median annual total compensation of all employees, except the CEO;\nThe annual total compensation of its CEO;\nThe ratio of these two amounts.\nWe’re right on time to take a look at the latest figures. Over the past few weeks, the majority of US publicly traded companies have published their median total compensation numbers for 2022. During this time, I’ve collected data on 100 tech companies. I can say the results are interesting.\nToday, we cover:\n“Median employee” vs a senior software engineer. Why the median compensation figure will almost always be below what senior engineers earn.\nHighest and lowest median salaries. Which companies paid the most, and which compensated the least, at the 50th percentile?\nBig Tech’s salary benchmarks. How does Amazon, Apple, Alphabet, Microsoft, Oracle, Meta, Salesforce and NVIDIA benchmark their compensation, and which ones benchmark each other mutually?\nCEO pay ratios. Which CEOs took home the most and the least, relative to a median employee? How do standout CEOs such as Satya Nadella and Tim Cook compare to others?\nCompensation packages with job stability. Many companies which offer strong packages have had layoffs recently. But which places have not let workers go, and also pay well?\nWhere to find these “hidden” numbers. Companies don’t advertise their median pay brackets. How can you find this revealing number for most publicly traded US companies? And which companies are allowed to not publish this data, and how come?\nThe complete list. In browsable format, so you can slice and dice the data.\nAs a first peek, let’s cover how we arrive at the numbers, like those in this set:",
+  "excerpt": "Compensation at Publicly Traded Tech Companies\nInsights from 100 tech companies, and a list of those paying the most median total compensation.\nI’m back from my spring break which I spent with my in-laws in sunny Florida, so the usual cadence of two issues per week resumes. Thank you for your support during the break: we’re now back into the thick of it!\nIn 2015, the US Securities and Exchange Commission issued a rule which mandates publicly traded US companies to disclose their compensation det",
+  "word_count": 365,
+  "scraped_at": "2026-02-24T08:17:43.548252+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Pragmatic Engineer and Addy Osmani Substacks"
+  ]
+}

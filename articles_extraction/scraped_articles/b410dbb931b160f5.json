@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/71007828/github-copilot-could-not-connect-to-server",
+  "normalized_url": "https://stackoverflow.com/questions/71007828/github-copilot-could-not-connect-to-server",
+  "source_type": "stackoverflow",
+  "title": "GitHub Copilot could not connect to server",
+  "author": "Kongpop Parkpisas",
+  "date": "2022-02-06",
+  "text": "Someone told me that the problem was caused by a firewall and a VPN, but I disabled the firewall and do not have a VPN.\n3 Answers\nGitHub Copilot could not connect to server. Extension activation failed: \"Timed out waiting for authentication provider to register\"\nYou probably have GitHub Authentication disabled.\nGitHub Autenthication is an extension that is bundled with Visual Studio Code.\nGo to File -> Preferences -> Profiles -> Show Contents\nIn the left panel, in the \"Extensions\" group, click in \"GitHub Authentication\" and enable the extension.\n1 Comment\nMaksym Dudyk\nYou are the only person in the Internet, who suggested the solution to the issue.\nIt's because network problem.\nEdit you hosts\nfile, and add\n140.82.114.4 github.com\n140.82.114.6 api.github.com\nReference",
+  "excerpt": "Someone told me that the problem was caused by a firewall and a VPN, but I disabled the firewall and do not have a VPN.\n3 Answers\nGitHub Copilot could not connect to server. Extension activation failed: \"Timed out waiting for authentication provider to register\"\nYou probably have GitHub Authentication disabled.\nGitHub Autenthication is an extension that is bundled with Visual Studio Code.\nGo to File -> Preferences -> Profiles -> Show Contents\nIn the left panel, in the \"Extensions\" group, click i",
+  "word_count": 123,
+  "scraped_at": "2026-02-24T08:21:24.857562+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

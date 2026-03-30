@@ -1,0 +1,12 @@
+{
+    "ID": "article_be2f153716cf59b6",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Bluesky Thread Viewer thread by @simonwillison.net",
+    "Text": "28th November 2025 - Link Blog\nBluesky Thread Viewer thread by @simonwillison.net. I've been having a lot of fun hacking on my Bluesky Thread Viewer JavaScript tool with Claude Code recently. Here it renders a thread (complete with demo video) talking about the latest improvements to the tool itself.\nI've been mostly vibe-coding this thing since April, now spanning 15 commits with contributions from ChatGPT, Claude, Claude Code for Web and Claude Code on my laptop. Each of those commits links to the transcript that created the changes in the commit.\nBluesky is a lot of fun to build tools like this against because the API supports CORS (so you can talk to it from an HTML+JavaScript page hosted anywhere) and doesn't require authentication.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-11-28",
+    "Word_Count": 163,
+    "Comments": []
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://blog.stackademic.com/i-paid-20-to-test-claude-opus-4-6-it-passed-every-test-except-the-one-that-matters-3e507f12c033",
+  "normalized_url": "https://blog.stackademic.com/i-paid-20-to-test-claude-opus-4-6-it-passed-every-test-except-the-one-that-matters-3e507f12c033",
+  "source_type": "personal_blog",
+  "title": "I Paid $20 to Test Claude Opus 4.6. It Passed Every Test Except the One That Matters.",
+  "author": "Simra Husain",
+  "date": "2026-02-14",
+  "text": "Member-only story\nI Paid $20 to Test Claude Opus 4.6. It Passed Every Test Except the One That Matters.\nFrom “Ghost Packages” to “Physics Failures” — here is the 24-hour review no one else is writing.\nThe tech world is currently obsessed with “Vibe Coding.” Anthropic just dropped Claude Opus 4.6, and the benchmarks are staggering. It currently leads the industry in Terminal-Bench 2.0 (65.4%) and dominates the GDPval-AA (1364 Elo), which measures economically valuable knowledge work.\nBut I don’t ship benchmarks. I ship production Flutter apps.\nI spent the last 24 hours entering a “Logic Battle” with Opus 4.6 to see if a Senior Architect can actually trust it. The results? It is the most brilliant “Senior-Junior” I’ve ever hired — and it will lie to your face to keep you happy.\n1. The Physics Fail: “Genius with no Common Sense”\nI started with a classic spatial reasoning test. If an AI is going to refactor my architecture, it needs to understand physical reality, not just text patterns.\nThe Setup: I asked Claude to physically rotate an analog clock showing 3:15 PM by 90 degrees counter-clockwise and tell me what an observer would see.",
+  "excerpt": "Member-only story\nI Paid $20 to Test Claude Opus 4.6. It Passed Every Test Except the One That Matters.\nFrom “Ghost Packages” to “Physics Failures” — here is the 24-hour review no one else is writing.\nThe tech world is currently obsessed with “Vibe Coding.” Anthropic just dropped Claude Opus 4.6, and the benchmarks are staggering. It currently leads the industry in Terminal-Bench 2.0 (65.4%) and dominates the GDPval-AA (1364 Elo), which measures economically valuable knowledge work.\nBut I don’t ",
+  "word_count": 195,
+  "scraped_at": "2026-02-24T08:11:02.520371+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "Medium top publications sweep (balancing)"
+  ]
+}

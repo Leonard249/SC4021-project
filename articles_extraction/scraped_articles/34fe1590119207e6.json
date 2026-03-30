@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Jan/11/linus-torvalds/",
+  "normalized_url": "https://simonwillison.net/2026/jan/11/linus-torvalds",
+  "source_type": "personal_blog",
+  "title": "A quote from Linus Torvalds",
+  "author": "Simon Willison",
+  "date": "2026-01-11",
+  "text": "11th January 2026\nAlso note that the python visualizer tool has been basically written by vibe-coding. I know more about analog filters -- and that's not saying much -- than I do about python. It started out as my typical \"google and do the monkey-see-monkey-do\" kind of programming, but then I cut out the middle-man -- me -- and just used Google Antigravity to do the audio sample visualizer.\n— Linus Torvalds, Another silly guitar-pedal-related repo\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "11th January 2026\nAlso note that the python visualizer tool has been basically written by vibe-coding. I know more about analog filters -- and that's not saying much -- than I do about python. It started out as my typical \"google and do the monkey-see-monkey-do\" kind of programming, but then I cut out the middle-man -- me -- and just used Google Antigravity to do the audio sample visualizer.\n— Linus Torvalds, Another silly guitar-pedal-related repo\nRecent articles\n- Writing about Agentic Enginee",
+  "word_count": 115,
+  "scraped_at": "2026-02-24T08:20:34.256468+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

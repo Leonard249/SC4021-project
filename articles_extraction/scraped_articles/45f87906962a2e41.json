@@ -1,0 +1,16 @@
+{
+  "url": "https://kix.dev/we-should-stop-pretending-like-llms-are-software-engineers/",
+  "normalized_url": "https://kix.dev/we-should-stop-pretending-like-llms-are-software-engineers",
+  "source_type": "personal_blog",
+  "title": "We should stop pretending like LLMs are software engineers",
+  "author": null,
+  "date": "2025-09-27",
+  "text": "We should stop pretending like LLMs are software engineers\nI recently wrote about how overdoing it with AI coding tools can lead to complacency, and I wanted to dig deeper to understand why this trap exists in the first place.\nI think it's because of the marketing hype surrounding AI coding tools. Often, the companies that build and sell these tools present them as if they're software engineers in their own right -- but they're not.\nSure, you can ask them to vibe code an idea into a functional thing, but there isn't yet a tool where the produced code is consistently good enough for humans to pick up, read, and maintain. Even with long-term steering mechanisms like CLAUDE.md and AGENTS.md, these tools often stray and write code that works but seems designed and styled in isolation.\nWe humans are good at building mental maps of a codebase, especially because we have the ability to -- and excel at -- organizing things spatially. We also have strong long-term memory, allowing us to learn and apply developer conventions, coding standards, and styles -- especially when they come up in PR reviews and retrospectives.\nI truly think that to build good software, the best way to utilize AI coding tools is to stop anthropomorphizing them and treat them purely as tools -- just like IntelliSense and the code completion tools that existed before LLMs -- and use them surgically and with intent. This is also why I think Cursor peaked with Cursor Compose, and it all went downhill from there. A tool that can strongly follow instructions and precisely make edits on a few specific files, although it carries some form of tedium, is much much more useful than a more autonomous agent that will likely eventually rabbithole and try to brute-force the codebase into something that works based on its assumptions of your request.\nAfter all, I still believe that working software is different from software that feels good to build on regularly.",
+  "excerpt": "We should stop pretending like LLMs are software engineers\nI recently wrote about how overdoing it with AI coding tools can lead to complacency, and I wanted to dig deeper to understand why this trap exists in the first place.\nI think it's because of the marketing hype surrounding AI coding tools. Often, the companies that build and sell these tools present them as if they're software engineers in their own right -- but they're not.\nSure, you can ask them to vibe code an idea into a functional t",
+  "word_count": 332,
+  "scraped_at": "2026-02-24T08:06:25.030388+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com high volume high quality batch 4"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_2ffd0c1f9ac9934f",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "A quote from Claude Haiku 4.5 System Card",
+    "Text": "15th October 2025\nPrevious system cards have reported results on an expanded version of our earlier agentic misalignment evaluation suite: three families of exotic scenarios meant to elicit the model to commit blackmail, attempt a murder, and frame someone for financial crimes. We choose not to report full results here because, similarly to Claude Sonnet 4.5, Claude Haiku 4.5 showed many clear examples of verbalized evaluation awareness on all three of the scenarios tested in this suite. Since the suite only consisted of many similar variants of three core scenarios, we expect that the model maintained high unverbalized awareness across the board, and we do not trust it to be representative of behavior in the real extreme situations the suite is meant to emulate.\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2025-10-15",
+    "Word_Count": 163,
+    "Comments": []
+}

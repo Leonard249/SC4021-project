@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Jan/15/boaz-barak-gabriel-wu-jeremy-chen-and-manas-joglekar/",
+  "normalized_url": "https://simonwillison.net/2026/jan/15/boaz-barak-gabriel-wu-jeremy-chen-and-manas-joglekar",
+  "source_type": "personal_blog",
+  "title": "A quote from Boaz Barak, Gabriel Wu, Jeremy Chen and Manas Joglekar",
+  "author": "Simon Willison",
+  "date": "2026-01-15",
+  "text": "15th January 2026\nWhen we optimize responses using a reward model as a proxy for “goodness” in reinforcement learning, models sometimes learn to “hack” this proxy and output an answer that only “looks good” to it (because coming up with an answer that is actually good can be hard). The philosophy behind confessions is that we can train models to produce a second output — aka a “confession” — that is rewarded solely for honesty, which we will argue is less likely hacked than the normal task reward function. One way to think of confessions is that we are giving the model access to an “anonymous tip line” where it can turn itself in by presenting incriminating evidence of misbehavior. But unlike real-world tip lines, if the model acted badly in the original task, it can collect the reward for turning itself in while still keeping the original reward from the bad behavior in the main task. We hypothesize that this form of training will teach models to produce maximally honest confessions.\n— Boaz Barak, Gabriel Wu, Jeremy Chen and Manas Joglekar, OpenAI: Why we are excited about confessions\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "15th January 2026\nWhen we optimize responses using a reward model as a proxy for “goodness” in reinforcement learning, models sometimes learn to “hack” this proxy and output an answer that only “looks good” to it (because coming up with an answer that is actually good can be hard). The philosophy behind confessions is that we can train models to produce a second output — aka a “confession” — that is rewarded solely for honesty, which we will argue is less likely hacked than the normal task rewar",
+  "word_count": 228,
+  "scraped_at": "2026-02-24T08:20:43.424174+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://medium.com/@realmerlyn/my-ai-coding-workflow-evolved-and-it-changed-everything-e03903caf89f",
+  "normalized_url": "https://medium.com/@realmerlyn/my-ai-coding-workflow-evolved-and-it-changed-everything-e03903caf89f",
+  "source_type": "medium",
+  "title": "My AI Coding Workflow Evolved, and It Changed Everything",
+  "author": "Randal L Schwartz",
+  "date": "2025-07-26",
+  "text": "Member-only story\nMy AI Coding Workflow Evolved, and It Changed Everything\nIt started with asking an AI to write a function. It ended with a strategy that supercharged my entire development process. This is my journey.\nA year ago, my use of AI for coding was chaotic. I was like a kid in a candy store. I’d get stuck on a tricky algorithm and ask, “Write a Dart function that does X.” Boom, instant code. I’d need a complex SQL query. Zap, there it was. It felt like magic, but it was also messy. My projects were a patchwork of AI-generated snippets, and I was spending more time stitching them together than I was thinking strategically. I had a powerful tool, but no system.\nI was drowning in code without a map. Through trial and error, I stumbled upon a workflow that brought order to the chaos. It evolved in stages, and now, it’s the bedrock of how I build everything.\nIf you’re not a paid subscriber, continue this story with https://medium.com/@realmerlyn/my-ai-coding-workflow-evolved-and-it-changed-everything-e03903caf89f?sk=94dcd74eb639aef4621b25a83be2015a\nPart 1: The First Breakthrough — The Plan\nMy first “aha!” moment came when I stopped asking the AI for code and started asking it for a plan. Instead of saying, “Write the code for a login page,” I changed my prompt:\n“I need to build a user login and registration system. Break this down into…",
+  "excerpt": "Member-only story\nMy AI Coding Workflow Evolved, and It Changed Everything\nIt started with asking an AI to write a function. It ended with a strategy that supercharged my entire development process. This is my journey.\nA year ago, my use of AI for coding was chaotic. I was like a kid in a candy store. I’d get stuck on a tricky algorithm and ask, “Write a Dart function that does X.” Boom, instant code. I’d need a complex SQL query. Zap, there it was. It felt like magic, but it was also messy. My ",
+  "word_count": 228,
+  "scraped_at": "2026-02-24T08:29:14.986410+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "medium.com LLM coding workflow"
+  ]
+}

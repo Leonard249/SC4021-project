@@ -1,0 +1,16 @@
+{
+  "url": "https://aider.chat/",
+  "normalized_url": "https://aider.chat",
+  "source_type": "other_blog",
+  "title": "AI pair programming in your terminal",
+  "author": null,
+  "date": null,
+  "text": "Aider lets you pair program with LLMs to start a new project or build on your existing codebase.\nAider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.\nAider makes a map of your entire codebase, which helps it work well in larger projects.\nAider works with most popular programming languages: python, javascript, rust, ruby, go, cpp, php, html, css, and dozens more.\nAider automatically commits changes with sensible commit messages. Use familiar git tools to easily diff, manage and undo AI changes.\nUse aider from within your favorite IDE or editor. Ask for changes by adding comments to your code and aider will get to work.\nAdd images and web pages to the chat to provide visual context, screenshots, reference docs, etc.\nSpeak with aider about your code! Request new features, test cases or bug fixes using your voice and let aider implement the changes.\nAutomatically lint and test your code every time aider makes changes. Aider can fix problems detected by your linters and test suites.\nAider works best with LLM APIs, but it can also work an LLM via its web chat interface. Aider streamlines copy/pasting code back and forth with a browser.\npython -m pip install aider-install\naider-install\n# Change directory into your codebase\ncd /to/your/project\n# DeepSeek\naider --model deepseek --api-key deepseek=<key>\n# Claude 3.7 Sonnet\naider --model sonnet --api-key anthropic=<key>\n# o3-mini\naider --model o3-mini --api-key openai=<key>\nWant more details?\nEverything you need to get started and make the most of Aider\nConnect with other users and find additional resources",
+  "excerpt": "Aider lets you pair program with LLMs to start a new project or build on your existing codebase.\nAider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.\nAider makes a map of your entire codebase, which helps it work well in larger projects.\nAider works with most popular programming languages: python, javascript, rust, ruby, go, cpp, php, html, css, and dozens more.\nAider automatically commits changes ",
+  "word_count": 273,
+  "scraped_at": "2026-02-24T08:04:38.559880+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "AI pair programming"
+  ]
+}

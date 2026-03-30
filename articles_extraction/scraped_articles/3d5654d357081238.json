@@ -1,0 +1,16 @@
+{
+  "url": "https://stackoverflow.com/questions/78075334/github-copilot-issue-on-pycharm",
+  "normalized_url": "https://stackoverflow.com/questions/78075334/github-copilot-issue-on-pycharm",
+  "source_type": "stackoverflow",
+  "title": "GitHub Copilot issue on PyCharm",
+  "author": "Blade 1",
+  "date": "2024-02-28",
+  "text": "I've been using GitHub Copilot plugin on PyCharm IDE for a while now. However, I recently encountered an issue where the plugin keeps turning off whenever I start writing a new line of code. Oddly, my GitHub subscription is still active. Any suggestions on how to troubleshoot and resolve this issue?\n1 Answer\nUpdate github copilot plugin.\nReauthenticate github copilot.\nReinstall the plugin.\nUpdate PyCharm.\n3 Comments\nBlade\nI logged in and out, removed and installed it again, and updated the plug in and restarted the system, still the moment I start coding it turns off.\nBlade\nUpdating PyCharm got it fixed. Thanks for the suggestions.\nTigran Aivazian\nIt has not been working for several months now. I am surprised some people report that it (github copilot code completion in PyCharm) works. IT DOES NOT!",
+  "excerpt": "I've been using GitHub Copilot plugin on PyCharm IDE for a while now. However, I recently encountered an issue where the plugin keeps turning off whenever I start writing a new line of code. Oddly, my GitHub subscription is still active. Any suggestions on how to troubleshoot and resolve this issue?\n1 Answer\nUpdate github copilot plugin.\nReauthenticate github copilot.\nReinstall the plugin.\nUpdate PyCharm.\n3 Comments\nBlade\nI logged in and out, removed and installed it again, and updated the plug ",
+  "word_count": 135,
+  "scraped_at": "2026-02-24T08:18:22.746421+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "keyword:copilot"
+  ]
+}

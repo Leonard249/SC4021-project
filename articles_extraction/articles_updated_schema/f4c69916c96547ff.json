@@ -1,0 +1,12 @@
+{
+    "ID": "article_f4c69916c96547ff",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "The Secret Developer",
+    "Title": "AI in Software Development",
+    "Text": "Member-only story\nAI in Software Development\nThe Miracle, the Menace, and the Missed Pull Request\nThere\u2019s a funny little dance we all do when a new technology bursts onto the scene.\nSome rush in, feet stomping and arms flailing, declaring it a revolution. Others lurk at the edges, arms folded, saying \u201cwe don\u2019t use AI here and never will\u201d. It\u2019s as if they\u2019re proudly announcing their allegiance to Blockbuster in 2010.\nIn software development, AI isn\u2019t just at the gates. There\u2019s more to it than that.\nThe Gatekeeper\nAI hits hard. It\u2019s running the gatehouse, automating the keycard access, and assigning Jira tickets to the guards. If you want a job you\u2019ll need to get through an AI prescreen before anyone even looks at your application.\nEvery standup I\u2019m in has at least one person who \u201cused ChatGPT to write the PR description\u201d and because the people who are using AI don\u2019t change anything everyone can tell.\nWe now get code from AI, tests from AI, and even bug reports written by a bot that ironically understands our acceptance criteria better than our product manager. There\u2019s a reason junior devs are struggling to get a foot in the door because they\u2019re being out-interviewed by a language model that doesn\u2019t mind unpaid overtime or performative Agile\u2026",
+    "Score": 0,
+    "Date": "2025-09-10",
+    "Word_Count": 215,
+    "Comments": []
+}

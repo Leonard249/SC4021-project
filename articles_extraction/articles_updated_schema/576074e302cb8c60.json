@@ -1,0 +1,12 @@
+{
+    "ID": "article_576074e302cb8c60",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Rituraj",
+    "Title": "Why AI Coding Tools Are Making You Slower (And What Actually Works)",
+    "Text": "Member-only story\nWhy AI Coding Tools Are Making You Slower (And What Actually Works)\nI spent months testing Cursor, Antigravity, Claude Code, and Copilot. Here\u2019s the uncomfortable truth nobody in the AI hype cycle is talking about.\nI watched 200 lines of code materialize in my editor in under eight seconds. Cursor\u2019s agent had taken my one-line prompt and generated an entire authentication module \u2014 controllers, services, middleware, the works.\nI felt fast.\nForty minutes later, I was still debugging line 147.\nThe AI had hallucinated a middleware function that didn\u2019t exist in my framework version. Fixing it broke the service layer. Fixing that introduced a subtle race condition I didn\u2019t catch until my tests started failing intermittently.\nI could have written the 30 lines I actually needed in 10 minutes.\nThat was my wake-up call. And after spending most of the past year testing every major AI coding tool on the market \u2014 Cursor, Google Antigravity, Claude Code, GitHub Copilot, Windsurf, Cline \u2014 while building production applications, I\u2019ve come to a conclusion that won\u2019t make me popular in developer Twitter circles:",
+    "Score": 0,
+    "Date": "2026-02-22",
+    "Word_Count": 182,
+    "Comments": []
+}

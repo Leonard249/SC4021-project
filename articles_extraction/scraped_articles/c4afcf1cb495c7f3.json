@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Feb/14/thoughtworks/",
+  "normalized_url": "https://simonwillison.net/2026/feb/14/thoughtworks",
+  "source_type": "personal_blog",
+  "title": "A quote from Thoughtworks",
+  "author": "Simon Willison",
+  "date": "2026-02-14",
+  "text": "14th February 2026\nThe retreat challenged the narrative that AI eliminates the need for junior developers. Juniors are more profitable than they have ever been. AI tools get them past the awkward initial net-negative phase faster. They serve as a call option on future productivity. And they are better at AI tools than senior engineers, having never developed the habits and assumptions that slow adoption.\nThe real concern is mid-level engineers who came up during the decade-long hiring boom and may not have developed the fundamentals needed to thrive in the new environment. This population represents the bulk of the industry by volume, and retraining them is genuinely difficult. The retreat discussed whether apprenticeship models, rotation programs and lifelong learning structures could address this gap, but acknowledged that no organization has solved it yet.\n— Thoughtworks, findings from a retreat concerning \"the future of software engineering\", conducted under Chatham House rules\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "14th February 2026\nThe retreat challenged the narrative that AI eliminates the need for junior developers. Juniors are more profitable than they have ever been. AI tools get them past the awkward initial net-negative phase faster. They serve as a call option on future productivity. And they are better at AI tools than senior engineers, having never developed the habits and assumptions that slow adoption.\nThe real concern is mid-level engineers who came up during the decade-long hiring boom and m",
+  "word_count": 190,
+  "scraped_at": "2026-02-24T08:20:26.197902+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

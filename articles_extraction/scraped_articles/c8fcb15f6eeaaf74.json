@@ -1,0 +1,19 @@
+{
+  "url": "https://solmaz.io/typed-languages-are-better-suited-for-vibecoding",
+  "normalized_url": "https://solmaz.io/typed-languages-are-better-suited-for-vibecoding",
+  "source_type": "personal_blog",
+  "title": "Typed languages are better suited for vibecoding",
+  "author": "Onur Solmaz",
+  "date": "2025-08-03",
+  "text": "Typed languages are better suited for vibecoding\nThis post had some discussions on Hacker News, see the thread.\nMy >10 year old programming habits have changed since Claude Code launched. Python is less likely to be my go-to language for new projects anymore. I am managing projects in languages I am not fluent in—TypeScript, Rust and Go—and seem to be doing pretty well.\nIt seems that typed, compiled, etc. languages are better suited for vibecoding, because of the safety guarantees. This is unsurprising in hindsight, but it was counterintuitive because by default I “vibed” projects into existence in Python since forever.\nParadoxically, after a certain size of project, I can move faster and safer with e.g. Claude Code + Rust, compared to Claude Code + Python, despite the low-levelness of the code1. This is possible purely because of AI tools.\nFor example, I refactored large chunks of our TypeScript frontend code at TextCortex. Claude Code runs tsc\nafter finishing each task and ensures that the code compiles before committing. This let me move much faster compared to how I would have done it in Python, which does not provide compile-time guarantees. I am amazed every time how my 3-5k line diffs created in a few hours don’t end up breaking anything, and instead even increase stability.\nLLMs are leaky abstractions, sure. But they now work well enough so that they solve the problem Python solved for me (fast prototyping), without the disadvantages of Python (lower safety guarantees, slowness, ambiguity2).\nBecause of this, I predict a decrease in Python adoption in companies, specifically for production deployments, even though I like it so much.",
+  "excerpt": "Typed languages are better suited for vibecoding\nThis post had some discussions on Hacker News, see the thread.\nMy >10 year old programming habits have changed since Claude Code launched. Python is less likely to be my go-to language for new projects anymore. I am managing projects in languages I am not fluent in—TypeScript, Rust and Go—and seem to be doing pretty well.\nIt seems that typed, compiled, etc. languages are better suited for vibecoding, because of the safety guarantees. This is unsur",
+  "word_count": 272,
+  "scraped_at": "2026-02-24T08:08:56.291590+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "hn.algolia.com vibe coding",
+    "hn.algolia.com broad AI coding batch",
+    "vibe coding and agentic engineering high quality batch",
+    "hn.algolia.com high volume high quality batch 3"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_401949c44cf5ba38",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Dr Derek Austin",
+    "Title": "Coding with LLMs Is Far From the Best Use Case of LLMs for SWEs",
+    "Text": "Member-only story\nCoding with LLMs Is Far From the Best Use Case of LLMs for SWEs\nLead SWEs like you and me aren\u2019t going to get great results from gaslighting LLMs trying to \u201cone-shot\u201d our engineering problems. But code is far from the best use case of LLMs for SWEs. Here\u2019s why.\nDo you agree with the quote (from Hacker News user lubujackson) that \u201cLLMs are more deterministic than they seem?\u201d\n\u201c[C]oding with LLMs is really just a higher level abstraction. And the good news of that is LLMs are more deterministic than they seem, which is a lot of what people are fearful of losing by giving LLMs \u2018the reins\u2019.\u201d \u2014 lubujackson on HN\nI agree with them myself, because LLMs are trained heavily to follow instructions. In my mind, that makes them not particularly good coders.\nWe SWEs understand that solving engineering problems involves a lot of creative problem solving, not necessarily \u201cjust following instructions.\u201d\nIf coding was just following instructions step-by-step all day, then anybody could do it, with no training. And, if that were true, PMs would code all day instead of complaining all the time about how they\u2019re \u201cnot technical.\u201d",
+    "Score": 0,
+    "Date": "2025-12-01",
+    "Word_Count": 195,
+    "Comments": []
+}

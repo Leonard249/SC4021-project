@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2025/Dec/28/actions-latest/",
+  "normalized_url": "https://simonwillison.net/2025/dec/28/actions-latest",
+  "source_type": "personal_blog",
+  "title": "simonw/actions-latest",
+  "author": "Simon Willison",
+  "date": "2025-12-28",
+  "text": "28th December 2025 - Link Blog\nsimonw/actions-latest. Today in extremely niche projects, I got fed up of Claude Code creating GitHub Actions workflows for me that used stale actions: actions/setup-python@v4\nwhen the latest is actions/setup-python@v6\nfor example.\nI couldn't find a good single place listing those latest versions, so I had Claude Code for web (via my phone, I'm out on errands) build a Git scraper to publish those versions in one place:\nhttps://simonw.github.io/actions-latest/versions.txt\nTell your coding agent of choice to fetch that any time it wants to write a new GitHub Actions workflows.\n(I may well bake this into a Skill.)\nHere's the first and second transcript I used to build this, shared using my claude-code-transcripts tool (which just gained a search feature.)\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "28th December 2025 - Link Blog\nsimonw/actions-latest. Today in extremely niche projects, I got fed up of Claude Code creating GitHub Actions workflows for me that used stale actions: actions/setup-python@v4\nwhen the latest is actions/setup-python@v6\nfor example.\nI couldn't find a good single place listing those latest versions, so I had Claude Code for web (via my phone, I'm out on errands) build a Git scraper to publish those versions in one place:\nhttps://simonw.github.io/actions-latest/versio",
+  "word_count": 163,
+  "scraped_at": "2026-02-24T08:18:28.470136+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}

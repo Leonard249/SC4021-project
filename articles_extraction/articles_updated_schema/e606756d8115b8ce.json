@@ -1,0 +1,12 @@
+{
+    "ID": "article_e606756d8115b8ce",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Tom Smykowski",
+    "Title": "\ud83e\udd9e How Does OpenClaw Work? Inside the Agent Loop That Powers 200,000+ GitHub Stars",
+    "Text": "Member-only story\n\ud83e\udd9e How Does OpenClaw Work? Inside the Agent Loop That Powers 200,000+ GitHub Stars\n20 min read 3 days ago\nOpenClaw hit 200,000 GitHub stars in a week. Everyone talks about what it does, but few understand how it actually works. I spent hours reading the source code to find out. The architecture is surprisingly elegant. At its core sits a loop that turns chat messages into executable actions.\nThis loop runs in src/agents/pi-embedded-runner/run.ts\n. Today I'll show you exactly how it works.\nHi, my name is Tom Smykowski, I\u2019m a staff software engineer. I build and scale products to millions of users. On this blog I write about software engineering and AI.\nHere\u2019s the core loop, simplified:\nwhile (true) {\nconst attempt = await runEmbeddedAttempt({\nsessionId, sessionKey, prompt, model, tools, ...\n});\nif (attempt.success) break;\nif (attempt.contextOverflow) {\nawait compactSession();\ncontinue;\n}\nif (attempt.authError) {\nawait rotateApiKey();\ncontinue;\n}\nbreak; // Other errors exit the loop\n}\nA loop that keeps trying until it succeeds or hits an unrecoverable error. Everything else builds\u2026",
+    "Score": 0,
+    "Date": "2026-02-19",
+    "Word_Count": 176,
+    "Comments": []
+}

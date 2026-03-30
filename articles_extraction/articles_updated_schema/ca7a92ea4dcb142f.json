@@ -1,0 +1,12 @@
+{
+    "ID": "article_ca7a92ea4dcb142f",
+    "Source": "medium",
+    "Type": "Article",
+    "Author": "Jan Kammerath",
+    "Title": "The Rise Of Vibe Coding: A Practical Experiment With GitHub Copilot",
+    "Text": "Member-only story\nThe Rise Of Vibe Coding: A Practical Experiment With GitHub Copilot\nVibe coding is a very new phenomenon in which a developer fully relies on LLMs and agents to build software. One of the most notable examples is the web based flight simulator built by levelsio with Cursor and ThreeJS. He claims to have solely built with with Cursor. How much code he wrote himself, we don\u2019t know. But in this article, we\u2019ll have a look on how far we can take Vibe Coding with Visual Studio Code and GitHub Copilot.\nOur goal is to build a web based Tic Tac Toe application. One approach with vibe coding is to throw out software as fast and cheap as possible to make a quick buck, hosting it on the cheapest infrastructure possible. This can be a $1 virtual Linux box (VPS). So we need to build it in a way that can run on the most underwhelming server.\nHaving Copilot pick the tech stack\nWhen prompted to come up with a tech stack both Claude and GPT-4o recommend the use of React and NodeJS. Even when prompted with the requirement for it running on a cheap Linux VPS with only 1 GB RAM, they both still propose React and Node.",
+    "Score": 0,
+    "Date": "2025-03-14",
+    "Word_Count": 211,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_a17025a8d623a401",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Simon Willison",
+    "Title": "Skills in OpenAI API",
+    "Text": "11th February 2026 - Link Blog\nSkills in OpenAI API. OpenAI's adoption of Skills continues to gain ground. You can now use Skills directly in the OpenAI API with their shell tool. You can zip skills up and upload them first, but I think an even neater interface is the ability to send skills with the JSON request as inline base64-encoded zip data, as seen in this script:\nr = OpenAI().responses.create( model=\"gpt-5.2\", tools=[ { \"type\": \"shell\", \"environment\": { \"type\": \"container_auto\", \"skills\": [ { \"type\": \"inline\", \"name\": \"wc\", \"description\": \"Count words in a file.\", \"source\": { \"type\": \"base64\", \"media_type\": \"application/zip\", \"data\": b64_encoded_zip_file, }, } ], }, } ], input=\"Use the wc skill to count words in its own SKILL.md file.\", ) print(r.output_text)\nI built that example script after first having Claude Code for web use Showboat to explore the API for me and create this report. My opening prompt for the research project was:\nRun uvx showboat --help - you will use this tool later\nFetch https://developers.openai.com/cookbook/examples/skills_in_api.md to /tmp with curl, then read it\nUse the OpenAI API key you have in your environment variables\nUse showboat to build up a detailed demo of this, replaying the examples from the documents and then trying some experiments of your own\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+    "Score": 0,
+    "Date": "2026-02-11",
+    "Word_Count": 247,
+    "Comments": []
+}

@@ -1,0 +1,12 @@
+{
+    "ID": "article_e34a2fbe90ef64e7",
+    "Source": "personal_blog",
+    "Type": "Article",
+    "Author": "Dave R; AI MVP",
+    "Title": "How Microsoft Is Rewiring Cloud Security Into Every Azure Migration: Defender for Cloud+Agentic AI",
+    "Text": "Member-only story\nHow Microsoft Is Rewiring Cloud Security Into Every Azure Migration: A Deep Dive Into Defender for Cloud and Agentic AI.\nFrom Agentic AI Discovery to Runtime Threat Protection, a Unified Strategy That Makes Security a Revenue Multiplier for Cloud Migration Projects.\nCloud migration is no longer just about moving workloads from on-premises to Azure. It is about moving them securely, efficiently, and with AI-powered intelligence at every step. Microsoft has been making significant investments to ensure that security is embedded into the migration journey from day one, not bolted on after the fact.\nIn this article, I will walk you through the technical architecture behind this approach, covering Microsoft Defender for Cloud as a Cloud-Native Application Protection Platform (CNAPP), the agentic AI capabilities transforming migration workflows, the security insights tooling that builds the business case, and the economic model that turns security into a growth engine for every Azure project. Whether you are a cloud architect, a security engineer, or a partner building a practice around Azure, this deep dive will give you a clear picture of how all the pieces fit together.\nReference here.",
+    "Score": 0,
+    "Date": "2026-02-23",
+    "Word_Count": 187,
+    "Comments": []
+}

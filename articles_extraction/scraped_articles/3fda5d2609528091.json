@@ -1,0 +1,16 @@
+{
+  "url": "https://simonwillison.net/2026/Feb/11/glm-5/",
+  "normalized_url": "https://simonwillison.net/2026/feb/11/glm-5",
+  "source_type": "personal_blog",
+  "title": "GLM-5: From Vibe Coding to Agentic Engineering",
+  "author": "Simon Willison",
+  "date": "2026-02-11",
+  "text": "11th February 2026 - Link Blog\nGLM-5: From Vibe Coding to Agentic Engineering (via) This is a huge new MIT-licensed model: 754B parameters and 1.51TB on Hugging Face twice the size of GLM-4.7 which was 368B and 717GB (4.5 and 4.6 were around that size too).\nIt's interesting to see Z.ai take a position on what we should call professional software engineers building with LLMs - I've seen Agentic Engineering show up in a few other places recently. most notable from Andrej Karpathy and Addy Osmani.\nI ran my \"Generate an SVG of a pelican riding a bicycle\" prompt through GLM-5 via OpenRouter and got back a very good pelican on a disappointing bicycle frame:\nRecent articles\n- Writing about Agentic Engineering Patterns - 23rd February 2026\n- Adding TILs, releases, museums, tools and research to my blog - 20th February 2026\n- Two new Showboat tools: Chartroom and datasette-showboat - 17th February 2026",
+  "excerpt": "11th February 2026 - Link Blog\nGLM-5: From Vibe Coding to Agentic Engineering (via) This is a huge new MIT-licensed model: 754B parameters and 1.51TB on Hugging Face twice the size of GLM-4.7 which was 368B and 717GB (4.5 and 4.6 were around that size too).\nIt's interesting to see Z.ai take a position on what we should call professional software engineers building with LLMs - I've seen Agentic Engineering show up in a few other places recently. most notable from Andrej Karpathy and Addy Osmani.\n",
+  "word_count": 154,
+  "scraped_at": "2026-02-24T08:19:10.221149+00:00",
+  "scrape_method": "trafilatura",
+  "queries": [
+    "simonwillison.net/tags/ai/ pages 2-5"
+  ]
+}
