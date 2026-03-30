@@ -1,0 +1,638 @@
+"""
+subjectivity_detector.py
+SC4021 Information Retrieval 2026 — Subjectivity Detection Module
+
+Hybrid subjectivity detector: lexicon-based scoring runs first on every
+sentence. Sentences whose scores fall in an uncertain middle band are
+escalated to a transformer-based zero-shot classifier for a second opinion.
+
+Pipeline position:
+    MicrotextNormalizer → SBD → POSTagger → NERTagger → SubjectivityDetector
+
+Requires:
+    pip install transformers torch nltk vaderSentiment
+    python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
+
+Fields added to each record and comment:
+    Subjectivity             — "subjective" | "objective"  (record-level)
+    Subjectivity_Score       — float 0.0–1.0, higher = more subjective
+    Subjectivity_Sentences   — list of per-sentence dicts (see below)
+
+Per-sentence dict format:
+    {
+        "text"   : str,
+        "label"  : "subjective" | "objective",
+        "score"  : float,          # 0.0 = fully objective, 1.0 = fully subjective
+        "method" : "lexicon" | "transformer"
+    }
+
+Hybrid logic (per sentence):
+    lexicon_score >= UPPER_THRESHOLD  → subjective  (lexicon, no transformer call)
+    lexicon_score <= LOWER_THRESHOLD  → objective   (lexicon, no transformer call)
+    otherwise                         → transformer decides (expensive path)
+"""
+import sys
+from pathlib import Path
+
+root = Path(__file__).resolve().parents[2] 
+if str(root) not in sys.path:
+    sys.path.insert(0, str(root))
+
+import re
+import logging
+from transformers import pipeline
+from pathlib import Path
+from typing import Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from syntactics.sbd import SentenceBoundaryDisambiguator
+
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Lexicon constants
+# ---------------------------------------------------------------------------
+
+# Threshold band: scores outside [LOWER, UPPER] are decided by the lexicon.
+# Scores inside the band are escalated to the transformer.
+LOWER_THRESHOLD = 0.25
+UPPER_THRESHOLD = 0.65
+
+# First-person pronouns — strong subjectivity signal
+FIRST_PERSON = {
+    "i", "me", "my", "mine", "myself",
+    "we", "us", "our", "ours", "ourselves",
+}
+
+# Opinion-bearing adverbs — indicate personal stance
+OPINION_ADVERBS = {
+    "honestly", "frankly", "personally", "truly", "seriously",
+    "genuinely", "literally", "clearly", "obviously", "definitely",
+    "certainly", "absolutely", "basically", "essentially", "arguably",
+    "apparently", "admittedly", "surprisingly", "unfortunately", "thankfully",
+}
+
+# Hedging words — uncertainty = personal judgement = subjectivity
+HEDGE_WORDS = {
+    "maybe", "perhaps", "probably", "possibly", "seemingly",
+    "apparently", "seems", "feel", "think", "believe", "guess",
+    "suppose", "reckon", "expect", "doubt", "wonder", "feel", "feels", "felt",
+}
+
+# Intensifiers — amplify opinion signal
+INTENSIFIERS = {
+    "very", "really", "extremely", "incredibly", "insanely",
+    "ridiculously", "super", "so", "soo", "quite", "pretty",
+    "utterly", "totally", "completely", "highly", "massively",
+}
+
+# Sentiment-bearing adjectives and verbs common in tech opinion text
+TECH_OPINION_ADJ_AND_VERBS = {
+    # positive
+    "amazing", "awesome", "brilliant", "fantastic", "excellent",
+    "great", "good", "nice", "useful", "powerful", "fast", "smooth",
+    "intuitive", "productive", "efficient", "impressive", "solid",
+    "reliable", "helpful", "clean", "elegant", "simple", "better",
+    "best", "favorite", "favourite",
+    # negative
+    "bad", "terrible", "awful", "horrible", "broken", "slow",
+    "annoying", "frustrating", "useless", "buggy", "worse", "worst",
+    "mediocre", "disappointing", "limited", "poor", "messy", "clunky",
+    "bloated", "overrated", "unreliable", "confusing",
+
+    # Positive Verbs
+    "save", "automate", "speed", "boost", "streamline", "solve", 
+    "recommend", "love", "enjoy",
+    # Negative Verbs
+    "crash", "break", "hallucinate", "freeze", "fail", "suck", 
+    "waste", "ruin", "force", "complicate"
+
+    # Emotional reactions — very common in tool reviews
+    "disappointed", "disappointing", "surprised", "impressed", "shocked",
+    "excited", "thrilled", "worried", "concerned", "satisfied", "unsatisfied",
+    "pleased", "displeased", "annoyed", "frustrated", "delighted", "upset",
+    "happy", "unhappy", "glad", "regret", "regretful", "skeptical",
+    "nervous", "confident", "doubtful",
+
+    # Evaluative verbs missing from your current list
+    "prefer", "prefer", "hate", "dislike", "like", "love", "miss",
+    "appreciate", "enjoy", "avoid", "trust", "distrust", "depend", "rely",
+    "struggle", "manage", "succeed", "fail",
+
+    # Tech-specific reactions
+    "switch", "switched", "migrate", "migrated", "abandon", "abandoned",
+    "replaced", "dropped", "adopted", "tried", "tested",
+}
+
+
+
+# Weights for each lexicon signal (contribution to subjectivity score)
+SIGNAL_WEIGHTS = {
+    "mpqa":          0.25,   # MPQA strongsubj/weaksubj lexicon
+    "vader":         0.15,   # VADER compound score absolute value
+    "first_person":  0.18,   # presence of I/me/my etc.
+    "opinion_adverb":0.10,   # honestly, frankly, personally...
+    "hedge":         0.08,   # maybe, seems, think...
+    "intensifier":   0.07,   # very, really, extremely...
+    "tech_opinion":  0.10,   # domain-specific opinion adjectives/verbs
+    "emoticon":      0.04,   # [smiley face] tokens from normalizer
+    "exclamation":   0.03,   # ! in the sentence
+}
+
+
+DEFAULT_TRANSFORMER = "GroNLP/mdebertav3-subjectivity-english"
+
+
+# ---------------------------------------------------------------------------
+# SubjectivityDetector
+# ---------------------------------------------------------------------------
+
+class SubjectivityDetector:
+    """
+    Hybrid subjectivity detection for the SC4021 pipeline.
+
+    Usage
+    -----
+    detector = SubjectivityDetector()
+    record = detector.detect_record(record)
+
+    For a full corpus:
+    records = detector.detect_corpus(records)
+    """
+
+    def __init__(
+        self,
+        lower_threshold: float = LOWER_THRESHOLD,
+        upper_threshold: float = UPPER_THRESHOLD,
+        transformer_model: str = DEFAULT_TRANSFORMER,
+        use_transformer: bool = True,
+        mpqa_path: str = "../data/mpqa_subjclues.tff",
+    ):
+        """
+        Parameters
+        ----------
+        lower_threshold : lexicon scores at or below this → objective (no transformer)
+        upper_threshold : lexicon scores at or above this → subjective (no transformer)
+        transformer_model : HuggingFace model name for zero-shot classification
+        use_transformer : set False to run lexicon-only (faster, for testing)
+        mpqa_path : path to the MPQA subjectivity lexicon file
+        """
+        self.lower = lower_threshold
+        self.upper = upper_threshold
+        self.use_transformer = use_transformer
+
+        # --- MPQA Lexicon ---
+        mpqa_file = self._resolve_path(mpqa_path)
+        self._mpqa = self._load_mpqa_lexicon(mpqa_file)
+
+        # --- VADER Sentiment Analyzer ---
+        self._vader = None
+        try:
+            from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+            self._vader = SentimentIntensityAnalyzer()
+            logger.info("VADER sentiment analyzer loaded.")
+        except ImportError:
+            logger.warning(
+                "vaderSentiment not installed — VADER signal disabled. "
+                "Install with: pip install vaderSentiment"
+            )
+
+        # --- HuggingFace transformer (lazy loaded on first uncertain sentence) ---
+        self._classifier = None
+        self._transformer_model = transformer_model
+        if use_transformer:
+            logger.info(
+                f"Transformer '{transformer_model}' will be loaded on first "
+                "uncertain sentence (lazy init)."
+            )
+        else:
+            logger.info("Transformer disabled — running lexicon-only mode.")
+
+    # ------------------------------------------------------------------
+    # Public API
+    # ------------------------------------------------------------------
+
+    def detect_record(self, record: dict) -> dict:
+        """
+        Detect subjectivity for a single record and all its comments.
+
+        Requires 'Normalized_Text' (from MicrotextNormalizer).
+        POS_Tags (from POSTagger) are used if present to improve scoring.
+
+        Adds: Subjectivity, Subjectivity_Score, Subjectivity_Sentences.
+        Returns the modified record.
+        """
+        text = record.get("Normalized_Text", "")
+        pos_tags = record.get("POS_Tags", [])
+        sentences = record.get("Sentences", [])   # ← read pre-split sentences
+
+        if not text:
+            logger.warning(f"Record {record.get('ID', '?')} has no Normalized_Text.")
+            self._write_empty(record)
+            return record
+
+        sentence_results = self._score_sentences(sentences, pos_tags)
+        record["Subjectivity_Sentences"] = sentence_results
+        record["Subjectivity"], record["Subjectivity_Score"] = (
+            self._aggregate(sentence_results)
+        )
+
+        post_context = (record.get("Title") or "")[:200]
+
+        for comment in record.get("Comments") or []:
+            c_text = comment.get("Normalized_Text", "")
+            c_pos = comment.get("POS_Tags", [])
+            c_sentences = comment.get("Sentences", [])   # ← read pre-split sentences
+
+            if not c_text:
+                self._write_empty(comment)
+                continue
+
+            c_results = self._score_sentences(c_sentences, c_pos, parent_context=post_context)
+            comment["Subjectivity_Sentences"] = c_results
+            comment["Subjectivity"], comment["Subjectivity_Score"] = (
+                self._aggregate(c_results)
+            )
+
+        return record
+
+    def detect_corpus(self, records: list[dict]) -> list[dict]:
+        """Detect subjectivity for an entire list of records."""
+        total = len(records)
+        for i, record in enumerate(records, 1):
+            try:
+                self.detect_record(record)
+            except Exception as e:
+                logger.error(
+                    f"Failed on record {record.get('ID', i)}: {e}"
+                )
+            if i % 500 == 0:
+                logger.info(f"Processed {i}/{total} records...")
+        logger.info(f"Subjectivity detection complete. {total} records processed.")
+        return records
+
+    # ------------------------------------------------------------------
+    # Core detection
+    # ------------------------------------------------------------------
+
+    def _score_sentences(self, sentences: list[str], pos_tags: list[list], parent_context: str = "") -> list[dict]:
+        """
+        Score a pre-split list of sentences for subjectivity.
+        Sentences and POS_Tags are both produced upstream by SBD and POSTagger.
+        pos_tags[i] contains the content-word triples for sentences[i].
+        """
+        results = []
+
+        for i, sentence in enumerate(sentences):
+            if not sentence.strip():
+                continue
+
+            # Build lookup from this sentence's POS tags only
+            sentence_pos = pos_tags[i] if i < len(pos_tags) else []
+            pos_lookup = self._build_pos_lookup(sentence_pos)
+
+            lexicon_score = self._lexicon_score(sentence, pos_lookup)
+
+            
+            word_count = len(sentence.split())
+            force_transformer = (
+                self.use_transformer
+                and word_count <= 10
+                and lexicon_score > 0.05
+            )
+
+            if not force_transformer and lexicon_score >= self.upper:
+                label, score, method = "subjective", lexicon_score, "lexicon"
+            elif not force_transformer and lexicon_score <= self.lower:
+                label, score, method = "objective", lexicon_score, "lexicon"
+
+            else:
+                if self.use_transformer:
+                    t_label, t_score = self._transformer_score(
+                        sentence, context=parent_context
+                    )
+                    label = t_label
+                    score = round(0.5 * lexicon_score + 0.5 * t_score, 4)
+                    method = "transformer"
+                else:
+                    label = "subjective" if lexicon_score >= 0.5 else "objective"
+                    score = lexicon_score
+                    method = "lexicon"
+
+            results.append({
+                "text":   sentence,
+                "label":  label,
+                "score":  round(score, 4),
+                "method": method,
+            })
+
+        return results
+
+    def _aggregate(self, sentence_results: list[dict]) -> tuple[str, float]:
+        """
+        Aggregate sentence-level results into a record-level label.
+
+        Strategy: blend of mean and max scores.
+        - Mean captures overall tone
+        - Max captures the strongest opinion signal in any single sentence
+        A record is subjective if the blended score exceeds 0.45.
+        """
+        if not sentence_results:
+            return "objective", 0.0
+
+        scores = [s["score"] for s in sentence_results]
+        mean_score = sum(scores) / len(scores)
+        max_score = max(scores)
+
+        # 40% mean, 60% max — rewards posts with at least one strong opinion
+        blended = 0.4 * mean_score + 0.6 * max_score
+
+        # Slightly lower decision boundary than 0.5 since we're blending
+        label = "subjective" if blended >= 0.45 else "objective"
+        return label, round(blended, 4)
+
+    # ------------------------------------------------------------------
+    # Lexicon scoring
+    # ------------------------------------------------------------------
+
+    def _lexicon_score(
+        self,
+        sentence: str,
+        pos_lookup: dict[str, tuple[str, str, str]],
+    ) -> float:
+        """
+        Compute a subjectivity score in [0, 1] using weighted lexicon signals.
+
+        Signals (weights defined in SIGNAL_WEIGHTS at module level):
+            textblob      — TextBlob's own subjectivity score
+            first_person  — presence of I/me/my
+            opinion_adverb — honestly, frankly, personally...
+            hedge         — maybe, seems, think...
+            intensifier   — very, really, so...
+            tech_opinion  — domain opinion adjectives
+            emoticon      — [bracket emoticon] tokens
+            exclamation   — ! present in sentence
+        """
+        tokens = [t.strip('.,!?()[]"').lower() for t in sentence.split()]
+        token_set = set(tokens)
+        signals: dict[str, float] = {}
+
+        # TextBlob subjectivity (0=objective, 1=subjective)
+        if self._mpqa:
+            strong_hits = sum(
+                1 for t in tokens
+                if self._mpqa.get(t, {}).get("type") == "strongsubj"
+            )
+            weak_hits = sum(
+                1 for t in tokens
+                if self._mpqa.get(t, {}).get("type") == "weaksubj"
+            )
+            # Strong hits worth 1.0, weak hits worth 0.5, cap at 1.0
+            signals["mpqa"] = min((strong_hits * 1.0 + weak_hits * 0.5) / 3, 1.0)
+        else:
+            signals["mpqa"] = 0.0
+        
+        if self._vader:
+            clean_sentence = re.sub(r"<CODE>|\[[^\]]+\]", "", sentence).strip()
+            vader_scores = self._vader.polarity_scores(clean_sentence)
+            signals["vader"] = min(abs(vader_scores["compound"]), 1.0)
+        else:
+            signals["vader"] = 0.0
+
+        # First-person pronouns — any presence → 1.0
+        signals["first_person"] = 1.0 if token_set & FIRST_PERSON else 0.0
+
+        # Opinion adverbs
+        signals["opinion_adverb"] = 1.0 if token_set & OPINION_ADVERBS else 0.0
+
+        # Hedge words
+        signals["hedge"] = 1.0 if token_set & HEDGE_WORDS else 0.0
+
+        # Intensifiers
+        signals["intensifier"] = 1.0 if token_set & INTENSIFIERS else 0.0
+
+        # Domain opinion adjectives and verbs (check lemmas from POS_Tags if available)
+        opinion_hits = token_set & TECH_OPINION_ADJ_AND_VERBS
+        # Also check POS_Tags lemmas for morphological variants
+        pos_opinion_hits = {
+            lemma for _, pos, lemma in (pos_lookup.get(t, ("", "", t)) for t in tokens)
+            if lemma in TECH_OPINION_ADJ_AND_VERBS
+        }
+        signals["tech_opinion"] = 1.0 if opinion_hits or pos_opinion_hits else 0.0
+
+        # Emoticon tokens — [bracket text] pattern
+        emoticon_count = len(re.findall(r"\[[^\]]+\]", sentence))
+        signals["emoticon"] = min(emoticon_count, 1.0)
+
+        # Exclamation marks
+        signals["exclamation"] = 1.0 if "!" in sentence else 0.0
+
+
+        # Weighted sum — normalise by available weight in case lexicons are absent
+        available_weight = sum(
+            w for key, w in SIGNAL_WEIGHTS.items()
+            if not (key == "mpqa" and not self._mpqa)
+            and not (key == "vader" and not self._vader)
+        )
+        score = sum(
+            SIGNAL_WEIGHTS[key] * value
+            for key, value in signals.items()
+        ) / available_weight
+
+
+        # Clamp to [0, 1]
+        return min(max(score, 0.0), 1.0)
+
+    # ------------------------------------------------------------------
+    # Transformer scoring
+    # ------------------------------------------------------------------
+
+    def _load_transformer(self) -> None:
+        if self._classifier is not None:
+            return
+        try:
+            logger.info(f"Loading transformer '{self._transformer_model}'...")
+            self._classifier = pipeline(
+                "text-classification",
+                model=self._transformer_model,
+            )
+            logger.info("Transformer loaded.")
+        except Exception as e:
+            raise RuntimeError(f"Failed to load transformer: {e}")
+            
+
+    def _transformer_score(self, sentence: str, context: str = "") -> tuple[str, float]:
+        self._load_transformer()
+
+        clean = re.sub(r"<CODE>|\[[^\]]+\]", "", sentence).strip()
+        if not clean:
+            return "objective", 0.0
+
+        # Prepend context as a premise only for short sentences
+        if context and len(clean.split()) <= 10:
+            input_text = f"{context[:200]} | {clean}"  # cap context length
+        else:
+            input_text = clean
+
+        classifier = self._classifier
+        if classifier is None:
+            raise RuntimeError("Transformer classifier is not initialized")
+
+        result = classifier(input_text)[0]
+        label = "subjective" if result["label"] == "SUBJ" else "objective"
+        score = result["score"] if result["label"] == "SUBJ" else 1 - result["score"]
+        return label, float(score)
+
+    # ------------------------------------------------------------------
+    # Utilities
+    # ------------------------------------------------------------------
+
+
+    def _build_pos_lookup(
+        self, pos_tags: list[list]
+    ) -> dict[str, tuple[str, str, str]]:
+        """
+        Build a dict from token surface form → (surface, pos, lemma)
+        for quick lookup during lexicon scoring.
+        """
+        return {
+            token.lower(): (token, pos, lemma)
+            for token, pos, lemma in pos_tags
+        }
+
+    @staticmethod
+    def _resolve_path(path: str | Path) -> Path:
+        """Resolve file path from cwd first, then relative to this module."""
+        candidate = Path(path)
+        if candidate.is_absolute():
+            return candidate
+        if candidate.exists():
+            return candidate.resolve()
+        return (Path(__file__).resolve().parent / candidate).resolve()
+
+    def _load_mpqa_lexicon(self, path: str | Path) -> dict[str, dict]:
+        """
+        Load MPQA subjectivity lexicon into a dict keyed by word.
+        Each entry: { "type": "strongsubj"|"weaksubj", "pos": str, "polarity": str }
+        Returns empty dict if file not found (degrades gracefully).
+        """
+        path = Path(path)
+        lexicon: dict[str, dict] = {}
+        if not path.exists():
+            logger.warning(
+                f"MPQA lexicon not found at '{path}'. "
+                "MPQA signal will be disabled."
+            )
+            return lexicon
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                parts = dict(
+                    item.split("=") for item in line.strip().split()
+                    if "=" in item
+                )
+                word = parts.get("word1", "")
+                if word:
+                    lexicon[word.lower()] = {
+                        "type":     parts.get("type", "weaksubj"),
+                        "pos":      parts.get("pos1", "anypos"),
+                        "polarity": parts.get("priorpolarity", "neutral"),
+                    }
+        logger.info(f"MPQA lexicon loaded: {len(lexicon)} entries from {path}")
+        return lexicon
+
+    @staticmethod
+    def _write_empty(container: dict) -> None:
+        """Write empty subjectivity fields to a record or comment."""
+        container["Subjectivity"] = "objective"
+        container["Subjectivity_Score"] = 0.0
+        container["Subjectivity_Sentences"] = []
+
+
+
+# ---------------------------------------------------------------------------
+# Example usage / smoke test
+# ---------------------------------------------------------------------------
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+
+    # Simulates a record after MicrotextNormalizer + POSTagger + NERTagger.
+    sample_record = {
+        "ID": "r_001",
+        "Source": "Reddit",
+        "Normalized_Text": (
+            "GitHub Copilot was released by Microsoft in 2021. "
+            "Honestly it has made me so much more productive. "
+            "I think it is better than tabnine for Python development. "
+            "The autocomplete feature suggests entire functions which is amazing. "
+            "Some people say it produces buggy code sometimes."
+        ),
+        "Sentences": [
+            "GitHub Copilot was released by Microsoft in 2021.",
+            "Honestly it has made me so much more productive.",
+            "I think it is better than tabnine for Python development.",
+            "The autocomplete feature suggests entire functions which is amazing.",
+            "Some people say it produces buggy code sometimes.",
+        ],
+        # Sentence-aligned: POS_Tags[i] ↔ Sentences[i], content words only
+        "POS_Tags": [
+            [["GitHub", "PROPN", "GitHub"], ["Copilot", "PROPN", "Copilot"],
+             ["released", "VERB", "release"], ["Microsoft", "PROPN", "Microsoft"]],
+            [["Honestly", "ADV", "honestly"], ["made", "VERB", "make"],
+             ["productive", "ADJ", "productive"]],
+            [["think", "VERB", "think"], ["better", "ADJ", "well"],
+             ["tabnine", "NOUN", "tabnine"], ["Python", "PROPN", "Python"],
+             ["development", "NOUN", "development"]],
+            [["autocomplete", "NOUN", "autocomplete"], ["feature", "NOUN", "feature"],
+             ["suggests", "VERB", "suggest"], ["functions", "NOUN", "function"],
+             ["amazing", "ADJ", "amazing"]],
+            [["people", "NOUN", "people"], ["say", "VERB", "say"],
+             ["produces", "VERB", "produce"], ["buggy", "ADJ", "buggy"],
+             ["code", "NOUN", "code"]],
+        ],
+        "Comments": [
+            {
+                "comment_id": "c_001",
+                "Normalized_Text": (
+                    "I completely agree. "
+                    "The context window is 8192 tokens. "
+                    "It feels incredibly intuitive to use [smiley face]."
+                ),
+                "Sentences": [
+                    "I completely agree.",
+                    "The context window is 8192 tokens.",
+                    "It feels incredibly intuitive to use [smiley face].",
+                ],
+                "POS_Tags": [
+                    [["completely", "ADV", "completely"], ["agree", "VERB", "agree"]],
+                    [["context", "NOUN", "context"], ["window", "NOUN", "window"],
+                     ["8192", "NUM", "8192"], ["tokens", "NOUN", "token"]],
+                    [["feels", "VERB", "feel"], ["incredibly", "ADV", "incredibly"],
+                     ["intuitive", "ADJ", "intuitive"],
+                     ["[smiley face]", "EMOTICON", "[smiley face]"]],
+                ],
+            }
+        ],
+    }
+
+    detector = SubjectivityDetector(use_transformer=True)
+    result = detector.detect_record(sample_record)
+
+    print(f"\n=== Record-level ===")
+    print(f"  Label : {result['Subjectivity']}")
+    print(f"  Score : {result['Subjectivity_Score']}")
+
+    print(f"\n=== Sentence-level (Post) ===")
+    print(f"  {'Sentence':<60} {'Label':<12} {'Score':>6} {'Method'}")
+    print(f"  {'-'*60} {'-'*12} {'-'*6} {'-'*11}")
+    for s in result["Subjectivity_Sentences"]:
+        preview = s["text"][:57] + "..." if len(s["text"]) > 60 else s["text"]
+        print(f"  {preview:<60} {s['label']:<12} {s['score']:>6.3f} {s['method']}")
+
+    print(f"\n=== Sentence-level (Comment) ===")
+    comment = result["Comments"][0]
+    print(f"  Label : {comment['Subjectivity']}")
+    print(f"  Score : {comment['Subjectivity_Score']}")
+    for s in comment["Subjectivity_Sentences"]:
+        preview = s["text"][:57] + "..." if len(s["text"]) > 60 else s["text"]
+        print(f"  {preview:<60} {s['label']:<12} {s['score']:>6.3f} {s['method']}")

@@ -1,0 +1,26 @@
+[project]
+name = "sc4021-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "elasticsearch>=9.3.0",
+    "emoji>=2.15.0",
+    "en-core-web-sm",
+    "ipykernel>=7.2.0",
+    "langdetect>=1.0.9",
+    "nltk>=3.9.2",
+    "pandas>=3.0.0",
+    "pyspellchecker>=0.9.0",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.3",
+    "senticnet>=1.6",
+    "spacy>=3.8.13",
+    "textblob>=0.19.0",
+    "vadersentiment>=3.3.2",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
