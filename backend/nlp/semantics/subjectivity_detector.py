@@ -44,6 +44,11 @@ from transformers import pipeline
 from pathlib import Path
 from typing import Optional, TYPE_CHECKING
 
+try:
+    import torch
+except ImportError:
+    torch = None
+
 if TYPE_CHECKING:
     from syntactics.sbd import SentenceBoundaryDisambiguator
 
@@ -166,7 +171,7 @@ class SubjectivityDetector:
         upper_threshold: float = UPPER_THRESHOLD,
         transformer_model: str = DEFAULT_TRANSFORMER,
         use_transformer: bool = True,
-        mpqa_path: str = "../data/mpqa_subjclues.tff",
+        mpqa_path: str = "../data/lexicons/mpqa_subjclues.tff",
     ):
         """
         Parameters
@@ -275,25 +280,28 @@ class SubjectivityDetector:
     # Core detection
     # ------------------------------------------------------------------
 
-    def _score_sentences(self, sentences: list[str], pos_tags: list[list], parent_context: str = "") -> list[dict]:
-        """
-        Score a pre-split list of sentences for subjectivity.
-        Sentences and POS_Tags are both produced upstream by SBD and POSTagger.
-        pos_tags[i] contains the content-word triples for sentences[i].
-        """
-        results = []
+    def _score_sentences(
+        self,
+        sentences: list[str],
+        pos_tags: list[list],
+        parent_context: str = "",
+    ) -> list[dict]:
+        results = [None] * len(sentences)
+        transformer_queue = []  # (sentence_idx, sentence, context)
 
+        # --- Pass 1: Lexicon pass — resolve what we can, queue the rest ---
         for i, sentence in enumerate(sentences):
             if not sentence.strip():
+                results[i] = {
+                    "text": sentence, "label": "objective",
+                    "score": 0.0, "method": "lexicon"
+                }
                 continue
 
-            # Build lookup from this sentence's POS tags only
             sentence_pos = pos_tags[i] if i < len(pos_tags) else []
-            pos_lookup = self._build_pos_lookup(sentence_pos)
-
+            pos_lookup   = self._build_pos_lookup(sentence_pos)
             lexicon_score = self._lexicon_score(sentence, pos_lookup)
 
-            
             word_count = len(sentence.split())
             in_uncertain_band = self.lower < lexicon_score < self.upper
             force_transformer = (
@@ -304,38 +312,83 @@ class SubjectivityDetector:
             )
 
             if not force_transformer and lexicon_score >= self.upper:
-                label, score, method = "subjective", lexicon_score, "lexicon"
+                results[i] = {
+                    "text": sentence, "label": "subjective",
+                    "score": round(lexicon_score, 4), "method": "lexicon"
+                }
             elif not force_transformer and lexicon_score <= self.lower:
-                label, score, method = "objective", lexicon_score, "lexicon"
-
+                results[i] = {
+                    "text": sentence, "label": "objective",
+                    "score": round(lexicon_score, 4), "method": "lexicon"
+                }
             else:
-                if self.use_transformer:
-                    t_label, t_score = self._transformer_score(
-                        sentence, context=parent_context
-                    )
-                    # Flip to subjective if transformer sees strong opinion signals in an otherwise objective sentence
-                    if t_label == "objective" and t_score < 0.6:
-                        has_first_person = bool(re.search(r'\b(i|my|me|we|our)\b', sentence, re.IGNORECASE))
-                        has_stance = bool(re.search(r'\b(i think|i feel|imo|imho|ngl|tbh|never|always)\b', sentence, re.IGNORECASE))
-                        if has_first_person and has_stance:
-                            t_label = "subjective"
-                            t_score = 1.0 - t_score
-                    score = round(0.4 * lexicon_score + 0.6 * t_score, 4)
-                    label = "subjective" if score >= 0.5 else "objective"
-                    method = "lexicon and transformer"
+                # Queue for batched transformer inference
+                transformer_queue.append((i, sentence, lexicon_score, parent_context))
+
+        # --- Pass 2: Batched transformer inference ---
+        if transformer_queue and self.use_transformer:
+            self._load_transformer()
+
+            # Build cleaned input texts
+            inputs = []
+            for (_, sentence, lexicon_score, context) in transformer_queue:
+                clean = re.sub(r"<CODE>|\[[^\]]+\]", "", sentence).strip()
+                if context and len(clean.split()) <= 10:
+                    inputs.append(f"{context[:200]} | {clean}")
                 else:
-                    label = "subjective" if lexicon_score >= 0.5 else "objective"
-                    score = lexicon_score
-                    method = "lexicon"
+                    inputs.append(clean or ".")
 
-            results.append({
-                "text":   sentence,
-                "label":  label,
-                "score":  round(score, 4),
-                "method": method,
-            })
+            # Single batched call — this is the key change
+            try:
+                batch_results = self._classifier(
+                    inputs,
+                    batch_size=32,      # tune based on your RAM
+                    truncation=True,
+                    max_length=512,
+                )
+            except Exception as e:
+                logger.warning(f"Batch transformer failed: {e} — falling back to neutral")
+                batch_results = [{"label": "OBJ", "score": 0.5}] * len(inputs)
 
-        return results
+            # Write batch results back
+            for (sent_idx, sentence, lexicon_score, _), model_out in zip(
+                transformer_queue, batch_results
+            ):
+                raw_label = model_out["label"]
+                t_score   = model_out["score"]
+
+                if any(k in raw_label.upper() for k in ("SUBJ",)):
+                    t_label = "subjective"
+                else:
+                    t_label = "objective"
+                    t_score = 1.0 - t_score   # convert OBJ confidence to SUBJ probability
+
+                # Neutral flip for low-confidence objective predictions
+                if t_label == "objective" and model_out["score"] < 0.65:
+                    has_first_person = bool(re.search(
+                        r'\b(i|my|me|we|our)\b', sentence, re.IGNORECASE
+                    ))
+                    has_stance = bool(re.search(
+                        r'\b(i think|i feel|imo|imho|ngl|tbh|never|always)\b',
+                        sentence, re.IGNORECASE
+                    ))
+                    if has_first_person and has_stance:
+                        t_label = "subjective"
+                        t_score = 1.0 - model_out["score"]
+
+                blended_score = round(0.4 * lexicon_score + 0.6 * t_score, 4)
+                label = "subjective" if blended_score >= 0.5 else "objective"
+
+                results[sent_idx] = {
+                    "text":   sentence,
+                    "label":  label,
+                    "score":  blended_score,
+                    "method": "transformer",
+                }
+
+        return [r for r in results if r is not None]
+
+
 
     def _aggregate(self, sentence_results: list[dict]) -> tuple[str, float]:
         """
@@ -401,11 +454,31 @@ class SubjectivityDetector:
             return
         try:
             logger.info(f"Loading transformer '{self._transformer_model}'...")
+
+            # Use CUDA when available; device=-1 forces CPU in transformers.
+            device = -1
+            device_desc = "CPU"
+            if torch is None:
+                logger.warning(
+                    "PyTorch is not installed; transformer will run on CPU. "
+                    "Install torch with CUDA support to use GPU."
+                )
+            elif torch.cuda.is_available():
+                device = 0
+                try:
+                    gpu_name = torch.cuda.get_device_name(0)
+                    device_desc = f"GPU (cuda:0, {gpu_name})"
+                except Exception:
+                    device_desc = "GPU (cuda:0)"
+            else:
+                logger.info("CUDA not available; transformer will run on CPU.")
+
             self._classifier = pipeline(
                 "text-classification",
                 model=self._transformer_model,
+                device=device,
             )
-            logger.info("Transformer loaded.")
+            logger.info(f"Transformer loaded on {device_desc}.")
         except Exception as e:
             raise RuntimeError(f"Failed to load transformer: {e}")
             
