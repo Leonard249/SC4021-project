@@ -6,6 +6,7 @@ bry_note
 dataset
 .venv
 final_dataset
+data/raw
 data/processed/raw_data.json
 data/processed/temp.json
 data/raw_data.json
