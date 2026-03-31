@@ -1,0 +1,977 @@
+[
+  {
+    "ID": "vbc_sub_001",
+    "Source": "Reddit",
+    "Type": "Post",
+    "Author": "techdebt_survivor_99",
+    "Title": "Vibe coding is genuinely destroying junior developers and I am sick of pretending otherwise",
+    "Text": "Vibe coding is genuinely ruining the industry and I cannot stay quiet about it anymore. I watched three junior developers on my team ship an entire authentication module last week using Cursor without reading a single line of the output. The code hallucinated OAuth endpoints that do not exist and introduced a critical security vulnerability that we only caught in code review. I honestly think Cursor and Cline are making developers stupider, not smarter. The technical debt we are accumulating is staggering and management does not care because the tickets are closing faster. This is going to end badly for everyone.",
+    "Score": 312,
+    "Date": "2026-01-14",
+    "Word_Count": 107,
+    "Comments": [
+      {
+        "comment_id": "ntb_001",
+        "parent_id": "vbc_sub_001",
+        "Source": "Reddit",
+        "Author": "burned_by_cursor",
+        "Text": "100% agree with everything you said. I have been screaming about this internally for months. Our codebase has turned into an absolute nightmare since half the team started vibe coding. Nobody understands the code they are shipping and debugging is a complete disaster because the AI generated garbage does not follow any coherent patterns. I am genuinely scared for the future of software engineering.",
+        "Score": 87,
+        "Date": "2026-01-14",
+        "Word_Count": 71,
+        "Mentions": [],
+        "Hashtags": [],
+        "Normalized_Text": "100% agree with everything you said. I have been screaming about this internally for months. Our codebase has turned into an absolute nightmare since half the team started vibe coding. Nobody understands the code they are shipping and debugging is a complete disaster because the AI generated garbage does not follow any coherent patterns. I am genuinely scared for the future of software engineering.",
+        "Normalized_Word_Count": 64,
+        "Sentences": [
+          "100% agree with everything you said.",
+          "I have been screaming about this internally for months.",
+          "Our codebase has turned into an absolute nightmare since half the team started vibe coding.",
+          "Nobody understands the code they are shipping and debugging is a complete disaster because the AI generated garbage does not follow any coherent patterns.",
+          "I am genuinely scared for the future of software engineering."
+        ],
+        "POS_Tags": [
+          [
+            [
+              "100",
+              "NUM",
+              "100"
+            ],
+            [
+              "%",
+              "NOUN",
+              "%"
+            ],
+            [
+              "agree",
+              "VERB",
+              "agree"
+            ],
+            [
+              "said",
+              "VERB",
+              "say"
+            ]
+          ],
+          [
+            [
+              "screaming",
+              "VERB",
+              "scream"
+            ],
+            [
+              "internally",
+              "ADV",
+              "internally"
+            ],
+            [
+              "months",
+              "NOUN",
+              "month"
+            ]
+          ],
+          [
+            [
+              "codebase",
+              "NOUN",
+              "codebase"
+            ],
+            [
+              "turned",
+              "VERB",
+              "turn"
+            ],
+            [
+              "absolute",
+              "ADJ",
+              "absolute"
+            ],
+            [
+              "nightmare",
+              "NOUN",
+              "nightmare"
+            ],
+            [
+              "team",
+              "NOUN",
+              "team"
+            ],
+            [
+              "started",
+              "VERB",
+              "start"
+            ],
+            [
+              "vibe",
+              "VERB",
+              "vibe"
+            ],
+            [
+              "coding",
+              "NOUN",
+              "coding"
+            ]
+          ],
+          [
+            [
+              "understands",
+              "VERB",
+              "understand"
+            ],
+            [
+              "code",
+              "NOUN",
+              "code"
+            ],
+            [
+              "shipping",
+              "VERB",
+              "ship"
+            ],
+            [
+              "debugging",
+              "NOUN",
+              "debugging"
+            ],
+            [
+              "complete",
+              "ADJ",
+              "complete"
+            ],
+            [
+              "disaster",
+              "NOUN",
+              "disaster"
+            ],
+            [
+              "AI",
+              "PROPN",
+              "AI"
+            ],
+            [
+              "generated",
+              "VERB",
+              "generate"
+            ],
+            [
+              "garbage",
+              "NOUN",
+              "garbage"
+            ],
+            [
+              "follow",
+              "VERB",
+              "follow"
+            ],
+            [
+              "coherent",
+              "ADJ",
+              "coherent"
+            ],
+            [
+              "patterns",
+              "NOUN",
+              "pattern"
+            ]
+          ],
+          [
+            [
+              "genuinely",
+              "ADV",
+              "genuinely"
+            ],
+            [
+              "scared",
+              "ADJ",
+              "scared"
+            ],
+            [
+              "future",
+              "NOUN",
+              "future"
+            ],
+            [
+              "software",
+              "NOUN",
+              "software"
+            ],
+            [
+              "engineering",
+              "NOUN",
+              "engineering"
+            ]
+          ]
+        ],
+        "NER_Tags": [
+          [
+            "AI",
+            "TECH_CONCEPT",
+            280,
+            282
+          ]
+        ],
+        "Subjectivity_Sentences": [
+          {
+            "text": "100% agree with everything you said.",
+            "label": "objective",
+            "score": 0.2937,
+            "method": "transformer"
+          },
+          {
+            "text": "I have been screaming about this internally for months.",
+            "label": "objective",
+            "score": 0.3396,
+            "method": "transformer"
+          },
+          {
+            "text": "Our codebase has turned into an absolute nightmare since half the team started vibe coding.",
+            "label": "objective",
+            "score": 0.266,
+            "method": "transformer"
+          },
+          {
+            "text": "Nobody understands the code they are shipping and debugging is a complete disaster because the AI generated garbage does not follow any coherent patterns.",
+            "label": "subjective",
+            "score": 0.7749,
+            "method": "lexicon"
+          },
+          {
+            "text": "I am genuinely scared for the future of software engineering.",
+            "label": "objective",
+            "score": 0.3838,
+            "method": "transformer"
+          }
+        ],
+        "Subjectivity": "subjective",
+        "Subjectivity_Score": 0.6296,
+        "Targeted_Aspects": [
+          {
+            "Aspect_Name": "AI",
+            "Entity_Type": "TECH_CONCEPT",
+            "Target_Sentence": "Nobody understands the code they are shipping and debugging is a complete disaster because the AI generated garbage does not follow any coherent patterns.",
+            "Sentence_Word_Count": 24,
+            "Sarcasm": {
+              "Is_Sarcastic": false,
+              "Sarcasm_Confidence": 0.4324
+            }
+          }
+        ],
+        "Aspect_Sentiments": [
+          {
+            "Aspect": "AI",
+            "Routing_Path": "short",
+            "Final_Polarity": "negative",
+            "Final_Score": -0.3802
+          }
+        ],
+        "Overall_Document_Polarity": "negative"
+      },
+      {
+        "comment_id": "ntb_002",
+        "parent_id": "vbc_sub_001",
+        "Source": "Reddit",
+        "Author": "vibecoder_unironically",
+        "Text": "I completely disagree and I think you are being incredibly dramatic. Cursor and Cline have made me personally 5x more productive and I love every single day of coding now. Yes you need to review the output but that is on you and your team not the tools. These tools are genuinely brilliant and anyone who cannot adapt is just going to be left behind. I honestly believe this is the best time to be a developer.",
+        "Score": 54,
+        "Date": "2026-01-14",
+        "Word_Count": 75,
+        "Mentions": [],
+        "Hashtags": [],
+        "Normalized_Text": "I completely disagree and I think you are being incredibly dramatic. Cursor and Cline have made me personally 5x more productive and I love every single day of coding now. Yes you need to review the output but that is on you and your team not the tools. These tools are genuinely brilliant and anyone who cannot adapt is just going to be left behind. I honestly believe this is the best time to be a developer.",
+        "Normalized_Word_Count": 77,
+        "Sentences": [
+          "I completely disagree and I think you are being incredibly dramatic.",
+          "Cursor and Cline have made me personally 5x more productive and I love every single day of coding now.",
+          "Yes you need to review the output but that is on you and your team not the tools.",
+          "These tools are genuinely brilliant and anyone who cannot adapt is just going to be left behind.",
+          "I honestly believe this is the best time to be a developer."
+        ],
+        "POS_Tags": [
+          [
+            [
+              "completely",
+              "ADV",
+              "completely"
+            ],
+            [
+              "disagree",
+              "VERB",
+              "disagree"
+            ],
+            [
+              "think",
+              "VERB",
+              "think"
+            ],
+            [
+              "incredibly",
+              "ADV",
+              "incredibly"
+            ],
+            [
+              "dramatic",
+              "ADJ",
+              "dramatic"
+            ]
+          ],
+          [
+            [
+              "Cursor",
+              "PROPN",
+              "Cursor"
+            ],
+            [
+              "Cline",
+              "PROPN",
+              "Cline"
+            ],
+            [
+              "made",
+              "VERB",
+              "make"
+            ],
+            [
+              "personally",
+              "ADV",
+              "personally"
+            ],
+            [
+              "5x",
+              "VERB",
+              "5x"
+            ],
+            [
+              "more",
+              "ADV",
+              "more"
+            ],
+            [
+              "productive",
+              "ADJ",
+              "productive"
+            ],
+            [
+              "love",
+              "VERB",
+              "love"
+            ],
+            [
+              "single",
+              "ADJ",
+              "single"
+            ],
+            [
+              "day",
+              "NOUN",
+              "day"
+            ],
+            [
+              "coding",
+              "VERB",
+              "cod"
+            ],
+            [
+              "now",
+              "ADV",
+              "now"
+            ]
+          ],
+          [
+            [
+              "Yes",
+              "INTJ",
+              "yes"
+            ],
+            [
+              "need",
+              "VERB",
+              "need"
+            ],
+            [
+              "review",
+              "VERB",
+              "review"
+            ],
+            [
+              "output",
+              "NOUN",
+              "output"
+            ],
+            [
+              "team",
+              "NOUN",
+              "team"
+            ],
+            [
+              "tools",
+              "NOUN",
+              "tool"
+            ]
+          ],
+          [
+            [
+              "tools",
+              "NOUN",
+              "tool"
+            ],
+            [
+              "genuinely",
+              "ADV",
+              "genuinely"
+            ],
+            [
+              "brilliant",
+              "ADJ",
+              "brilliant"
+            ],
+            [
+              "adapt",
+              "VERB",
+              "adapt"
+            ],
+            [
+              "just",
+              "ADV",
+              "just"
+            ],
+            [
+              "going",
+              "VERB",
+              "go"
+            ],
+            [
+              "left",
+              "VERB",
+              "leave"
+            ],
+            [
+              "behind",
+              "ADV",
+              "behind"
+            ]
+          ],
+          [
+            [
+              "honestly",
+              "ADV",
+              "honestly"
+            ],
+            [
+              "believe",
+              "VERB",
+              "believe"
+            ],
+            [
+              "best",
+              "ADJ",
+              "good"
+            ],
+            [
+              "time",
+              "NOUN",
+              "time"
+            ],
+            [
+              "developer",
+              "NOUN",
+              "developer"
+            ]
+          ]
+        ],
+        "NER_Tags": [
+          [
+            "Cursor",
+            "AI_TOOL",
+            69,
+            75
+          ]
+        ],
+        "Subjectivity_Sentences": [
+          {
+            "text": "I completely disagree and I think you are being incredibly dramatic.",
+            "label": "subjective",
+            "score": 0.8191,
+            "method": "lexicon"
+          },
+          {
+            "text": "Cursor and Cline have made me personally 5x more productive and I love every single day of coding now.",
+            "label": "subjective",
+            "score": 1.0,
+            "method": "lexicon"
+          },
+          {
+            "text": "Yes you need to review the output but that is on you and your team not the tools.",
+            "label": "objective",
+            "score": 0.3961,
+            "method": "transformer"
+          },
+          {
+            "text": "These tools are genuinely brilliant and anyone who cannot adapt is just going to be left behind.",
+            "label": "subjective",
+            "score": 0.8859,
+            "method": "lexicon"
+          },
+          {
+            "text": "I honestly believe this is the best time to be a developer.",
+            "label": "subjective",
+            "score": 1.0,
+            "method": "lexicon"
+          }
+        ],
+        "Subjectivity": "subjective",
+        "Subjectivity_Score": 0.9281,
+        "Targeted_Aspects": [
+          {
+            "Aspect_Name": "Cursor",
+            "Entity_Type": "AI_TOOL",
+            "Target_Sentence": "Cursor and Cline have made me personally 5x more productive and I love every single day of coding now.",
+            "Sentence_Word_Count": 19,
+            "Sarcasm": {
+              "Is_Sarcastic": true,
+              "Sarcasm_Confidence": 0.9331
+            }
+          }
+        ],
+        "Aspect_Sentiments": [
+          {
+            "Aspect": "Cursor",
+            "Routing_Path": "short",
+            "Final_Polarity": "negative",
+            "Final_Score": -0.5617
+          }
+        ],
+        "Overall_Document_Polarity": "negative"
+      }
+    ],
+    "Text_Source": "text",
+    "Mentions": [],
+    "Hashtags": [],
+    "Normalized_Text": "Vibe coding is genuinely ruining the industry and I cannot stay quiet about it anymore. I watched three junior developers on my team ship an entire authentication module last week using Cursor without reading a single line of the output. The code hallucinated OAuth endpoints that do not exist and introduced a critical security vulnerability that we only caught in code review. I honestly think Cursor and Cline are making developers stupider, not smarter. The technical debt we are accumulating is staggering and management does not care because the tickets are closing faster. This is going to end badly for everyone.",
+    "Normalized_Word_Count": 101,
+    "Sentences": [
+      "Vibe coding is genuinely ruining the industry and I cannot stay quiet about it anymore.",
+      "I watched three junior developers on my team ship an entire authentication module last week using Cursor without reading a single line of the output.",
+      "The code hallucinated OAuth endpoints that do not exist and introduced a critical security vulnerability that we only caught in code review.",
+      "I honestly think Cursor and Cline are making developers stupider, not smarter.",
+      "The technical debt we are accumulating is staggering and management does not care because the tickets are closing faster.",
+      "This is going to end badly for everyone."
+    ],
+    "POS_Tags": [
+      [
+        [
+          "Vibe",
+          "NOUN",
+          "vibe"
+        ],
+        [
+          "coding",
+          "NOUN",
+          "coding"
+        ],
+        [
+          "genuinely",
+          "ADV",
+          "genuinely"
+        ],
+        [
+          "ruining",
+          "VERB",
+          "ruin"
+        ],
+        [
+          "industry",
+          "NOUN",
+          "industry"
+        ],
+        [
+          "stay",
+          "VERB",
+          "stay"
+        ],
+        [
+          "quiet",
+          "ADJ",
+          "quiet"
+        ],
+        [
+          "anymore",
+          "ADV",
+          "anymore"
+        ]
+      ],
+      [
+        [
+          "watched",
+          "VERB",
+          "watch"
+        ],
+        [
+          "three",
+          "NUM",
+          "three"
+        ],
+        [
+          "junior",
+          "ADJ",
+          "junior"
+        ],
+        [
+          "developers",
+          "NOUN",
+          "developer"
+        ],
+        [
+          "team",
+          "NOUN",
+          "team"
+        ],
+        [
+          "ship",
+          "NOUN",
+          "ship"
+        ],
+        [
+          "entire",
+          "ADJ",
+          "entire"
+        ],
+        [
+          "authentication",
+          "NOUN",
+          "authentication"
+        ],
+        [
+          "module",
+          "NOUN",
+          "module"
+        ],
+        [
+          "last",
+          "ADJ",
+          "last"
+        ],
+        [
+          "week",
+          "NOUN",
+          "week"
+        ],
+        [
+          "using",
+          "VERB",
+          "use"
+        ],
+        [
+          "Cursor",
+          "PROPN",
+          "Cursor"
+        ],
+        [
+          "reading",
+          "VERB",
+          "read"
+        ],
+        [
+          "single",
+          "ADJ",
+          "single"
+        ],
+        [
+          "line",
+          "NOUN",
+          "line"
+        ],
+        [
+          "output",
+          "NOUN",
+          "output"
+        ]
+      ],
+      [
+        [
+          "code",
+          "NOUN",
+          "code"
+        ],
+        [
+          "hallucinated",
+          "VERB",
+          "hallucinate"
+        ],
+        [
+          "OAuth",
+          "PROPN",
+          "OAuth"
+        ],
+        [
+          "endpoints",
+          "NOUN",
+          "endpoint"
+        ],
+        [
+          "exist",
+          "VERB",
+          "exist"
+        ],
+        [
+          "introduced",
+          "VERB",
+          "introduce"
+        ],
+        [
+          "critical",
+          "ADJ",
+          "critical"
+        ],
+        [
+          "security",
+          "NOUN",
+          "security"
+        ],
+        [
+          "vulnerability",
+          "NOUN",
+          "vulnerability"
+        ],
+        [
+          "only",
+          "ADV",
+          "only"
+        ],
+        [
+          "caught",
+          "VERB",
+          "catch"
+        ],
+        [
+          "code",
+          "NOUN",
+          "code"
+        ],
+        [
+          "review",
+          "NOUN",
+          "review"
+        ]
+      ],
+      [
+        [
+          "honestly",
+          "ADV",
+          "honestly"
+        ],
+        [
+          "think",
+          "VERB",
+          "think"
+        ],
+        [
+          "Cursor",
+          "PROPN",
+          "Cursor"
+        ],
+        [
+          "Cline",
+          "PROPN",
+          "Cline"
+        ],
+        [
+          "making",
+          "VERB",
+          "make"
+        ],
+        [
+          "developers",
+          "NOUN",
+          "developer"
+        ],
+        [
+          "stupider",
+          "PROPN",
+          "stupider"
+        ],
+        [
+          "smarter",
+          "ADJ",
+          "smart"
+        ]
+      ],
+      [
+        [
+          "technical",
+          "ADJ",
+          "technical"
+        ],
+        [
+          "debt",
+          "NOUN",
+          "debt"
+        ],
+        [
+          "accumulating",
+          "VERB",
+          "accumulate"
+        ],
+        [
+          "staggering",
+          "ADJ",
+          "staggering"
+        ],
+        [
+          "management",
+          "NOUN",
+          "management"
+        ],
+        [
+          "care",
+          "VERB",
+          "care"
+        ],
+        [
+          "tickets",
+          "NOUN",
+          "ticket"
+        ],
+        [
+          "closing",
+          "VERB",
+          "close"
+        ],
+        [
+          "faster",
+          "ADV",
+          "fast"
+        ]
+      ],
+      [
+        [
+          "going",
+          "VERB",
+          "go"
+        ],
+        [
+          "end",
+          "VERB",
+          "end"
+        ],
+        [
+          "badly",
+          "ADV",
+          "badly"
+        ]
+      ]
+    ],
+    "NER_Tags": [
+      [
+        "Vibe",
+        "ORG",
+        0,
+        4
+      ],
+      [
+        "Cursor",
+        "AI_TOOL",
+        186,
+        192
+      ],
+      [
+        "Cursor",
+        "AI_TOOL",
+        396,
+        402
+      ]
+    ],
+    "Subjectivity_Sentences": [
+      {
+        "text": "Vibe coding is genuinely ruining the industry and I cannot stay quiet about it anymore.",
+        "label": "objective",
+        "score": 0.297,
+        "method": "transformer"
+      },
+      {
+        "text": "I watched three junior developers on my team ship an entire authentication module last week using Cursor without reading a single line of the output.",
+        "label": "objective",
+        "score": 0.16,
+        "method": "lexicon"
+      },
+      {
+        "text": "The code hallucinated OAuth endpoints that do not exist and introduced a critical security vulnerability that we only caught in code review.",
+        "label": "objective",
+        "score": 0.388,
+        "method": "transformer"
+      },
+      {
+        "text": "I honestly think Cursor and Cline are making developers stupider, not smarter.",
+        "label": "subjective",
+        "score": 0.8652,
+        "method": "lexicon"
+      },
+      {
+        "text": "The technical debt we are accumulating is staggering and management does not care because the tickets are closing faster.",
+        "label": "subjective",
+        "score": 0.8683,
+        "method": "lexicon"
+      },
+      {
+        "text": "This is going to end badly for everyone.",
+        "label": "objective",
+        "score": 0.347,
+        "method": "transformer"
+      }
+    ],
+    "Subjectivity": "subjective",
+    "Subjectivity_Score": 0.716,
+    "Targeted_Aspects": [
+      {
+        "Aspect_Name": "Vibe",
+        "Entity_Type": "ORG",
+        "Target_Sentence": "Vibe coding is genuinely ruining the industry and I cannot stay quiet about it anymore.",
+        "Sentence_Word_Count": 15,
+        "Sarcasm": {
+          "Is_Sarcastic": true,
+          "Sarcasm_Confidence": 0.5295
+        }
+      },
+      {
+        "Aspect_Name": "Cursor",
+        "Entity_Type": "AI_TOOL",
+        "Target_Sentence": "I watched three junior developers on my team ship an entire authentication module last week using Cursor without reading a single line of the output.",
+        "Sentence_Word_Count": 25,
+        "Sarcasm": {
+          "Is_Sarcastic": true,
+          "Sarcasm_Confidence": 0.7842
+        }
+      },
+      {
+        "Aspect_Name": "Cursor",
+        "Entity_Type": "AI_TOOL",
+        "Target_Sentence": "I honestly think Cursor and Cline are making developers stupider, not smarter.",
+        "Sentence_Word_Count": 12,
+        "Sarcasm": {
+          "Is_Sarcastic": true,
+          "Sarcasm_Confidence": 0.5053
+        }
+      }
+    ],
+    "Aspect_Sentiments": [
+      {
+        "Aspect": "Vibe",
+        "Routing_Path": "short",
+        "Final_Polarity": "neutral",
+        "Final_Score": 0.0
+      },
+      {
+        "Aspect": "Cursor",
+        "Routing_Path": "short",
+        "Final_Polarity": "neutral",
+        "Final_Score": 0.0
+      },
+      {
+        "Aspect": "Cursor",
+        "Routing_Path": "short",
+        "Final_Polarity": "positive",
+        "Final_Score": 0.211
+      }
+    ],
+    "Overall_Document_Polarity": "neutral"
+  }
+]

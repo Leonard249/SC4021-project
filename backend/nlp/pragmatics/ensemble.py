@@ -80,8 +80,8 @@ from typing import Optional
 # of where the script is called from.
 # sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from length_routing.sentic_vader import SenticVaderClassifier, flatten_pos_tags
-from length_routing.transformer_polarity import TransformerPolarityClassifier
+from .length_routing.sentic_vader import SenticVaderClassifier, flatten_pos_tags
+from .length_routing.transformer_polarity import TransformerPolarityClassifier
 
 logger = logging.getLogger(__name__)
 

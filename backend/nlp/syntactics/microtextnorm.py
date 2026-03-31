@@ -25,12 +25,16 @@ from typing import Optional
 import emoji as emoji_lib
 from spellchecker import SpellChecker
 
+# Language detector
+try:
+    from langdetect import detect, DetectorFactory, LangDetectException
+    DetectorFactory.seed = 42  # Enforces consistent, deterministic detection
+    _LANGDETECT_AVAILABLE = True
+except ImportError:
+    _LANGDETECT_AVAILABLE = False
+
 logger = logging.getLogger(__name__)
 
-
-# ---------------------------------------------------------------------------
-# Constants
-# ---------------------------------------------------------------------------
 
 # Tech terms that must NEVER be passed to acronym expansion or spell correction.
 # All entries should be lowercase.
@@ -147,8 +151,28 @@ class MicrotextNormalizer:
                 "pyspellchecker not installed — Stage 6 (spell correction) "
                 "will be skipped. Install with: pip install pyspellchecker"
             )
-
             
+        if _LANGDETECT_AVAILABLE:
+            logger.info("langdetect loaded successfully.")
+        else:
+            logger.warning(
+                "langdetect not installed — Language checking will be skipped. "
+                "Install with: pip install langdetect"
+            )
+
+    def _is_english(self, text: str) -> bool:
+        """
+        Detects the language of the cleaned text.
+        Returns: (language_code, is_english_boolean)
+        """
+        if not _LANGDETECT_AVAILABLE or not text.strip():
+            return True # Default to True if we can't check
+        try:
+            return detect(text) == 'en'
+        except LangDetectException:
+            # Triggered if the text has no recognizable alphabet (e.g., just numbers/punctuation)
+            return False
+        
     def normalize_record(
         self,
         record: dict,
@@ -175,8 +199,7 @@ class MicrotextNormalizer:
         source = record.get("Source", "")
         run_spell = apply_spellcheck and source in spellcheck_sources
  
-        # HackerNews-specific: many posts store their body in Title with an empty Text field. If Text is empty and Title is non-empty, use Title
-        # as the normalization input. Raw fields are never modified.
+        # for entries that only have title and no text (i.e hackernews)
         raw_text  = (record.get("Text")  or "").strip()
         raw_title = (record.get("Title") or "").strip()
  
@@ -186,6 +209,14 @@ class MicrotextNormalizer:
         else:
             text_to_normalize = raw_text
             record["Text_Source"] = "text"
+            
+        # Check if text is english
+        # Pre check (Strip code and URLs)
+        test_text, _ = self._stage0_extract_code_and_markdown(text_to_normalize)
+        test_text = self._stage1_structural_clean(test_text)
+        
+        # drop entire record if it is not english
+        if not self._is_english(test_text): return None
  
         record["Normalized_Text"] = self._normalize_text(
             text_to_normalize, record, run_spell
@@ -193,13 +224,23 @@ class MicrotextNormalizer:
         record["Normalized_Word_Count"] = len(record["Normalized_Text"].split())
  
         # Normalize comments recursively — comments are short-form so
-        # spellcheck can be applied regardless of source.
+        valid_comments = []
         for comment in record.get("Comments") or []:
-            comment["Normalized_Text"] = self._normalize_text(
-                comment.get("Text", ""), comment, apply_spellcheck
-            )
-            comment["Normalized_Word_Count"] = len(comment["Normalized_Text"].split())
+            raw_c_text = comment.get("Text", "")
+            
+            # Quick clean for the comment's language check
+            c_test, _ = self._stage0_extract_code_and_markdown(raw_c_text)
+            c_test = self._stage1_structural_clean(c_test)
+
+            # Drop individual comments if they aren't English
+            if self._is_english(c_test):
+                comment["Normalized_Text"] = self._normalize_text(
+                    raw_c_text, comment, apply_spellcheck
+                )
+                comment["Normalized_Word_Count"] = len(comment["Normalized_Text"].split())
+                valid_comments.append(comment)
  
+        record["Comments"] = valid_comments
         return record
 
     def normalize_corpus(
@@ -208,17 +249,22 @@ class MicrotextNormalizer:
         apply_spellcheck: bool = False,
     ) -> list[dict]:
         """Convenience method to normalize an entire list of records."""
+        kept_records = []
         for i, record in enumerate(records):
             try:
-                self.normalize_record(record, apply_spellcheck)
+                result = self.normalize_record(record, apply_spellcheck)
+                if result is not None:
+                    kept_records.append(result)
             except Exception as e:
                 logger.error(f"Failed to normalize record {record.get('ID', i)}: {e}")
-        return records
+                
+        dropped = len(records) - len(kept_records)
+        if dropped > 0:
+            logger.info(f"Dropped {dropped} non-English records at Stage 1.")
+            
+        return kept_records
 
-    # ------------------------------------------------------------------
     # Loader helpers
-    # ------------------------------------------------------------------
-
     @staticmethod
     def _resolve_path(path: str | Path) -> Path:
         """Resolve data paths from either the current cwd or this module's folder."""
@@ -297,9 +343,7 @@ class MicrotextNormalizer:
         # 3. Default to first (most common) meaning.
         return meanings[0]
 
-    # ------------------------------------------------------------------
     # Core normalization — applies all stages in order
-    # ------------------------------------------------------------------
 
     def _normalize_text(self, text: str, record: dict, run_spell: bool) -> str:
         # Stage 0: Protect code blocks and strip Markdown structure.
@@ -589,11 +633,6 @@ class MicrotextNormalizer:
             return match.group(1), match.group(2)
         return token, ""
 
-
-# ---------------------------------------------------------------------------
-# Example usage
-# ---------------------------------------------------------------------------
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
@@ -630,14 +669,42 @@ if __name__ == "__main__":
             }
         ],
     }
+    
+    sample_record = {
+        "ID": "r_002",
+        "Source": "Reddit",
+        "Type": "Post",
+        "Author": "dev_user_42",
+        "Title": "Github 好棒哦！",
+        "Text": (
+            "太好了 😍 "
+            "我觉得他比GPT好. check out https://github.com/features/copilot "
+        ),
+        "Score": 142,
+        "Date": "2024-11-01",
+        "Word_Count": 45,
+        "Comments": [
+            {
+                "comment_id": "c_001",
+                "parent_id": "r_001",
+                "Source": "Reddit",
+                "Author": "alice_dev",
+                "Text": "omg same!! afk rn but will try it l8r :) thx!!",
+                "Score": 23,
+                "Date": "2024-11-01",
+                "Word_Count": 10,
+            }
+        ],
+    }
 
     result = normalizer.normalize_record(sample_record, apply_spellcheck=False)
 
-    print("=== Normalized Post Text ===")
-    print(result["Normalized_Text"])
-    print(f"\nMentions: {result['Mentions']}")
-    print(f"Hashtags: {result['Hashtags']}")
-    print(f"Word count: {result['Normalized_Word_Count']}")
+    # print("=== Normalized Post Text ===")
+    # print(result["Normalized_Text"])
+    # print(f"\nMentions: {result['Mentions']}")
+    # print(f"Hashtags: {result['Hashtags']}")
+    # print(f"Word count: {result['Normalized_Word_Count']}")
 
-    print("\n=== Normalized Comment Text ===")
-    print(result["Comments"][0]["Normalized_Text"])
+    # print("\n=== Normalized Comment Text ===")
+    # print(result["Comments"][0]["Normalized_Text"])
+    print(json.dumps(result, indent=4))

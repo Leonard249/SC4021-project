@@ -7,6 +7,8 @@ dataset
 .venv
 final_dataset
 data/raw
+data/results/draft_output.json
+data/my_test/pipeline_output.json
 data/processed/raw_data.json
 data/processed/temp.json
 data/raw_data.json
