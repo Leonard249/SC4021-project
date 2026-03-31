@@ -8,9 +8,12 @@ dataset
 final_dataset
 data/processed/raw_data.json
 data/processed/temp.json
-data/raw
+data/raw_data.json
 articles_extraction/articles_updated_schema
 articles_extraction/scraped_articles
+backend/test/output/pipeline_output.json
+backend/test/output/checkpoint.jsonl
+backend/test/output/pipeline_run.log
 
 utils/__pycache__
 semantics/__pycache__
