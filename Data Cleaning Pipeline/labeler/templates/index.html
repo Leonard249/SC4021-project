@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Labeler</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #1a1d27;
+      border-bottom: 1px solid #2d3148;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 { font-size: 0.95rem; font-weight: 600; color: #a5b4fc; letter-spacing: 0.05em; }
+
+    .progress-strip { display: flex; gap: 10px; align-items: center; }
+
+    .bucket-pill {
+      display: flex; align-items: center; gap: 5px;
+      background: #252840; border-radius: 20px;
+      padding: 3px 10px; font-size: 0.75rem; font-weight: 600;
+      cursor: pointer; border: 1.5px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .bucket-pill:hover { border-color: #4b5280; }
+    .bucket-pill.active { border-color: #6366f1; background: #1e1f3a; }
+    .bucket-pill .dot { width: 7px; height: 7px; border-radius: 50%; }
+    .dot-irrelevant { background: #94a3b8; }
+    .dot-neutral    { background: #60a5fa; }
+    .dot-positive   { background: #34d399; }
+    .dot-negative   { background: #f87171; }
+    .bucket-pill .frac { color: #64748b; margin-left: 2px; }
+    .bucket-pill.full .frac { color: #a5b4fc; }
+
+    /* ── Review panel ── */
+    .review-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .btn-back {
+      background: #252840; border: 1.5px solid #2d3148; border-radius: 8px;
+      color: #94a3b8; font-size: 0.82rem; font-weight: 600;
+      padding: 6px 14px; cursor: pointer; transition: all 0.12s;
+    }
+    .btn-back:hover { border-color: #6366f1; color: #a5b4fc; }
+    .review-title {
+      font-size: 1rem; font-weight: 700; color: #e2e8f0;
+    }
+    .review-empty { color: #475569; font-style: italic; padding: 20px 0; }
+
+    .review-item {
+      background: #1a1d27; border: 1px solid #2d3148;
+      border-radius: 10px; padding: 18px; margin-bottom: 12px;
+    }
+    .review-item-title {
+      font-size: 0.95rem; font-weight: 700; color: #f1f5f9;
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .review-item-title.empty { color: #475569; font-style: italic; font-weight: 400; }
+    .review-text {
+      background: #0f1117; border: 1px solid #1e2233; border-radius: 6px;
+      padding: 10px 12px; font-size: 0.82rem; line-height: 1.65;
+      color: #94a3b8; max-height: 160px; overflow-y: auto;
+      white-space: pre-wrap; word-break: break-word; margin-bottom: 10px;
+    }
+    .review-reasoning {
+      font-size: 0.78rem; color: #6366f1; font-style: italic;
+      margin-bottom: 10px; padding: 6px 10px;
+      background: #16173a; border-radius: 5px;
+    }
+    .review-actions {
+      display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+    }
+    .btn-move {
+      padding: 5px 11px; border-radius: 6px; font-size: 0.75rem;
+      font-weight: 700; cursor: pointer; border: 1.5px solid transparent;
+      background: #252840; color: #64748b; transition: all 0.12s;
+    }
+    .btn-move.lbtn-I { border-color: #475569; }
+    .btn-move.lbtn-N { border-color: #3b82f6; }
+    .btn-move.lbtn-P { border-color: #10b981; }
+    .btn-move.lbtn-G { border-color: #ef4444; }
+    .btn-move:hover { color: #e2e8f0; }
+    .btn-remove {
+      margin-left: auto; padding: 5px 11px; border-radius: 6px;
+      font-size: 0.75rem; font-weight: 700; cursor: pointer;
+      border: 1.5px solid #7f1d1d; background: #1f1010;
+      color: #f87171; transition: all 0.12s;
+    }
+    .btn-remove:hover { background: #3d1a1a; }
+    .btn-move.selected.lbtn-I { background: #263044; border-color: #94a3b8; color: #e2e8f0; }
+    .btn-move.selected.lbtn-N { background: #1d3a5f; border-color: #60a5fa; color: #93c5fd; }
+    .btn-move.selected.lbtn-P { background: #1a3d2e; border-color: #34d399; color: #6ee7b7; }
+    .btn-move.selected.lbtn-G { background: #3d1a1a; border-color: #f87171; color: #fca5a5; }
+    .review-item-type { font-size: 0.7rem; color: #4b5563; margin-bottom: 4px; }
+
+    /* ── Layout ── */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 28px 20px 100px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #1a1d27;
+      border: 1px solid #2d3148;
+      border-radius: 10px;
+      padding: 22px;
+      margin-bottom: 14px;
+    }
+
+    .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+    .tag {
+      background: #252840; border-radius: 5px;
+      padding: 2px 9px; font-size: 0.72rem; color: #94a3b8; font-weight: 500;
+    }
+    .tag.source   { color: #a5b4fc; }
+    .tag.suggested { color: #fbbf24; }
+
+    .post-title {
+      font-size: 1.05rem; font-weight: 700; line-height: 1.4;
+      margin-bottom: 12px; color: #f1f5f9;
+    }
+    .post-title.empty { color: #475569; font-style: italic; font-weight: 400; }
+
+    .text-box {
+      background: #0f1117; border: 1px solid #2d3148; border-radius: 7px;
+      padding: 14px; font-size: 0.85rem; line-height: 1.7; color: #cbd5e1;
+      max-height: 240px; overflow-y: auto;
+      white-space: pre-wrap; word-break: break-word;
+    }
+    .text-box.empty { color: #475569; font-style: italic; }
+
+    /* ── Label selector (shared by post and comments) ── */
+    .label-row {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .lbtn {
+      padding: 6px 13px; border: 1.5px solid transparent;
+      border-radius: 7px; font-size: 0.8rem; font-weight: 700;
+      cursor: pointer; transition: all 0.12s; background: #252840;
+      color: #64748b;
+    }
+    .lbtn:hover { color: #e2e8f0; }
+
+    .lbtn.lbtn-I { border-color: #475569; }
+    .lbtn.lbtn-N { border-color: #3b82f6; }
+    .lbtn.lbtn-P { border-color: #10b981; }
+    .lbtn.lbtn-G { border-color: #ef4444; }
+
+    .lbtn.selected.lbtn-I { background: #263044; border-color: #94a3b8; color: #e2e8f0; }
+    .lbtn.selected.lbtn-N { background: #1d3a5f; border-color: #60a5fa; color: #93c5fd; }
+    .lbtn.selected.lbtn-P { background: #1a3d2e; border-color: #34d399; color: #6ee7b7; }
+    .lbtn.selected.lbtn-G { background: #3d1a1a; border-color: #f87171; color: #fca5a5; }
+
+    /* ── Reasoning ── */
+    .reasoning-wrap { margin-top: 10px; }
+
+    textarea.reasoning {
+      width: 100%; background: #0f1117; border: 1px solid #2d3148;
+      border-radius: 7px; padding: 10px; font-size: 0.82rem;
+      line-height: 1.6; color: #e2e8f0; resize: vertical;
+      min-height: 60px; font-family: inherit;
+    }
+    textarea.reasoning:focus { outline: none; border-color: #6366f1; }
+    textarea.reasoning::placeholder { color: #374151; }
+
+    /* ── Section divider ── */
+    .section-title {
+      font-size: 0.72rem; font-weight: 700; color: #475569;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    /* ── Comments ── */
+    .comment-block {
+      background: #0f1117; border: 1px solid #1e2233;
+      border-radius: 8px; padding: 14px; margin-bottom: 10px;
+    }
+    .comment-block:last-child { margin-bottom: 0; }
+
+    .comment-author {
+      font-size: 0.75rem; font-weight: 600; color: #6366f1;
+      margin-bottom: 6px;
+    }
+    .comment-text {
+      font-size: 0.83rem; line-height: 1.65; color: #94a3b8;
+      white-space: pre-wrap; word-break: break-word;
+    }
+
+    .show-more-btn {
+      background: none; border: none; color: #60a5fa;
+      font-size: 0.75rem; cursor: pointer; margin-top: 4px;
+      padding: 0; text-decoration: underline;
+    }
+
+    /* ── Submit bar ── */
+    .submit-bar {
+      display: flex; gap: 10px; align-items: center;
+      margin-top: 6px;
+    }
+
+    .btn-submit {
+      flex: 1; padding: 14px; border: 2px solid #6366f1;
+      border-radius: 10px; background: #1e1f3a;
+      color: #a5b4fc; font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .btn-submit:hover { background: #252660; color: #c7d2fe; }
+
+    .btn-skip {
+      padding: 14px 20px; border: 1.5px solid #2d3148;
+      border-radius: 10px; background: #1a1d27;
+      color: #475569; font-size: 0.82rem; font-weight: 600;
+      cursor: pointer; transition: all 0.12s;
+    }
+    .btn-skip:hover { border-color: #475569; color: #94a3b8; }
+
+    /* ── Flash ── */
+    .flash {
+      position: fixed; bottom: 24px; right: 24px;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.85rem; font-weight: 600;
+      opacity: 0; transition: opacity 0.2s;
+      pointer-events: none; z-index: 100;
+    }
+    .flash.show { opacity: 1; }
+    .flash.ok   { background: #166534; color: #86efac; }
+    .flash.warn { background: #7c2d12; color: #fed7aa; }
+    .flash.muted { background: #1e2433; color: #94a3b8; }
+
+    .loading { text-align: center; padding: 60px; color: #475569; }
+    .done-screen { text-align: center; padding: 80px 40px; }
+    .done-screen h2 { font-size: 1.4rem; color: #a5b4fc; margin-bottom: 10px; }
+    .done-screen p { color: #64748b; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SC4021 · Data Labeler</h1>
+  <div class="progress-strip" id="strip"></div>
+</header>
+
+<main id="app">
+  <div class="loading">Loading…</div>
+</main>
+
+<div class="flash" id="flash"></div>
+
+<script>
+  // ── State ────────────────────────────────────────────────────────────────
+  let currentPost   = null;
+  let selections    = {};  // { id: { label, reasoning, is_comment } }
+
+  const LABEL_CLS = {
+    'Irrelevant': 'lbtn-I',
+    'Neutral':    'lbtn-N',
+    'Positive':   'lbtn-P',
+    'Negative':   'lbtn-G',
+  };
+
+  // ── Strip ────────────────────────────────────────────────────────────────
+  let lastCounts = {Irrelevant:0,Neutral:0,Positive:0,Negative:0};
+  const LIMITS   = {Irrelevant:6,Neutral:5,Positive:5,Negative:5};
+
+  function renderStrip(counts, limits) {
+    lastCounts = counts;
+    document.getElementById('strip').innerHTML = [
+      ['Irrelevant','irrelevant'], ['Neutral','neutral'],
+      ['Positive','positive'],    ['Negative','negative'],
+    ].map(([k, cls]) => `
+      <div class="bucket-pill ${counts[k] >= (limits||LIMITS)[k] ? 'full' : ''}"
+           data-bucket="${k}" onclick="openReview('${k}')">
+        <span class="dot dot-${cls}"></span>${k}
+        <span class="frac">${counts[k]}/${(limits||LIMITS)[k]}</span>
+      </div>`).join('');
+  }
+
+  // ── Review mode ──────────────────────────────────────────────────────────
+  let reviewBucket = null;
+
+  async function openReview(bucket) {
+    reviewBucket = bucket;
+    document.querySelectorAll('.bucket-pill').forEach(p =>
+      p.classList.toggle('active', p.dataset.bucket === bucket));
+    document.getElementById('app').innerHTML = '<div class="loading">Loading…</div>';
+
+    const [bucketRes, commentRes] = await Promise.all([
+      fetch(`/bucket/${bucket}`),
+      fetch('/labeled-comments'),
+    ]);
+    const bucketData  = await bucketRes.json();
+    const commentData = await commentRes.json();   // { comment_id: { bucket, reasoning } }
+    renderReview(bucket, bucketData.items || [], commentData);
+  }
+
+  function renderReview(bucket, items, commentLabels = {}) {
+    const posts    = items.filter(x => x.Type !== 'Comment');
+    const comments = items.filter(x => x.Type === 'Comment');
+
+    const itemHTML = (list, isComment) => list.length === 0 ? '' : list.map(item => {
+      const hasTitle = item.Title && item.Title.trim();
+      const hasText  = item.Text  && item.Text.trim();
+      const otherBuckets = ['Irrelevant','Neutral','Positive','Negative']
+        .filter(b => b !== bucket);
+      const moveBtns = otherBuckets.map(b => `
+        <button class="btn-move ${LABEL_CLS[b]}"
+          data-id="${item.ID}" data-from="${bucket}" data-to="${b}"
+          onclick="doMove(this)">→ ${b}</button>`).join('');
+
+      const rid = `r-${item.ID}`;
+      return `
+        <div class="review-item" id="review-item-${item.ID}">
+          <div class="review-item-type">${esc(item.Source)} · ${esc(item.Type)}${item.Date ? ' · ' + esc(item.Date) : ''}${isComment && item.parent_post_id ? ' · reply to ' + esc(item.parent_post_id) : ''}</div>
+          <div class="review-item-title ${hasTitle ? '' : 'empty'}">
+            ${hasTitle ? esc(item.Title) : '(no title)'}
+          </div>
+          ${hasText ? `<div class="review-text">${esc(item.Text)}</div>` : ''}
+          ${(item.Comments && item.Comments.length) ? `
+            <div class="section-title" style="margin:12px 0 8px">Comments</div>
+            ${item.Comments.map(c => {
+              const cid      = c.comment_id;
+              const existing = commentLabels[cid];
+              const cRid     = `cr-${cid}`;
+              const moveBtns = Object.keys(LABEL_CLS).map(b => {
+                const isSelected = existing && existing.bucket === b;
+                return `<button class="btn-move ${LABEL_CLS[b]} ${isSelected ? 'selected' : ''}"
+                  id="cbtn-${cid}-${b}"
+                  data-cid="${cid}" data-pid="${item.ID}" data-bucket="${b}"
+                  onclick="selectCommentLabel(this)">${b}</button>`;
+              }).join('');
+              return `
+                <div class="comment-block">
+                  <div class="comment-author">${esc(c.Author || 'Anonymous')}</div>
+                  <div class="comment-text">${esc(c.Text || '')}</div>
+                  <div class="label-row" style="margin-top:8px">${moveBtns}</div>
+                  <textarea class="reasoning" id="${cRid}" rows="2"
+                    placeholder="Reasoning for this comment…"
+                    style="margin-top:8px"
+                  >${esc(existing ? existing.reasoning : '')}</textarea>
+                  <div style="margin-top:6px">
+                    <button class="btn-move" style="border-color:#6366f1;color:#a5b4fc"
+                      data-cid="${cid}" data-pid="${item.ID}" data-rid="${cRid}"
+                      onclick="saveCommentLabel(this)">Save</button>
+                  </div>
+                </div>`;
+            }).join('')}` : ''}
+          <textarea class="reasoning" id="${rid}"
+            placeholder="Add reasoning…"
+            rows="2"
+            style="margin-top:10px"
+          >${esc(item.reasoning || '')}</textarea>
+          <div class="review-actions" style="margin-top:8px">
+            ${moveBtns}
+            <button class="btn-move" style="border-color:#6366f1;color:#a5b4fc"
+              data-id="${item.ID}" data-from="${bucket}" data-rid="${rid}"
+              onclick="saveReasoning(this)">Save reasoning</button>
+            <button class="btn-remove"
+              data-id="${item.ID}" data-from="${bucket}"
+              onclick="doRemove(this)">Remove</button>
+          </div>
+        </div>`;
+    }).join('');
+
+    document.getElementById('app').innerHTML = `
+      <div class="review-header">
+        <button class="btn-back" onclick="exitReview()">← Back to labeling</button>
+        <div class="review-title">${bucket} (${posts.length} post${posts.length !== 1 ? 's' : ''})</div>
+      </div>
+      ${posts.length === 0
+        ? '<div class="review-empty">No posts in this bucket yet.</div>'
+        : itemHTML(posts, false)}
+    `;
+  }
+
+  // Track selected label per comment in review mode
+  const commentReviewSelections = {};  // { cid: bucket }
+
+  function selectCommentLabel(btn) {
+    const cid    = btn.dataset.cid;
+    const bucket = btn.dataset.bucket;
+    commentReviewSelections[cid] = bucket;
+    // Update button highlight
+    Object.keys(LABEL_CLS).forEach(b => {
+      const el = document.getElementById(`cbtn-${cid}-${b}`);
+      if (el) el.classList.toggle('selected', b === bucket);
+    });
+  }
+
+  async function saveCommentLabel(btn) {
+    const cid  = btn.dataset.cid;
+    const pid  = btn.dataset.pid;
+    const rid  = btn.dataset.rid;
+    const label = commentReviewSelections[cid];
+    if (!label) { showFlash('Select a label first', 'warn'); return; }
+    const reasoning = document.getElementById(rid)?.value || '';
+    btn.disabled = true;
+    const res = await fetch('/save-comment', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({comment_id: cid, parent_post_id: pid, label, reasoning}),
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    if (data.status === 'ok') {
+      renderStrip(data.counts, LIMITS);
+      showFlash(`Comment saved as ${label}`, 'ok');
+    }
+  }
+
+  async function saveReasoning(btn) {
+    const id      = btn.dataset.id;
+    const from    = btn.dataset.from;
+    const rid     = btn.dataset.rid;
+    const reasoning = document.getElementById(rid)?.value || '';
+    btn.disabled  = true;
+    const res = await fetch('/relabel', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({id, from_bucket: from, action: 'move', to_bucket: from, reasoning}),
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    if (data.status === 'ok') showFlash('Reasoning saved', 'ok');
+  }
+
+  async function doMove(btn) {
+    const id   = btn.dataset.id;
+    const from = btn.dataset.from;
+    const to   = btn.dataset.to;
+    btn.disabled = true;
+    const res  = await fetch('/relabel', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({id, from_bucket: from, action: 'move', to_bucket: to}),
+    });
+    const data = await res.json();
+    if (data.status === 'ok') {
+      renderStrip(data.counts, LIMITS);
+      showFlash(`Moved to ${to}`, 'ok');
+      openReview(from);
+    }
+  }
+
+  async function doRemove(btn) {
+    const id   = btn.dataset.id;
+    const from = btn.dataset.from;
+    btn.disabled = true;
+    const res  = await fetch('/relabel', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({id, from_bucket: from, action: 'remove'}),
+    });
+    const data = await res.json();
+    if (data.status === 'ok') {
+      renderStrip(data.counts, LIMITS);
+      showFlash('Removed', 'muted');
+      openReview(from);
+    }
+  }
+
+  function exitReview() {
+    reviewBucket = null;
+    document.querySelectorAll('.bucket-pill').forEach(p => p.classList.remove('active'));
+    fetchNext();
+  }
+
+  // ── Label buttons (reusable) ─────────────────────────────────────────────
+  function labelButtons(id, isComment) {
+    return Object.keys(LABEL_CLS).map(label => `
+      <button
+        class="lbtn ${LABEL_CLS[label]}"
+        id="btn-${id}-${label}"
+        data-id="${id}"
+        data-label="${label}"
+        data-is-comment="${isComment}"
+        onclick="toggleLabel(this)"
+      >${label}</button>`).join('');
+  }
+
+  function toggleLabel(btn) {
+    const id       = btn.dataset.id;
+    const label    = btn.dataset.label;
+    const isComment = btn.dataset.isComment === 'true';
+    const current = selections[id];
+    if (current && current.label === label) {
+      // Deselect
+      delete selections[id];
+    } else {
+      selections[id] = { label, is_comment: isComment,
+                         reasoning: selections[id]?.reasoning || '' };
+    }
+    refreshButtons(id);
+  }
+
+  function refreshButtons(id) {
+    const sel = selections[id];
+    Object.keys(LABEL_CLS).forEach(label => {
+      const btn = document.getElementById(`btn-${id}-${label}`);
+      if (btn) {
+        btn.classList.toggle('selected', !!(sel && sel.label === label));
+      }
+    });
+    // Show/hide reasoning box
+    const rBox = document.getElementById(`reasoning-${id}`);
+    if (rBox) rBox.style.display = sel ? 'block' : 'none';
+  }
+
+  function onReasoningChange(el, id) {
+    if (selections[id]) {
+      selections[id].reasoning = el.value;
+    }
+  }
+
+  // ── Render ───────────────────────────────────────────────────────────────
+  function renderCard(item, suggested, counts, limits) {
+    currentPost = item;
+    selections  = {};
+
+    const hasTitle    = item.Title && item.Title.trim();
+    const hasText     = item.Text  && item.Text.trim();
+    const comments    = Array.isArray(item.Comments) ? item.Comments : [];
+    const pid         = item.ID;
+
+    const commentsHTML = comments.map(c => {
+      const cid      = c.comment_id;
+      const fullText = esc(c.Text || '');
+      const short    = false;
+      return `
+        <div class="comment-block">
+          <div class="comment-author">${esc(c.Author || 'Anonymous')}</div>
+          <div class="comment-text" id="ctext-${cid}" data-full="${fullText.replace(/"/g, '&quot;')}">
+            ${short ? fullText.slice(0, 400) + '…' : fullText}
+          </div>
+          ${short ? `<button class="show-more-btn" data-cid="${cid}" onclick="expandComment(this)">Show more</button>` : ''}
+          <div class="label-row">${labelButtons(cid, true)}</div>
+          <div class="reasoning-wrap" style="display:none" id="reasoning-${cid}">
+            <textarea class="reasoning" placeholder="Why this label?" rows="2"
+              oninput="onReasoningChange(this,'${cid}')"></textarea>
+          </div>
+        </div>`;
+    }).join('');
+
+    document.getElementById('app').innerHTML = `
+      <!-- Post card -->
+      <div class="card">
+        <div class="meta">
+          <span class="tag source">${esc(item.Source)}</span>
+          <span class="tag">${esc(item.Type)}</span>
+          ${item.Date ? `<span class="tag">${esc(item.Date)}</span>` : ''}
+          ${item.Word_Count ? `<span class="tag">${item.Word_Count} words</span>` : ''}
+          <span class="tag suggested">Existing: ${esc(item.label || '—')}</span>
+        </div>
+        <div class="post-title ${hasTitle ? '' : 'empty'}">
+          ${hasTitle ? esc(item.Title) : '(no title)'}
+        </div>
+        <div class="text-box ${hasText ? '' : 'empty'}">
+          ${hasText ? esc(item.Text) : '(no body text)'}
+        </div>
+        <div class="label-row">${labelButtons(pid, false)}</div>
+        <div class="reasoning-wrap" style="display:none" id="reasoning-${pid}">
+          <textarea class="reasoning" placeholder="Why this label for the post?" rows="2"
+            oninput="onReasoningChange(this,'${pid}')"></textarea>
+        </div>
+      </div>
+
+      <!-- Comments card -->
+      ${comments.length > 0 ? `
+        <div class="card">
+          <div class="section-title">${comments.length} Comment${comments.length > 1 ? 's' : ''}</div>
+          ${commentsHTML}
+        </div>` : ''}
+
+      <!-- Submit bar -->
+      <div class="submit-bar">
+        <button class="btn-submit" onclick="submitAll()">Submit &amp; Next</button>
+        <button class="btn-skip"   onclick="skipAll()">Skip post</button>
+      </div>
+    `;
+
+    renderStrip(counts, limits);
+  }
+
+  // ── Fetch next ───────────────────────────────────────────────────────────
+  async function fetchNext() {
+    document.getElementById('app').innerHTML = '<div class="loading">Loading…</div>';
+    currentPost = null;
+    selections  = {};
+
+    const res  = await fetch('/next');
+    const data = await res.json();
+
+    renderStrip(data.counts || lastCounts, data.limits || LIMITS);
+
+    if (data.done) {
+      document.getElementById('app').innerHTML = `
+        <div class="done-screen">
+          <h2>All done!</h2>
+          <p>sample.json has been saved with all labeled entries.</p>
+        </div>`;
+      return;
+    }
+    renderCard(data.item, data.suggested, data.counts, data.limits);
+  }
+
+  // ── Submit ───────────────────────────────────────────────────────────────
+  async function submitAll() {
+    if (!currentPost) return;
+
+    const entries = Object.entries(selections).map(([id, sel]) => ({
+      id,
+      label:      sel.label,
+      reasoning:  sel.reasoning,
+      is_comment: sel.is_comment,
+    }));
+
+    const res  = await fetch('/label', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ post_id: currentPost.ID, entries }),
+    });
+    const data = await res.json();
+
+    const accepted  = (data.results || []).filter(r => r.status === 'accepted').length;
+    const discarded = (data.results || []).filter(r => r.status === 'discarded').length;
+
+    if (accepted > 0) showFlash(`✓ Saved ${accepted} label${accepted > 1 ? 's' : ''}${discarded ? `, ${discarded} bucket-full` : ''}`, 'ok');
+    else if (entries.length === 0) showFlash('Skipped', 'muted');
+    else showFlash('All buckets full for selected labels', 'warn');
+
+    if (data.counts) renderStrip(data.counts, LIMITS);
+    setTimeout(fetchNext, 400);
+  }
+
+  async function skipAll() {
+    if (!currentPost) return;
+    await fetch('/label', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ post_id: currentPost.ID, entries: [] }),
+    });
+    showFlash('Skipped', 'muted');
+    setTimeout(fetchNext, 300);
+  }
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+  function expandComment(btn) {
+    const cid = btn.dataset.cid;
+    const el  = document.getElementById(`ctext-${cid}`);
+    // fullText stored as data on the element at render time
+    if (el) el.innerHTML = el.dataset.full;
+    btn.remove();
+  }
+
+  function showFlash(msg, type) {
+    const el = document.getElementById('flash');
+    el.textContent = msg;
+    el.className   = `flash ${type} show`;
+    setTimeout(() => el.classList.remove('show'), 2000);
+  }
+
+  function esc(s) {
+    return String(s ?? '')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  fetchNext();
+</script>
+</body>
+</html>

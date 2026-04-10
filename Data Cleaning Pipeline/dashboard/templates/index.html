@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1020;
+      color: #dbe4ff;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 22px;
+      background: rgba(11, 16, 32, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1f2a44;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #8fb4ff;
+    }
+    header .meta {
+      font-size: 0.8rem;
+      color: #7f8fb3;
+    }
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      gap: 18px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    .summary-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .bucket-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .two-col {
+      grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+      align-items: start;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(21, 29, 52, 0.95), rgba(13, 18, 34, 0.95));
+      border: 1px solid #1f2a44;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+    }
+    .card h2, .card h3 {
+      margin: 0 0 14px 0;
+      font-size: 0.95rem;
+      color: #9ab8ff;
+      letter-spacing: 0.03em;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: #7f8fb3;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #f3f7ff;
+    }
+    .stat-sub {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: #8fa1c6;
+    }
+    .progress {
+      width: 100%;
+      height: 10px;
+      background: #11192d;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 12px 0 10px;
+      border: 1px solid #253250;
+    }
+    .progress-bar {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.2s ease;
+    }
+    .b-I { background: linear-gradient(90deg, #94a3b8, #cbd5e1); }
+    .b-N { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+    .b-P { background: linear-gradient(90deg, #10b981, #34d399); }
+    .b-G { background: linear-gradient(90deg, #ef4444, #f87171); }
+    .bucket-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .bucket-title-row .count {
+      color: #eef4ff;
+      font-weight: 700;
+    }
+    .bucket-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #89a0cf;
+    }
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .pill {
+      border: 1px solid #2a3b63;
+      background: #11192d;
+      color: #9cb3e6;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .pill.active {
+      border-color: #6f9dff;
+      color: #f2f6ff;
+      background: #16213f;
+    }
+    .item-list, .mini-list {
+      display: grid;
+      gap: 12px;
+    }
+    .list-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .list-section-meta {
+      font-size: 0.8rem;
+      color: #7f8fb3;
+    }
+    .item {
+      border: 1px solid #24324f;
+      border-radius: 12px;
+      padding: 14px;
+      background: #0d1529;
+    }
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+    .item-title {
+      font-weight: 700;
+      color: #f0f5ff;
+      line-height: 1.4;
+    }
+    .item-title.muted {
+      color: #6f7f9f;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .item-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .tag {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #131f38;
+      border: 1px solid #24324f;
+      color: #8fa1c6;
+    }
+    .tag.bucket-I { color: #d7dee8; }
+    .tag.bucket-N { color: #93c5fd; }
+    .tag.bucket-P { color: #86efac; }
+    .tag.bucket-G { color: #fca5a5; }
+    .item-preview {
+      font-size: 0.84rem;
+      color: #b9c7e6;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .item-reasoning {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #1f2a44;
+      font-size: 0.8rem;
+      color: #91a3c8;
+      line-height: 1.55;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 8px;
+      border-bottom: 1px solid #1f2a44;
+      vertical-align: top;
+    }
+    th {
+      color: #87a6e6;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    td {
+      color: #d4def7;
+    }
+    .muted {
+      color: #7f8fb3;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+    }
+    .error {
+      color: #fca5a5;
+    }
+    .source-bar {
+      display: grid;
+      gap: 10px;
+    }
+    .source-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 44px;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    .source-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #11192d;
+      overflow: hidden;
+      border: 1px solid #23304b;
+    }
+    .source-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #5b7bd8, #8fb4ff);
+    }
+    .empty {
+      color: #6c7b99;
+      font-style: italic;
+      padding: 10px 0;
+    }
+    .small-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .small-stat {
+      background: #0d1529;
+      border: 1px solid #1f2a44;
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .small-stat .label {
+      font-size: 0.74rem;
+      color: #7f8fb3;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .small-stat .value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f2f6ff;
+    }
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #1f2a44;
+    }
+    .pagination-info {
+      font-size: 0.8rem;
+      color: #7f8fb3;
+    }
+    .pagination-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .page-btn {
+      border: 1px solid #2a3b63;
+      background: #11192d;
+      color: #b5c7ee;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .page-btn:hover:not(:disabled) {
+      border-color: #6f9dff;
+      color: #f2f6ff;
+      background: #16213f;
+    }
+    .page-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+    @media (max-width: 1100px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SC4021 · Cleaning Pipeline Dashboard</h1>
+    <div class="meta">
+      <div id="refreshMeta">Loading...</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid summary-grid" id="summaryCards"></section>
+    <section class="grid bucket-grid" id="bucketCards"></section>
+
+    <section class="grid two-col">
+      <div class="card">
+        <h2>Selected Items</h2>
+        <div class="pill-row" id="bucketPills"></div>
+        <div class="list-section-head">
+          <div class="list-section-meta" id="selectedBucketMeta">Loading...</div>
+        </div>
+        <div class="item-list" id="selectedBucketItems"></div>
+        <div class="pagination" id="selectedBucketPagination"></div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Recent Accepted</h2>
+          <div class="list-section-head">
+            <div class="list-section-meta" id="recentAcceptedMeta">Loading...</div>
+          </div>
+          <div class="mini-list" id="recentSelected"></div>
+          <div class="pagination" id="recentSelectedPagination"></div>
+        </div>
+
+        <div class="card">
+          <h2>Recent Failures</h2>
+          <div class="mini-list" id="recentFailures"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid two-col">
+      <div class="card">
+        <h2>Timing Summary</h2>
+        <div class="small-grid" id="timingStats"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Total</th>
+              <th>LLM</th>
+              <th>Prompt</th>
+              <th>Persist</th>
+              <th>Finished</th>
+            </tr>
+          </thead>
+          <tbody id="timingRows"></tbody>
+        </table>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Recent Runs</h2>
+          <div class="mini-list" id="recentRuns"></div>
+        </div>
+
+        <div class="card">
+          <h2>Selected By Source</h2>
+          <div class="source-bar" id="sourceDistribution"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const BUCKETS = {{ buckets|tojson }};
+    const BUCKET_CLASS = {
+      Irrelevant: 'I',
+      Neutral: 'N',
+      Positive: 'P',
+      Negative: 'G',
+    };
+    const PAGE_SIZE = 5;
+    let activeBucket = BUCKETS[0];
+    let recentSelectedPage = 1;
+    let selectedBucketPage = 1;
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function fmtInt(value) {
+      return value == null ? '—' : Number(value).toLocaleString();
+    }
+
+    function fmtMs(value) {
+      if (value == null) return '—';
+      const num = Number(value);
+      if (num >= 1000) return `${(num / 1000).toFixed(2)}s`;
+      return `${num.toFixed(1)}ms`;
+    }
+
+    function fmtTime(value) {
+      if (!value) return '—';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return new Intl.DateTimeFormat('en-SG', {
+        timeZone: 'Asia/Singapore',
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+      }).format(date) + ' GMT+8';
+    }
+
+    function bucketClass(bucket) {
+      return `bucket-${BUCKET_CLASS[bucket]}`;
+    }
+
+    async function getJson(url) {
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    }
+
+    function renderSummary(summary) {
+      const eta = summary.eta_completion || {};
+      const cards = [
+        {
+          label: 'Estimated Completion',
+          value: eta.eta_display || 'Unavailable',
+          sub: `${eta.duration_display || 'Unavailable'} · ${eta.basis || 'ETA unavailable'}`
+        },
+        {
+          label: 'Selected',
+          value: `${fmtInt(summary.selected_total)} / ${fmtInt(summary.selected_target_total)}`,
+          sub: `${fmtInt(summary.selected_remaining_total)} more needed to fill targets`
+        },
+        {
+          label: 'Processed',
+          value: fmtInt(summary.processed_total),
+          sub: 'Items already examined by the loop'
+        },
+        {
+          label: 'Pool Remaining',
+          value: fmtInt(summary.index_remaining_total),
+          sub: 'IDs still available in index.json'
+        },
+        {
+          label: 'Failures',
+          value: fmtInt(summary.failed_total),
+          sub: 'Items logged to failed_item.json'
+        },
+      ];
+
+      document.getElementById('summaryCards').innerHTML = cards.map(card => `
+        <article class="card">
+          <div class="stat-label">${escapeHtml(card.label)}</div>
+          <div class="stat-value">${escapeHtml(card.value)}</div>
+          <div class="stat-sub">${escapeHtml(card.sub)}</div>
+        </article>
+      `).join('');
+    }
+
+    function renderBuckets(summary) {
+      document.getElementById('bucketCards').innerHTML = BUCKETS.map(bucket => {
+        const count = summary.counts[bucket] ?? 0;
+        const limit = summary.limits[bucket] ?? 0;
+        const remaining = summary.remaining[bucket] ?? 0;
+        const pct = limit ? (count / limit) * 100 : 0;
+        return `
+          <article class="card">
+            <div class="bucket-title-row">
+              <h3>${escapeHtml(bucket)}</h3>
+              <div class="count">${fmtInt(count)} / ${fmtInt(limit)}</div>
+            </div>
+            <div class="progress"><div class="progress-bar b-${BUCKET_CLASS[bucket]}" style="width:${pct}%"></div></div>
+            <div class="bucket-meta">
+              <span>${remaining} remaining</span>
+              <span>${pct.toFixed(1)}%</span>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderBucketPills(summary) {
+      document.getElementById('bucketPills').innerHTML = BUCKETS.map(bucket => `
+        <button class="pill ${bucket === activeBucket ? 'active' : ''}" data-bucket="${escapeHtml(bucket)}">
+          ${escapeHtml(bucket)} · ${fmtInt(summary.counts[bucket])}/${fmtInt(summary.limits[bucket])}
+        </button>
+      `).join('');
+
+      document.querySelectorAll('#bucketPills .pill').forEach(button => {
+        button.addEventListener('click', async () => {
+          activeBucket = button.dataset.bucket;
+          selectedBucketPage = 1;
+          renderBucketPills(summary);
+          await refreshSelectedBucket();
+        });
+      });
+    }
+
+    function renderItemList(targetId, items, emptyText) {
+      const target = document.getElementById(targetId);
+      if (!items.length) {
+        target.innerHTML = `<div class="empty">${escapeHtml(emptyText)}</div>`;
+        return;
+      }
+      target.innerHTML = items.map(item => {
+        const title = item.title || '(No title)';
+        const titleClass = item.title ? 'item-title' : 'item-title muted';
+        return `
+          <article class="item">
+            <div class="item-head">
+              <div class="${titleClass}">${escapeHtml(title)}</div>
+              <div class="tag ${item.bucket ? bucketClass(item.bucket) : ''}">${escapeHtml(item.bucket || item.status || '')}</div>
+            </div>
+            <div class="item-tags">
+              ${item.id ? `<span class="tag mono">${escapeHtml(item.id)}</span>` : ''}
+              ${item.source ? `<span class="tag">${escapeHtml(item.source)}</span>` : ''}
+              ${item.type ? `<span class="tag">${escapeHtml(item.type)}</span>` : ''}
+              ${item.confidence != null ? `<span class="tag">conf ${Number(item.confidence).toFixed(2)}</span>` : ''}
+              ${item.classified_at ? `<span class="tag">${escapeHtml(fmtTime(item.classified_at))}</span>` : ''}
+            </div>
+            <div class="item-preview">${escapeHtml(item.preview || '')}</div>
+            ${item.reasoning ? `<div class="item-reasoning">${escapeHtml(item.reasoning)}</div>` : ''}
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderRecentSelected(items) {
+      const totalItems = items.length;
+      const totalPages = Math.max(Math.ceil(totalItems / PAGE_SIZE), 1);
+      recentSelectedPage = Math.min(recentSelectedPage, totalPages);
+      const start = (recentSelectedPage - 1) * PAGE_SIZE;
+      const pageItems = items.slice(start, start + PAGE_SIZE);
+      document.getElementById('recentAcceptedMeta').textContent = `${fmtInt(totalItems)} recent accepted items loaded`;
+      renderItemList('recentSelected', pageItems, 'No accepted items yet.');
+      renderPagination(
+        'recentSelectedPagination',
+        recentSelectedPage,
+        totalPages,
+        totalItems,
+        (nextPage) => {
+          recentSelectedPage = nextPage;
+          renderRecentSelected(items);
+        }
+      );
+    }
+
+    function renderRecentFailures(items) {
+      const target = document.getElementById('recentFailures');
+      if (!items.length) {
+        target.innerHTML = '<div class="empty">No failed items logged.</div>';
+        return;
+      }
+      target.innerHTML = items.map(item => `
+        <article class="item">
+          <div class="item-tags">
+            <span class="tag mono">${escapeHtml(item.id || 'unknown')}</span>
+            <span class="tag">${escapeHtml(item.source || 'unknown')}</span>
+            <span class="tag">${escapeHtml(item.type || 'unknown')}</span>
+          </div>
+          <div class="item-preview error">${escapeHtml(item.error || 'Unknown error')}</div>
+          <div class="item-reasoning">${escapeHtml(fmtTime(item.failed_at))}</div>
+        </article>
+      `).join('');
+    }
+
+    function renderTiming(timing) {
+      const stats = [
+        ['Entries', fmtInt(timing.entry_count)],
+        ['Avg Iteration', fmtMs(timing.avg_iteration_ms)],
+        ['P50 Iteration', fmtMs(timing.p50_iteration_ms)],
+        ['P90 Iteration', fmtMs(timing.p90_iteration_ms)],
+        ['Avg Classify', fmtMs(timing.avg_classify_ms)],
+        ['Avg LLM', fmtMs(timing.avg_llm_ms)],
+      ];
+      document.getElementById('timingStats').innerHTML = stats.map(([label, value]) => `
+        <div class="small-stat">
+          <div class="label">${escapeHtml(label)}</div>
+          <div class="value">${escapeHtml(value)}</div>
+        </div>
+      `).join('');
+
+      const rows = timing.recent_entries || [];
+      document.getElementById('timingRows').innerHTML = rows.length ? rows.map(entry => `
+        <tr>
+          <td>
+            <div class="mono">${escapeHtml(entry.item_id || '')}</div>
+            <div class="muted">${escapeHtml(entry.source || '')}</div>
+          </td>
+          <td>
+            <div>${escapeHtml(entry.status || '')}</div>
+            <div class="muted">${escapeHtml(entry.classification || '—')}</div>
+          </td>
+          <td>${escapeHtml(fmtMs(entry.iteration_total_ms))}</td>
+          <td>${escapeHtml(fmtMs(entry.llm_total_ms))}</td>
+          <td>${escapeHtml(fmtMs(entry.prompt_build_ms))}</td>
+          <td>${escapeHtml(fmtMs(entry.persist_ms))}</td>
+          <td>${escapeHtml(fmtTime(entry.finished_at))}</td>
+        </tr>
+      `).join('') : `<tr><td colspan="7" class="empty">No timing entries yet.</td></tr>`;
+
+      const recentRuns = timing.recent_runs || [];
+      const runsTarget = document.getElementById('recentRuns');
+      if (!recentRuns.length) {
+        runsTarget.innerHTML = '<div class="empty">No completed runs logged yet.</div>';
+      } else {
+        runsTarget.innerHTML = recentRuns.map(run => `
+          <article class="item">
+            <div class="item-tags">
+              <span class="tag mono">${escapeHtml(run.run_id || '')}</span>
+              <span class="tag">${escapeHtml(fmtTime(run.finished_at))}</span>
+            </div>
+            <div class="item-preview">processed ${fmtInt(run.processed_this_run)} items · runtime ${escapeHtml(fmtMs(run.runtime_ms))}</div>
+            <div class="item-reasoning">${escapeHtml(JSON.stringify(run.final_counts || {}))}</div>
+          </article>
+        `).join('');
+      }
+    }
+
+    function renderSources(sources) {
+      const target = document.getElementById('sourceDistribution');
+      if (!sources.length) {
+        target.innerHTML = '<div class="empty">No selected sources yet.</div>';
+        return;
+      }
+      const max = Math.max(...sources.map(item => item.count), 1);
+      target.innerHTML = sources.map(item => `
+        <div class="source-row">
+          <div>${escapeHtml(item.source)}</div>
+          <div class="source-track"><div class="source-fill" style="width:${(item.count / max) * 100}%"></div></div>
+          <div>${fmtInt(item.count)}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderPagination(targetId, currentPage, totalPages, totalItems, onPageChange) {
+      const target = document.getElementById(targetId);
+      if (totalItems <= PAGE_SIZE) {
+        target.innerHTML = '';
+        return;
+      }
+
+      target.innerHTML = `
+        <div class="pagination-info">Page ${fmtInt(currentPage)} of ${fmtInt(totalPages)} · ${fmtInt(totalItems)} items</div>
+        <div class="pagination-controls">
+          <button class="page-btn" data-dir="-1" ${currentPage <= 1 ? 'disabled' : ''}>Previous</button>
+          <button class="page-btn" data-dir="1" ${currentPage >= totalPages ? 'disabled' : ''}>Next</button>
+        </div>
+      `;
+
+      target.querySelectorAll('.page-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const nextPage = currentPage + Number(button.dataset.dir);
+          if (nextPage >= 1 && nextPage <= totalPages) {
+            onPageChange(nextPage);
+          }
+        });
+      });
+    }
+
+    async function refreshSelectedBucket() {
+      const data = await getJson(
+        `/api/selected/${encodeURIComponent(activeBucket)}?page=${selectedBucketPage}&page_size=${PAGE_SIZE}`
+      );
+      const totalItems = data.count || 0;
+      const totalPages = data.total_pages || 1;
+      selectedBucketPage = Math.min(data.page || 1, totalPages);
+      document.getElementById('selectedBucketMeta').textContent =
+        `${activeBucket} bucket · ${fmtInt(totalItems)} selected`;
+      renderItemList('selectedBucketItems', data.items || [], `No items selected in ${activeBucket} yet.`);
+      renderPagination(
+        'selectedBucketPagination',
+        selectedBucketPage,
+        totalPages,
+        totalItems,
+        async (nextPage) => {
+          selectedBucketPage = nextPage;
+          await refreshSelectedBucket();
+        }
+      );
+    }
+
+    async function refreshDashboard() {
+      try {
+        const data = await getJson('/api/dashboard');
+        renderSummary(data.summary);
+        renderBuckets(data.summary);
+        renderBucketPills(data.summary);
+        renderRecentSelected(data.recent_selected || []);
+        renderRecentFailures(data.recent_failures || []);
+        renderTiming(data.timing || {});
+        renderSources(data.source_distribution || []);
+        document.getElementById('refreshMeta').textContent = `Updated ${fmtTime(data.updated_at)} · auto-refresh every 4s`;
+        await refreshSelectedBucket();
+      } catch (error) {
+        document.getElementById('refreshMeta').textContent = `Dashboard refresh failed: ${error.message}`;
+      }
+    }
+
+    refreshDashboard();
+    setInterval(refreshDashboard, 4000);
+  </script>
+</body>
+</html>

@@ -63,6 +63,31 @@ logger = logging.getLogger(__name__)
 LOWER_THRESHOLD = 0.20
 UPPER_THRESHOLD = 0.75
 
+# Domain keywords for relevance check — covers AI coding tools, vibe coding, and dev ecosystem
+DOMAIN_KEYWORDS = {
+    # Core coding / dev terms
+    "code", "coding", "coding", "python", "api", "developer", "bug",
+    "programming", "software", "engineer", "engineering", "dev", "devex",
+    "repo", "refactor", "debug", "deploy", "deployment", "terminal", "cli",
+    "function", "library", "framework", "syntax", "compile", "runtime",
+    # AI coding tools
+    "copilot", "cursor", "claude", "chatgpt", "gpt", "gemini", "tabnine",
+    "codeium", "windsurf", "devin", "codex", "copilot", "supermaven",
+    "replit", "cline", "aider", "continue",
+    # AI / LLM general
+    "ai", "llm", "llms", "model", "models", "agent", "agents", "prompt",
+    "prompting", "context", "token", "tokens", "inference", "fine-tuning",
+    "openai", "anthropic", "deepseek", "mistral", "qwen",
+    # IDE / editor ecosystem
+    "ide", "editor", "vscode", "jetbrains", "neovim", "vim", "emacs",
+    "intellij", "pycharm", "autocomplete", "autocompletion", "plugin",
+    # Vibe coding specific
+    "vibe", "vibecoding", "vibe-coding", "generate", "generated", "generation",
+    "hallucinate", "hallucination", "hallucinations", "productivity", "workflow",
+    # Platforms
+    "github", "gitlab", "stackoverflow", "hackernews",
+}
+
 # First-person pronouns — strong subjectivity signal
 FIRST_PERSON = {
     "i", "me", "my", "mine", "myself",
@@ -213,9 +238,20 @@ class SubjectivityDetector:
         else:
             logger.info("Transformer disabled — running lexicon-only mode.")
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
+    def _is_relevant(self, text: str, pos_tags: list[list]) -> bool:
+        """
+        Phase A: Topic/Relevance Check.
+        Returns True if the text is about AI/Coding, False if it is off-topic.
+        """
+        # Flatten the POS tags to easily search all lemmas in the text
+        all_lemmas = {lemma.lower() for sentence in pos_tags for _, _, lemma in sentence}
+        
+        # If there is no overlap between the text's lemmas and your keywords, it's irrelevant.
+        if not all_lemmas.intersection(DOMAIN_KEYWORDS):
+            return False
+            
+        # You can add more complex context/proximity checks here later!
+        return True
 
     def detect_record(self, record: dict) -> dict:
         """
@@ -235,29 +271,38 @@ class SubjectivityDetector:
             logger.warning(f"Record {record.get('ID', '?')} has no Normalized_Text.")
             self._write_empty(record)
             return record
+        
+        if not self._is_relevant(text, pos_tags):
+            record["Subjectivity"] = "Irrelevant"
+            record["Subjectivity_Score"] = None
+            record["Subjectivity_Sentences"] = []
+        else:
+            # Existing subjective/objective logic runs ONLY if relevant
+            sentence_results = self._score_sentences(sentences, pos_tags)
+            record["Subjectivity_Sentences"] = sentence_results
+            record["Subjectivity"], record["Subjectivity_Score"] = self._aggregate(sentence_results)
 
-        sentence_results = self._score_sentences(sentences, pos_tags)
-        record["Subjectivity_Sentences"] = sentence_results
-        record["Subjectivity"], record["Subjectivity_Score"] = (
-            self._aggregate(sentence_results)
-        )
+        if record["Subjectivity"] != "Irrelevant": 
+            post_context = (record.get("Title") or "")[:200]
+            for comment in record.get("Comments") or []:
+                c_text = comment.get("Normalized_Text", "")
+                c_pos = comment.get("POS_Tags", [])
+                c_sentences = comment.get("Sentences", [])   # ← read pre-split sentences
 
-        post_context = (record.get("Title") or "")[:200]
+                if not c_text:
+                    self._write_empty(comment)
+                    continue
 
-        for comment in record.get("Comments") or []:
-            c_text = comment.get("Normalized_Text", "")
-            c_pos = comment.get("POS_Tags", [])
-            c_sentences = comment.get("Sentences", [])   # ← read pre-split sentences
-
-            if not c_text:
-                self._write_empty(comment)
-                continue
-
-            c_results = self._score_sentences(c_sentences, c_pos, parent_context=post_context)
-            comment["Subjectivity_Sentences"] = c_results
-            comment["Subjectivity"], comment["Subjectivity_Score"] = (
-                self._aggregate(c_results)
-            )
+                c_results = self._score_sentences(c_sentences, c_pos, parent_context=post_context)
+                comment["Subjectivity_Sentences"] = c_results
+                comment["Subjectivity"], comment["Subjectivity_Score"] = (
+                    self._aggregate(c_results)
+                )
+        else: 
+            for comment in record.get("Comments") or []:
+                comment["Subjectivity"] = "Irrelevant"
+                comment["Subjectivity_Score"] = None
+                comment["Subjectivity_Sentences"] = []
 
         return record
 
@@ -276,9 +321,7 @@ class SubjectivityDetector:
         logger.info(f"Subjectivity detection complete. {total} records processed.")
         return records
 
-    # ------------------------------------------------------------------
     # Core detection
-    # ------------------------------------------------------------------
 
     def _score_sentences(
         self,
@@ -636,9 +679,60 @@ if __name__ == "__main__":
             }
         ],
     }
+    
+    sample_record_irrelevant = {
+        "ID": "r_002",
+        "Source": "Reddit",
+        "Normalized_Text": (
+            "I went to the new Italian place downtown yesterday. "
+            "Honestly the pizza crust was perfectly crispy and the cheese was amazing. "
+            "I highly recommend trying their garlic bread. "
+            "It cost about 20 dollars which is a great deal."
+        ),
+        "Sentences": [
+            "I went to the new Italian place downtown yesterday.",
+            "Honestly the pizza crust was perfectly crispy and the cheese was amazing.",
+            "I highly recommend trying their garlic bread.",
+            "It cost about 20 dollars which is a great deal.",
+        ],
+        # Sentence-aligned: POS_Tags[i] ↔ Sentences[i], content words only
+        "POS_Tags": [
+            [["went", "VERB", "go"], ["new", "ADJ", "new"], ["Italian", "ADJ", "italian"],
+             ["place", "NOUN", "place"], ["downtown", "ADV", "downtown"], ["yesterday", "NOUN", "yesterday"]],
+            [["Honestly", "ADV", "honestly"], ["pizza", "NOUN", "pizza"], ["crust", "NOUN", "crust"],
+             ["perfectly", "ADV", "perfectly"], ["crispy", "ADJ", "crispy"], ["cheese", "NOUN", "cheese"],
+             ["amazing", "ADJ", "amazing"]],
+            [["highly", "ADV", "highly"], ["recommend", "VERB", "recommend"],
+             ["trying", "VERB", "try"], ["garlic", "NOUN", "garlic"], ["bread", "NOUN", "bread"]],
+            [["cost", "VERB", "cost"], ["20", "NUM", "20"], ["dollars", "NOUN", "dollar"],
+             ["great", "ADJ", "great"], ["deal", "NOUN", "deal"]],
+        ],
+        "Comments": [
+            {
+                "comment_id": "c_002",
+                "Normalized_Text": (
+                    "I completely agree. "
+                    "The tomato sauce tasted super fresh. "
+                    "Best meal I have had in weeks!"
+                ),
+                "Sentences": [
+                    "I completely agree.",
+                    "The tomato sauce tasted super fresh.",
+                    "Best meal I have had in weeks!",
+                ],
+                "POS_Tags": [
+                    [["completely", "ADV", "completely"], ["agree", "VERB", "agree"]],
+                    [["tomato", "NOUN", "tomato"], ["sauce", "NOUN", "sauce"],
+                     ["tasted", "VERB", "taste"], ["super", "ADV", "super"], ["fresh", "ADJ", "fresh"]],
+                    [["Best", "ADJ", "good"], ["meal", "NOUN", "meal"], ["had", "VERB", "have"],
+                     ["weeks", "NOUN", "week"]],
+                ],
+            }
+        ],
+    }
 
     detector = SubjectivityDetector(use_transformer=True)
-    result = detector.detect_record(sample_record)
+    result = detector.detect_record(sample_record_irrelevant)
 
     print(f"\n=== Record-level ===")
     print(f"  Label : {result['Subjectivity']}")

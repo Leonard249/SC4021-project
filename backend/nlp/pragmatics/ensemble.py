@@ -72,16 +72,22 @@ Requires:
 
 import json
 import logging
+import re
 import sys
 from pathlib import Path
 from typing import Optional
+
+try:
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer as _VaderSIA
+except ImportError:
+    _VaderSIA = None
 
 # Resolve classifiers/ relative to this file so the import works regardless
 # of where the script is called from.
 # sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from length_routing.sentic_vader import SenticVaderClassifier, flatten_pos_tags
-from length_routing.transformer_polarity import TransformerPolarityClassifier
+from .length_routing.sentic_vader import SenticVaderClassifier, flatten_pos_tags
+from .length_routing.transformer_polarity import TransformerPolarityClassifier
 
 logger = logging.getLogger(__name__)
 
@@ -113,6 +119,9 @@ class PolarityEnsemble:
         self.short_threshold = short_threshold
         self._sentic_vader  = SenticVaderClassifier()
         self._transformer   = TransformerPolarityClassifier()
+        self._vader = _VaderSIA() if _VaderSIA is not None else None
+        if self._vader is None:
+            logger.warning("vaderSentiment not installed — document-level VADER fallback disabled.")
 
     def classify_record(self, record: dict) -> dict:
         """
@@ -171,15 +180,22 @@ class PolarityEnsemble:
 
         Objective containers are skipped (empty list + "neutral").
         """
-        if container.get("Subjectivity", "objective") != "subjective":
+        subjectivity = container.get("Subjectivity", "objective")
+
+        # Fix 3: "Irrelevant" (truly off-topic) stays neutral — nothing to classify.
+        # "objective" (on-topic but factual) still gets a VADER fallback below.
+        if subjectivity == "Irrelevant":
             container["Aspect_Sentiments"]         = []
             container["Overall_Document_Polarity"] = "neutral"
             return
 
         aspects: list[dict] = container.get("Targeted_Aspects") or []
-        if not aspects:
-            container["Aspect_Sentiments"]         = []
-            container["Overall_Document_Polarity"] = "neutral"
+
+        # Fix 1 & Fix 3: When there are no aspects OR the record is objective,
+        # fall back to document-level VADER rather than defaulting to "neutral".
+        if not aspects or subjectivity == "objective":
+            container["Aspect_Sentiments"] = []
+            container["Overall_Document_Polarity"] = self._vader_fallback(container)
             return
 
         aspect_sentiments: list[dict] = []
@@ -212,6 +228,36 @@ class PolarityEnsemble:
         container["Overall_Document_Polarity"] = self._aggregate(
             aspect_sentiments
         )
+
+    # Document-level VADER fallback
+
+    def _vader_fallback(self, container: dict) -> str:
+        """
+        Compute document-level polarity using VADER on the full Normalized_Text.
+
+        Used when:
+          - Subjectivity == "objective" (Fix 3): on-topic but no aspect entities found
+          - Targeted_Aspects is empty (Fix 1): subjective but no extractable aspect
+
+        Returns "positive" | "negative" | "neutral".
+        Falls back to "neutral" if VADER is unavailable.
+        """
+        if self._vader is None:
+            return "neutral"
+
+        text = container.get("Normalized_Text", "")
+        if not text:
+            return "neutral"
+
+        # Strip <CODE> blocks and emoticon tokens before scoring
+        clean = re.sub(r"<CODE>|\[[^\]]+\]", " ", text).strip()
+        compound = self._vader.polarity_scores(clean)["compound"]
+
+        if compound >= 0.05:
+            return "positive"
+        if compound <= -0.05:
+            return "negative"
+        return "neutral"
 
     # Routing
 

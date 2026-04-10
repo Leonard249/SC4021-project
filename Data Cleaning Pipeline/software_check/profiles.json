@@ -1,0 +1,32 @@
+{
+  "profiles": [
+    {
+      "id": "bryan",
+      "name": "Bryan",
+      "assigned_bucket": "Irrelevant",
+      "db_file": "db_bryan.json",
+      "item_count": 300
+    },
+    {
+      "id": "ananya",
+      "name": "Ananya",
+      "assigned_bucket": "Neutral",
+      "db_file": "db_ananya.json",
+      "item_count": 300
+    },
+    {
+      "id": "ryan",
+      "name": "Ryan",
+      "assigned_bucket": "Positive",
+      "db_file": "db_ryan.json",
+      "item_count": 300
+    },
+    {
+      "id": "leonard",
+      "name": "Leonard",
+      "assigned_bucket": "Negative",
+      "db_file": "db_leonard.json",
+      "item_count": 300
+    }
+  ]
+}

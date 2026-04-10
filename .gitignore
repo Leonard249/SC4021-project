@@ -3,10 +3,16 @@ pyproject.toml
 uv.lock
 .venv
 bry_note
+big data
+archive
+eval_viewer
+
 dataset
 .venv
 final_dataset
 data/raw
+data/results/draft_output.json
+data/my_test/pipeline_output.json
 data/processed/raw_data.json
 data/processed/temp.json
 data/raw_data.json
@@ -19,3 +25,17 @@ backend/test/output/pipeline_run.log
 utils/__pycache__
 semantics/__pycache__
 syntactics/__pycache__
+
+# HuggingFace models & checkpoints
+data/models/
+data/models.zip
+*.zip
+
+# Large JSON datasets & evaluations
+data/analysis/
+data/results/
+Data Cleaning Pipeline/raw_data.json
+
+# Node.js dependencies & Next.js cache
+**/node_modules/
+**/.next/
