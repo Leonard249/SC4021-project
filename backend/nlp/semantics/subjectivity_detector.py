@@ -431,7 +431,7 @@ class SubjectivityDetector:
         blended = 0.4 * mean_score + 0.6 * max_score
 
         # Slightly lower decision boundary than 0.5 since we're blending
-        label = "subjective" if blended >= 0.48 else "objective"
+        label = "subjective" if blended >= 0.42 else "objective"
         return label, round(blended, 4)
 
     # ------------------------------------------------------------------

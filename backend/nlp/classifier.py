@@ -74,7 +74,7 @@ from pragmatics.ensemble import PolarityEnsemble                   # Stage 8
 INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "db_labelled.json"
 
 # Output JSON: fully annotated records ready for indexing / evaluation.
-OUTPUT_PATH: Path = _PROJECT_ROOT / "data" / "results" / "classified_eval_transformer_only.json"
+OUTPUT_PATH: Path = _PROJECT_ROOT / "data" / "results" / "classified_eval.json"
 
 # Lexicon paths (relative to backend/nlp/syntactics/ or absolute).
 EMOTICON_DICT: Path = _PROJECT_ROOT / "data" / "lexicons" / "emoticon_dict.json"
@@ -268,6 +268,8 @@ class NLPPipeline:
     @staticmethod
     def _log_summary(records: list[dict], elapsed: float) -> None:
         """Print a brief stats summary after the full pipeline completes."""
+
+        
         n_total = len(records)
         n_subjective = sum(1 for r in records if r.get("Subjectivity") == "subjective")
         n_objective = sum(1 for r in records if r.get("Subjectivity") == "objective")
@@ -288,6 +290,14 @@ class NLPPipeline:
         logger.info(f"  Polarity → negative: {n_negative}")
         logger.info(f"  Polarity → neutral: {n_neutral}")
         logger.info(f"  Total time: {elapsed:.1f}s  ({rate:.1f} records/s)")
+
+        # Add these lines right below where it counts n_positive, n_negative, etc.
+        n_vader_pos = sum(1 for r in records if r.get("Overall_Document_Polarity") == "positive" and "vader" in r.get("Dominant_Routing_Path", "").lower())
+        n_trans_pos = sum(1 for r in records if r.get("Overall_Document_Polarity") == "positive" and "transformer" in r.get("Dominant_Routing_Path", "").lower())
+        
+        # Add these to the logger block at the bottom:
+        logger.info(f"  Polarity → positive: {n_positive} (Vader: {n_vader_pos}, Transformer: {n_trans_pos})")
+
         logger.info("=" * 60)
 
 def run_pipeline(

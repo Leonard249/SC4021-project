@@ -56,8 +56,8 @@ logger = logging.getLogger(__name__)
 
 VADER_WEIGHT      = 0.55
 SENTICNET_WEIGHT  = 0.45
-POSITIVE_THRESHOLD = 0.55
-NEGATIVE_THRESHOLD = 0.45
+POSITIVE_THRESHOLD = 0.65
+NEGATIVE_THRESHOLD = 0.35
 
 
 class SenticVaderClassifier:
@@ -138,7 +138,20 @@ class SenticVaderClassifier:
         try:
             from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
             self._vader = SentimentIntensityAnalyzer()
-            logger.info("SenticVaderClassifier: VADER loaded.")
+            
+            # --- ADD THIS BLOCK TO NEUTRALIZE TECH WORDS ---
+            tech_neutral_words = [
+                "support", "supports", "supported",
+                "share", "shares", "shared",
+                "like", "default", "defaults",
+                "native", "update", "upgrade",
+                "resolve", "resolves", "fixed"
+            ]
+            for word in tech_neutral_words:
+                self._vader.lexicon[word] = 0.0 
+            # -----------------------------------------------
+                
+            logger.info("SenticVaderClassifier: VADER loaded with tech overrides.")
         except ImportError:
             logger.warning(
                 "vaderSentiment not installed — VADER signal disabled. "

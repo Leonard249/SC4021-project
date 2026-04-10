@@ -142,6 +142,26 @@ class PolarityEnsemble:
     def classify_corpus(self, records: list[dict]) -> list[dict]:
         """Classify polarity for an entire list of records."""
         total = len(records)
+
+
+        subj_counts = {"subjective": 0, "objective": 0, "irrelevant": 0, "other": 0}
+        for r in records:
+            lbl = (r.get("Subjectivity") or "").lower()
+            key = lbl if lbl in subj_counts else "other"
+            subj_counts[key] += 1
+            for c in r.get("Comments") or []:
+                lbl_c = (c.get("Subjectivity") or "").lower()
+                key_c = lbl_c if lbl_c in subj_counts else "other"
+                subj_counts[key_c] += 1
+        logger.info(
+            f"PolarityEnsemble | Subjectivity gate — "
+            f"subjective: {subj_counts['subjective']}, "
+            f"objective: {subj_counts['objective']}, "
+            f"irrelevant: {subj_counts['irrelevant']}, "
+            f"other/missing: {subj_counts['other']}. "
+            f"Only 'subjective' records reach polarity classification."
+        )
+
         for i, record in enumerate(records, 1):
             try:
                 self.classify_record(record)
@@ -158,49 +178,36 @@ class PolarityEnsemble:
         return records
 
     # Container-level processing
+    def _classify_container(self, container: dict, flat_pos_tags: list[list]) -> None:
+        subj_label = container.get("Subjectivity", "objective").lower()
 
-    def _classify_container(
-        self,
-        container: dict,
-        flat_pos_tags: list[list],
-    ) -> None:
-        """
-        Classify every aspect in container["Targeted_Aspects"] and write:
-            Aspect_Sentiments         — list of per-aspect result dicts
-            Overall_Document_Polarity — aggregated polarity label
+        # if subj_label == "irrelevant":
+        #     container["Aspect_Sentiments"] = []
+        #     container["Overall_Document_Polarity"] = "irrelevant"
+        #     container["Dominant_Routing_Path"] = "none"
+        #     return
 
-        Objective containers are skipped (empty list + "neutral").
-        """
-        if container.get("Subjectivity", "objective") != "subjective":
-            container["Aspect_Sentiments"]         = []
-            container["Overall_Document_Polarity"] = "neutral"
-            return
+        # if subj_label != "subjective":
+        #     container["Aspect_Sentiments"] = []
+        #     container["Overall_Document_Polarity"] = "neutral"
+        #     container["Dominant_Routing_Path"] = "none"
+        #     return
 
+        # --- Step 1: aspect-level analysis (kept for Aspect_Sentiments output) ---
         aspects: list[dict] = container.get("Targeted_Aspects") or []
-        if not aspects:
-            container["Aspect_Sentiments"]         = []
-            container["Overall_Document_Polarity"] = "neutral"
-            return
-
         aspect_sentiments: list[dict] = []
 
         for aspect in aspects:
             sent = aspect.get("Target_Sentence", "")
             wc = aspect.get("Sentence_Word_Count", len(sent.split()))
-            is_sarcastic = (
-                aspect.get("Sarcasm", {}).get("Is_Sarcastic", False)
-            )
+            sarcasm_data = aspect.get("Sarcasm", {})
+            is_sarcastic = sarcasm_data.get("Is_Sarcastic", False)
+            sarcasm_conf = sarcasm_data.get("Sarcasm_Confidence", 0.0)
 
-            # Route to the correct classifier.
             raw_result = self._route(sent, wc, flat_pos_tags)
-
-            # Apply sarcasm correction.
             final_polarity, final_score = self._apply_sarcasm_correction(
-                raw_result["Label"],
-                raw_result["Confidence"],
-                is_sarcastic,
+                raw_result["Label"], raw_result["Confidence"], is_sarcastic, sarcasm_conf
             )
-
             aspect_sentiments.append({
                 "Aspect": aspect.get("Aspect_Name", ""),
                 "Routing_Path": raw_result.get("Routing_Path", "unknown"),
@@ -208,10 +215,32 @@ class PolarityEnsemble:
                 "Final_Score": round(final_score, 4),
             })
 
-        container["Aspect_Sentiments"]         = aspect_sentiments
-        container["Overall_Document_Polarity"] = self._aggregate(
-            aspect_sentiments
-        )
+        container["Aspect_Sentiments"] = aspect_sentiments
+
+        # --- Step 2: DOCUMENT-LEVEL polarity — always run on full text ---
+        full_text = container.get("Normalized_Text", "").strip()
+        if full_text:
+            wc = len(full_text.split())
+            raw = self._transformer.classify(full_text, wc, confidence_floor=0.25)
+            label = raw.get("Label", "neutral")
+            confidence = raw.get("Confidence", 0.0)
+
+            # --- Step 3: Aspect tiebreaker ---
+            # If transformer is unsure (neutral), use aspect scores as tiebreaker
+            if label == "neutral" and aspect_sentiments:
+                scores = [a["Final_Score"] for a in aspect_sentiments]
+                aspect_mean = sum(scores) / len(scores)
+                if aspect_mean >= 0.25:
+                    label = "positive"
+                elif aspect_mean <= -0.25:
+                    label = "negative"
+                # else: stay neutral
+
+            container["Overall_Document_Polarity"] = label
+            container["Dominant_Routing_Path"] = "transformer_direct"
+        else:
+            container["Overall_Document_Polarity"] = "neutral"
+            container["Dominant_Routing_Path"] = "none"
 
     # Routing
 
@@ -222,12 +251,18 @@ class PolarityEnsemble:
         flat_pos_tags: list[list],
     ) -> dict:
         """Dispatch to SenticVader or TransformerPolarity based on word count."""
+        
+        if sentence_word_count < self.short_threshold:
+            result = self._sentic_vader.classify(target_sentence, flat_pos_tags)
+            result["Routing_Path"] = "vader"
+            return result
+        else:
+            result = self._transformer.classify(target_sentence, sentence_word_count)
+            result["Routing_Path"] = "transformer"
+            return result
+        
         # COMMENTED OUT HERE FOR NOW ====================
-        # if sentence_word_count < self.short_threshold:
-        #     return self._sentic_vader.classify(target_sentence, flat_pos_tags)
-        # else:
-        #     return self._transformer.classify(target_sentence, sentence_word_count)
-        return self._transformer.classify(target_sentence, sentence_word_count)
+        #return self._transformer.classify(target_sentence, sentence_word_count)
 
     # Sarcasm correction
     @staticmethod
@@ -235,6 +270,7 @@ class PolarityEnsemble:
         label: str,
         confidence: float,
         is_sarcastic: bool,
+        sarcasm_confidence: float = 0.0
     ) -> tuple[str, float]:
         """
         Convert (label, confidence) → (final_polarity, final_score) on −1…+1.
@@ -247,7 +283,8 @@ class PolarityEnsemble:
             negative → −confidence
             neutral  →  0.0
         """
-        if is_sarcastic and label != "neutral":
+        # Only flip if we are VERY confident it is sarcasm
+        if is_sarcastic and sarcasm_confidence > 0.99 and label != "neutral":
             label = "negative" if label == "positive" else "positive"
 
         if label == "positive":
@@ -261,25 +298,37 @@ class PolarityEnsemble:
 
     # Aggregation
     @staticmethod
-    def _aggregate(aspect_sentiments: list[dict]) -> str:
-        """
-        Compute Overall_Document_Polarity from the mean of Final_Scores.
-
-            mean >= +0.1  → "positive"
-            mean <= −0.1  → "negative"
-            otherwise → "neutral"
-        """
+    def _aggregate(aspect_sentiments: list[dict]) -> tuple[str, str]:
         if not aspect_sentiments:
-            return "neutral"
+            return "neutral", "none"
 
         scores = [a["Final_Score"] for a in aspect_sentiments]
-        mean   = sum(scores) / len(scores)
+        mean_score = sum(scores) / len(scores)
 
-        if mean >= OVERALL_POSITIVE_THRESHOLD:
-            return "positive"
-        if mean <= OVERALL_NEGATIVE_THRESHOLD:
-            return "negative"
-        return "neutral"
+        # Use the most extreme score to prevent dilution
+        max_score = max(scores)
+        min_score = min(scores)
+
+        # Pick the pole with the stronger signal
+        if abs(min_score) >= abs(max_score):
+            extreme_score = min_score
+        else:
+            extreme_score = max_score
+
+        # 60% mean + 40% extreme — mirrors the subjectivity aggregation logic
+        blended = 0.6 * mean_score + 0.4 * extreme_score
+
+        strongest_aspect = max(aspect_sentiments, key=lambda a: abs(a["Final_Score"]))
+        dominant_path = strongest_aspect.get("Routing_Path", "unknown")
+
+        if blended >= 0.1:
+            return "positive", dominant_path
+        elif blended <= -0.1:
+            return "negative", dominant_path
+
+        return "neutral", dominant_path
+    
+
 
 
 def load_json(path: str | Path) -> list[dict] | dict:
