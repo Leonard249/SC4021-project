@@ -13,6 +13,7 @@ data/processed/raw_data.json
 data/processed/temp.json
 data/raw_data.json
 data/results/classified_eval.json
+data/results/classified_eval_transformer_only.json
 articles_extraction/articles_updated_schema
 articles_extraction/scraped_articles
 backend/test/output/pipeline_output.json
