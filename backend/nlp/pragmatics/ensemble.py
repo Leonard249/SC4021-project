@@ -45,9 +45,9 @@ positive-leaning, < 0 is negative-leaning.
 
 Overall_Document_Polarity
 --------------------------
-    mean(Final_Scores) >= 0.1  → "positive"
-    mean(Final_Scores) <= -0.1 → "negative"
-    otherwise                  → "neutral"
+    mean(Final_Scores) >= 0.1   → "positive"
+    mean(Final_Scores) <= -0.05 → "negative"   ← asymmetric: lower bar for negative
+    otherwise                   → "neutral"
 
 Fields written to each subjective record / comment
 ---------------------------------------------------
@@ -88,9 +88,11 @@ logger = logging.getLogger(__name__)
 
 SHORT_THRESHOLD = 60    # Sentence_Word_Count below this → SenticVader
 
-# Overall_Document_Polarity thresholds (on signed −1…+1 scale)
-OVERALL_POSITIVE_THRESHOLD = 0.1
-OVERALL_NEGATIVE_THRESHOLD = -0.1
+# Overall_Document_Polarity thresholds (on signed −1…+1 scale).
+# Asymmetric: the negative bar is intentionally lower than the positive bar
+# to compensate for VADER's well-known positive bias in AI/coding discourse.
+OVERALL_POSITIVE_THRESHOLD =  0.10
+OVERALL_NEGATIVE_THRESHOLD = -0.05  # lowered from -0.10
 
 class PolarityEnsemble:
     """
@@ -114,6 +116,10 @@ class PolarityEnsemble:
         self._sentic_vader  = SenticVaderClassifier()
         self._transformer   = TransformerPolarityClassifier()
 
+    # ------------------------------------------------------------------
+    # Public API
+    # ------------------------------------------------------------------
+
     def classify_record(self, record: dict) -> dict:
         """
         Classify polarity for a single record and all its comments in-place.
@@ -127,10 +133,10 @@ class PolarityEnsemble:
         # Flatten parent POS_Tags once — reused for all comments.
         parent_pos_tags = flatten_pos_tags(record.get("POS_Tags") or [])
 
-        # Post 
+        # --- Post ---
         self._classify_container(record, flat_pos_tags=parent_pos_tags)
 
-        # Comments (inherit parent POS context) 
+        # --- Comments (inherit parent POS context) ---
         for comment in record.get("Comments") or []:
             # Use comment's own POS_Tags if available, else fall back to parent.
             comment_pos = flatten_pos_tags(comment.get("POS_Tags") or [])
@@ -157,7 +163,9 @@ class PolarityEnsemble:
         logger.info(f"PolarityEnsemble: complete. {total} records processed.")
         return records
 
+    # ------------------------------------------------------------------
     # Container-level processing
+    # ------------------------------------------------------------------
 
     def _classify_container(
         self,
@@ -186,7 +194,7 @@ class PolarityEnsemble:
 
         for aspect in aspects:
             sent = aspect.get("Target_Sentence", "")
-            wc = aspect.get("Sentence_Word_Count", len(sent.split()))
+            wc   = aspect.get("Sentence_Word_Count", len(sent.split()))
             is_sarcastic = (
                 aspect.get("Sarcasm", {}).get("Is_Sarcastic", False)
             )
@@ -202,10 +210,10 @@ class PolarityEnsemble:
             )
 
             aspect_sentiments.append({
-                "Aspect": aspect.get("Aspect_Name", ""),
-                "Routing_Path": raw_result.get("Routing_Path", "unknown"),
+                "Aspect":         aspect.get("Aspect_Name", ""),
+                "Routing_Path":   raw_result.get("Routing_Path", "unknown"),
                 "Final_Polarity": final_polarity,
-                "Final_Score": round(final_score, 4),
+                "Final_Score":    round(final_score, 4),
             })
 
         container["Aspect_Sentiments"]         = aspect_sentiments
@@ -213,7 +221,9 @@ class PolarityEnsemble:
             aspect_sentiments
         )
 
+    # ------------------------------------------------------------------
     # Routing
+    # ------------------------------------------------------------------
 
     def _route(
         self,
@@ -227,7 +237,10 @@ class PolarityEnsemble:
         else:
             return self._transformer.classify(target_sentence, sentence_word_count)
 
+    # ------------------------------------------------------------------
     # Sarcasm correction
+    # ------------------------------------------------------------------
+
     @staticmethod
     def _apply_sarcasm_correction(
         label: str,
@@ -257,15 +270,18 @@ class PolarityEnsemble:
 
         return label, final_score
 
+    # ------------------------------------------------------------------
     # Aggregation
+    # ------------------------------------------------------------------
+
     @staticmethod
     def _aggregate(aspect_sentiments: list[dict]) -> str:
         """
         Compute Overall_Document_Polarity from the mean of Final_Scores.
 
-            mean >= +0.1  → "positive"
-            mean <= −0.1  → "negative"
-            otherwise → "neutral"
+            mean >= +0.10  → "positive"
+            mean <= −0.05  → "negative"   (asymmetric — lower bar for negative)
+            otherwise      → "neutral"
         """
         if not aspect_sentiments:
             return "neutral"
@@ -280,7 +296,12 @@ class PolarityEnsemble:
         return "neutral"
 
 
+# ---------------------------------------------------------------------------
+# Convenience I/O helper
+# ---------------------------------------------------------------------------
+
 def load_json(path: str | Path) -> list[dict] | dict:
+    """Load a JSON file; returns a list or a single dict."""
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 

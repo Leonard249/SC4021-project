@@ -71,10 +71,10 @@ from pragmatics.ensemble import PolarityEnsemble                   # Stage 8
 
 # Input JSON
 # INPUT_PATH: str = "../../data/processed/raw_data.json"
-INPUT_PATH: str = "../../data/processed/db_labelled.json"
+INPUT_PATH: str = "../../data/processed/new_db_labelled.json"
 
 # Output JSON: fully annotated records ready for indexing / evaluation.
-OUTPUT_PATH: str = "../../data/results/classified_eval.json"
+OUTPUT_PATH: str = "../../data/results/final_eval.json"
 
 # Lexicon paths (relative to backend/nlp/syntactics/ or absolute).
 EMOTICON_DICT:str = "../../data/lexicons/emoticon_dict.json"
