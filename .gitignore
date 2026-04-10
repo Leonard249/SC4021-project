@@ -19,6 +19,4 @@ backend/test/output/pipeline_output.json
 backend/test/output/checkpoint.jsonl
 backend/test/output/pipeline_run.log
 
-utils/__pycache__
-semantics/__pycache__
-syntactics/__pycache__
+__pycache__/
