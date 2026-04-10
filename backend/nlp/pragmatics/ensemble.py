@@ -86,7 +86,7 @@ from .length_routing.transformer_polarity import TransformerPolarityClassifier
 logger = logging.getLogger(__name__)
 
 
-SHORT_THRESHOLD = 60    # Sentence_Word_Count below this → SenticVader
+SHORT_THRESHOLD = 1    # Sentence_Word_Count below this → SenticVader
 
 # Overall_Document_Polarity thresholds (on signed −1…+1 scale)
 OVERALL_POSITIVE_THRESHOLD = 0.1
@@ -222,10 +222,12 @@ class PolarityEnsemble:
         flat_pos_tags: list[list],
     ) -> dict:
         """Dispatch to SenticVader or TransformerPolarity based on word count."""
-        if sentence_word_count < self.short_threshold:
-            return self._sentic_vader.classify(target_sentence, flat_pos_tags)
-        else:
-            return self._transformer.classify(target_sentence, sentence_word_count)
+        # COMMENTED OUT HERE FOR NOW ====================
+        # if sentence_word_count < self.short_threshold:
+        #     return self._sentic_vader.classify(target_sentence, flat_pos_tags)
+        # else:
+        #     return self._transformer.classify(target_sentence, sentence_word_count)
+        return self._transformer.classify(target_sentence, sentence_word_count)
 
     # Sarcasm correction
     @staticmethod
@@ -287,7 +289,8 @@ def load_json(path: str | Path) -> list[dict] | dict:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
-    dataset_path = Path('../../../data/my_test/ensemble_input.json')
+    project_root = Path(__file__).resolve().parents[3]
+    dataset_path = project_root / "data" / "my_test" / "ensemble_input.json"
 
     data = load_json(dataset_path)
     records: list[dict] = data if isinstance(data, list) else [data]

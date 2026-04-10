@@ -295,8 +295,8 @@ if __name__ == "__main__":
             sent = asp.get("Target_Sentence", "")
             wc   = asp.get("Sentence_Word_Count", len(sent.split()))
             
-            if wc < 60:
-                continue  # would be handled by SenticVader
+            # if wc < 60:
+            #     continue  # would be handled by SenticVader
             
             # Fetch the in-memory dictionary
             result_to_print = classifier.classify(sent, wc)
