@@ -46,7 +46,18 @@ This component implements the **Indexing and Retrieval** portion (40 points) of 
 
 ### 1. Data Preparation Pipeline
 
-**Script:** `prepare_raw_data.py`
+Two scripts are available depending on your input data:
+
+**Script A:** `prepare_output_data.py` *(recommended — uses fully classified data)*
+
+**Process:**
+- Loads `output.json` (fully annotated data with sentiment, NER, aspect analysis)
+- Cleans text and deduplicates entries
+- Generates 384-dimensional embeddings using all-MiniLM-L6-v2
+- Adds enriched fields: `entities`, `ai_tools`, `aspects`, `has_sarcasm`, `post_id`, `label`
+- Outputs: `indexed_dataset.json` + `indexed_embeddings.npy`
+
+**Script B:** `prepare_raw_data.py` *(alternative — uses raw crawled data)*
 
 **Process:**
 - Loads raw crawled data (73,664 documents)
@@ -67,9 +78,17 @@ This component implements the **Indexing and Retrieval** portion (40 points) of 
   "author": "Username",
   "date": "Timestamp (YYYY-MM-DD)",
   "type": "post or comment",
-  "title": "Optional title"
+  "title": "Optional title",
+  "label": "Sentiment label (positive/negative/neutral) — from classified data",
+  "entities": "Named entities extracted per document — from classified data",
+  "ai_tools": "AI tool names mentioned — from classified data",
+  "aspects": "Targeted aspect names — from classified data",
+  "has_sarcasm": "Sarcasm flag (boolean) — from classified data",
+  "post_id": "Links comments back to parent post — from classified data"
 }
 ```
+
+*Fields marked "from classified data" are only present when using `prepare_output_data.py`.*
 
 **Specifications:**
 - Index name: `ai_coding_search`
@@ -127,7 +146,7 @@ This component implements the **Indexing and Retrieval** portion (40 points) of 
 
 ---
 
-### 2️Semantic Search (Embeddings)
+### Semantic Search (Embeddings)
 
 **How it works:**
 - Converts query to 384-dimensional vector
@@ -339,10 +358,19 @@ pip install -r requirements.txt
 
 ### Step 2: Prepare and Index Data (First Time Only)
 
-**Prepare raw data:**
+**Option A — Prepare from classified output (recommended):**
+```bash
+python prepare_output_data.py
+# Reads output.json (fully classified data)
+# Generates enriched index with sentiment, NER, aspects
+# Generates embeddings (~15-30 minutes)
+# Outputs: indexed_dataset.json, indexed_embeddings.npy
+```
+
+**Option B — Prepare from raw crawled data:**
 ```bash
 python prepare_raw_data.py
-# Processes 73,664 documents
+# Processes 73,664 raw documents
 # Generates embeddings (~20 minutes)
 # Outputs: indexed_dataset.json, indexed_embeddings.npy
 ```
@@ -385,14 +413,15 @@ enhanced-search/
 ├── search_engine.py              # Flask REST API
 ├── search_ui_enhanced.html       # Web-based UI
 ├── index_data.py                 # Elasticsearch indexing script
-├── prepare_raw_data.py           # Data preprocessing + embeddings
+├── prepare_output_data.py        # Data prep from classified output.json (recommended)
+├── prepare_raw_data.py           # Data prep from raw crawled data
 ├── requirements.txt              # Python dependencies
 ├── README.md                     # This file
-├── .gitignore                    # Git ignore rules
 │
+├── output.json                   # Fully classified data (sentiment, NER, aspects)
 ├── raw_data.json                 # Original crawled data (73,664 docs)
-├── indexed_dataset.json          # Processed data
-└── indexed_embeddings.npy        # 384-dim embeddings
+├── indexed_dataset.json          # Processed data (generated — not committed)
+└── indexed_embeddings.npy        # 384-dim embeddings (generated — not committed)
 ```
 
 ---
