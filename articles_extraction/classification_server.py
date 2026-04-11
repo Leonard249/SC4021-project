@@ -7,7 +7,7 @@ agent (e.g., Gemini CLI) and records the agent's classification for each:
     1. Is the article relevant to Vibe-Coding / AI-Assisted Coding?
     2. Does the article express an opinion about Vibe-Coding / AI-Assisted Coding?
 
-All progress is persisted to `classification_checkpoint.json` so work can
+All progress is persisted to `relevant_checkpoint.json` so work can
 resume across sessions without overlap.
 
 Run this server:
@@ -29,7 +29,7 @@ from mcp.server.fastmcp import FastMCP
 
 _DIR = os.path.dirname(os.path.abspath(__file__))
 SCRAPED_ARTICLES_DIR = os.path.join(_DIR, "scraped_articles")
-CLASSIFICATION_CHECKPOINT_FILE = os.path.join(_DIR, "classification_checkpoint.json")
+CLASSIFICATION_CHECKPOINT_FILE = os.path.join(_DIR, "relevant_checkpoint.json")
 
 # Max words to send to the LLM per article
 MAX_WORDS = 2000
