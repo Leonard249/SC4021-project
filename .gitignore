@@ -21,3 +21,26 @@ backend/test/output/pipeline_run.log
 utils/__pycache__
 semantics/__pycache__
 syntactics/__pycache__
+
+# Large data files
+*.npy
+indexed_dataset.json
+raw_data.json
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+output.json

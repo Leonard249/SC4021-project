@@ -1,23 +1,46 @@
 {
   "model": "all-MiniLM-L6-v2",
   "dimensions": 384,
-  "total_entries": 2541,
-  "relevant_only": true,
-  "sources": [
-    "HackerNews",
-    "Reddit",
-    "Twitter",
-    "personal_blog",
-    "substack",
-    "corporate_blog",
-    "other_blog",
-    "medium",
-    "stackoverflow"
+  "num_documents": 73149,
+  "fields": [
+    "id",
+    "text",
+    "source",
+    "author",
+    "date",
+    "score",
+    "title",
+    "type",
+    "post_id",
+    "label",
+    "subjectivity",
+    "subjectivity_score",
+    "aspect_sentiments",
+    "entities",
+    "ai_tools",
+    "aspects",
+    "has_sarcasm"
+  ],
+  "top_ai_tools": [
+    "claude",
+    "cursor",
+    "gemini",
+    "copilot",
+    "chatgpt",
+    "github copilot",
+    "windsurf",
+    "replit",
+    "tabnine",
+    "codeium",
+    "llama",
+    "ai model",
+    "gpt-4",
+    "gpt-4o",
+    "mistral"
   ],
   "label_distribution": {
-    "neutral": 962,
-    "positive": 964,
-    "negative": 615
-  },
-  "date_generated": "2026-03-27T02:09:22.921833"
+    "neutral": 45626,
+    "positive": 20356,
+    "negative": 7167
+  }
 }

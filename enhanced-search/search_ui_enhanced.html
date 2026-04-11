@@ -395,7 +395,73 @@
             border-left-color: #3498db;
             transform: translateX(5px);
         }
-        
+
+        .facet-item.clickable {
+            cursor: pointer;
+        }
+
+        .facet-item.clickable:hover .facet-name {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        /* Sentiment badge */
+        .sentiment-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .sentiment-positive { background: #d5f5e3; color: #1e8449; }
+        .sentiment-negative { background: #fadbd8; color: #c0392b; }
+        .sentiment-neutral  { background: #eaf0fb; color: #2471a3; }
+
+        /* Expand/collapse */
+        .expand-btn {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 3px 10px;
+            font-size: 12px;
+            background: transparent;
+            color: #3498db;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: none;
+            transform: none;
+            font-weight: 500;
+        }
+        .expand-btn:hover {
+            background: #3498db;
+            color: white;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Drill-down results panel */
+        .drilldown-panel {
+            background: #f0f8ff;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        .drilldown-panel h3 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .drilldown-close {
+            float: right;
+            cursor: pointer;
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
         .facet-name {
             font-weight: 600;
             color: #2c3e50;
@@ -478,6 +544,7 @@
             <div class="tab active" onclick="switchView('results')">Search Results</div>
             <div class="tab" onclick="switchView('timeline')">Timeline Analysis</div>
             <div class="tab" onclick="switchView('facets')">Multifaceted View</div>
+            <div class="tab" onclick="switchView('sentiment')">Sentiment Analysis</div>
             <div class="tab" onclick="switchView('visualizations')">Advanced Analytics</div>
         </div>
         
@@ -550,6 +617,12 @@
                     </div>
                 </div>
             </div>
+
+            <div id="period-drilldown" class="drilldown-panel" style="display:none; margin-top:30px;">
+                <span class="drilldown-close" onclick="document.getElementById('period-drilldown').style.display='none'">Close</span>
+                <h3 id="period-drilldown-title">Results for period</h3>
+                <div id="period-drilldown-results"></div>
+            </div>
         </div>
         
         <!-- VIEW 3: FACETS -->
@@ -573,13 +646,87 @@
                 </div>
                 
                 <div class="viz-card large">
-                    <h3>Source × Type Heatmap</h3>
+                    <h3>Source &times; Type Heatmap</h3>
                     <div id="heatmapChart" style="height: 450px;"></div>
+                </div>
+
+                <div id="source-drilldown" class="drilldown-panel" style="display:none; grid-column: span 2;">
+                    <span class="drilldown-close" onclick="document.getElementById('source-drilldown').style.display='none'">Close</span>
+                    <h3 id="source-drilldown-title">Results from source</h3>
+                    <div id="source-drilldown-results"></div>
                 </div>
             </div>
         </div>
         
-        <!-- VIEW 4: VISUALIZATIONS -->
+        <!-- VIEW 4: SENTIMENT ANALYSIS -->
+        <div id="sentiment-view" class="view">
+            <!-- Summary cards: overall label distribution -->
+            <div class="metrics-dashboard" id="sentiment-cards">
+                <div class="metric-card">
+                    <div class="metric-label">Positive</div>
+                    <div class="metric-value" id="sent-pos" style="color:#27ae60;">–</div>
+                    <div class="metric-change" id="sent-pos-pct"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Negative</div>
+                    <div class="metric-value" id="sent-neg" style="color:#e74c3c;">–</div>
+                    <div class="metric-change" id="sent-neg-pct"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Neutral</div>
+                    <div class="metric-value" id="sent-neu" style="color:#3498db;">–</div>
+                    <div class="metric-change" id="sent-neu-pct"></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Sarcasm Detected</div>
+                    <div class="metric-value" id="sent-sarcasm" style="color:#9b59b6;">–</div>
+                    <div class="metric-change">In search results</div>
+                </div>
+            </div>
+
+            <div class="viz-grid">
+                <!-- Sentiment over time -->
+                <div class="viz-card large">
+                    <h3>Sentiment Trend Over Time</h3>
+                    <div class="chart-wrapper tall">
+                        <canvas id="sentimentTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Sentiment donut -->
+                <div class="viz-card">
+                    <h3>Overall Sentiment Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="sentimentDonutChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- AI Tool Comparison -->
+                <div class="viz-card">
+                    <h3>AI Tool Sentiment Comparison</h3>
+                    <p style="font-size:12px;color:#7f8c8d;margin-bottom:12px;">
+                        Stacked bar showing positive vs negative sentiment per tool
+                    </p>
+                    <div class="chart-wrapper tall">
+                        <canvas id="toolComparisonChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top mentioned AI tools table -->
+                <div class="viz-card">
+                    <h3>Most Mentioned AI Tools</h3>
+                    <div id="top-tools-list"></div>
+                </div>
+
+                <!-- Top aspects -->
+                <div class="viz-card">
+                    <h3>Top Discussed Aspects</h3>
+                    <div id="top-aspects-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 5: VISUALIZATIONS -->
         <div id="visualizations-view" class="view">
             <div class="viz-grid">
                 <div class="viz-card">
@@ -625,13 +772,14 @@
         function switchView(view) {
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            
-            const viewMap = {results: 0, timeline: 1, facets: 2, visualizations: 3};
+
+            const viewMap = {results: 0, timeline: 1, facets: 2, sentiment: 3, visualizations: 4};
             document.querySelectorAll('.view')[viewMap[view]].classList.add('active');
             document.querySelectorAll('.tab')[viewMap[view]].classList.add('active');
-            
+
             if (view === 'timeline') loadTimeline();
             if (view === 'facets') loadFacets();
+            if (view === 'sentiment') loadSentiment();
             if (view === 'visualizations') updateVisualizations();
         }
         
@@ -670,28 +818,158 @@
             updateStats(dateFrom, dateTo);
         }
         
+        function sentimentBadge(label) {
+            if (!label || label === 'unlabeled') return '';
+            const cls = label === 'positive' ? 'sentiment-positive'
+                      : label === 'negative' ? 'sentiment-negative'
+                      : 'sentiment-neutral';
+            return `<span class="sentiment-badge ${cls}" title="Model-predicted sentiment — may not be 100% accurate">${label}</span>`;
+        }
+
+        function renderResultItems(results, limit = 5) {
+            let html = '';
+            results.slice(0, limit).forEach((result, idx) => {
+                const preview = result.text;
+                const hasMore = result.truncated;
+                const uid = `r_${Date.now()}_${idx}`;
+                const isComment = result.type === 'comment';
+
+                // Comment banner: show which post this comment belongs to
+                const commentBanner = isComment && result.post_id ? `
+                    <div style="font-size:11px;background:#eaf4fb;border-left:3px solid #3498db;padding:5px 10px;margin-bottom:8px;border-radius:0 4px 4px 0;color:#2471a3;">
+                        Comment on post:
+                        <strong>${result.title ? escapeHtml(result.title.slice(0, 80)) + (result.title.length > 80 ? '…' : '') : result.post_id}</strong>
+                        &nbsp;
+                        <span class="expand-btn" style="padding:1px 7px;font-size:11px;cursor:pointer;"
+                            onclick="showThread('${result.id}', '${result.post_id}', this)">
+                            View thread
+                        </span>
+                    </div>` : '';
+
+                html += `
+                    <div class="result-item">
+                        ${commentBanner}
+                        <div class="result-score">
+                            Relevance Score: ${result.score.toFixed(3)}
+                            ${sentimentBadge(result.label)}
+                            ${result.has_sarcasm ? '<span class="sentiment-badge" style="background:#f5e6ff;color:#7d3c98;">sarcasm</span>' : ''}
+                        </div>
+                        <div class="result-text" id="text_${uid}">${escapeHtml(preview)}</div>
+                        ${hasMore ? `<button class="expand-btn" id="btn_${uid}"
+                            onclick="expandText('${uid}', this, '${result.id}', ${result.full_length})">
+                            Show full text (${result.full_length.toLocaleString()} chars)
+                        </button>` : ''}
+                        <div class="result-meta">
+                            <span>Source: ${result.source}</span>
+                            <span>Date: ${result.date || 'N/A'}</span>
+                            ${result.type ? `<span>Type: ${result.type}</span>` : ''}
+                            ${result.subjectivity ? `<span>Subjectivity: ${result.subjectivity}</span>` : ''}
+                        </div>
+                        ${result.aspect_sentiments ? `<div style="font-size:11px;color:#7f8c8d;margin-top:4px;">Aspects: ${escapeHtml(result.aspect_sentiments.slice(0,120))}${result.aspect_sentiments.length > 120 ? '…' : ''}</div>` : ''}
+                        <div id="thread_${uid}" style="display:none;"></div>
+                    </div>
+                `;
+            });
+            return html;
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        // Fetch full text from backend and display it in-place
+        async function expandText(uid, btn, docId, fullLength) {
+            const el = document.getElementById('text_' + uid);
+            if (btn.dataset.expanded === '1') {
+                // Collapse back to preview (stored in data attribute)
+                el.textContent = btn.dataset.preview || '';
+                btn.textContent = `Show full text (${Number(fullLength).toLocaleString()} chars)`;
+                btn.dataset.expanded = '0';
+                return;
+            }
+            btn.textContent = 'Loading…';
+            btn.disabled = true;
+            try {
+                const resp = await fetch(`http://localhost:5001/api/doc/${encodeURIComponent(docId)}`);
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                // Save preview so we can collapse later
+                btn.dataset.preview = el.textContent;
+                el.textContent = data.text;
+                btn.textContent = 'Show less';
+                btn.dataset.expanded = '1';
+            } catch (e) {
+                btn.textContent = `Show full text (${Number(fullLength).toLocaleString()} chars)`;
+                el.textContent += '\n\n[Could not load full text: ' + e.message + ']';
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        // Show the full thread (parent post + sibling comments) for a comment
+        async function showThread(docId, postId, btn) {
+            // Find the thread container — it's the sibling div after the result-item's content
+            const resultItem = btn.closest('.result-item');
+            const threadDiv = resultItem ? resultItem.querySelector('[id^="thread_"]') : null;
+            if (!threadDiv) return;
+
+            if (threadDiv.style.display !== 'none') {
+                threadDiv.style.display = 'none';
+                btn.textContent = 'View thread';
+                return;
+            }
+
+            btn.textContent = 'Loading…';
+            threadDiv.style.display = 'block';
+            threadDiv.innerHTML = '<div class="loading">Loading thread</div>';
+
+            try {
+                const resp = await fetch(`http://localhost:5001/api/doc/${encodeURIComponent(docId)}/siblings?size=30`);
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+
+                let html = `<div style="margin-top:12px;border-top:2px solid #3498db;padding-top:12px;">
+                    <div style="font-size:12px;font-weight:700;color:#2c3e50;margin-bottom:8px;">
+                        Thread — ${data.total} document(s) in this post
+                    </div>`;
+
+                for (const doc of data.documents) {
+                    const isCurrent = doc.is_current;
+                    const typeIcon = doc.type === 'post' ? 'post' : 'comment';
+                    html += `<div style="margin:6px 0;padding:8px 12px;border-radius:6px;
+                        background:${isCurrent ? '#d6eaf8' : '#f8f9fa'};
+                        border-left:3px solid ${isCurrent ? '#3498db' : '#bdc3c7'};">
+                        <div style="font-size:11px;color:#7f8c8d;margin-bottom:4px;">
+                            ${typeIcon} ${doc.type.toUpperCase()}
+                            ${doc.author ? '· ' + escapeHtml(doc.author) : ''}
+                            ${doc.date ? '· ' + doc.date : ''}
+                            ${sentimentBadge(doc.label)}
+                            ${isCurrent ? '<span style="font-size:10px;color:#3498db;font-weight:700;"> ← this result</span>' : ''}
+                        </div>
+                        <div style="font-size:13px;color:#2c3e50;">${escapeHtml(doc.text.slice(0, 300))}${doc.text.length > 300 ? '…' : ''}</div>
+                    </div>`;
+                }
+                html += '</div>';
+                threadDiv.innerHTML = html;
+                btn.textContent = 'Hide thread';
+            } catch (e) {
+                threadDiv.innerHTML = `<div style="color:#e74c3c;font-size:12px;padding:8px;">Error loading thread: ${e.message}</div>`;
+                btn.textContent = 'View thread';
+            }
+        }
+
         function displayResults(method, data) {
             let html = `<div style="color: #27ae60; font-weight: 600; margin-bottom: 15px; font-size: 13px;">
                 ${data.search_time_ms}ms | ${data.total_hits.toLocaleString()} documents found
             </div>`;
-            
+
             if (data.results && data.results.length > 0) {
-                data.results.slice(0, 5).forEach(result => {
-                    html += `
-                        <div class="result-item">
-                            <div class="result-score">Relevance Score: ${result.score.toFixed(3)}</div>
-                            <div class="result-text">${result.text}</div>
-                            <div class="result-meta">
-                                <span>Source: ${result.source}</span>
-                                <span>Date: ${result.date || 'N/A'}</span>
-                            </div>
-                        </div>
-                    `;
-                });
+                html += renderResultItems(data.results, 5);
             } else {
                 html += '<p style="text-align: center; color: #95a5a6; padding: 40px;">No results found</p>';
             }
-            
+
             document.getElementById(`${method}-results`).innerHTML = html;
         }
         
@@ -738,14 +1016,15 @@
             }
             document.getElementById('timeline-range').textContent = rangeText;
             
-            // Main timeline
+            // Main timeline (clickable points)
             if (charts.timeline) charts.timeline.destroy();
+            const timelineLabels = filteredData.map(t => t.date);
             charts.timeline = new Chart(document.getElementById('timelineChart'), {
                 type: 'line',
                 data: {
-                    labels: filteredData.map(t => t.date),
+                    labels: timelineLabels,
                     datasets: [{
-                        label: 'Documents per Month',
+                        label: 'Documents per Month — click a point to view docs',
                         data: filteredData.map(t => t.count),
                         borderColor: '#3498db',
                         backgroundColor: 'rgba(52, 152, 219, 0.1)',
@@ -753,7 +1032,7 @@
                         tension: 0.4,
                         borderWidth: 3,
                         pointRadius: 5,
-                        pointHoverRadius: 8,
+                        pointHoverRadius: 10,
                         pointBackgroundColor: '#3498db',
                         pointBorderColor: '#fff',
                         pointBorderWidth: 2
@@ -762,13 +1041,23 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    onClick: (evt, elements) => {
+                        if (elements.length > 0) {
+                            const idx = elements[0].index;
+                            const yearMonth = timelineLabels[idx];
+                            drilldownByPeriod(yearMonth);
+                        }
+                    },
                     plugins: {
                         legend: { display: true, position: 'top' },
                         tooltip: {
                             backgroundColor: 'rgba(44, 62, 80, 0.9)',
                             padding: 12,
                             titleFont: { size: 14, weight: 'bold' },
-                            bodyFont: { size: 13 }
+                            bodyFont: { size: 13 },
+                            callbacks: {
+                                footer: () => 'Click to view documents for this period'
+                            }
                         }
                     },
                     scales: {
@@ -843,37 +1132,38 @@
             const query = currentQuery || '';
             const response = await fetch(`http://localhost:5001/api/facets?q=${encodeURIComponent(query)}`);
             const data = await response.json();
-            
-            // Sources
-            document.getElementById('facet-sources').innerHTML = 
-                '<ul class="facet-list">' + 
-                data.facets.sources.map(s => 
-                    `<li class="facet-item">
+
+            // Sources (clickable)
+            document.getElementById('facet-sources').innerHTML =
+                '<ul class="facet-list">' +
+                data.facets.sources.map(s =>
+                    `<li class="facet-item clickable" onclick="drilldownBySource('${s.source}')">
                         <span class="facet-name">${s.source}</span>
                         <span class="facet-count">${s.count.toLocaleString()}</span>
                     </li>`
-                ).join('') + 
+                ).join('') +
                 '</ul>';
-            
+
             // Types
-            document.getElementById('facet-types').innerHTML = 
-                '<ul class="facet-list">' + 
-                data.facets.types.map(t => 
+            document.getElementById('facet-types').innerHTML =
+                '<ul class="facet-list">' +
+                data.facets.types.map(t =>
                     `<li class="facet-item">
                         <span class="facet-name">${t.type}</span>
                         <span class="facet-count">${t.count.toLocaleString()}</span>
                     </li>`
-                ).join('') + 
+                ).join('') +
                 '</ul>';
-            
-            // Bar chart
+
+            // Bar chart (clickable bars)
             if (charts.facet) charts.facet.destroy();
+            const sourceLabels = data.facets.sources.map(s => s.source);
             charts.facet = new Chart(document.getElementById('facetChart'), {
                 type: 'bar',
                 data: {
-                    labels: data.facets.sources.map(s => s.source),
+                    labels: sourceLabels,
                     datasets: [{
-                        label: 'Documents',
+                        label: 'Documents — click a bar to view',
                         data: data.facets.sources.map(s => s.count),
                         backgroundColor: 'rgba(52, 152, 219, 0.7)',
                         borderColor: '#3498db',
@@ -884,36 +1174,296 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    onClick: (evt, elements) => {
+                        if (elements.length > 0) {
+                            const src = sourceLabels[elements[0].index];
+                            drilldownBySource(src);
+                        }
+                    },
                     plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+
+            // Heatmap — use real source×type data from backend (dynamic: only sources with results)
+            const hm = data.facets.heatmap;
+            if (hm && hm.sources.length > 0) {
+                Plotly.newPlot('heatmapChart', [{
+                    z: hm.matrix,
+                    x: hm.types,
+                    y: hm.sources,
+                    type: 'heatmap',
+                    colorscale: [
+                        [0,   '#ecf0f1'],
+                        [0.5, '#3498db'],
+                        [1,   '#2c3e50']
+                    ],
+                    hoverongaps: false,
+                    hovertemplate: '<b>%{y}</b> × <b>%{x}</b><br>Count: %{z}<extra></extra>'
+                }], {
+                    margin: { t: 30, l: 120, r: 50, b: 80 },
+                    height: Math.max(300, hm.sources.length * 35 + 100),
+                    font: { family: 'Inter, sans-serif' }
+                }, {responsive: true});
+            } else {
+                document.getElementById('heatmapChart').innerHTML =
+                    '<p style="text-align:center;color:#95a5a6;padding:60px;">No data for heatmap</p>';
+            }
+        }
+
+        async function drilldownBySource(source) {
+            const query = currentQuery || '';
+            const panel = document.getElementById('source-drilldown');
+            const title = document.getElementById('source-drilldown-title');
+            const resultsEl = document.getElementById('source-drilldown-results');
+
+            title.textContent = `Results from "${source}"${query ? ` matching "${query}"` : ''}`;
+            resultsEl.innerHTML = '<div class="loading">Loading</div>';
+            panel.style.display = 'block';
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            const url = `http://localhost:5001/api/search/by_source?source=${encodeURIComponent(source)}&q=${encodeURIComponent(query)}&size=20`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.results && data.results.length > 0) {
+                resultsEl.innerHTML = `<p style="color:#27ae60;font-size:13px;margin-bottom:10px;">${data.total_hits.toLocaleString()} documents found (${data.search_time_ms}ms)</p>` +
+                    renderResultItems(data.results, 20);
+            } else {
+                resultsEl.innerHTML = '<p style="color:#95a5a6;padding:20px;">No results found for this source.</p>';
+            }
+        }
+
+        async function drilldownByPeriod(yearMonth) {
+            const query = currentQuery || '';
+            const panel = document.getElementById('period-drilldown');
+            const title = document.getElementById('period-drilldown-title');
+            const resultsEl = document.getElementById('period-drilldown-results');
+
+            title.textContent = `Documents from ${yearMonth}${query ? ` matching "${query}"` : ''}`;
+            resultsEl.innerHTML = '<div class="loading">Loading</div>';
+            panel.style.display = 'block';
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            const url = `http://localhost:5001/api/search/by_period?year_month=${encodeURIComponent(yearMonth)}&q=${encodeURIComponent(query)}&size=20`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.results && data.results.length > 0) {
+                resultsEl.innerHTML = `<p style="color:#27ae60;font-size:13px;margin-bottom:10px;">${data.total_hits.toLocaleString()} documents found (${data.search_time_ms}ms)</p>` +
+                    renderResultItems(data.results, 20);
+            } else {
+                resultsEl.innerHTML = '<p style="color:#95a5a6;padding:20px;">No results found for this period.</p>';
+            }
+        }
+        
+        async function loadSentiment() {
+            const query = currentQuery || '';
+
+            // Fetch sentiment trend + tool comparison + entity summary in parallel
+            const [trendResp, toolResp, entityResp] = await Promise.all([
+                fetch(`http://localhost:5001/api/sentiment_trend?q=${encodeURIComponent(query)}`),
+                fetch(`http://localhost:5001/api/tool_comparison?q=${encodeURIComponent(query)}`),
+                fetch(`http://localhost:5001/api/top_entities?q=${encodeURIComponent(query)}`)
+            ]);
+            const trendData  = await trendResp.json();
+            const toolData   = await toolResp.json();
+            const entityData = await entityResp.json();
+
+            // --- Summary cards from entity label distribution ---
+            const labelDist = {};
+            (entityData.label_distribution || []).forEach(l => { labelDist[l.label] = l.count; });
+            const total = Object.values(labelDist).reduce((a, b) => a + b, 0) || 1;
+            document.getElementById('sent-pos').textContent = (labelDist['positive'] || 0).toLocaleString();
+            document.getElementById('sent-neg').textContent = (labelDist['negative'] || 0).toLocaleString();
+            document.getElementById('sent-neu').textContent = (labelDist['neutral']  || 0).toLocaleString();
+            document.getElementById('sent-pos-pct').textContent = `${(100*(labelDist['positive']||0)/total).toFixed(1)}% of results`;
+            document.getElementById('sent-neg-pct').textContent = `${(100*(labelDist['negative']||0)/total).toFixed(1)}% of results`;
+            document.getElementById('sent-neu-pct').textContent = `${(100*(labelDist['neutral']||0)/total).toFixed(1)}% of results`;
+
+            // Sarcasm count from current search results
+            const sarcasmCount = allResults.filter(r => r.has_sarcasm).length;
+            document.getElementById('sent-sarcasm').textContent = sarcasmCount;
+
+            // --- Sentiment Trend chart (stacked area) ---
+            const trend = trendData.trend || [];
+            if (charts.sentTrend) charts.sentTrend.destroy();
+            charts.sentTrend = new Chart(document.getElementById('sentimentTrendChart'), {
+                type: 'line',
+                data: {
+                    labels: trend.map(t => t.date),
+                    datasets: [
+                        {
+                            label: 'Positive',
+                            data: trend.map(t => t.positive),
+                            borderColor: '#27ae60',
+                            backgroundColor: 'rgba(39,174,96,0.15)',
+                            fill: true, tension: 0.4, borderWidth: 2,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Negative',
+                            data: trend.map(t => t.negative),
+                            borderColor: '#e74c3c',
+                            backgroundColor: 'rgba(231,76,60,0.15)',
+                            fill: true, tension: 0.4, borderWidth: 2,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Neutral',
+                            data: trend.map(t => t.neutral),
+                            borderColor: '#3498db',
+                            backgroundColor: 'rgba(52,152,219,0.10)',
+                            fill: true, tension: 0.4, borderWidth: 2,
+                            pointRadius: 3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true, position: 'top' },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
                     scales: {
-                        y: { beginAtZero: true }
+                        y: { beginAtZero: true, stacked: false },
+                        x: { grid: { display: false } }
                     }
                 }
             });
-            
-            // Heatmap
-            const matrix = data.facets.sources.map(s => 
-                data.facets.types.map(t => Math.floor(Math.random() * s.count * 0.4))
-            );
-            
-            Plotly.newPlot('heatmapChart', [{
-                z: matrix,
-                x: data.facets.types.map(t => t.type),
-                y: data.facets.sources.map(s => s.source),
-                type: 'heatmap',
-                colorscale: [
-                    [0, '#ecf0f1'],
-                    [0.5, '#3498db'],
-                    [1, '#2c3e50']
-                ],
-                hoverongaps: false
-            }], {
-                margin: { t: 30, l: 100, r: 50, b: 80 },
-                height: 450,
-                font: { family: 'Inter, sans-serif' }
-            }, {responsive: true});
+
+            // --- Sentiment Donut ---
+            if (charts.sentDonut) charts.sentDonut.destroy();
+            charts.sentDonut = new Chart(document.getElementById('sentimentDonutChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Positive', 'Negative', 'Neutral'],
+                    datasets: [{
+                        data: [labelDist['positive']||0, labelDist['negative']||0, labelDist['neutral']||0],
+                        backgroundColor: ['#27ae60', '#e74c3c', '#3498db'],
+                        borderWidth: 3,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    const val = ctx.parsed;
+                                    const pct = (100 * val / total).toFixed(1);
+                                    return ` ${ctx.label}: ${val.toLocaleString()} (${pct}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // --- AI Tool Comparison (stacked bar: positive / neutral / negative) ---
+            const tools = toolData.tools || [];
+            if (charts.toolComp) charts.toolComp.destroy();
+            charts.toolComp = new Chart(document.getElementById('toolComparisonChart'), {
+                type: 'bar',
+                data: {
+                    labels: tools.map(t => t.tool),
+                    datasets: [
+                        {
+                            label: 'Positive',
+                            data: tools.map(t => t.positive),
+                            backgroundColor: 'rgba(39,174,96,0.75)',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Neutral',
+                            data: tools.map(t => t.neutral),
+                            backgroundColor: 'rgba(52,152,219,0.55)',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Negative',
+                            data: tools.map(t => t.negative),
+                            backgroundColor: 'rgba(231,76,60,0.75)',
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true, position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                footer: items => {
+                                    const t = tools[items[0].dataIndex];
+                                    return `Total: ${t.total} | +${t.positive_pct}% −${t.negative_pct}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { stacked: true, beginAtZero: true },
+                        y: { stacked: true }
+                    }
+                }
+            });
+
+            // --- Top AI Tools list (clickable) ---
+            const topTools = entityData.top_tools || [];
+            document.getElementById('top-tools-list').innerHTML =
+                '<ul class="facet-list">' +
+                topTools.slice(0, 12).map(t => {
+                    const display = t.tool.charAt(0).toUpperCase() + t.tool.slice(1);
+                    return `<li class="facet-item clickable" onclick="drilldownByEntity('${t.tool}')">
+                        <span class="facet-name">${display}</span>
+                        <span class="facet-count">${t.count.toLocaleString()}</span>
+                    </li>`;
+                }).join('') +
+                '</ul>';
+
+            // --- Top Aspects list ---
+            const topAspects = entityData.top_aspects || [];
+            document.getElementById('top-aspects-list').innerHTML =
+                '<ul class="facet-list">' +
+                topAspects.slice(0, 12).map(a =>
+                    `<li class="facet-item">
+                        <span class="facet-name">${a.aspect}</span>
+                        <span class="facet-count">${a.count.toLocaleString()}</span>
+                    </li>`
+                ).join('') +
+                '</ul>';
         }
-        
+
+        async function drilldownByEntity(entity) {
+            const query = currentQuery || '';
+            // Reuse source-drilldown panel
+            const panel = document.getElementById('source-drilldown');
+            const title = document.getElementById('source-drilldown-title');
+            const resultsEl = document.getElementById('source-drilldown-results');
+
+            title.textContent = `Documents mentioning "${entity}"${query ? ` matching "${query}"` : ''}`;
+            resultsEl.innerHTML = '<div class="loading">Loading</div>';
+            panel.style.display = 'block';
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            const url = `http://localhost:5001/api/entity_search?entity=${encodeURIComponent(entity)}&q=${encodeURIComponent(query)}&size=20`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.results && data.results.length > 0) {
+                resultsEl.innerHTML = `<p style="color:#27ae60;font-size:13px;margin-bottom:10px;">${data.total_hits.toLocaleString()} documents found (${data.search_time_ms}ms)</p>` +
+                    renderResultItems(data.results, 20);
+            } else {
+                resultsEl.innerHTML = '<p style="color:#95a5a6;padding:20px;">No results found for this entity.</p>';
+            }
+        }
+
         function updateVisualizations() {
             if (allResults.length === 0) return;
             
@@ -1143,33 +1693,42 @@
                 }
             });
             
-            // 3D scatter
+            // 3D scatter — X: score, Y: method (0=Keyword, 1=Semantic, 2=Hybrid), Z: result rank
+            const methodMap = { keyword: 0, semantic: 1, hybrid: 2 };
             const sample = allResults.slice(0, 200);
-            
+
             Plotly.newPlot('scatter3d', [{
                 x: sample.map(r => r.score),
-                y: sample.map((r, i) => i % 3),
+                y: sample.map(r => methodMap[r.method] !== undefined ? methodMap[r.method] : 0),
                 z: sample.map((r, i) => i),
+                text: sample.map(r => `Method: ${r.method}<br>Score: ${r.score.toFixed(3)}<br>Source: ${r.source}`),
+                hoverinfo: 'text',
                 mode: 'markers',
                 type: 'scatter3d',
                 marker: {
                     size: 4,
                     color: sample.map(r => r.score),
                     colorscale: [
-                        [0, '#ecf0f1'],
+                        [0,   '#ecf0f1'],
                         [0.5, '#3498db'],
-                        [1, '#2c3e50']
+                        [1,   '#2c3e50']
                     ],
-                    showscale: true
+                    showscale: true,
+                    colorbar: { title: 'Score' }
                 }
             }], {
                 scene: {
                     xaxis: { title: 'Relevance Score' },
-                    yaxis: { title: 'Search Method' },
-                    zaxis: { title: 'Result Index' }
+                    yaxis: {
+                        title: 'Search Method',
+                        tickmode: 'array',
+                        tickvals: [0, 1, 2],
+                        ticktext: ['Keyword', 'Semantic', 'Hybrid']
+                    },
+                    zaxis: { title: 'Result Rank' }
                 },
                 height: 500,
-                margin: { t: 0, l: 0, r: 0, b: 0 }
+                margin: { t: 30, l: 0, r: 0, b: 0 }
             }, {responsive: true});
         }
         
