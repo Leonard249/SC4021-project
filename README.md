@@ -1,43 +1,3 @@
-Steps to use backend
-
-1. Create and activate venv
-   python -m venv venv
-   source .venv/Bin/Activate
-
-2. start the elasticsearch server
-
-``````docker run -d --name elasticsearch \
-  -p 9200:9200 \
-  -e "discovery.type=single-node" \
-  -e "xpack.security.enabled=false" \
-  docker.elastic.co/elasticsearch/elasticsearch:9.3.0```
-
-3. test elasticsearch server
-   curl http://localhost:9200/
-
-2. start the solr server
-
-`````docker run -d --name my_solr \
-  -p 8983:8983 \
-  solr \
-  solr-precreate opinions```
-
-3. test solr server
-   curl -X POST "http://localhost:8983/solr/opinions/update/json/docs?commit=true" \
--H 'Content-Type: application/json' \
--d '{
-  "id": "doc_1",
-  "topic": "cryptocurrency",
-  "text": "Solana is moving really fast today!",
-  "sentiment": "positive"
-}'
-
-# my own steps
-
-cd SC4021-project
-source .venv/Scripts/Activate
-cd backend
-
 ## Sample JSON schema
 
 ````{
@@ -107,10 +67,9 @@ cd backend
                                         ▼
                      ┌─────────────────────────────────────────────────────┐
                      │  LAYER 3: PRAGMATICS LAYER (Polarity & Context)     │
-                     │  - Context: Apply Domain Corrections (Vibe Coding)  │
                      │  - Sarcasm Detection (e.g., /s tag checking)        │
                      │                                                     │
-                     │  ────────── Stage 2: Length-Aware Routing ────────  │
+                     │    ──────────  Length-Aware Routing ─────────       │
                      │                                                     │
                      │  Word count < 60       → SHORT path                 │
                      │  60 ≤ Words ≤ 400      → MEDIUM path                │
@@ -123,17 +82,17 @@ cd backend
                      │  │  VADER +     │  Transformer    │  Chunk →     │  │
                      │  │  SenticNet   │  (direct)       │  classify    │  │
                      │  │  concepts    │                 │  each chunk  │  │
-                     │  │             │                 │  → aggregate  │  │
+                     │  │              │                 │  → aggregate │  │
                      │  └──────────────┴─────────────────┴──────────────┘  │
-                     │                        │                            │
-                     │                        ▼                            │
-                     │         ┌─────────────────────────┐                 │
-                     │         │   Ensemble / Aggregation │                 │
-                     │         │   Weighted majority vote │                 │
-                     │         │   or average confidence  │                 │
-                     │         └─────────────────────────┘                 │
-                     └───────────────────┬─────────────────────────────────┘
-                                         │
-                                         ▼
+                     │                         │                           │
+                     │                         ▼                           │
+                     │           ┌──────────────────────────┐              │
+                     │           │  Ensemble / Aggregation  │              │
+                     │           │  Weighted majority vote  │              │
+                     │           │  or average confidence   │              │
+                     │           └──────────────────────────┘              │
+                     └─────────────────────────┬───────────────────────────┘
+                                               │
+                                               ▼
                           Polarity: Positive / Negative + Confidence Score
 ```
