@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Prepare classification output data (output.json) for indexing.
+Prepare classification output data (classified_eval.json) for indexing.
 Uses the fully classified/annotated data including sentiment labels,
 subjectivity scores, aspect-based sentiment analysis, and named entities.
 """
@@ -125,8 +125,8 @@ def check_sarcasm(targeted_aspects):
     return len(hits) >= 2 or any(c >= 0.95 for c in hits)
 
 
-print("\nLoading output.json...")
-with open('output.json', 'r', encoding='utf-8') as f:
+print("\nLoading classified_eval.json...")
+with open('classified_eval.json', 'r', encoding='utf-8') as f:
     raw_data = json.load(f)
 
 print(f"Loaded {len(raw_data):,} top-level documents")
