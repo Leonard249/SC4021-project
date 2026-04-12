@@ -1,4 +1,4 @@
-# SC4021 Information Retrieval — AI Coding Tools Opinion Search Engine
+# SC4021 Information Retrieval — Group 33
 
 ## Project Overview
 
