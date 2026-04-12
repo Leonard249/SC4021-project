@@ -520,7 +520,7 @@
                     <div class="subtitle">Information Retrieval | SC4021 Project | Group 33</div>
                 </div>
                 <div class="header-right">
-                    <div class="badge">73,664 Documents Indexed</div>
+                    <div class="badge">69,047 Documents Indexed</div>
                     <div class="stats-mini">Elasticsearch 7.17.4 | 384-dim Embeddings</div>
                 </div>
             </div>
@@ -1590,17 +1590,19 @@
                 });
             });
             
-            const wordList = Object.entries(words)
+            const sortedWords = Object.entries(words)
                 .sort((a, b) => b[1] - a[1])
-                .slice(0, 60)
-                .map(([word, freq]) => [word, freq * 3]);
-            
+                .slice(0, 60);
+            const maxFreq = sortedWords[0]?.[1] || 1;
+            const wordList = sortedWords.map(([word, freq]) => [word, 10 + (freq / maxFreq) * 40]);
+
             document.getElementById('wordcloud').innerHTML = '';
             setTimeout(() => {
                 WordCloud(document.getElementById('wordcloud'), {
                     list: wordList,
-                    gridSize: 8,
-                    weightFactor: 3,
+                    gridSize: 12,
+                    weightFactor: 1,
+                    minSize: 10,
                     fontFamily: 'Inter, sans-serif',
                     color: () => {
                         const colors = ['#2c3e50', '#3498db', '#2980b9', '#34495e'];
