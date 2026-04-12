@@ -29,5 +29,5 @@ def analyze_checkpoint(file_path):
     print(f"3. Number of relevant websites AND has opinion: {relevant_with_opinion_count}")
 
 if __name__ == "__main__":
-    checkpoint_path = "/Users/bryanatistakiely/Documents/Modules/Y4S2/SC4021/SC4021-project/articles_extraction/classification_checkpoint.json"
+    checkpoint_path = "/Users/bryanatistakiely/Documents/Modules/Y4S2/SC4021/SC4021-project/articles_extraction/relevant_checkpoint.json"
     analyze_checkpoint(checkpoint_path)

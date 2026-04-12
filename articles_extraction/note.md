@@ -1,6 +1,6 @@
 # Overview of Bryan's Result
 - I have successfully scraped a total of 1,835 blogs and articles. You can check this in the folder `scraped_articles`
-- I perform a random sampling of 322 websites out of 1,835 and classify their relevance to our topic. From the random sampling, I found that 258 (80.1%) of them are relevant. Among the relevant ones, I found that 242/258 (93.8%) of them conveys an opinion/sentiment towards the topic. The result of this random sampling and classification can be seen in `classification_checkpoint.json` 
+- I perform a random sampling of 322 websites out of 1,835 and classify their relevance to our topic. From the random sampling, I found that 258 (80.1%) of them are relevant. Among the relevant ones, I found that 242/258 (93.8%) of them conveys an opinion/sentiment towards the topic. The result of this random sampling and classification can be seen in `relevant_checkpoint.json` 
 
 # Methodology
 1. Crawling 

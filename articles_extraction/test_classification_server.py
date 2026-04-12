@@ -20,7 +20,7 @@ import shutil
 # ---------------------------------------------------------------------------
 
 _tmpdir = tempfile.mkdtemp(prefix="test_articles_")
-_tmpcheckpoint = os.path.join(_tmpdir, "classification_checkpoint.json")
+_tmpcheckpoint = os.path.join(_tmpdir, "relevant_checkpoint.json")
 
 # Create 3 fake articles
 FAKE_ARTICLES = {

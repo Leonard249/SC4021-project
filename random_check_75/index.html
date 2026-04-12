@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentiment Label Checker</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a1a; min-height: 100vh; }
+
+  /* Header */
+  .header { background: #1e293b; color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  .header h1 { font-size: 16px; font-weight: 600; letter-spacing: .3px; }
+  .progress-info { font-size: 13px; color: #94a3b8; }
+  .progress-bar-wrap { background: #334155; border-radius: 4px; height: 6px; width: 200px; margin-left: 12px; }
+  .progress-bar { background: #38bdf8; height: 6px; border-radius: 4px; transition: width .3s; }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+
+  /* Nav */
+  .nav { display: flex; gap: 8px; align-items: center; padding: 12px 24px; background: white; border-bottom: 1px solid #e2e8f0; }
+  .nav button { padding: 6px 14px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-size: 13px; font-weight: 500; color: #475569; transition: all .15s; }
+  .nav button:hover:not(:disabled) { background: #f1f5f9; border-color: #94a3b8; }
+  .nav button:disabled { opacity: .4; cursor: default; }
+  .nav .counter { font-size: 13px; color: #64748b; padding: 0 8px; }
+
+  /* Jump to input */
+  .jump-wrap { display: flex; gap: 6px; align-items: center; margin-left: auto; }
+  .jump-wrap input { width: 58px; padding: 5px 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; text-align: center; }
+  .jump-wrap button { padding: 5px 10px; border-radius: 6px; border: 1px solid #94a3b8; background: #f8fafc; font-size: 13px; cursor: pointer; }
+
+  /* Filter */
+  .filter-bar { display: flex; gap: 8px; align-items: center; padding: 10px 24px; background: white; border-bottom: 1px solid #e2e8f0; }
+  .filter-bar label { font-size: 13px; color: #64748b; font-weight: 500; }
+  .filter-bar select { padding: 5px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; background: white; cursor: pointer; }
+
+  /* Main card */
+  .main { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+  .card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .card-header { padding: 16px 20px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 99px; text-transform: uppercase; letter-spacing: .4px; }
+  .badge-twitter { background: #dbeafe; color: #1d4ed8; }
+  .badge-hackernews { background: #ffedd5; color: #c2410c; }
+  .badge-reddit { background: #fef9c3; color: #854d0e; }
+  .badge-post { background: #f0fdf4; color: #15803d; }
+  .badge-story { background: #fdf4ff; color: #7e22ce; }
+  .badge-other { background: #f1f5f9; color: #475569; }
+  .date { font-size: 12px; color: #94a3b8; }
+  .author { font-size: 12px; color: #64748b; font-weight: 500; }
+  .card-body { padding: 16px 20px; }
+  .post-title { font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 10px; line-height: 1.4; }
+  .post-text { font-size: 14px; line-height: 1.65; color: #374151; white-space: pre-wrap; word-break: break-word; }
+  .empty-text { font-size: 13px; color: #94a3b8; font-style: italic; }
+
+  /* Verdict row */
+  .verdict-row { padding: 14px 20px; background: #f8fafc; border-top: 1px solid #f1f5f9; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .model-label { font-size: 13px; color: #64748b; }
+  .polarity-badge { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 99px; text-transform: capitalize; }
+  .pol-positive { background: #dcfce7; color: #166534; }
+  .pol-negative { background: #fee2e2; color: #991b1b; }
+  .pol-neutral  { background: #f1f5f9; color: #475569; }
+  .pol-mixed    { background: #fef9c3; color: #854d0e; }
+  .pol-unknown  { background: #e0f2fe; color: #075985; }
+
+  .verdict-actions { display: flex; gap: 8px; align-items: center; margin-left: auto; flex-wrap: wrap; }
+  .btn-accept { padding: 7px 18px; border-radius: 7px; border: 2px solid #22c55e; background: white; color: #16a34a; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .btn-accept:hover { background: #22c55e; color: white; }
+  .btn-accept.active { background: #22c55e; color: white; }
+  .btn-reject { padding: 7px 18px; border-radius: 7px; border: 2px solid #ef4444; background: white; color: #dc2626; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .btn-reject:hover { background: #ef4444; color: white; }
+  .btn-reject.active { background: #ef4444; color: white; }
+
+  .alt-label-wrap { display: flex; gap: 6px; align-items: center; }
+  .alt-label-wrap label { font-size: 12px; color: #64748b; }
+  .alt-label-wrap select { padding: 5px 10px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 13px; background: white; }
+
+  .checked-badge { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; }
+  .checked-accept { background: #dcfce7; color: #166534; }
+  .checked-reject { background: #fee2e2; color: #991b1b; }
+
+  /* Comments */
+  .comments-section { padding: 0 20px 20px; }
+  .comments-title { font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 12px; padding-top: 4px; text-transform: uppercase; letter-spacing: .4px; }
+  .comment-card { border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+  .comment-header { padding: 10px 14px; background: #f8fafc; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; border-bottom: 1px solid #f1f5f9; }
+  .comment-body { padding: 10px 14px; font-size: 13px; line-height: 1.6; color: #374151; word-break: break-word; white-space: pre-wrap; }
+  .comment-verdict { padding: 10px 14px; background: #fafafa; border-top: 1px solid #f1f5f9; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .comment-verdict .verdict-actions { margin-left: auto; }
+
+  /* Save button */
+  .save-section { padding: 0 16px 28px; max-width: 860px; margin: 0 auto; }
+  .btn-save { width: 100%; padding: 12px; border-radius: 10px; border: none; background: #1e293b; color: white; font-size: 15px; font-weight: 600; cursor: pointer; transition: background .15s; }
+  .btn-save:hover { background: #0f172a; }
+  .btn-save:disabled { background: #94a3b8; cursor: default; }
+  .save-status { text-align: center; margin-top: 8px; font-size: 13px; color: #64748b; min-height: 18px; }
+
+  /* Status dots in index */
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+  .dot-done { background: #22c55e; }
+  .dot-pending { background: #e2e8f0; }
+
+  /* Index panel */
+  .index-toggle { background: none; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 10px; font-size: 12px; cursor: pointer; color: #64748b; }
+  .index-panel { max-width: 860px; margin: 0 auto 0; padding: 0 16px 16px; }
+  .index-grid { display: flex; flex-wrap: wrap; gap: 5px; padding: 12px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; }
+  .index-item { width: 38px; height: 38px; border-radius: 6px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; color: #374151; font-weight: 500; transition: all .1s; }
+  .index-item:hover { border-color: #94a3b8; background: #f8fafc; }
+  .index-item.current { border-color: #38bdf8; background: #e0f2fe; color: #075985; font-weight: 700; }
+  .index-item.done { background: #f0fdf4; border-color: #86efac; color: #166534; }
+  .index-item.partial { background: #fef9c3; border-color: #fde047; color: #854d0e; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏷️ Sentiment Label Checker</h1>
+  <div class="header-right">
+    <span class="progress-info" id="progressText">0 / 75 done</span>
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+  </div>
+</div>
+
+<div class="nav">
+  <button id="btnPrev" onclick="navigate(-1)">← Prev</button>
+  <span class="counter" id="navCounter"></span>
+  <button id="btnNext" onclick="navigate(1)">Next →</button>
+  <div class="jump-wrap">
+    <input type="number" id="jumpInput" min="1" max="75" placeholder="#" />
+    <button onclick="jumpTo()">Go</button>
+  </div>
+  <button class="index-toggle" onclick="toggleIndex()">Index</button>
+</div>
+
+<div class="filter-bar">
+  <label>Filter:</label>
+  <select id="filterSelect" onchange="applyFilter()">
+    <option value="all">All items</option>
+    <option value="pending">Pending (not checked)</option>
+    <option value="done">Checked</option>
+  </select>
+  <span id="filterCount" style="font-size:13px;color:#94a3b8;margin-left:6px;"></span>
+</div>
+
+<div class="index-panel" id="indexPanel" style="display:none;"></div>
+<div class="main" id="main"></div>
+<div class="save-section">
+  <button class="btn-save" id="btnSave" onclick="saveItem()">💾 Save &amp; Next</button>
+  <div class="save-status" id="saveStatus"></div>
+</div>
+
+<script>
+let allData = [];
+let filteredIndexes = [];
+let currentFilteredPos = 0;
+let pendingChanges = {}; // index -> {user_check, comment_checks}
+
+const POLARITIES = ['positive', 'negative', 'neutral', 'mixed'];
+
+async function init() {
+  const res = await fetch('/api/data');
+  allData = await res.json();
+  applyFilter();
+  renderIndexPanel();
+  updateProgress();
+}
+
+function applyFilter() {
+  const f = document.getElementById('filterSelect').value;
+  if (f === 'all') filteredIndexes = allData.map((_, i) => i);
+  else if (f === 'pending') filteredIndexes = allData.map((_, i) => i).filter(i => !allData[i].user_check);
+  else filteredIndexes = allData.map((_, i) => i).filter(i => !!allData[i].user_check);
+
+  document.getElementById('filterCount').textContent = `(${filteredIndexes.length} items)`;
+
+  // Stay on current item if possible
+  const cur = currentGlobalIndex();
+  const posInFilter = filteredIndexes.indexOf(cur);
+  currentFilteredPos = posInFilter >= 0 ? posInFilter : 0;
+  if (filteredIndexes.length === 0) { document.getElementById('main').innerHTML = '<p style="text-align:center;padding:40px;color:#64748b">No items match filter.</p>'; return; }
+  renderItem();
+}
+
+function currentGlobalIndex() {
+  return filteredIndexes[currentFilteredPos] ?? 0;
+}
+
+function navigate(dir) {
+  currentFilteredPos = Math.max(0, Math.min(filteredIndexes.length - 1, currentFilteredPos + dir));
+  renderItem();
+}
+
+function jumpTo() {
+  const n = parseInt(document.getElementById('jumpInput').value, 10) - 1;
+  const pos = filteredIndexes.indexOf(n);
+  if (pos >= 0) { currentFilteredPos = pos; renderItem(); }
+  else alert(`Item ${n+1} not in current filter.`);
+}
+
+function toggleIndex() {
+  const p = document.getElementById('indexPanel');
+  p.style.display = p.style.display === 'none' ? 'block' : 'none';
+}
+
+function renderIndexPanel() {
+  const grid = document.createElement('div');
+  grid.className = 'index-grid';
+  allData.forEach((item, i) => {
+    const el = document.createElement('div');
+    el.className = 'index-item';
+    el.id = `idx-${i}`;
+    el.textContent = i + 1;
+    el.title = item.Type + ' – ' + (item.Title || item.Text?.substring(0, 40) || '');
+    el.onclick = () => {
+      const pos = filteredIndexes.indexOf(i);
+      if (pos >= 0) { currentFilteredPos = pos; renderItem(); }
+      else {
+        document.getElementById('filterSelect').value = 'all';
+        applyFilter();
+        const pos2 = filteredIndexes.indexOf(i);
+        if (pos2 >= 0) { currentFilteredPos = pos2; renderItem(); }
+      }
+    };
+    grid.appendChild(el);
+  });
+  const panel = document.getElementById('indexPanel');
+  panel.innerHTML = '';
+  panel.appendChild(grid);
+}
+
+function updateIndexPanel() {
+  allData.forEach((item, i) => {
+    const el = document.getElementById(`idx-${i}`);
+    if (!el) return;
+    el.className = 'index-item';
+    const gi = currentGlobalIndex();
+    if (i === gi) el.classList.add('current');
+    if (item.user_check) el.classList.add('done');
+    // partial: some comments checked but not all
+    const hasComments = item.Comments?.length > 0;
+    if (hasComments && !item.user_check) {
+      const someCommentChecked = item.Comments.some(c => c.user_check);
+      if (someCommentChecked) el.classList.add('partial');
+    }
+  });
+}
+
+function updateProgress() {
+  const done = allData.filter(d => !!d.user_check).length;
+  const total = allData.length;
+  document.getElementById('progressText').textContent = `${done} / ${total} done`;
+  document.getElementById('progressBar').style.width = `${(done/total)*100}%`;
+}
+
+function polarityClass(p) {
+  if (!p) return 'pol-unknown';
+  const lp = p.toLowerCase();
+  if (lp.includes('positive')) return 'pol-positive';
+  if (lp.includes('negative')) return 'pol-negative';
+  if (lp.includes('neutral'))  return 'pol-neutral';
+  if (lp.includes('mixed'))    return 'pol-mixed';
+  return 'pol-unknown';
+}
+
+function sourceBadgeClass(src) {
+  if (!src) return 'badge-other';
+  const s = src.toLowerCase();
+  if (s.includes('twitter')) return 'badge-twitter';
+  if (s.includes('hackernews') || s.includes('hacker')) return 'badge-hackernews';
+  if (s.includes('reddit')) return 'badge-reddit';
+  return 'badge-other';
+}
+
+function typeBadgeClass(t) {
+  if (!t) return 'badge-other';
+  const s = t.toLowerCase();
+  if (s === 'post') return 'badge-post';
+  if (s === 'story') return 'badge-story';
+  return 'badge-other';
+}
+
+// State for current item editing
+let editState = {};
+
+function getOrInitEdit(globalIdx, item) {
+  if (!editState[globalIdx]) {
+    editState[globalIdx] = {
+      decision: item.user_check?.decision || null,
+      final_label: item.user_check?.final_label || item.Overall_Document_Polarity || '',
+      comments: {}
+    };
+    (item.Comments || []).forEach((c, ci) => {
+      editState[globalIdx].comments[ci] = {
+        decision: c.user_check?.decision || null,
+        final_label: c.user_check?.final_label || c.Overall_Document_Polarity || ''
+      };
+    });
+  }
+  return editState[globalIdx];
+}
+
+function renderItem() {
+  if (filteredIndexes.length === 0) return;
+  const gi = currentGlobalIndex();
+  const item = allData[gi];
+  const state = getOrInitEdit(gi, item);
+
+  document.getElementById('navCounter').textContent = `${currentFilteredPos + 1} of ${filteredIndexes.length}`;
+  document.getElementById('btnPrev').disabled = currentFilteredPos === 0;
+  document.getElementById('btnNext').disabled = currentFilteredPos === filteredIndexes.length - 1;
+  updateIndexPanel();
+
+  const main = document.getElementById('main');
+  main.innerHTML = '';
+
+  // Build card
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  // Card header
+  const header = document.createElement('div');
+  header.className = 'card-header';
+  header.innerHTML = `
+    <div class="card-meta">
+      <span class="badge ${sourceBadgeClass(item.Source)}">${item.Source || '—'}</span>
+      <span class="badge ${typeBadgeClass(item.Type)}">${item.Type || '—'}</span>
+      <span class="author">${item.Author || 'Unknown'}</span>
+      <span class="date">${item.Date || ''}</span>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;">#${gi + 1}</div>
+  `;
+  card.appendChild(header);
+
+  // Card body
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  if (item.Title) {
+    const title = document.createElement('div');
+    title.className = 'post-title';
+    title.textContent = item.Title;
+    body.appendChild(title);
+  }
+  const textEl = document.createElement('div');
+  textEl.className = item.Text ? 'post-text' : 'empty-text';
+  textEl.textContent = item.Text || '(No text body)';
+  body.appendChild(textEl);
+  card.appendChild(body);
+
+  // Verdict row
+  card.appendChild(buildVerdictRow(gi, item, state, false, null));
+
+  // Comments
+  if (item.Comments && item.Comments.length > 0) {
+    const cs = document.createElement('div');
+    cs.className = 'comments-section';
+    const ct = document.createElement('div');
+    ct.className = 'comments-title';
+    ct.textContent = `Comments (${item.Comments.length})`;
+    cs.appendChild(ct);
+
+    item.Comments.forEach((c, ci) => {
+      const ccard = document.createElement('div');
+      ccard.className = 'comment-card';
+
+      const ch = document.createElement('div');
+      ch.className = 'comment-header';
+      ch.innerHTML = `
+        <span class="author">${c.Author || 'Unknown'}</span>
+        <span class="date">${c.Date || ''}</span>
+      `;
+      ccard.appendChild(ch);
+
+      const cb = document.createElement('div');
+      cb.className = 'comment-body';
+      cb.textContent = c.Text || '(No text)';
+      ccard.appendChild(cb);
+
+      const cstate = state.comments[ci];
+      ccard.appendChild(buildVerdictRow(gi, c, cstate, true, ci));
+      cs.appendChild(ccard);
+    });
+    card.appendChild(cs);
+  }
+
+  main.appendChild(card);
+  document.getElementById('saveStatus').textContent = '';
+}
+
+function buildVerdictRow(gi, item, state, isComment, commentIndex) {
+  const row = document.createElement('div');
+  row.className = isComment ? 'comment-verdict' : 'verdict-row';
+
+  const polarity = item.Overall_Document_Polarity || 'unknown';
+  row.innerHTML = `<span class="model-label">Model:</span>
+    <span class="polarity-badge ${polarityClass(polarity)}">${polarity}</span>`;
+
+  // checked status
+  if (state.decision) {
+    const badge = document.createElement('span');
+    badge.className = 'checked-badge ' + (state.decision === 'accept' ? 'checked-accept' : 'checked-reject');
+    badge.textContent = state.decision === 'accept' ? `✓ Accepted (${state.final_label})` : `✗ Rejected → ${state.final_label}`;
+    row.appendChild(badge);
+  }
+
+  const actions = document.createElement('div');
+  actions.className = 'verdict-actions';
+
+  const idSuffix = isComment ? `_c${commentIndex}` : '';
+  const btnAcc = document.createElement('button');
+  btnAcc.className = 'btn-accept' + (state.decision === 'accept' ? ' active' : '');
+  btnAcc.textContent = '✓ Accept';
+  btnAcc.onclick = () => {
+    if (isComment) {
+      editState[gi].comments[commentIndex].decision = 'accept';
+      editState[gi].comments[commentIndex].final_label = item.Overall_Document_Polarity || polarity;
+    } else {
+      editState[gi].decision = 'accept';
+      editState[gi].final_label = item.Overall_Document_Polarity || polarity;
+    }
+    renderItem();
+  };
+
+  const btnRej = document.createElement('button');
+  btnRej.className = 'btn-reject' + (state.decision === 'reject' ? ' active' : '');
+  btnRej.textContent = '✗ Reject';
+  btnRej.onclick = () => {
+    if (isComment) {
+      editState[gi].comments[commentIndex].decision = 'reject';
+    } else {
+      editState[gi].decision = 'reject';
+    }
+    renderItem();
+  };
+
+  actions.appendChild(btnAcc);
+  actions.appendChild(btnRej);
+
+  // If rejected, show alt label selector
+  const curDecision = isComment ? editState[gi].comments[commentIndex]?.decision : editState[gi]?.decision;
+  if (curDecision === 'reject') {
+    const wrap = document.createElement('div');
+    wrap.className = 'alt-label-wrap';
+    const lbl = document.createElement('label');
+    lbl.textContent = 'Correct label:';
+    const sel = document.createElement('select');
+    POLARITIES.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p;
+      opt.textContent = p;
+      const curFinal = isComment ? editState[gi].comments[commentIndex]?.final_label : editState[gi]?.final_label;
+      if (curFinal === p) opt.selected = true;
+      sel.appendChild(opt);
+    });
+    sel.onchange = () => {
+      if (isComment) editState[gi].comments[commentIndex].final_label = sel.value;
+      else editState[gi].final_label = sel.value;
+    };
+    wrap.appendChild(lbl);
+    wrap.appendChild(sel);
+    actions.appendChild(wrap);
+  }
+
+  row.appendChild(actions);
+  return row;
+}
+
+async function saveItem() {
+  if (filteredIndexes.length === 0) return;
+  const gi = currentGlobalIndex();
+  const state = editState[gi];
+  if (!state || !state.decision) {
+    document.getElementById('saveStatus').textContent = '⚠️ Please accept or reject the post first.';
+    return;
+  }
+
+  const user_check = { decision: state.decision, final_label: state.final_label };
+  const comment_checks = {};
+  Object.entries(state.comments || {}).forEach(([ci, cs]) => {
+    if (cs.decision) comment_checks[ci] = { decision: cs.decision, final_label: cs.final_label };
+  });
+
+  const btn = document.getElementById('btnSave');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+
+  try {
+    const res = await fetch('/api/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ index: gi, user_check, comment_checks })
+    });
+    if (!res.ok) throw new Error('Save failed');
+    // Update local data
+    allData[gi].user_check = user_check;
+    Object.entries(comment_checks).forEach(([ci, ck]) => {
+      allData[gi].Comments[parseInt(ci)].user_check = ck;
+    });
+    document.getElementById('saveStatus').textContent = '✅ Saved!';
+    updateProgress();
+    renderIndexPanel();
+    updateIndexPanel();
+    // Auto-advance
+    if (currentFilteredPos < filteredIndexes.length - 1) {
+      setTimeout(() => navigate(1), 400);
+    }
+  } catch (e) {
+    document.getElementById('saveStatus').textContent = '❌ Error saving. Try again.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '💾 Save & Next';
+  }
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'ArrowLeft') navigate(-1);
+  if (e.key === 'ArrowRight') navigate(1);
+  if (e.key === 'Enter') saveItem();
+  // a = accept post, r = reject post
+  if (e.key === 'a' || e.key === 'A') {
+    const gi = currentGlobalIndex();
+    const item = allData[gi];
+    editState[gi].decision = 'accept';
+    editState[gi].final_label = item.Overall_Document_Polarity || '';
+    renderItem();
+  }
+  if (e.key === 'r' || e.key === 'R') {
+    const gi = currentGlobalIndex();
+    editState[gi].decision = 'reject';
+    renderItem();
+  }
+});
+
+init();
+</script>
+</body>
+</html>

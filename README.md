@@ -79,58 +79,61 @@ cd backend
 }'
 ```
 
+```
 [ Raw Input Text from Reddit/HackerNews/Medium/X ]
 │
 ▼
 ┌─────────────────────────────────────────────────────┐
-│ 🧳 LAYER 1: SYNTACTICS LAYER (Preprocessing) │
-│ - Microtext Normalization (Clean HTML/Markdown) │
-│ - Sentence Boundary Disambiguation │
-│ - POS Tagging & Lemmatization (Prep for SenticNet) │
+│  LAYER 1: SYNTACTICS LAYER (Preprocessing)          │
+│  - Microtext Normalization (Clean HTML/Markdown)    │
+│  - Sentence Boundary Disambiguation                 │
+│  - POS Tagging & Lemmatization (Prep for SenticNet) │
 └────────────────────┬────────────────────────────────┘
-│ (Structured, Clean Text)
-▼
+                     │ (Structured, Clean Text)
+                     ▼
 ┌─────────────────────────────────────────────────────┐
-│ 🧳 LAYER 2: SEMANTICS LAYER (Stage 1: Subjectivity) │
-│ - Concept Extraction (Find Entities/Phrases) │
-│ - Rule-Based Subjectivity Detection: │
-│ ├─ TextBlob subjectivity score (soft signal) │
-│ ├─ First-person pronoun density │
-│ ├─ Hedging language detection │
-│ └─ Source type prior (Reddit = subjective) │
+│  LAYER 2: SEMANTICS LAYER (Stage 1: Subjectivity)   │
+│  - Concept Extraction (Find Entities/Phrases)       │
+│  - Rule-Based Subjectivity Detection:               │
+│    ├─ TextBlob subjectivity score (soft signal)     │
+│    ├─ First-person pronoun density                  │
+│    ├─ Hedging language detection                    │
+│    └─ Source type prior (Reddit = subjective)       │
 └─────────┬──────────────────────────────┬────────────┘
-│ │
-[ OBJECTIVE / NEUTRAL ] [ SUBJECTIVE / OPINIONATED ]
-Record as Neutral & Discard │ Continue
-▼
-┌─────────────────────────────────────────────────────┐
-│ 🧳 LAYER 3: PRAGMATICS LAYER (Polarity & Context) │
-│ - Context: Apply Domain Corrections (Vibe Coding) │
-│ - Sarcasm Detection (e.g., /s tag checking) │
-│ │
-│ ────────── Stage 2: Length-Aware Routing ────────── │
-│ │
-│ Word count < 60 → SHORT path │
-│ 60 ≤ Words ≤ 400 → MEDIUM path │
-│ Word count > 400 → LONG path (chunked) │
-│ │
-│ ┌─────────────┬────────────────┐ │
-│ SHORT path MEDIUM path LONG path │
-│ │ │ │ │
-│ ▼ ▼ ▼ │
-│ VADER + Transformer Chunk → classify │
-│ SenticNet (direct) each chunk → │
-│ concepts aggregate scores │
-│ │ │ │ │
-│ └─────────────┴────────────────┘ │
-│ │ │
-│ ▼ │
-│ ┌─────────────────────────┐ │
-│ │ Ensemble / Aggregation │ │
-│ │ Weighted majority vote │ │
-│ │ or average confidence │ │
-│ └─────────────────────────┘ │
-└───────────────────┬─────────────────────────────────┘
-│
-▼
-Polarity: Positive / Negative + Confidence Score
+          │                              │
+ [ OBJECTIVE / NEUTRAL ]    [ SUBJECTIVE / OPINIONATED ]
+  Record as Neutral &                   │
+  Discard                               │ Continue
+                                        ▼
+                     ┌─────────────────────────────────────────────────────┐
+                     │  LAYER 3: PRAGMATICS LAYER (Polarity & Context)     │
+                     │  - Context: Apply Domain Corrections (Vibe Coding)  │
+                     │  - Sarcasm Detection (e.g., /s tag checking)        │
+                     │                                                     │
+                     │  ────────── Stage 2: Length-Aware Routing ────────  │
+                     │                                                     │
+                     │  Word count < 60       → SHORT path                 │
+                     │  60 ≤ Words ≤ 400      → MEDIUM path                │
+                     │  Word count > 400      → LONG path (chunked)        │
+                     │                                                     │
+                     │  ┌──────────────┬─────────────────┬──────────────┐  │
+                     │  │  SHORT path  │   MEDIUM path   │  LONG path   │  │
+                     │  │      │       │        │        │      │       │  │
+                     │  │      ▼       │        ▼        │      ▼       │  │
+                     │  │  VADER +     │  Transformer    │  Chunk →     │  │
+                     │  │  SenticNet   │  (direct)       │  classify    │  │
+                     │  │  concepts    │                 │  each chunk  │  │
+                     │  │             │                 │  → aggregate  │  │
+                     │  └──────────────┴─────────────────┴──────────────┘  │
+                     │                        │                            │
+                     │                        ▼                            │
+                     │         ┌─────────────────────────┐                 │
+                     │         │   Ensemble / Aggregation │                 │
+                     │         │   Weighted majority vote │                 │
+                     │         │   or average confidence  │                 │
+                     │         └─────────────────────────┘                 │
+                     └───────────────────┬─────────────────────────────────┘
+                                         │
+                                         ▼
+                          Polarity: Positive / Negative + Confidence Score
+```

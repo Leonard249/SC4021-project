@@ -6,11 +6,47 @@ bry_note
 dataset
 .venv
 final_dataset
+data/raw
+data/results/draft_output.json
+data/my_test/pipeline_output.json
 data/processed/raw_data.json
 data/processed/temp.json
-data/raw
+data/raw_data.json
+articles_extraction/articles_updated_schema
+articles_extraction/scraped_articles
+backend/test/output/pipeline_output.json
+backend/test/output/checkpoint.jsonl
+backend/test/output/pipeline_run.log
+
+utils/__pycache__
+semantics/__pycache__
+syntactics/__pycache__
+
+# Large data files
+*.npy
+indexed_dataset.json
+raw_data.json
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+output.json
+big data
+
 __pycache__/
 data/results/classified_eval.json
 data/results/classified_eval_1k.json
 data/raw_data.json
-backend/test/output
