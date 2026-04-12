@@ -42,9 +42,8 @@ import nltk
 
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
+
 # Abbreviation lists
-# ---------------------------------------------------------------------------
 
 # These tokens followed by a period are NEVER sentence boundaries.
 # All entries lowercase, without the trailing period.
@@ -67,7 +66,6 @@ ABBREVIATIONS: frozenset[str] = frozenset({
 # Regex patterns that, when matched at a potential boundary, suppress splitting.
 # Each pattern is applied to the text around the candidate period.
 _SUPPRESS_PATTERNS: list[re.Pattern] = [
-    # Version numbers: 3.11.2, v1.0.3, 0.9
     re.compile(r"\d+\.\d+"),
     # File extensions: .py, .js, .exe, .md
     re.compile(r"\.\w{1,5}(?=\s|$)"),
@@ -121,10 +119,8 @@ class SentenceBoundaryDisambiguator:
         self.min_tokens = min_sentence_tokens
         self._tokenizer = self._load_nltk()
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
 
+    # Public APIs
     def split(self, text: str) -> list[str]:
         """
         Split text into sentences with boundary disambiguation applied.
@@ -177,10 +173,8 @@ class SentenceBoundaryDisambiguator:
         logger.info(f"SBD complete: {len(records)} records processed.")
         return records
 
-    # ------------------------------------------------------------------
-    # Protection pass (pre-tokenization)
-    # ------------------------------------------------------------------
 
+    # Protection pass (pre-tokenization)
     def _protect_non_boundaries(self, text: str) -> tuple[str, dict[str, str]]:
         """
         Replace non-boundary period patterns with placeholder strings that
@@ -258,10 +252,8 @@ class SentenceBoundaryDisambiguator:
 
         return text, restore_map
 
-    # ------------------------------------------------------------------
-    # Tokenization
-    # ------------------------------------------------------------------
 
+    # Tokenization
     def _run_tokenizer(self, text: str) -> list[str]:
         """Run the sentence tokenizer on pre-processed text."""
         if self._tokenizer:
@@ -276,10 +268,8 @@ class SentenceBoundaryDisambiguator:
         parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text)
         return [p.strip() for p in parts if p.strip()]
 
-    # ------------------------------------------------------------------
-    # Post-processing pass
-    # ------------------------------------------------------------------
 
+    # Post-processing pass
     def _postprocess(
         self,
         sentences: list[str],
@@ -315,10 +305,8 @@ class SentenceBoundaryDisambiguator:
 
         return [s for s in merged if s.strip()]
 
-    # ------------------------------------------------------------------
-    # NLTK loader
-    # ------------------------------------------------------------------
 
+    # NLTK loader
     def _load_nltk(self):
         """
         Load NLTK punkt tokenizer. Returns the tokenize function or None
@@ -340,10 +328,7 @@ class SentenceBoundaryDisambiguator:
             return None
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 

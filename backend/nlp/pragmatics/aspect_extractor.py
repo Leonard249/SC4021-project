@@ -181,10 +181,8 @@ class AspectExtractor:
  
         return aspects
  
-    # ------------------------------------------------------------------
+
     # Sentence interval reconstruction (two-tier search)
-    # ------------------------------------------------------------------
- 
     def _build_sentence_intervals(
         self,
         normalized_text: str,
@@ -282,7 +280,7 @@ class AspectExtractor:
                 )
                 continue
  
-            # ── Both tiers failed ─────────────────────────────────────
+            # If Both tiers failed
             # Append a sentinel so the lists stay aligned with Sentences[].
             # The entity containment check will simply never match this slot.
             logger.warning(

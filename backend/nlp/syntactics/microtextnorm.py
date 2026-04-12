@@ -1,21 +1,3 @@
-"""
-microtext_normalizer.py
-SC4021 Information Retrieval 2026 — Microtext Normalization Pipeline
-
-Normalizes raw crawled JSON records (Reddit, HackerNews, X, blogs) for
-sentiment analysis on AI coding productivity opinions.
-
-Pipeline order (order matters — do not rearrange):
-  Stage 0 : Code & Markdown extraction (protect before everything)
-  Stage 1 : Structural cleaning (URLs, HTML, whitespace)
-  Stage 2 : Mention & hashtag extraction → stored in JSON fields
-  Stage 3 : Emoji & emoticon handling
-  Stage 4 : Elongated word normalization
-  Stage 5 : Acronym & slang expansion
-  Stage 6 : Spelling correction (optional, X/Twitter only by default)
-  Stage 7 : Code token restoration (replace placeholders with <CODE>)
-"""
-
 import re
 import json
 import logging
@@ -96,17 +78,6 @@ TECH_HINT_WORDS: set[str] = {
 
 
 class MicrotextNormalizer:
-    """
-    Full microtext normalization pipeline for AI coding productivity corpus.
-
-    Usage
-    -----
-    normalizer = MicrotextNormalizer(
-        emoticons_path="../data/emoticon_dict.json",
-        slang_path="../data/slang_dict.json",
-    )
-    normalized_record = normalizer.normalize_record(record, apply_spellcheck=False)
-    """
 
     def __init__(
         self,
@@ -373,9 +344,6 @@ class MicrotextNormalizer:
 
         return text.strip()
 
-    # ------------------------------------------------------------------
-    # Stage implementations
-    # ------------------------------------------------------------------
 
     def _stage0_extract_code_and_markdown(
         self, text: str
@@ -609,9 +577,9 @@ class MicrotextNormalizer:
 
         return text
 
-    # ------------------------------------------------------------------
-    # Private utilities
-    # ------------------------------------------------------------------
+
+
+    # Utilities
 
     @staticmethod
     def _split_camel(s: str) -> str:

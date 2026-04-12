@@ -88,9 +88,8 @@ class POSTagger:
         )
         logger.info(f"POSTagger: active pipes: {self._nlp.pipe_names}")
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
+
+    # Public APIs
 
     def tag_record(self, record: dict) -> dict:
         """
@@ -166,10 +165,9 @@ class POSTagger:
         logger.info("POSTagger: batch tagging complete.")
         return records
 
-    # ------------------------------------------------------------------
-    # Core tagging logic
-    # ------------------------------------------------------------------
 
+
+    # Core tagging logic
     def _tag_sentences(self, sentences: list[str]) -> list[list[list[str]]]:
         """Tag a list of sentences, returning sentence-aligned content-word triples."""
         result = []
@@ -205,9 +203,7 @@ class POSTagger:
         return result
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)

@@ -261,8 +261,6 @@ class PolarityEnsemble:
             result["Routing_Path"] = "transformer"
             return result
         
-        # COMMENTED OUT HERE FOR NOW ====================
-        #return self._transformer.classify(target_sentence, sentence_word_count)
 
     # Sarcasm correction
     @staticmethod

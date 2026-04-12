@@ -54,9 +54,8 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
+
 # Lexicon constants
-# ---------------------------------------------------------------------------
 
 # Threshold band: scores outside [LOWER, UPPER] are decided by the lexicon.
 # Scores inside the band are escalated to the transformer.
@@ -154,10 +153,6 @@ SIGNAL_WEIGHTS = {
 
 DEFAULT_TRANSFORMER = "GroNLP/mdebertav3-subjectivity-english"
 
-
-# ---------------------------------------------------------------------------
-# SubjectivityDetector
-# ---------------------------------------------------------------------------
 
 class SubjectivityDetector:
     """
@@ -463,10 +458,8 @@ class SubjectivityDetector:
         label = "subjective" if blended >= 0.42 else "objective"
         return label, round(blended, 4)
 
-    # ------------------------------------------------------------------
-    # Lexicon scoring
-    # ------------------------------------------------------------------
 
+    # Lexicon scoring
     def _lexicon_score(self, sentence, pos_lookup):
         tokens = [t.strip('.,!?()[]"').lower() for t in sentence.split()]
         token_set = set(tokens)
@@ -495,10 +488,8 @@ class SubjectivityDetector:
         score = vader_compound + adjustment
         return min(max(score, 0.0), 1.0)
 
-    # ------------------------------------------------------------------
-    # Transformer scoring
-    # ------------------------------------------------------------------
 
+    # Transformer scoring
     def _load_transformer(self) -> None:
         if self._classifier is not None:
             return
@@ -555,11 +546,11 @@ class SubjectivityDetector:
         score = result["score"] if result["label"] == "SUBJ" else 1 - result["score"]
         return label, float(score)
 
-    # ------------------------------------------------------------------
+
+
+
+
     # Utilities
-    # ------------------------------------------------------------------
-
-
     def _build_pos_lookup(
         self, pos_tags: list[list]
     ) -> dict[str, tuple[str, str, str]]:
@@ -621,10 +612,7 @@ class SubjectivityDetector:
 
 
 
-# ---------------------------------------------------------------------------
-# Example usage / smoke test
-# ---------------------------------------------------------------------------
-
+# Example usage 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 

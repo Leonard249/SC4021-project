@@ -40,10 +40,9 @@ import sys
 import time
 from pathlib import Path
 
-# ---------------------------------------------------------------------------
+
 # Path bootstrap — resolves sibling packages regardless of working directory.
 # Assumes this file lives at: backend/nlp/classifier.py
-# ---------------------------------------------------------------------------
 _THIS_FILE  = Path(__file__).resolve()
 _NLP_ROOT = _THIS_FILE.parent                      # backend/nlp/
 _BACKEND = _THIS_FILE.parents[1]                  # backend/
@@ -71,7 +70,7 @@ from pragmatics.ensemble import PolarityEnsemble                   # Stage 8
 
 # Input JSON
 INPUT_PATH: Path = _PROJECT_ROOT / "data" / "raw_data.json"
-#INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "db_labelled.json"
+
 
 # Output JSON: fully annotated records ready for indexing / evaluation.
 OUTPUT_PATH: Path = _PROJECT_ROOT / "data" / "results" / "classified_eval.json"
@@ -126,10 +125,7 @@ def save_records(records: list[dict], path: str | Path) -> None:
     logger.info(f"Saved {len(records)} annotated records → {path.resolve()}")
 
 
-# ---------------------------------------------------------------------------
 # Pipeline builder — instantiates all components once, reuses across records
-# ---------------------------------------------------------------------------
-
 class NLPPipeline:
     """
     Lazy-initialised NLP pipeline wrapper.

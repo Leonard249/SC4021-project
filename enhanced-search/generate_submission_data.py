@@ -266,9 +266,8 @@ for t in tool_resp["tools"]:
     print(f"  {t['tool']:12s}: total={t['total']:6d}  "
           f"pos={t['positive_pct']}%  neg={t['negative_pct']}%  neu={t['neutral_pct']}%")
 
-# ─────────────────────────────────────────────────────────────
-# 8. TOP ENTITIES PER QUERY
-# ─────────────────────────────────────────────────────────────
+
+# TOP ENTITIES PER QUERY
 section("8. Top Entities and Aspects Per Query")
 
 entity_queries = [

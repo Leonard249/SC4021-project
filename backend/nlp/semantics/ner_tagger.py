@@ -118,10 +118,8 @@ class NERTagger:
         logger.info(f"NERTagger: EntityRuler loaded {len(patterns)} domain patterns")
         logger.info(f"NERTagger: active pipes: {self._nlp.pipe_names}")
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
 
+    # Public API
     def tag_record(self, record: dict) -> dict:
         """
         NER-tag a single record and all its comments in-place.
@@ -177,10 +175,8 @@ class NERTagger:
         logger.info("NERTagger: batch tagging complete.")
         return records
 
-    # ------------------------------------------------------------------
-    # Core NER logic
-    # ------------------------------------------------------------------
 
+    # Core NER logic
     def _tag_text(self, text: str) -> list[list]:
         """NER-tag a single text string."""
         cleaned, special_map = _extract_special_tokens(text)
@@ -230,10 +226,8 @@ class NERTagger:
         return result
 
 
-# ---------------------------------------------------------------------------
-# Smoke test
-# ---------------------------------------------------------------------------
 
+# Smoke test
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
