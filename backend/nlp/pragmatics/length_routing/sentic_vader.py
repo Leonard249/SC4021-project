@@ -39,17 +39,9 @@ to [0, 1] then fused with a weighted average:
 If SenticNet is unavailable or returns no hits, the classifier falls back to
 VADER alone (effective weight 1.0).
 
-Domain negative lexicon boost
-------------------------------
-VADER is known to under-score negativity in AI/coding discourse — phrases like
-"hallucinating garbage" or "completely useless" are scored near-neutral.
-A domain-specific negative lexicon is applied directly to the target sentence
-(not the parent POS tags). Each match shifts the fused score toward negative by
-DOMAIN_NEG_BOOST per match, capped at DOMAIN_NEG_CAP total shift.
-
-Label thresholds (asymmetric — negative bar is intentionally lower):
+Label thresholds:
     score >= 0.55  → "positive"
-    score <= 0.48  → "negative"   ← lowered from 0.45 to catch hedged negativity
+    score <= 0.45  → "negative"
     otherwise      → "neutral"
 
 Requires:
@@ -62,78 +54,11 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# Patterns are matched case-insensitively against the *cleaned* target sentence.
-# Use word-boundary anchors (\b) where a substring match would cause false fires.
-DOMAIN_NEGATIVE_PATTERNS: list[str] = [
-    # Reliability / correctness failures
-    r"\bhallucinate[sd]?\b", r"\bhallucination[s]?\b",
-    r"\bwrong(?:ly)?\b",     r"\bincorrect(?:ly)?\b",
-    r"\bbroken\b",           r"\bregress(?:ed|ion|ions)?\b",
-    r"\bdegrades?\b",        r"\bdegraded\b",
-    r"\bbug(?:gy|s)?\b",     r"\bcrash(?:es|ed|ing)?\b",
-    r"\bcorrupt(?:s|ed|ion)?\b",
-
-    # Productivity / workflow damage
-    r"\bslows?\s+(?:me\s+)?down\b", r"\bkill(?:s|ed|ing)?\s+(?:my\s+)?(?:workflow|productivity)\b",
-    r"\bwaste[sd]?\s+(?:my\s+)?time\b", r"\bfrustrat(?:ing|ed|es?)\b",
-    r"\bpointless\b",        r"\buseless\b",
-    r"\bunreliable\b",       r"\bunstable\b",
-    r"\bnot\s+worth\b",      r"\bwaste\s+of\b",
-
-    # Trust / quality concerns
-    r"\bcan(?:'t|not)\s+trust\b", r"\bdon(?:'t|ot)\s+trust\b",
-    r"\bmisleading\b",       r"\binaccurate\b",
-    r"\boutdated\b",         r"\bobsolete\b",
-    r"\bdisappoint(?:ing|ed|s)?\b",
-
-    # Abandonment / rejection signals
-    r"\bswitched?\s+(?:back|away|to)\b",
-    r"\bstopped?\s+using\b", r"\buninstall(?:ed|ing)?\b",
-    r"\bremoved?\s+(?:it|the\s+\w+)\b",
-    r"\bgave?\s+up\b",       r"\bno\s+longer\s+use\b",
-
-    # Comparative inferiority
-    r"\bworse\s+than\b",     r"\bfar\s+worse\b",
-    r"\bmuch\s+worse\b",     r"\bfar\s+inferior\b",
-
-    # Strong negative intensifiers common in tech discourse
-    r"\bcompletely\s+(?:useless|broken|wrong|missed)\b",
-    r"\babsolutely\s+(?:useless|broken|terrible|awful)\b",
-    r"\btotal(?:ly)?\s+(?:garbage|trash|mess|failure)\b",
-    r"\b(?:garbage|trash|junk)\b",
-    r"\bterrible\b",         r"\bawful\b",     r"\bhorrible\b",
-    r"\bdreadful\b",         r"\babysmal\b",
-]
-
-# Pre-compile all domain negative patterns once at import time for speed.
-_DOMAIN_NEG_RE: list[re.Pattern] = [
-    re.compile(p, re.IGNORECASE) for p in DOMAIN_NEGATIVE_PATTERNS
-]
-
-# ---------------------------------------------------------------------------
-# Weights & thresholds
-# ---------------------------------------------------------------------------
-
 VADER_WEIGHT      = 0.55
 SENTICNET_WEIGHT  = 0.45
-POSITIVE_THRESHOLD = 0.55
-NEGATIVE_THRESHOLD = 0.48   # Lowered from 0.45 — catches hedged / understated negativity
+POSITIVE_THRESHOLD = 0.65
+NEGATIVE_THRESHOLD = 0.35
 
-# ---------------------------------------------------------------------------
-# Domain-specific negative lexicon for AI/coding discourse
-# ---------------------------------------------------------------------------
-# VADER scores many of these terms near-neutral because they are rare in
-# its training corpus (movie/product reviews). Each regex pattern that fires
-# shifts the fused score toward negative by DOMAIN_NEG_BOOST, capped at
-# DOMAIN_NEG_CAP total shift so a single very negative sentence can't push
-# the score below 0 on its own.
-
-DOMAIN_NEG_BOOST = 0.06   # score penalty per matched pattern
-DOMAIN_NEG_CAP   = 0.24   # maximum total penalty (= 4 pattern hits)
-
-# ---------------------------------------------------------------------------
-# SenticVaderClassifier
-# ---------------------------------------------------------------------------
 
 class SenticVaderClassifier:
     """
@@ -152,10 +77,6 @@ class SenticVaderClassifier:
         self._senticnet = None
         self._load_vader()
         self._load_senticnet()
-
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
 
     def classify(
         self,
@@ -195,43 +116,18 @@ class SenticVaderClassifier:
         else:
             final = VADER_WEIGHT * vader_norm + SENTICNET_WEIGHT * sn_norm
 
-        # Apply domain-specific negative boost AFTER fusion so it can correct
-        # VADER's well-known positive bias on AI/coding vocabulary.
-        domain_penalty = self._domain_neg_penalty(clean)
-        final = max(0.0, final - domain_penalty)
-
-        label      = self._label(final)
+        label = self._label(final)
         confidence = round(abs(final - 0.5) * 2, 4)
 
         return {
-            "Label":        label,
-            "Score":        round(final, 4),
-            "Confidence":   confidence,
-            "Routing_Path": "short",
-            "Classifier":   "sentic_vader",
+            "Label":label,
+            "Score":round(final, 4),
+            "Confidence":confidence,
+            "Routing_Path":"short",
+            "Classifier":"sentic_vader",
         }
 
-    # ------------------------------------------------------------------
-    # Domain negative lexicon
-    # ------------------------------------------------------------------
-
-    @staticmethod
-    def _domain_neg_penalty(text: str) -> float:
-        """
-        Count how many domain-negative patterns fire on *text* and return a
-        score penalty in [0, DOMAIN_NEG_CAP].
-
-        Each pattern match contributes DOMAIN_NEG_BOOST. The total is capped at
-        DOMAIN_NEG_CAP so that even a very negative sentence cannot push the
-        fused score below 0.0.
-        """
-        hits = sum(1 for pattern in _DOMAIN_NEG_RE if pattern.search(text))
-        return min(hits * DOMAIN_NEG_BOOST, DOMAIN_NEG_CAP)
-
-    # ------------------------------------------------------------------
     # VADER
-    # ------------------------------------------------------------------
-
     def _vader_score(self, text: str) -> float:
         if self._vader is None:
             return 0.5
@@ -242,17 +138,27 @@ class SenticVaderClassifier:
         try:
             from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
             self._vader = SentimentIntensityAnalyzer()
-            logger.info("SenticVaderClassifier: VADER loaded.")
+            
+            # --- ADD THIS BLOCK TO NEUTRALIZE TECH WORDS ---
+            tech_neutral_words = [
+                "support", "supports", "supported",
+                "share", "shares", "shared",
+                "like", "default", "defaults",
+                "native", "update", "upgrade",
+                "resolve", "resolves", "fixed"
+            ]
+            for word in tech_neutral_words:
+                self._vader.lexicon[word] = 0.0 
+            # -----------------------------------------------
+                
+            logger.info("SenticVaderClassifier: VADER loaded with tech overrides.")
         except ImportError:
             logger.warning(
                 "vaderSentiment not installed — VADER signal disabled. "
                 "Install with: pip install vaderSentiment"
             )
 
-    # ------------------------------------------------------------------
     # SenticNet
-    # ------------------------------------------------------------------
-
     def _senticnet_score(self, pos_tags: list[list]) -> Optional[float]:
         """
         Look up each lemma in SenticNet; return mean polarity_value
@@ -294,10 +200,6 @@ class SenticVaderClassifier:
         except Exception as e:
             logger.warning(f"SenticVaderClassifier: SenticNet failed to load: {e}")
 
-    # ------------------------------------------------------------------
-    # Utilities
-    # ------------------------------------------------------------------
-
     @staticmethod
     def _label(score: float) -> str:
         if score >= POSITIVE_THRESHOLD:
@@ -309,18 +211,15 @@ class SenticVaderClassifier:
     @staticmethod
     def _neutral_result() -> dict:
         return {
-            "Label":        "neutral",
-            "Score":        0.5,
-            "Confidence":   0.0,
-            "Routing_Path": "short",
-            "Classifier":   "sentic_vader",
+            "Label":"neutral",
+            "Score":0.5,
+            "Confidence":0.0,
+            "Routing_Path":"short",
+            "Classifier":"sentic_vader",
         }
 
 
-# ---------------------------------------------------------------------------
 # Utility — flatten sentence-aligned POS_Tags into a single list
-# ---------------------------------------------------------------------------
-
 def flatten_pos_tags(pos_tags: list[list[list]]) -> list[list]:
     """
     Convert sentence-aligned POS_Tags (list of lists of triples) into a flat
@@ -331,11 +230,6 @@ def flatten_pos_tags(pos_tags: list[list[list]]) -> list[list]:
         if isinstance(sentence_tags, list):
             flat.extend(sentence_tags)
     return flat
-
-
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import json

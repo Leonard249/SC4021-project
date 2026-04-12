@@ -60,6 +60,8 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 DEFAULT_MODEL= "cardiffnlp/twitter-roberta-base-sentiment-latest"
+
+
 CHUNK_WORD_LIMIT= 300
 CHUNK_OVERLAP= 50
 LONG_THRESHOLD= 400   # words; above this → chunking path
@@ -76,6 +78,7 @@ LABEL_MAP: dict[str, str] = {
     "LABEL_1":  "neutral",
     "LABEL_2":  "positive",
 }
+
 
 class TransformerPolarityClassifier:
     """
@@ -102,7 +105,7 @@ class TransformerPolarityClassifier:
         self.batch_size = batch_size
         self._pipeline = None  # lazy-loaded
 
-    def classify(self, target_sentence: str, sentence_word_count: int) -> dict:
+    def classify(self, target_sentence: str, sentence_word_count: int, confidence_floor: float = 0.50) -> dict:
         """
         Classify the polarity of a medium or long Target_Sentence.
 
@@ -123,38 +126,32 @@ class TransformerPolarityClassifier:
             "Chunks": int
         }
         """
-        clean = re.sub(r"<CODE>|\[[^\]]+\]", "", target_sentence).strip()
+        clean = re.sub(r"\[[^\]]+\]", "", target_sentence).strip()
         if not clean:
             return self._neutral_result("medium")
 
         if sentence_word_count > LONG_THRESHOLD:
-            return self._classify_long(clean)
+            return self._classify_long(clean, confidence_floor=confidence_floor)
         else:
-            return self._classify_medium(clean)
+            return self._classify_medium(clean, confidence_floor=confidence_floor)
 
     # Medium path
-    def _classify_medium(self, text: str) -> dict:
-        """Single forward pass for medium-length sentences."""
+    def _classify_medium(self, text: str, confidence_floor: float = 0.50) -> dict:
         self._load_pipeline()
-        raw    = self._run_model([text[:MAX_CHARS]])[0]
-        score, label = self._parse_result(raw)
+        raw = self._run_model([text[:MAX_CHARS]])[0]
+        score, label = self._parse_result(raw, confidence_floor=confidence_floor)
         return {
             "Label": label,
             "Score": round(score, 4),
-            "Confidence": round(abs(score - 0.5) * 2, 4),
+            "Confidence": round(abs(score), 4),
             "Classifier": "transformer_polarity",
             "Routing_Path": "medium",
             "Chunks": 1,
         }
     
     # Long path
-    def _classify_long(self, text: str) -> dict:
-        """
-        Chunk the text, classify each chunk, then aggregate by word count.
-
-        Weighted average: longer chunks contribute proportionally more to
-        the final score than shorter tail chunks.
-        """
+    def _classify_long(self, text: str, confidence_floor: float = 0.50) -> dict:
+        """Chunk the text, classify each chunk, then aggregate."""
         chunks = self._make_chunks(text)
         if not chunks:
             return self._neutral_result("long")
@@ -164,19 +161,27 @@ class TransformerPolarityClassifier:
 
         weighted_sum = 0.0
         total_weight = 0.0
+        
         for chunk, raw in zip(chunks, raw_results):
-            score, _  = self._parse_result(raw)
-            weight = len(chunk.split())  # number of words in this chunk
+            score, _ = self._parse_result(raw, confidence_floor=confidence_floor) # score is -1.0 to +1.0
+            weight = len(chunk.split())  
             weighted_sum += score * weight
             total_weight += weight
 
-        final = weighted_sum / total_weight if total_weight else 0.5
-        label = self._label(final)
+        final_score = weighted_sum / total_weight if total_weight else 0.0
+        
+        # Determine the final label based on the aggregated signed score
+        if final_score >= 0.20: # Requires strong positive chunks to win
+            label = "positive"
+        elif final_score <= -0.20:
+            label = "negative"
+        else:
+            label = "neutral"
 
         return {
             "Label": label,
-            "Score": round(final, 4),
-            "Confidence": round(abs(final - 0.5) * 2, 4),
+            "Score": round(final_score, 4),
+            "Confidence": round(abs(final_score), 4),
             "Classifier": "transformer_polarity",
             "Routing_Path": "long",
             "Chunks": len(chunks),
@@ -214,25 +219,28 @@ class TransformerPolarityClassifier:
                 results.extend([{"label": "neutral", "score": 1.0}] * len(batch))
         return results
 
-    def _parse_result(self, raw: dict) -> tuple[float, str]:
-        """
-        Normalise raw model output to (positive_axis_score, label).
-            positive  → P(positive)
-            negative  → 1 − P(negative)
-            neutral   → 0.5
-        """
+    
+    def _parse_result(self, raw: dict, confidence_floor: float = 0.40) -> tuple[float, str]:
         raw_label = raw.get("label", "neutral")
         label = LABEL_MAP.get(raw_label, "neutral")
-        raw_score = float(raw.get("score", 0.5))
+        confidence = float(raw.get("score", 0.0))
 
-        if label == "positive":
-            score = raw_score
+        # Asymmetric floors — positive is harder to detect so lower bar
+        POSITIVE_FLOOR = confidence_floor * 0.85
+        NEGATIVE_FLOOR = confidence_floor
+
+        if label == "neutral":
+            return 0.0, "neutral"
+        elif label == "positive":
+            if confidence < POSITIVE_FLOOR:
+                return 0.0, "neutral"
+            return confidence, "positive"
         elif label == "negative":
-            score = 1.0 - raw_score
+            if confidence < NEGATIVE_FLOOR:
+                return 0.0, "neutral"
+            return -confidence, "negative"
         else:
-            score = 0.5
-
-        return score, label
+            return 0.0, "neutral"
 
     def _load_pipeline(self) -> None:
         if self._pipeline is not None:
@@ -268,12 +276,13 @@ class TransformerPolarityClassifier:
     def _neutral_result(route: str) -> dict:
         return {
             "Label": "neutral",
-            "Score": 0.5,
+            "Score": 0.0,
             "Confidence": 0.0,
             "Classifier": "transformer_polarity",
             "Routing_Path": route,
             "Chunks": 0,
         }
+    
 
 if __name__ == "__main__":
     import json
@@ -295,8 +304,8 @@ if __name__ == "__main__":
             sent = asp.get("Target_Sentence", "")
             wc   = asp.get("Sentence_Word_Count", len(sent.split()))
             
-            if wc < 60:
-                continue  # would be handled by SenticVader
+            # if wc < 60:
+            #     continue  # would be handled by SenticVader
             
             # Fetch the in-memory dictionary
             result_to_print = classifier.classify(sent, wc)

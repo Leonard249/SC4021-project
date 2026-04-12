@@ -42,15 +42,15 @@ from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Path bootstrap — resolves sibling packages regardless of working directory.
-# Assumes this file lives at:  backend/nlp/syntactics/classifier.py
+# Assumes this file lives at: backend/nlp/classifier.py
 # ---------------------------------------------------------------------------
 _THIS_FILE  = Path(__file__).resolve()
-_SYNTACTICS = _THIS_FILE.parent                     # backend/nlp/syntactics/
-_NLP_ROOT = _THIS_FILE.parents[1]                 # backend/nlp/
-_BACKEND = _THIS_FILE.parents[2]                 # backend/
+_NLP_ROOT = _THIS_FILE.parent                      # backend/nlp/
+_BACKEND = _THIS_FILE.parents[1]                  # backend/
+_PROJECT_ROOT = _THIS_FILE.parents[2]             # SC4021-project/
 
 for _p in [
-    str(_SYNTACTICS),                               # microtextnorm, sbd, pos_tagger
+    str(_NLP_ROOT),                                 # syntactics, semantics, pragmatics packages
     str(_NLP_ROOT / "semantics"),                   # ner_tagger, subjectivity_detector
     str(_NLP_ROOT / "pragmatics"),                  # aspect_extractor, sarcasm_detector, ensemble
     str(_NLP_ROOT / "pragmatics" / "length_routing"),  # sentic_vader, transformer_polarity
@@ -70,16 +70,16 @@ from pragmatics.sarcasm_detector import SarcasmDetector            # Stage 7
 from pragmatics.ensemble import PolarityEnsemble                   # Stage 8
 
 # Input JSON
-# INPUT_PATH: str = "../../data/processed/raw_data.json"
-INPUT_PATH: str = "../../data/processed/new_db_labelled.json"
+INPUT_PATH: Path = _PROJECT_ROOT / "data" / "raw_data.json"
+#INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "db_labelled.json"
 
 # Output JSON: fully annotated records ready for indexing / evaluation.
-OUTPUT_PATH: str = "../../data/results/final_eval.json"
+OUTPUT_PATH: Path = _PROJECT_ROOT / "data" / "results" / "classified_eval.json"
 
 # Lexicon paths (relative to backend/nlp/syntactics/ or absolute).
-EMOTICON_DICT:str = "../../data/lexicons/emoticon_dict.json"
-SLANG_DICT:str = "../../data/lexicons/slang_dict.json"
-MPQA_LEXICON:str = "../../data/lexicons/mpqa_subjclues.tff"
+EMOTICON_DICT: Path = _PROJECT_ROOT / "data" / "lexicons" / "emoticon_dict.json"
+SLANG_DICT: Path = _PROJECT_ROOT / "data" / "lexicons" / "slang_dict.json"
+MPQA_LEXICON: Path = _PROJECT_ROOT / "data" / "lexicons" / "mpqa_subjclues.tff"
 
 # Pipeline toggles
 APPLY_SPELLCHECK:bool = False   # Stage 1 — slow; enable for X/Twitter only
@@ -144,9 +144,9 @@ class NLPPipeline:
 
     def __init__(
         self,
-        emoticon_dict:str = EMOTICON_DICT,
-        slang_dict:str = SLANG_DICT,
-        mpqa_lexicon:str = MPQA_LEXICON,
+        emoticon_dict: str | Path = EMOTICON_DICT,
+        slang_dict: str | Path = SLANG_DICT,
+        mpqa_lexicon: str | Path = MPQA_LEXICON,
         spacy_model:str = SPACY_MODEL,
         apply_spellcheck:bool = APPLY_SPELLCHECK,
         use_transformer:bool = USE_TRANSFORMER,
@@ -158,8 +158,8 @@ class NLPPipeline:
         # Stage 1 — Microtext Normalization
         logger.info("Stage 1 — MicrotextNormalizer")
         self.normalizer = MicrotextNormalizer(
-            emoticons_path=emoticon_dict,
-            slang_path=slang_dict,
+            emoticons_path=str(emoticon_dict),
+            slang_path=str(slang_dict),
         )
 
         # Stage 2 — Sentence Boundary Disambiguation
@@ -178,7 +178,7 @@ class NLPPipeline:
         logger.info("Stage 5 — SubjectivityDetector")
         self.subjectivity = SubjectivityDetector(
             use_transformer=use_transformer,
-            mpqa_path=mpqa_lexicon,
+            mpqa_path=str(mpqa_lexicon),
         )
 
         # Stage 6 — Aspect Extraction
@@ -268,6 +268,8 @@ class NLPPipeline:
     @staticmethod
     def _log_summary(records: list[dict], elapsed: float) -> None:
         """Print a brief stats summary after the full pipeline completes."""
+
+        
         n_total = len(records)
         n_subjective = sum(1 for r in records if r.get("Subjectivity") == "subjective")
         n_objective = sum(1 for r in records if r.get("Subjectivity") == "objective")
@@ -288,14 +290,22 @@ class NLPPipeline:
         logger.info(f"  Polarity → negative: {n_negative}")
         logger.info(f"  Polarity → neutral: {n_neutral}")
         logger.info(f"  Total time: {elapsed:.1f}s  ({rate:.1f} records/s)")
+
+        # Add these lines right below where it counts n_positive, n_negative, etc.
+        n_vader_pos = sum(1 for r in records if r.get("Overall_Document_Polarity") == "positive" and "vader" in r.get("Dominant_Routing_Path", "").lower())
+        n_trans_pos = sum(1 for r in records if r.get("Overall_Document_Polarity") == "positive" and "transformer" in r.get("Dominant_Routing_Path", "").lower())
+        
+        # Add these to the logger block at the bottom:
+        logger.info(f"  Polarity → positive: {n_positive} (Vader: {n_vader_pos}, Transformer: {n_trans_pos})")
+
         logger.info("=" * 60)
 
 def run_pipeline(
     input_path:       str | Path = INPUT_PATH,
     output_path:      str | Path = OUTPUT_PATH,
-    emoticon_dict:    str = EMOTICON_DICT,
-    slang_dict:       str = SLANG_DICT,
-    mpqa_lexicon:     str = MPQA_LEXICON,
+    emoticon_dict:    str | Path = EMOTICON_DICT,
+    slang_dict:       str | Path = SLANG_DICT,
+    mpqa_lexicon:     str | Path = MPQA_LEXICON,
     spacy_model:      str = SPACY_MODEL,
     apply_spellcheck: bool = APPLY_SPELLCHECK,
     use_transformer:  bool = USE_TRANSFORMER,
@@ -341,12 +351,12 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--input",  "-i",
-        default=INPUT_PATH,
+        default=str(INPUT_PATH),
         help=f"Path to raw input JSON (default: {INPUT_PATH})",
     )
     parser.add_argument(
         "--output", "-o",
-        default=OUTPUT_PATH,
+        default=str(OUTPUT_PATH),
         help=f"Path for annotated output JSON (default: {OUTPUT_PATH})",
     )
     parser.add_argument(
@@ -368,17 +378,17 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--emoticons",
-        default=EMOTICON_DICT,
+        default=str(EMOTICON_DICT),
         help=f"Path to emoticon_dict.json (default: {EMOTICON_DICT})",
     )
     parser.add_argument(
         "--slang",
-        default=SLANG_DICT,
+        default=str(SLANG_DICT),
         help=f"Path to slang_dict.json (default: {SLANG_DICT})",
     )
     parser.add_argument(
         "--mpqa",
-        default=MPQA_LEXICON,
+        default=str(MPQA_LEXICON),
         help=f"Path to mpqa_subjclues.tff (default: {MPQA_LEXICON})",
     )
 
