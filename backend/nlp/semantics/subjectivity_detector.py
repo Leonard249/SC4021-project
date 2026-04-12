@@ -63,6 +63,10 @@ logger = logging.getLogger(__name__)
 LOWER_THRESHOLD = 0.20
 UPPER_THRESHOLD = 0.75
 
+
+BYPASS_SUBJECTIVITY = True
+
+
 # Domaiin Keywords 
 DOMAIN_KEYWORDS = {"code", "python", "api", "copilot", "cursor", "developer", "bug"}
 
@@ -241,6 +245,17 @@ class SubjectivityDetector:
         Adds: Subjectivity, Subjectivity_Score, Subjectivity_Sentences.
         Returns the modified record.
         """
+
+        if BYPASS_SUBJECTIVITY:
+            record["Subjectivity"] = "subjective"
+            record["Subjectivity_Score"] = 1.0
+            record["Subjectivity_Sentences"] = []
+            for comment in (record.get("Comments") or []):
+                comment["Subjectivity"] = "subjective"
+                comment["Subjectivity_Score"] = 1.0
+                comment["Subjectivity_Sentences"] = []
+            return record
+    
         text = record.get("Normalized_Text", "")
         pos_tags = record.get("POS_Tags", [])
         sentences = record.get("Sentences", [])   # ← read pre-split sentences
@@ -286,6 +301,20 @@ class SubjectivityDetector:
 
     def detect_corpus(self, records: list[dict]) -> list[dict]:
         """Detect subjectivity for an entire list of records."""
+
+        if BYPASS_SUBJECTIVITY:
+            for record in records:
+                record["Subjectivity"] = "subjective"
+                record["Subjectivity_Score"] = 1.0
+                record["Subjectivity_Sentences"] = []
+                for comment in (record.get("Comments") or []):
+                    comment["Subjectivity"] = "subjective"
+                    comment["Subjectivity_Score"] = 1.0
+                    comment["Subjectivity_Sentences"] = []
+            logger.info("SubjectivityDetector: BYPASS active — placeholder values written, model not loaded.")
+            return records
+
+
         total = len(records)
         for i, record in enumerate(records, 1):
             try:

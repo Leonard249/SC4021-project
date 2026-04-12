@@ -77,6 +77,8 @@ MAX_SENTENCE_CHARS = 600
 # How many chars of the parent post to prepend as context for comments.
 PARENT_CONTEXT_CHARS = 200
 
+BYPASS_SARCASM = True
+
 class SarcasmDetector:
     """
     Sarcasm / irony detector for the SC4021 pipeline.
@@ -115,6 +117,15 @@ class SarcasmDetector:
 
         Only subjective containers are processed. Returns the modified record.
         """
+
+        if BYPASS_SARCASM:
+            for aspect in (record.get("Targeted_Aspects") or []):
+                aspect["Sarcasm"] = {"Is_Sarcastic": False, "Sarcasm_Confidence": 0.0}
+            for comment in (record.get("Comments") or []):
+                for aspect in (comment.get("Targeted_Aspects") or []):
+                    aspect["Sarcasm"] = {"Is_Sarcastic": False, "Sarcasm_Confidence": 0.0}
+            return record
+    
         # --- Post ---
         if record.get("Subjectivity") == "subjective":
             self._process_container(record, parent_context="")
@@ -136,6 +147,18 @@ class SarcasmDetector:
         """
         # Collect (container, aspect_index, model_input_text) for every
         # aspect that still needs a Sarcasm result.
+
+        # Bypass filter as sarcasm is turned off for the final pipeline
+        if BYPASS_SARCASM:
+            for record in records:
+                for aspect in (record.get("Targeted_Aspects") or []):
+                    aspect["Sarcasm"] = {"Is_Sarcastic": False, "Sarcasm_Confidence": 0.0}
+                for comment in (record.get("Comments") or []):
+                    for aspect in (comment.get("Targeted_Aspects") or []):
+                        aspect["Sarcasm"] = {"Is_Sarcastic": False, "Sarcasm_Confidence": 0.0}
+            logger.info("SarcasmDetector: BYPASS active — placeholder values written, model not loaded.")
+            return records
+    
         work_items: list[tuple[dict, int, str]] = []
 
         for record in records:

@@ -70,8 +70,8 @@ from pragmatics.sarcasm_detector import SarcasmDetector            # Stage 7
 from pragmatics.ensemble import PolarityEnsemble                   # Stage 8
 
 # Input JSON
-# INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "raw_data.json"
-INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "db_labelled.json"
+INPUT_PATH: Path = _PROJECT_ROOT / "data" / "raw_data.json"
+#INPUT_PATH: Path = _PROJECT_ROOT / "data" / "processed" / "db_labelled.json"
 
 # Output JSON: fully annotated records ready for indexing / evaluation.
 OUTPUT_PATH: Path = _PROJECT_ROOT / "data" / "results" / "classified_eval.json"

@@ -12,6 +12,7 @@ data/my_test/pipeline_output.json
 data/processed/raw_data.json
 data/processed/temp.json
 data/raw_data.json
+data/results/classified_eval_1k.json
 data/results/classified_eval.json
 data/results/classified_eval_transformer_only.json
 articles_extraction/articles_updated_schema
